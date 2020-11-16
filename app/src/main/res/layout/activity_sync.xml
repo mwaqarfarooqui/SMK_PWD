@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.smk_hfa_2020.ui.sync.SyncActivity" />
+            type="edu.aku.hassannaqvi.smk_pwd.ui.sync.SyncActivity" />
     </data>
 
     <ScrollView

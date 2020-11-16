@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.aku.hassannaqvi.smk_hfa_2020">
+    package="edu.aku.hassannaqvi.smk_pwd">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
     <uses-feature android:name="android.hardware.location.gps" />
@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
-        android:name=".core.MainApp"
+        android:name="edu.aku.hassannaqvi.smk_pwd.core.MainApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_smkhfa"
         android:label="@string/app_name"
@@ -24,324 +24,324 @@
         android:theme="@style/AppTheme1">
 
         <activity
-            android:name=".ui.list_activity.FormsReportDate"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.list_activity.FormsReportDate"
             android:label="Forms Report"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ui.list_activity.PendingFormsActivity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.list_activity.PendingFormsActivity"
             android:label="Unfinished Forms"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ui.other.SectionMainActivity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionAActivity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionAActivity"
             android:label="@string/modatitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionBActivity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionBActivity"
             android:label="@string/modbtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionC1Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionC1Activity"
             android:label="@string/modctitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionD1Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD1Activity"
             android:label="@string/moddtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionD2Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD2Activity"
             android:label="@string/moddtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionD3Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD3Activity"
             android:label="@string/moddtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionD4Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD4Activity"
             android:label="@string/moddtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionD5Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD5Activity"
             android:label="@string/moddtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionD6Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD6Activity"
             android:label="@string/moddtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionD7Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD7Activity"
             android:label="@string/moddtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionD8Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD8Activity"
             android:label="@string/moddtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE101Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE101Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE102Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE102Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE103Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE103Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE2Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE2Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE31Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE31Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE32Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE32Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE33Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE33Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE41Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE41Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE42Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE42Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE5Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE5Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE6Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE6Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE7Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE7Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE8Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE8Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionF1Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF1Activity"
             android:label="@string/modftitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionF2Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF2Activity"
             android:label="@string/modftitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionF3Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF3Activity"
             android:label="@string/modftitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionF4Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF4Activity"
             android:label="@string/modftitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionF5Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF5Activity"
             android:label="@string/modftitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionF6Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF6Activity"
             android:label="@string/modftitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionF7Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF7Activity"
             android:label="@string/modftitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG1Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG1Activity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG2Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG2Activity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG311Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG311Activity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG312Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG312Activity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG313Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG313Activity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG314Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG314Activity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG315Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG315Activity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG321Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG321Activity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG322Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG322Activity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG323Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG323Activity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH1Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH1Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH2Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH2Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH31Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH31Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH32Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH32Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH4Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH4Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH5Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH5Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH6Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH6Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH7Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH7Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH8Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH8Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH9Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH9Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH10Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH10Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH11Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH11Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH12Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH12Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH13Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH13Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH14Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH14Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH151Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH151Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH152Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH152Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH153Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH153Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH16Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH16Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionH17Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH17Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionI1Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionI1Activity"
             android:label="@string/modititle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionJ1Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionJ1Activity"
             android:label="@string/modjtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionJ2Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionJ2Activity"
             android:label="@string/modjtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionJ3Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionJ3Activity"
             android:label="@string/modjtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionJ4Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionJ4Activity"
             android:label="@string/modjtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionJ5Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionJ5Activity"
             android:label="@string/modjtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionK1Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK1Activity"
             android:label="@string/modktitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionK2Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK2Activity"
             android:label="@string/modktitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionK3Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK3Activity"
             android:label="@string/modktitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionK4Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK4Activity"
             android:label="@string/modktitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionK5Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK5Activity"
             android:label="@string/modktitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionK61Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK61Activity"
             android:label="@string/modktitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionK62Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK62Activity"
             android:label="@string/modktitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionK63Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK63Activity"
             android:label="@string/modktitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionK7Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK7Activity"
             android:label="@string/modktitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.other.SplashscreenActivity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -351,28 +351,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.other.LoginActivity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.other.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ui.other.EndingActivity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.other.EndingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.other.MainActivity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.other.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
-            android:name=".core.AndroidDatabaseManager"
-            android:parentActivityName=".ui.other.MainActivity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.core.AndroidDatabaseManager"
+            android:parentActivityName="edu.aku.hassannaqvi.smk_pwd.ui.other.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ui.sync.SyncActivity"
-            android:parentActivityName=".ui.other.MainActivity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sync.SyncActivity"
+            android:parentActivityName="edu.aku.hassannaqvi.smk_pwd.ui.other.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
-        <service android:name=".DownloadFileService" />
+        <service android:name="edu.aku.hassannaqvi.smk_pwd.DownloadFileService" />
     </application>
 
 </manifest>

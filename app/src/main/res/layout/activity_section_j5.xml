@@ -6,7 +6,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.smk_hfa_2020.ui.sections.SectionJ5Activity" />
+            type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionJ5Activity" />
     </data>
 
     <ScrollView

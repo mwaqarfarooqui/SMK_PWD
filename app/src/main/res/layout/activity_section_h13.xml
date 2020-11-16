@@ -11,7 +11,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.smk_hfa_2020.ui.sections.SectionH13Activity" />
+            type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH13Activity" />
     </data>
 
 

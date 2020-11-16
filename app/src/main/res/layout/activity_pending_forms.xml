@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.smk_hfa_2020.ui.list_activity.PendingFormsActivity" />
+            type="edu.aku.hassannaqvi.smk_pwd.ui.list_activity.PendingFormsActivity" />
     </data>
 
     <LinearLayout

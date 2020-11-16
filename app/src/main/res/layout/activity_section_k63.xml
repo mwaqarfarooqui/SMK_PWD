@@ -8,7 +8,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.smk_hfa_2020.ui.sections.SectionK63Activity" />
+            type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK63Activity" />
     </data>
 
     <ScrollView

@@ -2,7 +2,7 @@
 <resources>
 
     <!--new Strings-->
-    <string name="app_name"> SMK HFA English </string>
+    <string name="app_name"> SMK PWD English </string>
 
     <!-- Strings related to login -->
     <string name="btnSync">Download Data</string>
