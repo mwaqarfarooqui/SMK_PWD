@@ -7,7 +7,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -17,36 +16,33 @@ import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI1Binding;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI3Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
-import edu.aku.hassannaqvi.smk_pwd.utils.EndSectionActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.CONSTANTS.SECTION_MAIN_CHECK_FOR_END;
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivityI;
 
+public class SectionI3Activity extends AppCompatActivity {
+    ActivitySectionI3Binding bi;
 
-public class SectionI1Activity extends AppCompatActivity implements EndSectionActivity {
-
-    ActivitySectionI1Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i1);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i3);
         bi.setCallback(this);
         setupSkips();
         setupContent();
     }
 
-
     private void setupContent() {
 
-       /* psc = new PatientsContract();
+        psc = new PatientsContract();
 
         bi.hfType.setText(MainApp.fc.getA10().equals("1") ? getString(R.string.hfpublic) : getString(R.string.hfprivate));
-        bi.countI.setText(new StringBuilder("Entries: 0").append(SectionMainActivity.countI));*/
+        bi.countI.setText(new StringBuilder("Entries: 0").append(SectionMainActivity.countI));
 
         /*if (MainApp.fc.getA10().equals("1")) {
             if (SectionMainActivity.paedsCount == 3) bi.i0108a.setEnabled(false);
@@ -57,11 +53,7 @@ public class SectionI1Activity extends AppCompatActivity implements EndSectionAc
 
     private void setupSkips() {
 
-        bi.ia01.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ia01b.getId()) {
-                Clear.clearAllFields(bi.llgrpsecsAq1);
-            }
-        }));
+
        /* bi.i0103.setOnCheckedChangeListener(((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpCVi0104)));
 
         bi.i0110a.setOnCheckedChangeListener((compoundButton, b) -> {
@@ -86,8 +78,8 @@ public class SectionI1Activity extends AppCompatActivity implements EndSectionAc
                 bi.i0111b.setEnabled(true);
                 bi.i0111c.setEnabled(true);
             }
-        });*/
-
+        });
+*/
         /*bi.i0108.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.i0108a.getId()) {
@@ -179,38 +171,46 @@ public class SectionI1Activity extends AppCompatActivity implements EndSectionAc
 
     private void SaveDraft() throws JSONException {
 
-       /* form.setIa01( bi.ia01a.isChecked() ? "1"
-                : bi.ia01b.isChecked() ? "2"
-                : bi.ia01c.isChecked() ? "3"
-                :  "-1");
 
-        form.setIa02( bi.ia02a.isChecked() ? "1"
-                : bi.ia02b.isChecked() ? "2"
-                : bi.ia02c.isChecked() ? "3"
-                :  "-1");
+        form.setIc01(bi.ic01a.isChecked() ? "1"
+                : bi.ic01b.isChecked() ? "2"
+                : bi.ic01c.isChecked() ? "3"
+                : "-1");
 
-        form.setIa03( bi.ia03a.isChecked() ? "1"
-                : bi.ia03b.isChecked() ? "2"
-                :  "-1");
+        form.setIc02(bi.ic02a.isChecked() ? "1"
+                : bi.ic02b.isChecked() ? "2"
+                : bi.ic02c.isChecked() ? "3"
+                : "-1");
 
-        form.setIa04( bi.ia04a.isChecked() ? "1"
-                : bi.ia04b.isChecked() ? "2"
-                :  "-1");
+        form.setIc03(bi.ic03a.isChecked() ? "1"
+                : bi.ic03b.isChecked() ? "2"
+                : bi.ic03c.isChecked() ? "3"
+                : "-1");
 
-        form.setIa05( bi.ia05a.isChecked() ? "1"
-                : bi.ia05b.isChecked() ? "2"
-                : bi.ia05c.isChecked() ? "3"
-                : bi.ia05d.isChecked() ? "4"
-                :  "-1");
+        form.setIc04(bi.ic04a.isChecked() ? "1"
+                : bi.ic04b.isChecked() ? "2"
+                : bi.ic04c.isChecked() ? "3"
+                : "-1");
 
-        form.setIa06( bi.ia06a.isChecked() ? "1"
-                : bi.ia06b.isChecked() ? "2"
-                :  "-1");
+        form.setIc05(bi.ic05a.isChecked() ? "1"
+                : bi.ic05b.isChecked() ? "2"
+                : bi.ic05c.isChecked() ? "3"
+                : "-1");
 
-        form.setIa07( bi.ia07a.isChecked() ? "1"
-                : bi.ia07b.isChecked() ? "2"
-                :  "-1");
-*/
+        form.setIc06(bi.ic06a.isChecked() ? "1"
+                : bi.ic06b.isChecked() ? "2"
+                : bi.ic06c.isChecked() ? "3"
+                : "-1");
+
+        form.setIc07(bi.ic07a.isChecked() ? "1"
+                : bi.ic07b.isChecked() ? "2"
+                : bi.ic07c.isChecked() ? "3"
+                : "-1");
+
+        form.setIc08(bi.ic08a.isChecked() ? "1"
+                : bi.ic08b.isChecked() ? "2"
+                : bi.ic08c.isChecked() ? "3"
+                : "-1");
 
 
     }
@@ -255,5 +255,6 @@ public class SectionI1Activity extends AppCompatActivity implements EndSectionAc
             Toast.makeText(getApplicationContext(), "Back Press Not Allowed", Toast.LENGTH_LONG).show();
         } else super.onBackPressed();
     }
+
 
 }

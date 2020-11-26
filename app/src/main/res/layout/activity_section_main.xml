@@ -147,7 +147,7 @@
                         android:background="@color/colorPrimaryLight"
                         android:gravity="start"
                         android:onClick="openForm"
-                        android:text="@string/moddtitle"
+                        android:text="@string/moddtilte"
                         android:textSize="14sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

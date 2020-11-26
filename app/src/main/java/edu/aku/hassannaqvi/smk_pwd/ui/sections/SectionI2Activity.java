@@ -7,7 +7,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -17,24 +16,21 @@ import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI1Binding;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI2Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
-import edu.aku.hassannaqvi.smk_pwd.utils.EndSectionActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.CONSTANTS.SECTION_MAIN_CHECK_FOR_END;
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivityI;
 
-
-public class SectionI1Activity extends AppCompatActivity implements EndSectionActivity {
-
-    ActivitySectionI1Binding bi;
+public class SectionI2Activity extends AppCompatActivity {
+    ActivitySectionI2Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i1);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i2);
         bi.setCallback(this);
         setupSkips();
         setupContent();
@@ -43,7 +39,7 @@ public class SectionI1Activity extends AppCompatActivity implements EndSectionAc
 
     private void setupContent() {
 
-       /* psc = new PatientsContract();
+        /*psc = new PatientsContract();
 
         bi.hfType.setText(MainApp.fc.getA10().equals("1") ? getString(R.string.hfpublic) : getString(R.string.hfprivate));
         bi.countI.setText(new StringBuilder("Entries: 0").append(SectionMainActivity.countI));*/
@@ -57,12 +53,7 @@ public class SectionI1Activity extends AppCompatActivity implements EndSectionAc
 
     private void setupSkips() {
 
-        bi.ia01.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ia01b.getId()) {
-                Clear.clearAllFields(bi.llgrpsecsAq1);
-            }
-        }));
-       /* bi.i0103.setOnCheckedChangeListener(((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpCVi0104)));
+        /*bi.i0103.setOnCheckedChangeListener(((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpCVi0104)));
 
         bi.i0110a.setOnCheckedChangeListener((compoundButton, b) -> {
             if (b) {
@@ -179,38 +170,79 @@ public class SectionI1Activity extends AppCompatActivity implements EndSectionAc
 
     private void SaveDraft() throws JSONException {
 
-       /* form.setIa01( bi.ia01a.isChecked() ? "1"
-                : bi.ia01b.isChecked() ? "2"
-                : bi.ia01c.isChecked() ? "3"
-                :  "-1");
 
-        form.setIa02( bi.ia02a.isChecked() ? "1"
-                : bi.ia02b.isChecked() ? "2"
-                : bi.ia02c.isChecked() ? "3"
-                :  "-1");
+        form.setIb01(bi.ib01a.isChecked() ? "1"
+                : bi.ib01b.isChecked() ? "2"
+                : bi.ib01c.isChecked() ? "3"
+                : bi.ib01d.isChecked() ? "4"
+                : bi.ib01e.isChecked() ? "5"
+                : "-1");
 
-        form.setIa03( bi.ia03a.isChecked() ? "1"
-                : bi.ia03b.isChecked() ? "2"
-                :  "-1");
+        form.setIb01dx(bi.ib01dx.getText().toString());
+        form.setIb01ex(bi.ib01ex.getText().toString());
+        form.setIb02(bi.ib02a.isChecked() ? "1"
+                : bi.ib02b.isChecked() ? "2"
+                : bi.ib02c.isChecked() ? "3"
+                : bi.ib02d.isChecked() ? "4"
+                : bi.ib02e.isChecked() ? "5"
+                : "-1");
 
-        form.setIa04( bi.ia04a.isChecked() ? "1"
-                : bi.ia04b.isChecked() ? "2"
-                :  "-1");
+        form.setIb02dx(bi.ib02dx.getText().toString());
+        form.setIb02ex(bi.ib02ex.getText().toString());
+        form.setIb03(bi.ib03a.isChecked() ? "1"
+                : bi.ib03b.isChecked() ? "2"
+                : bi.ib03c.isChecked() ? "3"
+                : bi.ib03d.isChecked() ? "4"
+                : bi.ib03e.isChecked() ? "5"
+                : "-1");
 
-        form.setIa05( bi.ia05a.isChecked() ? "1"
-                : bi.ia05b.isChecked() ? "2"
-                : bi.ia05c.isChecked() ? "3"
-                : bi.ia05d.isChecked() ? "4"
-                :  "-1");
+        form.setIb03dx(bi.ib03dx.getText().toString());
+        form.setIb03ex(bi.ib03ex.getText().toString());
+        form.setIb04(bi.ib04a.isChecked() ? "1"
+                : bi.ib04b.isChecked() ? "2"
+                : bi.ib04c.isChecked() ? "3"
+                : bi.ib04d.isChecked() ? "4"
+                : bi.ib04e.isChecked() ? "5"
+                : "-1");
 
-        form.setIa06( bi.ia06a.isChecked() ? "1"
-                : bi.ia06b.isChecked() ? "2"
-                :  "-1");
+        form.setIb04dx(bi.ib04dx.getText().toString());
+        form.setIb04ex(bi.ib04ex.getText().toString());
+        form.setIb05(bi.ib05a.isChecked() ? "1"
+                : bi.ib05b.isChecked() ? "2"
+                : bi.ib05c.isChecked() ? "3"
+                : bi.ib05d.isChecked() ? "4"
+                : bi.ib05e.isChecked() ? "5"
+                : "-1");
 
-        form.setIa07( bi.ia07a.isChecked() ? "1"
-                : bi.ia07b.isChecked() ? "2"
-                :  "-1");
-*/
+        form.setIb05dx(bi.ib05dx.getText().toString());
+        form.setIb05ex(bi.ib05ex.getText().toString());
+        form.setIb06(bi.ib06a.isChecked() ? "1"
+                : bi.ib06b.isChecked() ? "2"
+                : bi.ib06c.isChecked() ? "3"
+                : bi.ib06d.isChecked() ? "4"
+                : bi.ib06e.isChecked() ? "5"
+                : "-1");
+
+        form.setIb06dx(bi.ib06dx.getText().toString());
+        form.setIb06ex(bi.ib06ex.getText().toString());
+        form.setIb07(bi.ib07a.isChecked() ? "1"
+                : bi.ib07b.isChecked() ? "2"
+                : bi.ib07c.isChecked() ? "3"
+                : bi.ib07d.isChecked() ? "4"
+                : bi.ib07e.isChecked() ? "5"
+                : "-1");
+
+        form.setIb07dx(bi.ib07dx.getText().toString());
+        form.setIb07ex(bi.ib07ex.getText().toString());
+        form.setIb08(bi.ib08a.isChecked() ? "1"
+                : bi.ib08b.isChecked() ? "2"
+                : bi.ib08c.isChecked() ? "3"
+                : bi.ib08d.isChecked() ? "4"
+                : bi.ib08e.isChecked() ? "5"
+                : "-1");
+
+        form.setIb08dx(bi.ib08dx.getText().toString());
+        form.setIb08ex(bi.ib08ex.getText().toString());
 
 
     }
