@@ -25,14 +25,14 @@ import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionG1Binding;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 
-public class SectionG1Activity extends AppCompatActivity {
+public class SectionGActivity extends AppCompatActivity {
 
     ActivitySectionG1Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_g1);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_g);
         bi.setCallback(this);
         setupSkips();
 

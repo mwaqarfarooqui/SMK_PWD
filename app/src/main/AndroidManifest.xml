@@ -160,7 +160,7 @@
             android:label="@string/modftitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionG1Activity"
+            android:name=".ui.sections.SectionGActivity"
             android:label="@string/modgtitle"
             android:screenOrientation="portrait" />
         <activity
