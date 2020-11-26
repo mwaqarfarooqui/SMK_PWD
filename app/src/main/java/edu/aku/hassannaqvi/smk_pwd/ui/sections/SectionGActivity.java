@@ -41,10 +41,14 @@ public class SectionGActivity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.g01110b.setOnCheckedChangeListener(((radioGroup, i) -> {
+       /* bi.g01110b.setOnCheckedChangeListener(((radioGroup, i) -> {
             Clear.clearAllFields(bi.llGrpsecg01);
+        }));*/
+        bi.ga03.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.ga03b.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVga04);
+            }
         }));
-
     }
 
 
