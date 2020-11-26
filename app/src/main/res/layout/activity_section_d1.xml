@@ -1,6 +1,5 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -4925,7 +4924,9 @@
                             android:text="@string/da24hfb" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            </androidx.cardview.widget.CardView>
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -4933,15 +4934,15 @@
                 android:layout_marginTop="24dp"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btn_End"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:background="@color/red_overlay"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="Cancel"
-                    android:textColor="@color/white" />
+                <!-- <Button
+                     android:id="@+id/btn_End"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="12dp"
+                     android:background="@color/red_overlay"
+                     android:onClick="@{() -> callback.BtnEnd()}"
+                     android:text="Cancel"
+                     android:textColor="@color/white" />-->
 
                 <Button
                     android:id="@+id/btn_Continue"
@@ -4953,6 +4954,9 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>

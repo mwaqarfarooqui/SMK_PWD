@@ -13,18 +13,14 @@ import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.CONSTANTS;
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
-import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
-import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI2Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
-import static edu.aku.hassannaqvi.smk_pwd.CONSTANTS.SECTION_MAIN_CHECK_FOR_END;
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivityI;
 
 public class SectionI2Activity extends AppCompatActivity {
+
     ActivitySectionI2Binding bi;
 
     @Override
@@ -154,7 +150,7 @@ public class SectionI2Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addPSC(psc);
         psc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
@@ -164,14 +160,15 @@ public class SectionI2Activity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
 
     private void SaveDraft() throws JSONException {
 
 
-        form.setIb01(bi.ib01a.isChecked() ? "1"
+        /*form.setIb01(bi.ib01a.isChecked() ? "1"
                 : bi.ib01b.isChecked() ? "2"
                 : bi.ib01c.isChecked() ? "3"
                 : bi.ib01d.isChecked() ? "4"
@@ -242,8 +239,7 @@ public class SectionI2Activity extends AppCompatActivity {
                 : "-1");
 
         form.setIb08dx(bi.ib08dx.getText().toString());
-        form.setIb08ex(bi.ib08ex.getText().toString());
-
+        form.setIb08ex(bi.ib08ex.getText().toString());*/
 
     }
 
@@ -263,7 +259,7 @@ public class SectionI2Activity extends AppCompatActivity {
     }
 
 
-    @Override
+    /*@Override
     public void endSecActivity(boolean flag) {
         try {
             SaveDraft();
@@ -278,7 +274,7 @@ public class SectionI2Activity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 
 
     @Override

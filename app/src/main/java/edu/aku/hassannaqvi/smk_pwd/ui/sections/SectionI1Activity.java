@@ -14,16 +14,12 @@ import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.CONSTANTS;
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
-import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
-import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI1Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 import edu.aku.hassannaqvi.smk_pwd.utils.EndSectionActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.CONSTANTS.SECTION_MAIN_CHECK_FOR_END;
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivityI;
 
 
@@ -163,7 +159,7 @@ public class SectionI1Activity extends AppCompatActivity implements EndSectionAc
 
 
     private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addPSC(psc);
         psc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
@@ -173,7 +169,8 @@ public class SectionI1Activity extends AppCompatActivity implements EndSectionAc
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
 

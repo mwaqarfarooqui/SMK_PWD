@@ -20,6 +20,7 @@ import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD3Binding;
+import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
@@ -105,7 +106,7 @@ public class SectionD3Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionD4Activity.class));
+            startActivity(new Intent(this, SectionMainActivity.class));
         }
     }
 

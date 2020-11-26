@@ -22,7 +22,6 @@ import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE101Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionGActivity;
-import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH16Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionI1Activity;
 import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
@@ -172,7 +171,7 @@ public class SectionMainActivity extends AppCompatActivity {
                     oF = new Intent(this, SectionGActivity.class);
                     break;
                 case R.id.form07:
-                    oF = new Intent(this, fc.getA10().equals("2") ? SectionH16Activity.class : SectionH1Activity.class);
+                    oF = new Intent(this, SectionH1Activity.class);
                     break;
                 case R.id.form08:
                     countI = 0;

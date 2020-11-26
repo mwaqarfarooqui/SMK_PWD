@@ -13,15 +13,10 @@ import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.CONSTANTS;
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
-import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
-import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI3Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
-import static edu.aku.hassannaqvi.smk_pwd.CONSTANTS.SECTION_MAIN_CHECK_FOR_END;
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivityI;
 
 public class SectionI3Activity extends AppCompatActivity {
@@ -39,10 +34,10 @@ public class SectionI3Activity extends AppCompatActivity {
 
     private void setupContent() {
 
-        psc = new PatientsContract();
+       /* psc = new PatientsContract();
 
         bi.hfType.setText(MainApp.fc.getA10().equals("1") ? getString(R.string.hfpublic) : getString(R.string.hfprivate));
-        bi.countI.setText(new StringBuilder("Entries: 0").append(SectionMainActivity.countI));
+        bi.countI.setText(new StringBuilder("Entries: 0").append(SectionMainActivity.countI));*/
 
         /*if (MainApp.fc.getA10().equals("1")) {
             if (SectionMainActivity.paedsCount == 3) bi.i0108a.setEnabled(false);
@@ -155,7 +150,7 @@ public class SectionI3Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addPSC(psc);
         psc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
@@ -165,14 +160,14 @@ public class SectionI3Activity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
 
     private void SaveDraft() throws JSONException {
 
-
-        form.setIc01(bi.ic01a.isChecked() ? "1"
+        /*form.setIc01(bi.ic01a.isChecked() ? "1"
                 : bi.ic01b.isChecked() ? "2"
                 : bi.ic01c.isChecked() ? "3"
                 : "-1");
@@ -210,8 +205,7 @@ public class SectionI3Activity extends AppCompatActivity {
         form.setIc08(bi.ic08a.isChecked() ? "1"
                 : bi.ic08b.isChecked() ? "2"
                 : bi.ic08c.isChecked() ? "3"
-                : "-1");
-
+                : "-1");*/
 
     }
 
@@ -231,7 +225,7 @@ public class SectionI3Activity extends AppCompatActivity {
     }
 
 
-    @Override
+   /* @Override
     public void endSecActivity(boolean flag) {
         try {
             SaveDraft();
@@ -246,7 +240,7 @@ public class SectionI3Activity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 
 
     @Override
