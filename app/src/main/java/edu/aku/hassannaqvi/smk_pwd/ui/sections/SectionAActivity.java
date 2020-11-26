@@ -3,21 +3,14 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -25,11 +18,7 @@ import java.util.Locale;
 import java.util.Map;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.DistrictContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
-import edu.aku.hassannaqvi.smk_pwd.contracts.HFContract;
-import edu.aku.hassannaqvi.smk_pwd.contracts.TehsilsContract;
-import edu.aku.hassannaqvi.smk_pwd.contracts.UCsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionABinding;
@@ -86,7 +75,7 @@ public class SectionAActivity extends AppCompatActivity {
 
     public void populateSpinner(final Context context) {
         // Spinner Drop down elements
-        districtNames = new ArrayList<>();
+        /*districtNames = new ArrayList<>();
         districtCodes = new ArrayList<>();
         districtTypes = new ArrayList<>();
 
@@ -205,7 +194,7 @@ public class SectionAActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
-        });
+        });*/
 
     }
 
@@ -222,7 +211,7 @@ public class SectionAActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        if (!fc.get_ID().equals("")) return true;
+        /*if (!fc.get_ID().equals("")) return true;
 
         long updcount = db.addForm(fc);
         fc.set_ID(String.valueOf(updcount));
@@ -233,7 +222,8 @@ public class SectionAActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
 
     }
 
@@ -243,65 +233,93 @@ public class SectionAActivity extends AppCompatActivity {
         if (!fc.get_ID().equals("")) return;
 
         fc = new FormsContract();
-
         fc.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
-
         fc.setUserName(MainApp.userName);
-
         fc.setA01(MainApp.userName);
-
         fc.setDeviceID(MainApp.appInfo.getDeviceID());
-
         fc.setDevicetagID(MainApp.appInfo.getTagName());
-
         fc.setAppversion(MainApp.appInfo.getAppVersion());
 
-        fc.setA03d(bi.a03d.getText().toString().trim().isEmpty() ? "-1" : bi.a03d.getText().toString());
-        fc.setA03m(bi.a03m.getText().toString().trim().isEmpty() ? "-1" : bi.a03m.getText().toString());
+       /* form.setAa01d(bi.aa01d.getText().toString());
+        form.setAa01m(bi.aa01m.getText().toString());
+        form.setAa01y(bi.aa01y.getText().toString());
+        form.setAa02( bi.aa02a.isChecked() ? "1"
+                : bi.aa02b.isChecked() ? "2"
+                : bi.aa02c.isChecked() ? "3"
+                :  "-1");
 
-        fc.setDistrictCode(districtCodes.get(bi.a07.getSelectedItemPosition()));
-        fc.setA07(districtCodes.get(bi.a07.getSelectedItemPosition()));
-        fc.setDistrictType(districtTypes.get(bi.a07.getSelectedItemPosition()));
+        form.setAa03( bi.aa03a.isChecked() ? "101"
+                : bi.aa03b.isChecked() ? "102"
+                : bi.aa03c.isChecked() ? "201"
+                : bi.aa03d.isChecked() ? "202"
+                : bi.aa03e.isChecked() ? "203"
+                : bi.aa03f.isChecked() ? "204"
+                : bi.aa03g.isChecked() ? "205"
+                : bi.aa03h.isChecked() ? "206"
+                : bi.aa03i.isChecked() ? "301"
+                : bi.aa03j.isChecked() ? "302"
+                :  "-1");
 
-        fc.setUcCode(ucCodes.get(bi.a09.getSelectedItemPosition()));
-        fc.setA09(ucCodes.get(bi.a09.getSelectedItemPosition()));
+        form.setAa04(bi.aa04.getText().toString());
 
-        fc.setTehsilCode(tehsilCodes.get(bi.a08.getSelectedItemPosition()));
-        fc.setA08(tehsilCodes.get(bi.a08.getSelectedItemPosition()));
+        form.setAa05(bi.aa05.getText().toString());
 
-        fc.setHfCode(hfMap.get(bi.a13.getSelectedItem().toString()));
-        fc.setHfName(bi.a13.getSelectedItem().toString());
-        fc.setA12(hfMap.get(bi.a13.getSelectedItem().toString()));
-        fc.setA13(bi.a13.getSelectedItem().toString());
+        form.setAa06( bi.aa06a.isChecked() ? "1"
+                : bi.aa06b.isChecked() ? "2"
+                : bi.aa06c.isChecked() ? "3"
+                : bi.aa06d.isChecked() ? "4"
+                :  "-1");
 
-        fc.setA10(bi.a10a.isChecked() ? "1"
-                : bi.a10b.isChecked() ? "2"
-                : "-1");
+        form.setAa07(bi.aa07.getText().toString());
 
-        fc.setA11(bi.a11a.isChecked() ? "1"
-                : bi.a11b.isChecked() ? "2"
-                : "-1");
+        form.setAa08( bi.aa08a.isChecked() ? "1"
+                : bi.aa08b.isChecked() ? "2"
+                :  "-1");
+
+        form.setAa09( bi.aa09a.isChecked() ? "1"
+                : bi.aa09b.isChecked() ? "2"
+                :  "-1");
+
+        form.setAa10(bi.aa10.getText().toString());
+
+        form.setAa11( bi.aa11a.isChecked() ? "1"
+                : bi.aa11b.isChecked() ? "2"
+                :  "-1");
+
+        form.setAa12( bi.aa12a.isChecked() ? "1"
+                : bi.aa12b.isChecked() ? "2"
+                : bi.aa12c.isChecked() ? "3"
+                : bi.aa12d.isChecked() ? "4"
+                :  "-1");
+
+        form.setAa13(bi.aa13.getText().toString());
+
+        form.setAa14( bi.aa14a.isChecked() ? "1"
+                : bi.aa14b.isChecked() ? "2"
+                : bi.aa14c.isChecked() ? "3"
+                : bi.aa14d.isChecked() ? "4"
+                : bi.aa14e.isChecked() ? "5"
+                :  "-1");*/
 
         MainApp.setGPS(this); // Set GPS
+
     }
 
 
     private boolean formValidation() {
-        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
-            return false;
-        }
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
 
-        if (db.CheckHF(String.valueOf(hfMap.get(bi.a13.getSelectedItem().toString())))) {
+       /* if (db.CheckHF(String.valueOf(hfMap.get(bi.a13.getSelectedItem().toString())))) {
             Toast.makeText(this, "Facility Already filled ", Toast.LENGTH_LONG).show();
             return false;
-        }
+        }*/
 
-        fc = db.CheckHF(String.valueOf(hfMap.get(bi.a13.getSelectedItem().toString())), "1");
+       /* fc = db.CheckHF(String.valueOf(hfMap.get(bi.a13.getSelectedItem().toString())), "1");
         if (fc == null) {
             Toast.makeText(this, "Partially filled Facility ", Toast.LENGTH_LONG).show();
             return true;
-        }
-        return true;
+        }*/
+
     }
 
 }

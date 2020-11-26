@@ -15,20 +15,20 @@ import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC1Binding;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC2Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
-public class SectionC1Activity extends AppCompatActivity {
+public class SectionC2Activity extends AppCompatActivity {
 
-    ActivitySectionC1Binding bi;
+    ActivitySectionC2Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c1);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c2);
         bi.setCallback(this);
     }
 
@@ -45,14 +45,31 @@ public class SectionC1Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
         JSONObject json = new JSONObject();
-        json.put("ca01", bi.ca01a.isChecked() ? "1"
-                : bi.ca01b.isChecked() ? "2"
+        json.put("cb01", bi.cb01a.isChecked() ? "1"
+                : bi.cb01b.isChecked() ? "2"
+                : bi.cb01c.isChecked() ? "3"
+                : bi.cb01d.isChecked() ? "4"
                 : "-1");
 
-        json.put("ca02", bi.ca02a.isChecked() ? "1"
-                : bi.ca02b.isChecked() ? "2"
+        json.put("cb02", bi.cb02a.isChecked() ? "1"
+                : bi.cb02b.isChecked() ? "2"
+                : bi.cb02c.isChecked() ? "3"
+                : bi.cb02d.isChecked() ? "4"
+                : bi.cb02e.isChecked() ? "5"
                 : "-1");
 
+        json.put("cb03", bi.cb03a.isChecked() ? "1"
+                : bi.cb03b.isChecked() ? "2"
+                : "-1");
+
+        json.put("cb04", bi.cb04a.isChecked() ? "1"
+                : bi.cb04b.isChecked() ? "2"
+                : "-1");
+
+        json.put("cb05", bi.cb05a.isChecked() ? "1"
+                : bi.cb05b.isChecked() ? "2"
+                : bi.cb05c.isChecked() ? "3"
+                : "-1");
         fc.setsC(String.valueOf(json));
     }
 

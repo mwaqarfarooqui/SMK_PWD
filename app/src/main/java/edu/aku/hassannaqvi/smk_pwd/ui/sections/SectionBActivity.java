@@ -2,30 +2,25 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
+import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
-import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
-import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionBBinding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
+import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
+import static java.lang.Float.parseFloat;
 
 public class SectionBActivity extends AppCompatActivity {
 
@@ -37,12 +32,13 @@ public class SectionBActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_b);
         bi.setCallback(this);
         setupSkips();
+        setupTextWatchers();
     }
 
 
     private void setupSkips() {
 
-        if (fc.getA10().equals("1")) {
+        /*if (fc.getA10().equals("1")) {
             bi.a17h.setVisibility(View.GONE);
             bi.a17i.setVisibility(View.GONE);
             bi.a17j.setVisibility(View.GONE);
@@ -60,12 +56,68 @@ public class SectionBActivity extends AppCompatActivity {
 
         bi.a18.setOnCheckedChangeListener(((radioGroup, i) -> {
             Clear.clearAllFields(bi.fldGrpCVa19);
-        }));
+        }));*/
+
+    }
 
 
-        bi.b02.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.fldGrpS01);
-        }));
+    private void setupTextWatchers() {
+        editTextImplementation(bi.ba01a1, new EditTextPicker[]{bi.ba01a2, bi.ba01a4, bi.ba01a5}, bi.ba01a3);
+        editTextImplementation(bi.ba01b1, new EditTextPicker[]{bi.ba01b2, bi.ba01b4, bi.ba01b5}, bi.ba01b3);
+        editTextImplementation(bi.ba01c1, new EditTextPicker[]{bi.ba01c2, bi.ba01c4, bi.ba01c5}, bi.ba01c3);
+        editTextImplementation(bi.ba01d1, new EditTextPicker[]{bi.ba01d2, bi.ba01d4, bi.ba01d5}, bi.ba01d3);
+        editTextImplementation(bi.ba01e1, new EditTextPicker[]{bi.ba01e2, bi.ba01e4, bi.ba01e5}, bi.ba01e3);
+        editTextImplementation(bi.ba01f1, new EditTextPicker[]{bi.ba01f2, bi.ba01f4, bi.ba01f5}, bi.ba01f3);
+        editTextImplementation(bi.ba01g1, new EditTextPicker[]{bi.ba01g2, bi.ba01g4, bi.ba01g5}, bi.ba01g3);
+        editTextImplementation(bi.ba01h1, new EditTextPicker[]{bi.ba01h2, bi.ba01h4, bi.ba01h5}, bi.ba01h3);
+    }
+
+
+    public void editTextImplementation(EditTextPicker edit01, EditTextPicker[] editTextsArray, EditTextPicker edit02) {
+
+        edit01.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (TextUtils.isEmpty(edit01.getText()))
+                    return;
+                for (EditTextPicker item : editTextsArray) {
+                    item.setMaxvalue(Integer.parseInt(edit01.getText().toString().trim()));
+                }
+            }
+        });
+
+
+        editTextsArray[0].addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (TextUtils.isEmpty(edit01.getText()) || TextUtils.isEmpty(editTextsArray[0].getText()))
+                    return;
+                edit02.setText("");
+                edit02.setEnabled(false);
+                editTextsArray[1].setMaxvalue(Integer.parseInt(editTextsArray[0].getText().toString().trim()));
+                editTextsArray[2].setMaxvalue(Integer.parseInt(editTextsArray[0].getText().toString().trim()));
+                edit02.setText(String.valueOf(parseFloat(edit01.getText().toString().trim()) - parseFloat(editTextsArray[0].getText().toString().trim())));
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
 
     }
 
@@ -83,16 +135,21 @@ public class SectionBActivity extends AppCompatActivity {
         }
     }
 
+    public void BtnEnd() {
+        openSectionMainActivity(this, "D");
+    }
+
 
     private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SB, fc.getsB());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
 
@@ -100,76 +157,46 @@ public class SectionBActivity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
-        json.put("a14", bi.a14a.isChecked() ? "1"
-                : bi.a14b.isChecked() ? "2"
-                : "-1");
-
-        json.put("BDate", new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date().getTime()));
-        json.put("BTime", new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date().getTime()));
-
-        json.put("a15", bi.a15a.isChecked() ? "1"
-                : bi.a15b.isChecked() ? "2"
-                : "-1");
-
-        json.put("a16", bi.a16.getText().toString().trim().isEmpty() ? "-1" : bi.a16.getText().toString());
-
-        json.put("a17", bi.a17a.isChecked() ? "1"
-                : bi.a17b.isChecked() ? "2"
-                : bi.a17c.isChecked() ? "3"
-                : bi.a17d.isChecked() ? "4"
-                : bi.a17e.isChecked() ? "5"
-                : bi.a17f.isChecked() ? "6"
-                : bi.a17g.isChecked() ? "7"
-                : bi.a17h.isChecked() ? "8"
-                : bi.a17i.isChecked() ? "9"
-                : bi.a17j.isChecked() ? "10"
-                : "-1");
-
-        json.put("a18", bi.a18a.isChecked() ? "1"
-                : bi.a18b.isChecked() ? "2"
-                : bi.a18c.isChecked() ? "3"
-                : bi.a18d.isChecked() ? "4"
-                : bi.a18x.isChecked() ? "96"
-                : "-1");
-        json.put("a18xx", bi.a18xx.getText().toString().trim().isEmpty() ? "-1" : bi.a18xx.getText().toString());
-
-        json.put("a19", bi.a19a.isChecked() ? "1"
-                : bi.a19b.isChecked() ? "2"
-                : bi.a19c.isChecked() ? "3"
-                : bi.a19d.isChecked() ? "4"
-                : bi.a19e.isChecked() ? "5"
-                : bi.a19f.isChecked() ? "6"
-                : bi.a19g.isChecked() ? "7"
-                : bi.a19x.isChecked() ? "96"
-                : "-1");
-        json.put("a19xx", bi.a19xx.getText().toString().trim().isEmpty() ? "-1" : bi.a19xx.getText().toString());
-
-        json.put("a20", bi.a20a.isChecked() ? "1"
-                : bi.a20b.isChecked() ? "2"
-                : "-1");
-
-        json.put("a21", bi.a21.getText().toString().trim().isEmpty() ? "-1" : bi.a21.getText().toString());
-
-        json.put("a22", bi.a22a.isChecked() ? "1"
-                : bi.a22b.isChecked() ? "2"
-                : bi.a22c.isChecked() ? "3"
-                : bi.a22d.isChecked() ? "4"
-                : bi.a22e.isChecked() ? "5"
-                : "-1");
-
-        json.put("b01", bi.b01a.isChecked() ? "1"
-                : bi.b01b.isChecked() ? "2"
-                : "-1");
-
-        json.put("b02", bi.b02a.isChecked() ? "1"
-                : bi.b02b.isChecked() ? "2"
-                : "-1");
-
-        json.put("b03", bi.b03.getText().toString().trim().isEmpty() ? "-1" : bi.b03.getText().toString());
-        json.put("b04", bi.b04.getText().toString().trim().isEmpty() ? "-1" : bi.b04.getText().toString());
-        json.put("b05", bi.b05.getText().toString().trim().isEmpty() ? "-1" : bi.b05.getText().toString());
-
-        fc.setsB(String.valueOf(json));
+       /* form.setBa01a1(bi.ba01a1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a1.getText().toString());
+        form.setBa01a2(bi.ba01a2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a2.getText().toString());
+        form.setBa01a3(bi.ba01a3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a3.getText().toString());
+        form.setBa01a4(bi.ba01a4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a4.getText().toString());
+        form.setBa01a5(bi.ba01a5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a5.getText().toString());
+        form.setBa01b1(bi.ba01b1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b1.getText().toString());
+        form.setBa01b2(bi.ba01b2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b2.getText().toString());
+        form.setBa01b3(bi.ba01b3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b3.getText().toString());
+        form.setBa01b4(bi.ba01b4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b4.getText().toString());
+        form.setBa01b5(bi.ba01b5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b5.getText().toString());
+        form.setBa01c1(bi.ba01c1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c1.getText().toString());
+        form.setBa01c2(bi.ba01c2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c2.getText().toString());
+        form.setBa01c3(bi.ba01c3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c3.getText().toString());
+        form.setBa01c4(bi.ba01c4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c4.getText().toString());
+        form.setBa01c5(bi.ba01c5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c5.getText().toString());
+        form.setBa01d1(bi.ba01d1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d1.getText().toString());
+        form.setBa01d2(bi.ba01d2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d2.getText().toString());
+        form.setBa01d3(bi.ba01d3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d3.getText().toString());
+        form.setBa01d4(bi.ba01d4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d4.getText().toString());
+        form.setBa01d5(bi.ba01d5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d5.getText().toString());
+        form.setBa01e1(bi.ba01e1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e1.getText().toString());
+        form.setBa01e2(bi.ba01e2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e2.getText().toString());
+        form.setBa01e3(bi.ba01e3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e3.getText().toString());
+        form.setBa01e4(bi.ba01e4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e4.getText().toString());
+        form.setBa01e5(bi.ba01e5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e5.getText().toString());
+        form.setBa01f1(bi.ba01f1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f1.getText().toString());
+        form.setBa01f2(bi.ba01f2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f2.getText().toString());
+        form.setBa01f3(bi.ba01f3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f3.getText().toString());
+        form.setBa01f4(bi.ba01f4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f4.getText().toString());
+        form.setBa01f5(bi.ba01f5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f5.getText().toString());
+        form.setBa01g1(bi.ba01g1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g1.getText().toString());
+        form.setBa01g2(bi.ba01g2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g2.getText().toString());
+        form.setBa01g3(bi.ba01g3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g3.getText().toString());
+        form.setBa01g4(bi.ba01g4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g4.getText().toString());
+        form.setBa01g5(bi.ba01g5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g5.getText().toString());
+        form.setBa01h1(bi.ba01h1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h1.getText().toString());
+        form.setBa01h2(bi.ba01h2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h2.getText().toString());
+        form.setBa01h3(bi.ba01h3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h3.getText().toString());
+        form.setBa01h4(bi.ba01h4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h4.getText().toString());
+        form.setBa01h5(bi.ba01h5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h5.getText().toString());*/
 
     }
 
