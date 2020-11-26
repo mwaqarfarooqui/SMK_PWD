@@ -142,7 +142,7 @@ public class SectionH1Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
+        /*JSONObject json = new JSONObject();
 
         json.put("HDate", new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date().getTime()));
         json.put("HTime", new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date().getTime()));
@@ -161,7 +161,7 @@ public class SectionH1Activity extends AppCompatActivity {
         json.put("h0101cb", bi.h0101cb.getText().toString().trim().isEmpty() ? "-1" : bi.h0101cb.getText().toString());
 
         MainApp.fc.setsH(String.valueOf(json));
-
+*/
     }
 
 
