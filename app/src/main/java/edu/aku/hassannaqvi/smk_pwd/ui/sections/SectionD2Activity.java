@@ -41,50 +41,92 @@ public class SectionD2Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.d0201.setOnCheckedChangeListener(((radioGroup, i) -> {
+      /*  bi.d0201.setOnCheckedChangeListener(((radioGroup, i) -> {
             Clear.clearAllFields(bi.cvd0202);
             Clear.clearAllFields(bi.cvd0203);
-        }));
+        }));*/
 
     }
 
 
     private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, MainApp.fc.getsD());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
     }
 
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
+/*
+        form.setDb01( bi.db01a.isChecked() ? "1"
+                : bi.db01b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("d0201", bi.d0201a.isChecked() ? "1"
-                : bi.d0201b.isChecked() ? "2"
-                : "-1");
+        form.setDb02( bi.db02a.isChecked() ? "1"
+                : bi.db02b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("d0202", bi.d0202a.isChecked() ? "1"
-                : bi.d0202b.isChecked() ? "2"
-                : "-1");
+        form.setDb03( bi.db03a.isChecked() ? "1"
+                : bi.db03b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("d0203", bi.d0203a.isChecked() ? "1"
-                : bi.d0203b.isChecked() ? "2"
-                : "-1");
+        form.setDb04( bi.db04a.isChecked() ? "1"
+                : bi.db04b.isChecked() ? "2"
+                :  "-1");
 
-        try {
-            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsD()), json);
+        form.setDb05( bi.db05a.isChecked() ? "1"
+                : bi.db05b.isChecked() ? "2"
+                :  "-1");
 
-            fc.setsD(String.valueOf(json_merge));
+        form.setDb06( bi.db06a.isChecked() ? "1"
+                : bi.db06b.isChecked() ? "2"
+                :  "-1");
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        form.setDb07( bi.db07a.isChecked() ? "1"
+                : bi.db07b.isChecked() ? "2"
+                :  "-1");
+
+        form.setDb08( bi.db08a.isChecked() ? "1"
+                : bi.db08b.isChecked() ? "2"
+                :  "-1");
+
+        form.setDb09( bi.db09a.isChecked() ? "1"
+                : bi.db09b.isChecked() ? "2"
+                :  "-1");
+
+        form.setDb10( bi.db10a.isChecked() ? "1"
+                : bi.db10b.isChecked() ? "2"
+                :  "-1");
+
+        form.setDb11( bi.db11a.isChecked() ? "1"
+                : bi.db11b.isChecked() ? "2"
+                :  "-1");
+
+        form.setDb12( bi.db12a.isChecked() ? "1"
+                : bi.db12b.isChecked() ? "2"
+                : bi.db12c.isChecked() ? "3"
+                :  "-1");
+
+        form.setDb13( bi.db13a.isChecked() ? "1"
+                : bi.db13b.isChecked() ? "2"
+                :  "-1");
+
+        form.setDb14(bi.db14.getText().toString());
+
+        form.setDb15(bi.db15.getText().toString());
+
+        form.setDb16( bi.db16a.isChecked() ? "1"
+                : bi.db1696.isChecked() ? "96"
+                :  "-1");
+
+        form.setDb1696x(bi.db1696x.getText().toString());*/
+
     }
 
 
