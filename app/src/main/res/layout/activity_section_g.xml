@@ -277,7 +277,8 @@
             <!-- ga04  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVga04"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{ga03a.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
