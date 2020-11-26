@@ -21,13 +21,13 @@ import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionG1Binding;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionGBinding;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 
 public class SectionGActivity extends AppCompatActivity {
 
-    ActivitySectionG1Binding bi;
+    ActivitySectionGBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,94 +62,128 @@ public class SectionGActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
 
-        json.put("GDate", new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date().getTime()));
-        json.put("GTime", new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date().getTime()));
+       /* form.setGa01( bi.ga01a.isChecked() ? "1"
+                : bi.ga01b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("g0101", bi.g0101a.isChecked() ? "1"
-                : bi.g0101b.isChecked() ? "2"
-                : bi.g0101c.isChecked() ? "3"
-                : bi.g0101d.isChecked() ? "4"
-                : bi.g0101e.isChecked() ? "5"
-                : bi.g0101f.isChecked() ? "6"
-                : bi.g0101x.isChecked() ? "96"
-                : "-1");
-        json.put("g0101xx", bi.g0101xx.getText().toString().trim().isEmpty() ? "-1" : bi.g0101xx.getText().toString());
+        form.setGa02d(bi.ga02d.getText().toString());
+        form.setGa02m(bi.ga02m.getText().toString());
+        form.setGa02y(bi.ga02y.getText().toString());
+        form.setGa02h(bi.ga02h.getText().toString());
+        form.setGa02mi(bi.ga02mi.getText().toString());
+        form.setGa02s(bi.ga02s.getText().toString());
+        form.setGa03( bi.ga03a.isChecked() ? "1"
+                : bi.ga03b.isChecked() ? "2"
+                :  "-1");
 
+        form.setGa04( bi.ga04a.isChecked() ? "1"
+                : bi.ga04b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("g0102", bi.g0102a.isChecked() ? "1"
-                : bi.g0102b.isChecked() ? "2"
-                : "-1");
+        form.setGa05( bi.ga05a.isChecked() ? "1"
+                : bi.ga05b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("g0103", bi.g0103a.isChecked() ? "1"
-                : bi.g0103b.isChecked() ? "98"
-                : bi.g0103x.isChecked() ? "96"
-                : "-1");
-        json.put("g0103xx", bi.g0103xx.getText().toString().trim().isEmpty() ? "-1" : bi.g0103xx.getText().toString());
+        form.setGa06y(bi.ga06y.getText().toString());
+        form.setGa06m(bi.ga06m.getText().toString());
+        form.setGa07( bi.ga07a.isChecked() ? "1"
+                : bi.ga07b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("g0104", bi.g0104a.isChecked() ? "1"
-                : bi.g0104b.isChecked() ? "2"
-                : bi.g0104c.isChecked() ? "3"
-                : bi.g0104d.isChecked() ? "4"
-                : bi.g0104e.isChecked() ? "5"
-                : bi.g0104f.isChecked() ? "6"
-                : bi.g0104g.isChecked() ? "7"
-                : "-1");
+        form.setGa08a( bi.ga08aa.isChecked() ? "1"
+                : bi.ga08ab.isChecked() ? "2"
+                : bi.ga08ac.isChecked() ? "3"
+                : bi.ga08ad.isChecked() ? "4"
+                : bi.ga08ae.isChecked() ? "5"
+                :  "-1");
 
-        json.put("g0105ax", bi.g0105ax.getText().toString().trim().isEmpty() ? "-1" : bi.g0105ax.getText().toString());
-        json.put("g0105bx", bi.g0105bx.getText().toString().trim().isEmpty() ? "-1" : bi.g0105bx.getText().toString());
+        form.setGa08b( bi.ga08ba.isChecked() ? "1"
+                : bi.ga08bb.isChecked() ? "2"
+                : bi.ga08bc.isChecked() ? "3"
+                : bi.ga08bd.isChecked() ? "4"
+                : bi.ga08be.isChecked() ? "5"
+                :  "-1");
 
-        json.put("g0106", bi.g0106a.isChecked() ? "1"
-                : bi.g0106b.isChecked() ? "2"
-                : bi.g0106c.isChecked() ? "3"
-                : bi.g0106d.isChecked() ? "4"
-                : bi.g0106x.isChecked() ? "96"
-                : "-1");
-        json.put("g0106xx", bi.g0106xx.getText().toString().trim().isEmpty() ? "-1" : bi.g0106xx.getText().toString());
+        form.setGa08c( bi.ga08ca.isChecked() ? "1"
+                : bi.ga08cb.isChecked() ? "2"
+                : bi.ga08cc.isChecked() ? "3"
+                : bi.ga08cd.isChecked() ? "4"
+                : bi.ga08ce.isChecked() ? "5"
+                :  "-1");
 
-        json.put("g0107", bi.g0107a.isChecked() ? "1"
-                : bi.g0107b.isChecked() ? "2"
-                : bi.g0107c.isChecked() ? "3"
-                : bi.g0107x.isChecked() ? "96"
-                : "-1");
-        json.put("g0107xx", bi.g0107xx.getText().toString().trim().isEmpty() ? "-1" : bi.g0107xx.getText().toString());
+        form.setGa08d( bi.ga08da.isChecked() ? "1"
+                : bi.ga08db.isChecked() ? "2"
+                : bi.ga08dc.isChecked() ? "3"
+                : bi.ga08dd.isChecked() ? "4"
+                : bi.ga08de.isChecked() ? "5"
+                :  "-1");
 
-        json.put("g0108", bi.g0108a.isChecked() ? "1"
-                : bi.g0108b.isChecked() ? "2"
-                : bi.g0108c.isChecked() ? "3"
-                : bi.g0108d.isChecked() ? "4"
-                : "-1");
+        form.setGa08e( bi.ga08ea.isChecked() ? "1"
+                : bi.ga08eb.isChecked() ? "2"
+                : bi.ga08ec.isChecked() ? "3"
+                : bi.ga08ed.isChecked() ? "4"
+                : bi.ga08ee.isChecked() ? "5"
+                :  "-1");
 
-        json.put("g0109ax", bi.g0109ax.getText().toString().trim().isEmpty() ? "-1" : bi.g0109ax.getText().toString());
-        json.put("g0109bx", bi.g0109bx.getText().toString().trim().isEmpty() ? "-1" : bi.g0109bx.getText().toString());
+        form.setGa08f( bi.ga08fa.isChecked() ? "1"
+                : bi.ga08fb.isChecked() ? "2"
+                : bi.ga08fc.isChecked() ? "3"
+                : bi.ga08fd.isChecked() ? "4"
+                : bi.ga08fe.isChecked() ? "5"
+                :  "-1");
 
-        json.put("g01110", bi.g01110a.isChecked() ? "1"
-                : bi.g01110b.isChecked() ? "2"
-                : "-1");
+        form.setGa09( bi.ga09a.isChecked() ? "1"
+                : bi.ga09b.isChecked() ? "2"
+                : bi.ga09c.isChecked() ? "3"
+                :  "-1");
 
-        json.put("g01111", bi.g01111a.isChecked() ? "1"
-                : bi.g01111b.isChecked() ? "2"
-                : bi.g01111c.isChecked() ? "3"
-                : "-1");
+        form.setGa09bx(bi.ga09bx.getText().toString());
+        form.setGa09cx(bi.ga09cx.getText().toString());
+        form.setGa10( bi.ga10a.isChecked() ? "1"
+                : bi.ga10b.isChecked() ? "2"
+                : bi.ga10c.isChecked() ? "3"
+                :  "-1");
 
-        json.put("g01112", bi.g01112a.isChecked() ? "1"
-                : bi.g01112b.isChecked() ? "2"
-                : bi.g01112c.isChecked() ? "3"
-                : "-1");
+        form.setGa10bx(bi.ga10bx.getText().toString());
+        form.setGa10cx(bi.ga10cx.getText().toString());
+        form.setGa11( bi.ga11a.isChecked() ? "1"
+                : bi.ga11b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("g01113", bi.g01113a.isChecked() ? "1"
-                : bi.g01113b.isChecked() ? "2"
-                : "-1");
+        form.setGa11ax(bi.ga11ax.getText().toString());
+        form.setGa11bx(bi.ga11bx.getText().toString());
+        form.setGa12( bi.ga12a.isChecked() ? "1"
+                : bi.ga12b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("g01114", bi.g01114a.isChecked() ? "1"
-                : bi.g01114b.isChecked() ? "2"
-                : bi.g01114c.isChecked() ? "3"
-                : bi.g01114d.isChecked() ? "4"
-                : bi.g01114e.isChecked() ? "5"
-                : "-1");
+        form.setGa13( bi.ga13a.isChecked() ? "1"
+                : bi.ga13b.isChecked() ? "2"
+                :  "-1");
 
-        MainApp.fc.setsG(String.valueOf(json));
+        form.setGa14( bi.ga14a.isChecked() ? "1"
+                : bi.ga14b.isChecked() ? "2"
+                : bi.ga14c.isChecked() ? "3"
+                :  "-1");
+
+        form.setGa14ax(bi.ga14ax.getText().toString());
+        form.setGa14bx(bi.ga14bx.getText().toString());
+        form.setGa14cx(bi.ga14cx.getText().toString());
+        form.setGa15( bi.ga15a.isChecked() ? "1"
+                : bi.ga15b.isChecked() ? "2"
+                : bi.ga15c.isChecked() ? "3"
+                : bi.ga15d.isChecked() ? "4"
+                : bi.ga15e.isChecked() ? "5"
+                : bi.ga15f.isChecked() ? "6"
+                : bi.ga1596.isChecked() ? "96"
+                :  "-1");
+
+        form.setGa1596x(bi.ga1596x.getText().toString());
+        form.setGa16( bi.ga16a.isChecked() ? "1"
+                : bi.ga16b.isChecked() ? "2"
+                :  "-1");
+*/
+
 
     }
 
