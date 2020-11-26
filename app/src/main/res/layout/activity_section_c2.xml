@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <!-- seccbtitle  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVseccbtitle"
@@ -37,6 +38,7 @@
                         android:text="@string/seccbtitle" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cb01  Radio   -->
             <androidx.cardview.widget.CardView
@@ -101,6 +103,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cb02  Radio   -->
             <androidx.cardview.widget.CardView
@@ -172,6 +175,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cb03  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcb03"
@@ -207,22 +211,29 @@
                     <RadioGroup
                         android:id="@+id/cb03"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/cb03a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/cb03a" />
 
                         <RadioButton
                             android:id="@+id/cb03b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/cb03b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- cb04  Radio   -->
             <androidx.cardview.widget.CardView
@@ -259,22 +270,29 @@
                     <RadioGroup
                         android:id="@+id/cb04"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/cb04a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/cb04a" />
 
                         <RadioButton
                             android:id="@+id/cb04b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/cb04b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- cb05  Radio   -->
             <androidx.cardview.widget.CardView
@@ -332,7 +350,10 @@
                             android:text="@string/cb05c" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            </androidx.cardview.widget.CardView>
+
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -360,6 +381,10 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
+
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>

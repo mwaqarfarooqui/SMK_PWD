@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <!-- seccgtitle  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVseccgtitle"
@@ -39,6 +40,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- hint  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhint"
@@ -55,6 +57,7 @@
                         android:text="@string/hint" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg01  Radio   -->
             <androidx.cardview.widget.CardView
@@ -128,6 +131,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg02  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg02"
@@ -199,6 +203,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg03  Radio   -->
             <androidx.cardview.widget.CardView
@@ -272,6 +277,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg04  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg04"
@@ -343,6 +349,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg05  Radio   -->
             <androidx.cardview.widget.CardView
@@ -416,6 +423,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg06  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg06"
@@ -487,6 +495,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg07  Radio   -->
             <androidx.cardview.widget.CardView
@@ -560,6 +569,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg08  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg08"
@@ -631,6 +641,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg09  Radio   -->
             <androidx.cardview.widget.CardView
@@ -704,6 +715,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg10  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg10"
@@ -775,6 +787,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg11  Radio   -->
             <androidx.cardview.widget.CardView
@@ -848,6 +861,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg12  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg12"
@@ -919,6 +933,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg13  Radio   -->
             <androidx.cardview.widget.CardView
@@ -992,6 +1007,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg14  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg14"
@@ -1063,6 +1079,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg15  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1136,6 +1153,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg16  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg16"
@@ -1207,6 +1225,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg17  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1280,6 +1299,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg18  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg18"
@@ -1351,6 +1371,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg19  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1424,6 +1445,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg20  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg20"
@@ -1495,6 +1517,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- cg21  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1568,6 +1591,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg22  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg22"
@@ -1640,6 +1664,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- cg23  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcg23"
@@ -1710,7 +1735,10 @@
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            </androidx.cardview.widget.CardView>
+
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1738,6 +1766,10 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
+
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>

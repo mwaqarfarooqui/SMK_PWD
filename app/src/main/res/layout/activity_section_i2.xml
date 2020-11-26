@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <!-- secibtitle  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVsecibtitle"
@@ -38,6 +39,7 @@
                         android:text="@string/secibtitle" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- ib01  Radio   -->
             <androidx.cardview.widget.CardView
@@ -147,6 +149,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- ib02  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVib02"
@@ -246,6 +249,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- ib03  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVib03"
@@ -343,6 +347,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- ib04  Radio   -->
             <androidx.cardview.widget.CardView
@@ -442,6 +447,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- ib05  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVib05"
@@ -539,6 +545,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- ib06  Radio   -->
             <androidx.cardview.widget.CardView
@@ -638,6 +645,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- ib07  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVib07"
@@ -736,6 +744,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- ib08  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVib08"
@@ -832,7 +841,10 @@
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            </androidx.cardview.widget.CardView>
+
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -860,6 +872,10 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
+
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
