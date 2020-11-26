@@ -142,26 +142,75 @@ public class SectionH1Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        /*JSONObject json = new JSONObject();
 
-        json.put("HDate", new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date().getTime()));
-        json.put("HTime", new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date().getTime()));
+        /*form.setHa01( bi.ha01a.isChecked() ? "1"
+                : bi.ha01b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("h0101a", bi.h0101a.getText().toString().trim().isEmpty() ? "-1" : bi.h0101a.getText().toString());
-        json.put("h0101b", bi.h0101b.getText().toString().trim().isEmpty() ? "-1" : bi.h0101b.getText().toString());
-        json.put("h0101c", bi.h0101c.getText().toString().trim().isEmpty() ? "-1" : bi.h0101c.getText().toString());
+        form.setHa02( bi.ha02a.isChecked() ? "1"
+                : bi.ha02b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("h0101aa", bi.h0101aa.getText().toString().trim().isEmpty() ? "-1" : bi.h0101aa.getText().toString());
-        json.put("h0101ab", bi.h0101ab.getText().toString().trim().isEmpty() ? "-1" : bi.h0101ab.getText().toString());
+        form.setHa03( bi.ha03a.isChecked() ? "1"
+                : bi.ha03b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("h0101ba", bi.h0101ba.getText().toString().trim().isEmpty() ? "-1" : bi.h0101ba.getText().toString());
-        json.put("h0101bb", bi.h0101bb.getText().toString().trim().isEmpty() ? "-1" : bi.h0101bb.getText().toString());
+        form.setHa04( bi.ha04a.isChecked() ? "1"
+                : bi.ha04b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("h0101ca", bi.h0101ca.getText().toString().trim().isEmpty() ? "-1" : bi.h0101ca.getText().toString());
-        json.put("h0101cb", bi.h0101cb.getText().toString().trim().isEmpty() ? "-1" : bi.h0101cb.getText().toString());
+        form.setHa05( bi.ha05a.isChecked() ? "1"
+                : bi.ha05b.isChecked() ? "2"
+                :  "-1");
 
-        MainApp.fc.setsH(String.valueOf(json));
-*/
+        form.setHa06( bi.ha06a.isChecked() ? "1"
+                : bi.ha06b.isChecked() ? "2"
+                :  "-1");
+
+        form.setHa07( bi.ha07a.isChecked() ? "1"
+                : bi.ha07b.isChecked() ? "2"
+                :  "-1");
+
+        form.setHa08( bi.ha08a.isChecked() ? "1"
+                : bi.ha08b.isChecked() ? "2"
+                :  "-1");
+
+        form.setHa09( bi.ha09a.isChecked() ? "1"
+                : bi.ha09b.isChecked() ? "2"
+                :  "-1");
+
+        form.setHa10( bi.ha10a.isChecked() ? "1"
+                : bi.ha10b.isChecked() ? "2"
+                :  "-1");
+
+        form.setHa11( bi.ha11a.isChecked() ? "1"
+                : bi.ha11b.isChecked() ? "2"
+                :  "-1");
+
+        form.setHa12( bi.ha12a.isChecked() ? "1"
+                : bi.ha12b.isChecked() ? "2"
+                :  "-1");
+
+        form.setHa13( bi.ha13a.isChecked() ? "1"
+                : bi.ha13b.isChecked() ? "2"
+                :  "-1");
+
+        form.setHa14a(bi.ha14a.isChecked() ? "1" : "-1");
+
+        form.setHa14b(bi.ha14b.isChecked() ? "2" : "-1");
+
+        form.setHa14c(bi.ha14c.isChecked() ? "3" : "-1");
+
+        form.setHa14d(bi.ha14d.isChecked() ? "4" : "-1");
+
+        form.setHa14e(bi.ha14e.isChecked() ? "5" : "-1");
+
+        form.setHa14f(bi.ha14f.isChecked() ? "6" : "-1");
+
+        form.setHa1496(bi.ha1496.isChecked() ? "96" : "-1");
+
+        form.setHa1496x(bi.ha1496x.getText().toString());*/
+
     }
 
 

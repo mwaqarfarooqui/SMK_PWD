@@ -44,7 +44,7 @@ public class SectionH2Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionH31Activity.class));
+            startActivity(new Intent(this, SectionH3Activity.class));
         }
     }
 
@@ -63,37 +63,43 @@ public class SectionH2Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
 
-        json.put("h0201", bi.h0201a.isChecked() ? "1"
-                : bi.h0201b.isChecked() ? "2"
-                : "-1");
+       /* form.setHb01( bi.hb01a.isChecked() ? "1"
+                : bi.hb01b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("h0202", bi.h0202a.isChecked() ? "1"
-                : bi.h0202b.isChecked() ? "2"
-                : bi.h0202c.isChecked() ? "3"
-                : "-1");
+        form.setHb02( bi.hb02a.isChecked() ? "1"
+                : bi.hb02b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("h0203a", bi.h0203aa.isChecked() ? "1"
-                : bi.h0203ab.isChecked() ? "2"
-                : bi.h0203ac.isChecked() ? "3"
-                : bi.h0203ad.isChecked() ? "4"
-                : "-1");
+        form.setHb03( bi.hb03a.isChecked() ? "1"
+                : bi.hb03b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("h0203b", bi.h0203ba.isChecked() ? "1"
-                : bi.h0203bb.isChecked() ? "2"
-                : bi.h0203bc.isChecked() ? "3"
-                : bi.h0203bd.isChecked() ? "4"
-                : "-1");
+        form.setHb04( bi.hb04a.isChecked() ? "1"
+                : bi.hb04b.isChecked() ? "2"
+                :  "-1");
 
-        try {
-            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsH()), json);
+        form.setHb05( bi.hb05a.isChecked() ? "1"
+                : bi.hb05b.isChecked() ? "2"
+                :  "-1");
 
-            fc.setsH(String.valueOf(json_merge));
+        form.setHb06( bi.hb06a.isChecked() ? "1"
+                : bi.hb06b.isChecked() ? "2"
+                :  "-1");
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        form.setHb07a(bi.hb07a.isChecked() ? "1" : "-1");
+
+        form.setHb07b(bi.hb07b.isChecked() ? "2" : "-1");
+
+        form.setHb07c(bi.hb07c.isChecked() ? "3" : "-1");
+
+        form.setHb07d(bi.hb07d.isChecked() ? "4" : "-1");
+
+        form.setHb0796(bi.hb0796.isChecked() ? "96" : "-1");
+
+        form.setHb0796x(bi.hb0796x.getText().toString());*/
+
 
     }
 
