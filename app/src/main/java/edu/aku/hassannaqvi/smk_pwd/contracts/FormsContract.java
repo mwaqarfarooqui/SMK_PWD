@@ -80,8 +80,6 @@ public class FormsContract {
     private String sG;
     private String sH;
     private String sI;
-    private String sJ;
-    private String sK;
 
 
     public FormsContract() {
@@ -178,8 +176,6 @@ public class FormsContract {
         this.sG = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SG));
         this.sH = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SH));
         this.sI = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SI));
-        this.sJ = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SJ));
-        this.sK = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SK));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
         this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS88x));
         this.endingdatetime = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ENDINGDATETIME));
@@ -293,10 +289,6 @@ public class FormsContract {
         }*/
         json.put(FormsTable.COLUMN_SI, this.sI == null ? JSONObject.NULL : this.sI);
 
-        if (this.sJ != null && !this.sJ.equals("")) {
-            json.put(FormsTable.COLUMN_SJ, new JSONObject(this.sJ));
-        }
-
         return json;
     }
 
@@ -321,10 +313,6 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_DEVICEID, this.deviceID == null ? JSONObject.NULL : this.deviceID);
         json.put(FormsTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
         json.put(FormsTable.COLUMN_APPVERSION, this.appversion == null ? JSONObject.NULL : this.appversion);
-
-        if (this.sK != null && !this.sK.equals("")) {
-            json.put(FormsTable.COLUMN_SK, new JSONObject(this.sK));
-        }
 
         return json;
     }
@@ -596,24 +584,6 @@ public class FormsContract {
     }
 
 
-    public String getsJ() {
-        return sJ;
-    }
-
-    public void setsJ(String sJ) {
-        this.sJ = sJ;
-    }
-
-
-    public String getsK() {
-        return sK;
-    }
-
-    public void setsK(String sK) {
-        this.sK = sK;
-    }
-
-
     public String getIstatus() {
         return istatus;
     }
@@ -762,8 +732,6 @@ public class FormsContract {
         public static final String COLUMN_SG = "sG";
         public static final String COLUMN_SH = "sH";
         public static final String COLUMN_SI = "sI";
-        public static final String COLUMN_SJ = "sJ";
-        public static final String COLUMN_SK = "sK";
         public static final String COLUMN_ISTATUS = "istatus";
         public static final String COLUMN_ISTATUS88x = "istatus88x";
         public static final String COLUMN_ENDINGDATETIME = "endingdatetime";

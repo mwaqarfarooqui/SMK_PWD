@@ -636,8 +636,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SG, fc.getsG());
         values.put(FormsTable.COLUMN_SH, fc.getsH());
         values.put(FormsTable.COLUMN_SI, fc.getsI());
-        values.put(FormsTable.COLUMN_SJ, fc.getsJ());
-        values.put(FormsTable.COLUMN_SK, fc.getsK());
         values.put(FormsTable.COLUMN_ISTATUS, fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
         values.put(FormsTable.COLUMN_ENDINGDATETIME, fc.getEndingdatetime());
@@ -926,8 +924,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SG,
                 FormsTable.COLUMN_SH,
                 FormsTable.COLUMN_SI,
-                FormsTable.COLUMN_SJ,
-                FormsTable.COLUMN_SK,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_GPSLAT,
                 FormsTable.COLUMN_GPSLNG,
@@ -1006,8 +1002,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SG,
                 FormsTable.COLUMN_SH,
                 FormsTable.COLUMN_SI,
-                FormsTable.COLUMN_SJ,
-                FormsTable.COLUMN_SK,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_GPSLAT,
                 FormsTable.COLUMN_GPSLNG,
@@ -1086,8 +1080,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SG,
                 FormsTable.COLUMN_SH,
                 FormsTable.COLUMN_SI,
-                FormsTable.COLUMN_SJ,
-                FormsTable.COLUMN_SK,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS88x,
                 FormsTable.COLUMN_ENDINGDATETIME,

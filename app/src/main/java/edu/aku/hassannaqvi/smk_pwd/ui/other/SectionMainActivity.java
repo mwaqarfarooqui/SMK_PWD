@@ -25,8 +25,6 @@ import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionG1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH16Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionI1Activity;
-import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionJ1Activity;
-import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionK1Activity;
 import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
@@ -106,16 +104,6 @@ public class SectionMainActivity extends AppCompatActivity {
             bi.form08.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (fc.getsJ() != null) {
-            bi.form09.setEnabled(false);
-            bi.form09.setBackgroundResource(R.color.dullWhite);
-        }
-
-        if (fc.getsK() != null) {
-            bi.form10.setEnabled(false);
-            bi.form10.setBackgroundResource(R.color.dullWhite);
-        }
-
 
     }
 
@@ -133,9 +121,7 @@ public class SectionMainActivity extends AppCompatActivity {
                 && !bi.form05.isEnabled()
                 && !bi.form06.isEnabled()
                 && !bi.form07.isEnabled()
-                && !bi.form08.isEnabled()
-                && !bi.form09.isEnabled()
-                && !bi.form10.isEnabled()) {
+                && !bi.form08.isEnabled()) {
             finish();
             startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
         } else {
@@ -152,9 +138,7 @@ public class SectionMainActivity extends AppCompatActivity {
                 || bi.form05.isEnabled()
                 || bi.form06.isEnabled()
                 || bi.form07.isEnabled()
-                || bi.form08.isEnabled()
-                || bi.form09.isEnabled()
-                || bi.form10.isEnabled()) {
+                || bi.form08.isEnabled()) {
             finish();
             startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
             //MainApp.endActivity(this, EndingActivity.class).putExtra("complete", false);
@@ -193,12 +177,6 @@ public class SectionMainActivity extends AppCompatActivity {
                 case R.id.form08:
                     countI = 0;
                     oF = new Intent(this, SectionI1Activity.class);
-                    break;
-                case R.id.form09:
-                        oF = new Intent(this, SectionJ1Activity.class);
-                    break;
-                case R.id.form10:
-                    oF = new Intent(this, SectionK1Activity.class);
                     break;
             }
             startActivity(oF);

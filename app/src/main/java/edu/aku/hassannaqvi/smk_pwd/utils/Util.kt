@@ -86,8 +86,6 @@ fun openSectionMainActivity(activity: Activity, item: String) {
             "G" -> MainApp.fc.setsG(null)
             "H" -> MainApp.fc.setsH(null)
             "I" -> MainApp.fc.setsI(null)
-            "J" -> MainApp.fc.setsJ(null)
-            "K" -> MainApp.fc.setsK(null)
         }
 
         activity.finish()
