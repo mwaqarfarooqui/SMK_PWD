@@ -209,7 +209,7 @@
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH31Activity"
+            android:name="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH3Activity"
             android:label="@string/modhtitle"
             android:screenOrientation="portrait" />
         <activity

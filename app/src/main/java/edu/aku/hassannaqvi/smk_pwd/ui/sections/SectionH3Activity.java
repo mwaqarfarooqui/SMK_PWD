@@ -19,21 +19,21 @@ import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionH31Binding;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionH3Binding;
 import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 
-public class SectionH31Activity extends AppCompatActivity {
+public class SectionH3Activity extends AppCompatActivity {
 
-    ActivitySectionH31Binding bi;
+    ActivitySectionH3Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_h31);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_h3);
         bi.setCallback(this);
 
     }
@@ -68,7 +68,7 @@ public class SectionH31Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-
+/*
         json.put("h3101m1", bi.h3101m1.getText().toString().trim().isEmpty() ? "-1" : bi.h3101m1.getText().toString());
         json.put("h3101m2", bi.h3101m2.getText().toString().trim().isEmpty() ? "-1" : bi.h3101m2.getText().toString());
         json.put("h3101m3", bi.h3101m3.getText().toString().trim().isEmpty() ? "-1" : bi.h3101m3.getText().toString());
@@ -171,7 +171,7 @@ public class SectionH31Activity extends AppCompatActivity {
 
         json.put("h3113q1", bi.h3113q1y.isChecked() ? "1"
                 : bi.h3113q1n.isChecked() ? "2"
-                : "-1");
+                : "-1");*/
 
         try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsH()), json);
