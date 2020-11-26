@@ -3,7 +3,6 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -212,7 +211,7 @@ public class SectionAActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        if (!fc.get_ID().equals("")) return true;
+        /*if (!fc.get_ID().equals("")) return true;
 
         long updcount = db.addForm(fc);
         fc.set_ID(String.valueOf(updcount));
@@ -223,7 +222,8 @@ public class SectionAActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
 
     }
 
