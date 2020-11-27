@@ -32,7 +32,10 @@ public class SectionC4Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.cd02.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc402));
+        bi.cd02.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc202));
+
+        bi.cd04.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc402));
+
     }
 
     private boolean UpdateDB() {

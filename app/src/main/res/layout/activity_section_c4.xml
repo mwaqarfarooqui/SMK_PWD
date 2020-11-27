@@ -186,7 +186,7 @@
 
         <!--cd0202 Skip-->
         <LinearLayout
-            android:id="@+id/fldGrpc402"
+            android:id="@+id/fldGrpc202"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -325,6 +325,13 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+        <!--cd0202 Skip-->
+        <LinearLayout
+            android:id="@+id/fldGrpc402"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility='@{cd04n.checked? View.GONE : View.VISIBLE}'>
 
             <!-- cd05  Radio   -->
             <androidx.cardview.widget.CardView
@@ -391,7 +398,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
+        </LinearLayout>
 
             <!-- cd06  Radio   -->
             <androidx.cardview.widget.CardView
