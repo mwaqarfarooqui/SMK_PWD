@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,6 +33,12 @@ public class SectionD1Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
+
+        bi.da01.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.da01b.getId()) {
+                Clear.clearAllFields(bi.fldGrpskipda01b);
+            }
+        }));
     }
 
 
@@ -423,7 +430,10 @@ public class SectionD1Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionD2Activity.class));
+            startActivity(new Intent(this, bi.da01b.isChecked() ? SectionD2Activity.class : SectionE101Activity.class));
+          /*  startActivity(new Intent(this, SectionD2Activity.class));*/
+
+
         }
     }
 
