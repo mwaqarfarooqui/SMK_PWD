@@ -424,6 +424,8 @@ public class SectionD1Activity extends AppCompatActivity {
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionD2Activity.class));
+
+            // startActivity(new Intent(this, bi.raf601.isChecked() ? SectionF03Activity.class : SectionF04Activity.class);
         }
     }
 
