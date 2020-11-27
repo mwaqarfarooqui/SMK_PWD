@@ -45,6 +45,16 @@ public class SectionD2Activity extends AppCompatActivity {
             Clear.clearAllFields(bi.cvd0202);
             Clear.clearAllFields(bi.cvd0203);
         }));*/
+        bi.da14.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.da14b.getId()) {
+                Clear.clearAllFields(bi.fldGrpskipda14b);
+            }
+        }));
+        bi.da19aa.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.da19aab.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVda19af);
+            }
+        }));
 
     }
 
