@@ -36,6 +36,10 @@ public class SectionC4Activity extends AppCompatActivity {
 
         bi.cd04.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc402));
 
+        bi.cd06.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc602));
+
+//        bi.cd08.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc802));
+
     }
 
     private boolean UpdateDB() {
