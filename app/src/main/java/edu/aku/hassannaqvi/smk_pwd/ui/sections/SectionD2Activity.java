@@ -46,15 +46,36 @@ public class SectionD2Activity extends AppCompatActivity {
             Clear.clearAllFields(bi.cvd0203);
         }));*/
         bi.da14.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.da14b.getId()) {
+            if (i == bi.da14b.getId()) {
                 Clear.clearAllFields(bi.fldGrpskipda14b);
             }
         }));
         bi.da19aa.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.da19aab.getId()) {
+            if (i == bi.da19aab.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVda19af);
             }
         }));
+        bi.da19ba.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.da19bab.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVda19bf);
+            }
+        }));
+        bi.da19ca.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.da19cab.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVda19cf);
+            }
+        }));
+        bi.da19da.setOnCheckedChangeListener(((radioGroup,i)->{
+            if (i == bi.da19dab.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVda19df);
+            }
+        }));
+        bi.da20aa.setOnCheckedChangeListener(((radioGroup,i)->{
+            if (i == bi.da20aab.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVda20af);
+            }
+        }));
+
 
     }
 

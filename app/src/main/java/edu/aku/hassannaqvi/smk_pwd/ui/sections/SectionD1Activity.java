@@ -35,7 +35,7 @@ public class SectionD1Activity extends AppCompatActivity {
     private void setupSkips() {
 
         bi.da01.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.da01b.getId()) {
+            if (i == bi.da01b.getId()) {
                 Clear.clearAllFields(bi.fldGrpskipda01b);
             }
         }));

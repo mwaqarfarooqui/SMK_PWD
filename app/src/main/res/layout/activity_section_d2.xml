@@ -490,7 +490,8 @@
             <!-- da19bf  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVda19bf"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{da19bab.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -594,7 +595,8 @@
             <!-- da19cf  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVda19cf"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{da19cab.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -698,7 +700,8 @@
             <!-- da19df  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVda19df"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{da19dab.checked? View.GONE :View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -802,7 +805,8 @@
             <!-- da19ef  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVda19ef"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{da19eab.checked?View.GONE:View.VISIBLE }'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -923,7 +927,8 @@
             <!-- da20af  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVda20af"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{da20aab.checked?View.GONE:View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
