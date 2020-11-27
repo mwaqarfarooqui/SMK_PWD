@@ -38,7 +38,7 @@ public class SectionC4Activity extends AppCompatActivity {
 
         bi.cd06.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc602));
 
-//        bi.cd08.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc802));
+        bi.cd08.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc802));
 
     }
 
