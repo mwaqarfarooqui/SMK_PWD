@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -26,6 +27,12 @@ public class SectionC5Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c5);
         bi.setCallback(this);
+        setupSkips();
+    }
+
+    private void setupSkips() {
+
+        bi.ce05.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc505));
     }
 
     private boolean UpdateDB() {
