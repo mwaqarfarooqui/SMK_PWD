@@ -4,14 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
@@ -50,21 +49,26 @@ public class SectionF6Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-
-        json.put("f0601", bi.f0601a.isChecked() ? "1"
-                : bi.f0601b.isChecked() ? "2"
+        json.put("ff01", bi.ff01a.isChecked() ? "1"
+                : bi.ff01b.isChecked() ? "2"
                 : "-1");
 
-        json.put("f0602", bi.f0602a.isChecked() ? "1"
-                : bi.f0602b.isChecked() ? "2"
+        json.put("ff02d", bi.ff02d.getText().toString());
+
+        json.put("ff03", bi.ff03a.isChecked() ? "1"
+                : bi.ff03b.isChecked() ? "2"
                 : "-1");
 
-        json.put("f0603", bi.f0603a.isChecked() ? "1"
-                : bi.f0603b.isChecked() ? "2"
+        json.put("ff04", bi.ff04a.isChecked() ? "1"
+                : bi.ff04b.isChecked() ? "2"
                 : "-1");
 
-        json.put("f0604", bi.f0604a.isChecked() ? "1"
-                : bi.f0604b.isChecked() ? "2"
+        json.put("ff05", bi.ff05a.isChecked() ? "1"
+                : bi.ff05b.isChecked() ? "2"
+                : "-1");
+
+        json.put("ff06", bi.ff06a.isChecked() ? "1"
+                : bi.ff06b.isChecked() ? "2"
                 : "-1");
 
         try {
