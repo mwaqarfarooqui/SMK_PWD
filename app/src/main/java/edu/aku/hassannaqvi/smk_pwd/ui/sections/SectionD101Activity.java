@@ -430,10 +430,7 @@ public class SectionD101Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, bi.da01b.isChecked() ? SectionD102Activity.class : SectionD2Activity.class));
-          /*  startActivity(new Intent(this, SectionD2Activity.class));*/
-
-
+            startActivity(new Intent(this, bi.da01b.isChecked() ? SectionD2Activity.class : SectionD102Activity.class));
         }
     }
 

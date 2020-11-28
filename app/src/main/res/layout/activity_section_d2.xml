@@ -36,6 +36,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/secdbtitle" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -118,7 +119,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/hint1" />
+                            android:text="@string/hintdb1" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -136,7 +137,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/hint2" />
+                            android:text="@string/hintdb2" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -679,7 +680,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/hint3" />
+                            android:gravity="center"
+                            android:text="@string/hintdb3" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -754,7 +756,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/hint4" />
+                            android:gravity="center"
+                            android:text="@string/hintdb4" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

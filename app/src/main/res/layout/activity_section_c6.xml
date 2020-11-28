@@ -35,6 +35,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/seccftitle" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -280,7 +281,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/hint" />
+                        android:gravity="center"
+                        android:text="@string/hintcf" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

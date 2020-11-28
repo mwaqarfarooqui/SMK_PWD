@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -14,7 +13,6 @@ import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionBBinding;
@@ -155,15 +153,13 @@ public class SectionBActivity extends AppCompatActivity {
     }
 
 
-    @Override
+    /*@Override
     public void onBackPressed() {
         Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
 
     private void SaveDraft() throws JSONException {
-
-        JSONObject json = new JSONObject();
 
        /* form.setBa01a1(bi.ba01a1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a1.getText().toString());
         form.setBa01a2(bi.ba01a2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a2.getText().toString());

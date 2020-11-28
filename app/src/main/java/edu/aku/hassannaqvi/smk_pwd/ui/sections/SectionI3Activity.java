@@ -18,8 +18,8 @@ import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionI3Activity extends AppCompatActivity {
-    ActivitySectionI3Binding bi;
 
+    ActivitySectionI3Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

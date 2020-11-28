@@ -22,23 +22,6 @@
             android:orientation="vertical">
 
 
-            <!-- modititle  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVmodititle"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/modititle" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
 
             <!-- seciatitle  Title   -->
             <androidx.cardview.widget.CardView
@@ -53,6 +36,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/seciatitle" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

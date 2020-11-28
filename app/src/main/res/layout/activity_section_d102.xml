@@ -35,7 +35,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/hint4" />
+                        android:gravity="center"
+                        android:text="@string/hintda4" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -92,7 +93,6 @@
             </androidx.cardview.widget.CardView>
 
             <!--Skip Pattern on da14b-->
-
             <LinearLayout
                 android:id="@+id/fldGrpskipda14b"
                 android:layout_width="match_parent"
@@ -314,7 +314,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/hint5" />
+                        android:text="@string/hintda5" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -331,6 +331,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/da19" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -873,6 +874,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/da20" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1626,6 +1628,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/da21" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

@@ -547,7 +547,7 @@
     <string name="da18">What was the Organization Name Who Conduct those Training?</string>
     <string name="da18a">AKU</string>
     <string name="da1896">Others (Specify)</string>
-    <string name="hint5">I would like to know if the following basic equipment items are available in this service area (for IUCD, Implant, Vasectomy and Tubal Ligation) today. For each equipment or item, please tell me if it is available today and functioning. Ask to see the items</string>
+    <string name="hintda5">I would like to know if the following basic equipment items are available in this service area (for IUCD, Implant, Vasectomy and Tubal Ligation) today. For each equipment or item, please tell me if it is available today and functioning. Ask to see the items</string>
     <string name="da19">PPIUCD Insertion Kit Instruments</string>
     <string name="da19aa">Kidney Dish 700ml clear - Availability</string>
     <string name="da19aaa">Yes</string>
@@ -806,12 +806,12 @@
     <string name="db11">Maternal health care, including safe motherhood and pre &amp; post abortion care to avoid complications</string>
     <string name="db11a">Yes</string>
     <string name="db11b">No</string>
-    <string name="hint3">Please tell me if the following documents are available in the facility today:If available, ask to see the document</string>
+    <string name="hintdb3">Please tell me if the following documents are available in the facility today:If available, ask to see the document</string>
     <string name="db12">Do you have the national guidelines for service provision to adolescents available in this facility today? IF AVAILABLE, ASK TO SEE THE DOCUMENT</string>
     <string name="db12a">YES, OBSERVED</string>
     <string name="db12b">YES, REPORTED NOT SEEN</string>
     <string name="db12c">NO</string>
-    <string name="hint4">Have you or any provider(s):</string>
+    <string name="hintdb4">Have you or any provider(s):</string>
     <string name="db13">Have you or any providers of adolescent health services received any training on the provision of adolescent health services in the last two years?</string>
     <string name="db13a">Yes</string>
     <string name="db13b">No</string>
