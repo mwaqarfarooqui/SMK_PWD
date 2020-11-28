@@ -97,6 +97,7 @@
                             android:text="@string/ib01c" />
 
                         <LinearLayout
+                            android:id="@+id/llgrp1b01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
@@ -117,9 +118,9 @@
                                 android:maxLength="3"
                                 android:tag="ib01d"
                                 android:text='@{ib01d.checked ? ib01dx.getText().toString() : ""}'
-
                                 android:visibility='@{ib01d.checked? View.VISIBLE : View.GONE}'
                                 app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
 
                             <RadioButton
@@ -137,9 +138,9 @@
                                 android:maxLength="3"
                                 android:tag="ib01e"
                                 android:text='@{ib01e.checked ? ib01ex.getText().toString() : ""}'
-
                                 android:visibility='@{ib01e.checked? View.VISIBLE : View.GONE}'
                                 app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -147,6 +148,7 @@
                     </RadioGroup>
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -221,9 +223,9 @@
                             android:maxLength="3"
                             android:tag="ib02d"
                             android:text='@{ib02d.checked ? ib02dx.getText().toString() : ""}'
-
                             android:visibility='@{ib02d.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -241,9 +243,9 @@
                             android:maxLength="3"
                             android:tag="ib02e"
                             android:text='@{ib02e.checked ? ib02ex.getText().toString() : ""}'
-
                             android:visibility='@{ib02e.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -320,9 +322,9 @@
                             android:maxLength="3"
                             android:tag="ib03d"
                             android:text='@{ib03d.checked ? ib03dx.getText().toString() : ""}'
-
                             android:visibility='@{ib03d.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -340,9 +342,9 @@
                             android:maxLength="3"
                             android:tag="ib03e"
                             android:text='@{ib03e.checked ? ib03ex.getText().toString() : ""}'
-
                             android:visibility='@{ib03e.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -419,9 +421,9 @@
                             android:maxLength="3"
                             android:tag="ib04d"
                             android:text='@{ib04d.checked ? ib04dx.getText().toString() : ""}'
-
                             android:visibility='@{ib04d.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -439,9 +441,9 @@
                             android:maxLength="3"
                             android:tag="ib04e"
                             android:text='@{ib04e.checked ? ib04ex.getText().toString() : ""}'
-
                             android:visibility='@{ib04e.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -518,9 +520,9 @@
                             android:maxLength="3"
                             android:tag="ib05d"
                             android:text='@{ib05d.checked ? ib05dx.getText().toString() : ""}'
-
                             android:visibility='@{ib05d.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -538,9 +540,9 @@
                             android:maxLength="3"
                             android:tag="ib05e"
                             android:text='@{ib05e.checked ? ib05ex.getText().toString() : ""}'
-
                             android:visibility='@{ib05e.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -617,9 +619,9 @@
                             android:maxLength="3"
                             android:tag="ib06d"
                             android:text='@{ib06d.checked ? ib06dx.getText().toString() : ""}'
-
                             android:visibility='@{ib06d.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -637,9 +639,9 @@
                             android:maxLength="3"
                             android:tag="ib06e"
                             android:text='@{ib06e.checked ? ib06ex.getText().toString() : ""}'
-
                             android:visibility='@{ib06e.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -716,9 +718,9 @@
                             android:maxLength="3"
                             android:tag="ib07d"
                             android:text='@{ib07d.checked ? ib07dx.getText().toString() : ""}'
-
                             android:visibility='@{ib07d.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -736,9 +738,9 @@
                             android:maxLength="3"
                             android:tag="ib07e"
                             android:text='@{ib07e.checked ? ib07ex.getText().toString() : ""}'
-
                             android:visibility='@{ib07e.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -815,9 +817,9 @@
                             android:maxLength="3"
                             android:tag="ib08d"
                             android:text='@{ib08d.checked ? ib08dx.getText().toString() : ""}'
-
                             android:visibility='@{ib08d.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -835,9 +837,9 @@
                             android:maxLength="3"
                             android:tag="ib08e"
                             android:text='@{ib08e.checked ? ib08ex.getText().toString() : ""}'
-
                             android:visibility='@{ib08e.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>

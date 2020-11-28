@@ -2,20 +2,21 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.edittextpicker.aliazaz.EditTextPicker;
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
-import edu.aku.hassannaqvi.smk_pwd.CONSTANTS;
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI2Binding;
-import edu.aku.hassannaqvi.smk_pwd.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivityI;
 
@@ -29,97 +30,50 @@ public class SectionI2Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i2);
         bi.setCallback(this);
         setupSkips();
-        setupContent();
-    }
-
-
-    private void setupContent() {
-
-        /*psc = new PatientsContract();
-
-        bi.hfType.setText(MainApp.fc.getA10().equals("1") ? getString(R.string.hfpublic) : getString(R.string.hfprivate));
-        bi.countI.setText(new StringBuilder("Entries: 0").append(SectionMainActivity.countI));*/
-
-        /*if (MainApp.fc.getA10().equals("1")) {
-            if (SectionMainActivity.paedsCount == 3) bi.i0108a.setEnabled(false);
-            else if (SectionMainActivity.maternalCount == 3) bi.i0108b.setEnabled(false);
-        }*/
+        setupTextWatchers();
     }
 
 
     private void setupSkips() {
 
-        /*bi.i0103.setOnCheckedChangeListener(((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpCVi0104)));
+        bi.ib01.setOnCheckedChangeListener(((radioGroup, i) -> {
+            Clear.clearAllFields(bi.llgrp1b01);
+        }));
 
-        bi.i0110a.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b) {
-                bi.i0110b.setChecked(false);
-                bi.i0110b.setEnabled(false);
-                bi.i0110c.setChecked(false);
-                bi.i0110c.setEnabled(false);
-            } else {
-                bi.i0110b.setEnabled(true);
-                bi.i0110c.setEnabled(true);
-            }
-        });
-
-        bi.i0111a.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b) {
-                bi.i0111b.setChecked(false);
-                bi.i0111b.setEnabled(false);
-                bi.i0111c.setChecked(false);
-                bi.i0111c.setEnabled(false);
-            } else {
-                bi.i0111b.setEnabled(true);
-                bi.i0111c.setEnabled(true);
-            }
-        });*/
-
-        /*bi.i0108.setOnCheckedChangeListener(((radioGroup, i) -> {
-
-            if (i == bi.i0108a.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVi0105);
-                bi.i0105a.setEnabled(true);
-                Clear.clearAllFields(bi.fldGrpCVi0106);
-                bi.i0106a.setMaxvalue(5);
-                bi.i0106a.setMinvalue(0);
-            } else if (i == bi.i0108b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVi0105);
-                bi.i0105a.setEnabled(false);
-                bi.i0105b.setChecked(true);
-                Clear.clearAllFields(bi.fldGrpCVi0106);
-                bi.i0106a.setMaxvalue(49);
-                bi.i0106a.setMinvalue(15);
-            }
-
-        }));*/
+    }
 
 
-        /*bi.i0106a.addTextChangedListener(new TextWatcher() {
+    private void setupTextWatchers() {
+       /* editTextImplementation(bi.k00611q, bi.k00612q);
+        editTextImplementation(bi.k00621q, bi.k00622q);
+        editTextImplementation(bi.k00631q, bi.k00632q);
+        editTextImplementation(bi.k00641q, bi.k00642q);
+        editTextImplementation(bi.k00651q, bi.k00652q);
+        editTextImplementation(bi.k00661q, bi.k00662q);
+        editTextImplementation(bi.k00671q, bi.k00672q);
+        editTextImplementation(bi.k00681q, bi.k00682q);
+        editTextImplementation(bi.k00691q, bi.k00692q);*/
+    }
+
+
+    public void editTextImplementation(EditTextPicker edit01, EditTextPicker edit02) {
+
+        edit01.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
-
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (TextUtils.isEmpty(bi.i0106a.getText()))
+                if (TextUtils.isEmpty(edit01.getText()))
                     return;
-                if (bi.i0108a.isChecked() && Integer.parseInt(bi.i0106a.getText().toString()) == 5) {
-                    bi.i0106b.setMaxvalue(0);
-                } else if (bi.i0108b.isChecked() && Integer.parseInt(bi.i0106a.getText().toString()) == 49) {
-                    bi.i0106b.setMaxvalue(0);
-                } else {
-                    bi.i0106b.setMaxvalue(11);
-                }
-
+                edit02.setMaxvalue(Integer.parseInt(edit01.getText().toString()));
             }
+
             @Override
             public void afterTextChanged(Editable editable) {
             }
-        });*/
-
+        });
 
     }
 
@@ -132,12 +86,8 @@ public class SectionI2Activity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
+            startActivity(new Intent(this, SectionI3Activity.class));
             finish();
-            SectionMainActivity.countI++;
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true).putExtra(CONSTANTS.SECTION_MAIN_CHECK_FOR_END, true)
-                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-        } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -256,32 +206,6 @@ public class SectionI2Activity extends AppCompatActivity {
             }
         }
         return true;*/
-    }
-
-
-    /*@Override
-    public void endSecActivity(boolean flag) {
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
-            finish();
-            SectionMainActivity.countI++;
-            startActivity(new Intent(this, EndingActivity.class).putExtra(SECTION_MAIN_CHECK_FOR_END, true)
-                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-        } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-        }
-    }*/
-
-
-    @Override
-    public void onBackPressed() {
-        if (SectionMainActivity.countI > 0) {
-            Toast.makeText(getApplicationContext(), "Back Press Not Allowed", Toast.LENGTH_LONG).show();
-        } else super.onBackPressed();
     }
 
 }
