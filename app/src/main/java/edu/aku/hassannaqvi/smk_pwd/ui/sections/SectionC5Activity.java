@@ -49,7 +49,7 @@ public class SectionC5Activity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
-        JSONObject json = new JSONObject();
+        /*JSONObject json = new JSONObject();
         json.put("ce01", bi.ce01a.isChecked() ? "1"
                 : bi.ce01b.isChecked() ? "2"
                 :  "-1");
@@ -104,7 +104,7 @@ public class SectionC5Activity extends AppCompatActivity {
         }
         catch (JSONException e){
             e.printStackTrace();
-        }
+        }*/
     }
 
     private boolean formValidation() {

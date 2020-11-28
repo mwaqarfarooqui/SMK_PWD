@@ -13,9 +13,9 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC6Binding;
-import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
+
+
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionC6Activity extends AppCompatActivity {
@@ -42,7 +42,7 @@ public class SectionC6Activity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
-        JSONObject json = new JSONObject();
+       /* JSONObject json = new JSONObject();
         json.put("cf01", bi.cf01a.isChecked() ? "1"
                 : bi.cf01b.isChecked() ? "2"
                 : bi.cf01c.isChecked() ? "3"
@@ -84,7 +84,7 @@ public class SectionC6Activity extends AppCompatActivity {
         }
         catch (JSONException e){
             e.printStackTrace();
-        }
+        }*/
     }
 
     private boolean formValidation() {
