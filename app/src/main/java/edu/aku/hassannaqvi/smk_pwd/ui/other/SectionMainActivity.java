@@ -18,8 +18,8 @@ import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionMainBinding;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionBActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionC1Activity;
-import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD1Activity;
-import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE101Activity;
+import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD101Activity;
+import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionGActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH1Activity;
@@ -159,10 +159,10 @@ public class SectionMainActivity extends AppCompatActivity {
                     oF = new Intent(this, SectionC1Activity.class);
                     break;
                 case R.id.form03:
-                    oF = new Intent(this, SectionD1Activity.class);
+                    oF = new Intent(this, SectionD101Activity.class);
                     break;
                 case R.id.form04:
-                    oF = new Intent(this, SectionE101Activity.class);
+                    oF = new Intent(this, SectionE1Activity.class);
                     break;
                 case R.id.form05:
                     oF = new Intent(this, SectionF1Activity.class);

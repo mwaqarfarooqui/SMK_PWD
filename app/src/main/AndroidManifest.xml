@@ -63,19 +63,11 @@
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionD3Activity"
+            android:name=".ui.sections.SectionD2Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE101Activity"
-            android:label="@string/modetitle"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.sections.SectionE102Activity"
-            android:label="@string/modetitle"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.sections.SectionE103Activity"
+            android:name=".ui.sections.SectionE1Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
@@ -83,39 +75,7 @@
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionE31Activity"
-            android:label="@string/modetitle"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.sections.SectionE32Activity"
-            android:label="@string/modetitle"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.sections.SectionE33Activity"
-            android:label="@string/modetitle"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.sections.SectionE41Activity"
-            android:label="@string/modetitle"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.sections.SectionE42Activity"
-            android:label="@string/modetitle"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.sections.SectionE5Activity"
-            android:label="@string/modetitle"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.sections.SectionE6Activity"
-            android:label="@string/modetitle"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.sections.SectionE7Activity"
-            android:label="@string/modetitle"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.sections.SectionE8Activity"
+            android:name=".ui.sections.SectionE3Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
