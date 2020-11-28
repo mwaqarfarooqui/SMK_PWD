@@ -18,7 +18,7 @@ import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionMainBinding;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionBActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionC1Activity;
-import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD1Activity;
+import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD101Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE101Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionGActivity;
