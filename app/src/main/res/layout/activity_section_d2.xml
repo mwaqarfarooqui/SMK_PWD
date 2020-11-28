@@ -92,6 +92,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+          <!-- Skip Pattern on db01b -->
             <LinearLayout
                 android:id="@+id/fldGrpskipdb01b"
                 android:layout_width="match_parent"
