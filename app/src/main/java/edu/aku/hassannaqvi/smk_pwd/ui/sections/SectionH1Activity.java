@@ -2,17 +2,19 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionH1Binding;
-
 
 public class SectionH1Activity extends AppCompatActivity {
 
@@ -23,84 +25,41 @@ public class SectionH1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_h1);
         bi.setCallback(this);
-        //setupSpinner(this);
         setupSkips();
-
-
-        /*if (!MainApp.fc.getsG().isEmpty()) {
-            bi.h0101a.setText(getMon1());
-            bi.h0101b.setText(getMon2());
-            bi.h0101c.setText(getMon3());
-
-            String[] one = getMon1().split("-");
-            bi.h0101aa.setText(one[0]);
-            bi.h0101ab.setText(one[1]);
-
-            String[] two = getMon2().split("-");
-            bi.h0101ba.setText(two[0]);
-            bi.h0101bb.setText(two[1]);
-
-            String[] three = getMon3().split("-");
-            bi.h0101ca.setText(three[0]);
-            bi.h0101cb.setText(three[1]);
-        }*/
-
     }
 
 
-    /*private void setupSpinner(final Context context) {
-
-        bi.h0101b.setEnabled(false);
-        bi.h0101c.setEnabled(false);
-
-        bi.h0101a.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(getResources().getStringArray(R.array.months_array))));
-        bi.h0101a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                if (position == 0) return;
-                List<String> items = new LinkedList<>(Arrays.asList(getResources().getStringArray(R.array.months_array)));
-                items.remove(bi.h0101a.getSelectedItemPosition());
-                bi.h0101b.setAdapter(new ArrayAdapter<>(SectionH1Activity.this, android.R.layout.simple_spinner_dropdown_item, items));
-                bi.h0101b.setEnabled(true);
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-        bi.h0101b.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                if (position == 0) return;
-                List<String> items = new LinkedList<>(Arrays.asList(getResources().getStringArray(R.array.months_array)));
-                items.remove(bi.h0101a.getSelectedItemPosition());
-                items.remove(bi.h0101b.getSelectedItemPosition());
-                bi.h0101c.setAdapter(new ArrayAdapter<>(SectionH1Activity.this, android.R.layout.simple_spinner_dropdown_item, items));
-                bi.h0101c.setEnabled(true);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-    }*/
-
-
     private void setupSkips() {
+        radioGroup(bi.ha01);
+        radioGroup(bi.ha02);
+        radioGroup(bi.ha03);
+        radioGroup(bi.ha04);
+        radioGroup(bi.ha05);
+        radioGroup(bi.ha06);
+        radioGroup(bi.ha07);
+        radioGroup(bi.ha08);
+        radioGroup(bi.ha09);
+        radioGroup(bi.ha10);
+        radioGroup(bi.ha11);
+        radioGroup(bi.ha12);
+        radioGroup(bi.ha13);
+    }
 
-        /*bi.ss04.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ss04b.getId()) {
-                Clear.clearAllFields(bi.ss05cv, false);
+
+    public void radioGroup(RadioGroup grp) {
+
+        grp.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (bi.ha01b.isChecked() || bi.ha02b.isChecked() || bi.ha03b.isChecked()
+                    || bi.ha04b.isChecked() || bi.ha05b.isChecked() || bi.ha06b.isChecked()
+                    || bi.ha07b.isChecked() || bi.ha08b.isChecked() || bi.ha09b.isChecked()
+                    || bi.ha10b.isChecked() || bi.ha11b.isChecked() || bi.ha12b.isChecked() || bi.ha13b.isChecked()) {
+                Clear.clearAllFields(bi.fldGrpCVha14);
+                bi.fldGrpCVha14.setVisibility(View.VISIBLE);
             } else {
-                Clear.clearAllFields(bi.ss05cv, true);
+                Clear.clearAllFields(bi.fldGrpCVha14);
+                bi.fldGrpCVha14.setVisibility(View.GONE);
             }
-        }));*/
+        }));
 
     }
 
