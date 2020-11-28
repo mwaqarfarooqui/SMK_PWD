@@ -9,14 +9,11 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC7Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
-import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionC7Activity extends AppCompatActivity {
@@ -43,7 +40,7 @@ public class SectionC7Activity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
-        JSONObject json = new JSONObject();
+       /* JSONObject json = new JSONObject();
         json.put("cg01", bi.cg01y.isChecked() ? "1"
                 : bi.cg01n.isChecked() ? "2"
                 : bi.cg01f.isChecked() ? "3"
@@ -190,7 +187,7 @@ public class SectionC7Activity extends AppCompatActivity {
         }
         catch (JSONException e){
             e.printStackTrace();
-        }
+        }*/
     }
 
     private boolean formValidation() {
