@@ -119,106 +119,7 @@ public class SectionD102Activity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpCVda21df);
             }
         }));
-        bi.da22aa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22af);
-            }
-        }));
-        bi.da22ba.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22bf);
-            }
-        }));
-        bi.da22ca.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22cf);
-            }
-        }));
-        bi.da22da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22df);
-            }
-        }));
-        bi.da22ea.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22eab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22ef);
-            }
-        }));
-        bi.da22fa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22fab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22ff);
-            }
-        }));
-        bi.da22ga.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22gab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22gf);
-            }
-        }));
-        bi.da22ha.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22hab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22hf);
-            }
-        }));
-        bi.da23aa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da23aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda23af);
-            }
-        }));
-        bi.da23ba.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da23bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda23bf);
-            }
-        }));
-        bi.da23ca.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da23cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda23cf);
-            }
-        }));
-        bi.da23da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da23dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda23df);
-            }
-        }));
-        bi.da24aa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24af);
-            }
-        }));
-        bi.da24ba.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24bf);
-            }
-        }));
-        bi.da24ca.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24cf);
-            }
-        }));
-        bi.da24da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24df);
-            }
-        }));
-        bi.da24ea.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24eab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24ef);
-            }
-        }));
-        bi.da24fa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24fab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24ff);
-            }
-        }));
-        bi.da24ga.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24gab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24gf);
-            }
-        }));
-        bi.da24ha.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24hab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24hf);
-            }
-        }));
+
 
 
 
@@ -320,7 +221,7 @@ public class SectionD102Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionD2Activity.class));
+            startActivity(new Intent(this, bi.da14a.isChecked() ? SectionD103Activity.class : SectionD2Activity.class));
         }
     }
 

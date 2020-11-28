@@ -663,6 +663,7 @@
                         android:inputType="number"
                         android:maxLength="6"
                         app:maxValue="999999"
+                        app:minValue="0"
 
                         app:type="range" />
                 </LinearLayout>
