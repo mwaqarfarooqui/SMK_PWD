@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
@@ -35,6 +36,16 @@ public class SectionD2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d2);
         bi.setCallback(this);
+    }
+
+
+    private void setupSkips() {
+
+        bi.db01.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.db01b.getId()) {
+                Clear.clearAllFields(bi.fldGrpskipdb01b);
+            }
+        }));
     }
 
 

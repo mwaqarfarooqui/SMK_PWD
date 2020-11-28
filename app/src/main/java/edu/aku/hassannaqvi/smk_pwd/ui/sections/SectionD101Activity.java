@@ -16,12 +16,12 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD1Binding;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD101Binding;
 
 
 public class SectionD101Activity extends AppCompatActivity {
 
-    ActivitySectionD1Binding bi;
+    ActivitySectionD101Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -430,7 +430,7 @@ public class SectionD101Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, bi.da01b.isChecked() ? SectionD2Activity.class : SectionE101Activity.class));
+            startActivity(new Intent(this, bi.da01b.isChecked() ? SectionD102Activity.class : SectionD2Activity.class));
           /*  startActivity(new Intent(this, SectionD2Activity.class));*/
 
 
