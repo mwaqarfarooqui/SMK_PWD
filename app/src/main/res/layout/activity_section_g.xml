@@ -75,18 +75,21 @@
                     <RadioGroup
                         android:id="@+id/ga01"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/ga01a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga01a" />
 
                         <RadioButton
                             android:id="@+id/ga01b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga01b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -102,106 +105,198 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/ga02" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_ga02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_ga02"
+                            android:text="@string/ga02" />
+
+                        <TextView
+                            android:id="@+id/q_ga02"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_ga02"
+                            android:layout_alignBottom="@id/qtxt_ga02"
+                            android:text="@string/Q_ga02" />
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/ga02d" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/ga02d"
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ga02d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ga02d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/ga02d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                app:maxValue="31"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ga02m" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ga02m"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/ga02m"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                app:maxValue="12"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ga02y" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ga02y"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/ga02y"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                app:maxValue="2021"
+                                app:minValue="2020"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/ga02d"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="31"
-                        app:minValue="1"
-                        app:type="range" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ga02m" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/ga02m"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ga02m"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="12"
-                        app:minValue="1"
-                        app:type="range" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ga02h" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ga02y" />
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ga02h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/ga02h"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                app:maxValue="12"
+                                app:minValue="1"
+                                app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/ga02y"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ga02y"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="2021"
-                        app:minValue="2020"
-                        app:type="range" />
+                        </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ga02h" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/ga02h"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ga02h"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="12"
-                        app:minValue="1"
-                        app:type="range" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ga02mi" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ga02mi" />
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ga02mi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/ga02mi"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                app:maxValue="60"
+                                app:minValue="0"
+                                app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/ga02mi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ga02mi"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="60"
+                        </LinearLayout>
 
-                        app:type="range" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ga02s" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ga02s" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/ga02s"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ga02s"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="60"
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ga02s"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/ga02s"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                app:maxValue="60"
+                                app:minValue="0"
+                                app:type="range" />
 
-                        app:type="range" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -345,18 +440,21 @@
                     <RadioGroup
                         android:id="@+id/ga05"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/ga05a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga05a" />
 
                         <RadioButton
                             android:id="@+id/ga05b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga05b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -372,42 +470,87 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/ga06" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ga06y" />
+                        <TextView
+                            android:id="@+id/qtxt_ga06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_ga06"
+                            android:text="@string/ga06" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/ga06y"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ga06y"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="59"
-                        app:minValue="1"
-                        app:type="range" />
+                        <TextView
+                            android:id="@+id/q_ga06"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_ga06"
+                            android:layout_alignBottom="@id/qtxt_ga06"
+                            android:text="@string/Q_ga06" />
+                    </RelativeLayout>
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/ga06m" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/ga06m"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ga06m"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="11"
-                        app:minValue="1"
-                        app:type="range" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ga06y" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ga06y"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/ga06y"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                app:maxValue="59"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ga06m" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ga06m"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/ga06m"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                app:maxValue="11"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -446,18 +589,21 @@
                     <RadioGroup
                         android:id="@+id/ga07"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/ga07a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga07a" />
 
                         <RadioButton
                             android:id="@+id/ga07b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga07b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1138,14 +1284,15 @@
                             android:id="@+id/ga11ax"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/ga11a"
                             android:inputType="number"
                             android:maxLength="4"
                             android:tag="ga11a"
                             android:text='@{ga11a.checked ? ga11ax.getText().toString() : ""}'
-
                             android:visibility='@{ga11a.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="9999"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -1158,14 +1305,15 @@
                             android:id="@+id/ga11bx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/ga11b"
                             android:inputType="number"
                             android:maxLength="4"
                             android:tag="ga11b"
                             android:text='@{ga11b.checked ? ga11bx.getText().toString() : ""}'
-
                             android:visibility='@{ga11b.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="9999"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1258,18 +1406,21 @@
                     <RadioGroup
                         android:id="@+id/ga13"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/ga13a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga13a" />
 
                         <RadioButton
                             android:id="@+id/ga13b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga13b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1322,14 +1473,15 @@
                             android:id="@+id/ga14ax"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/ga14a"
                             android:inputType="number"
                             android:maxLength="4"
                             android:tag="ga14a"
                             android:text='@{ga14a.checked ? ga14ax.getText().toString() : ""}'
-
                             android:visibility='@{ga14a.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="9999"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -1342,14 +1494,15 @@
                             android:id="@+id/ga14bx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/ga14b"
                             android:inputType="number"
                             android:maxLength="4"
                             android:tag="ga14b"
                             android:text='@{ga14b.checked ? ga14bx.getText().toString() : ""}'
-
                             android:visibility='@{ga14b.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="9999"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -1362,14 +1515,15 @@
                             android:id="@+id/ga14cx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/ga14c"
                             android:inputType="number"
                             android:maxLength="4"
                             android:tag="ga14c"
                             android:text='@{ga14c.checked ? ga14cx.getText().toString() : ""}'
-
                             android:visibility='@{ga14c.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="9999"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1502,18 +1656,21 @@
                     <RadioGroup
                         android:id="@+id/ga16"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/ga16a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga16a" />
 
                         <RadioButton
                             android:id="@+id/ga16b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga16b" />
                     </RadioGroup>
                 </LinearLayout>

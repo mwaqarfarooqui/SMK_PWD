@@ -40,6 +40,7 @@ public class SectionC1Activity extends AppCompatActivity {
         return true;
     }
 
+
     private void SaveDraft() throws JSONException {
         JSONObject json = new JSONObject();
         json.put("ca01", bi.ca01a.isChecked() ? "1"
@@ -53,9 +54,11 @@ public class SectionC1Activity extends AppCompatActivity {
         fc.setsC(String.valueOf(json));
     }
 
+
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
+
 
     public void BtnContinue() {
         if (!formValidation()) return;
@@ -69,6 +72,7 @@ public class SectionC1Activity extends AppCompatActivity {
             startActivity(new Intent(this, SectionC2Activity.class));
         }
     }
+
 
     public void BtnEnd() {
         openSectionMainActivity(this, "C");
