@@ -14,16 +14,10 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
-import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
-import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionE2Binding;
-import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionE2Activity extends AppCompatActivity {
@@ -41,99 +35,75 @@ public class SectionE2Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.e0201.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.ll0204d);
-        }));
-
-
-        bi.e0204a.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.ll04b04d);
+        bi.eb03.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.eb03b.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVeb03y);
+            }
         }));
 
     }
 
 
     private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SE, fc.getsE());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
+        /*form.setEb01( bi.eb01a.isChecked() ? "1"
+                : bi.eb01b.isChecked() ? "2"
+                : bi.eb01c.isChecked() ? "3"
+                :  "-1");
 
-        json.put("e0201", bi.e0201a.isChecked() ? "1"
-                : bi.e0201b.isChecked() ? "2"
-                : "-1");
+        form.setEb02( bi.eb02a.isChecked() ? "1"
+                : bi.eb02b.isChecked() ? "2"
+                : bi.eb02c.isChecked() ? "3"
+                :  "-1");
 
-        json.put("e0202a", bi.e0202aa.isChecked() ? "1"
-                : bi.e0202ab.isChecked() ? "2"
-                : "-1");
+        form.setEb03( bi.eb03a.isChecked() ? "1"
+                : bi.eb03b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("e0202b", bi.e0202ba.isChecked() ? "1"
-                : bi.e0202bb.isChecked() ? "2"
-                : "-1");
+        form.setEb03t(bi.eb03t.getText().toString());
+        form.setEb04( bi.eb04a.isChecked() ? "1"
+                : bi.eb04b.isChecked() ? "2"
+                : bi.eb04c.isChecked() ? "3"
+                :  "-1");
 
-        json.put("e0202c", bi.e0202ca.isChecked() ? "1"
-                : bi.e0202cb.isChecked() ? "2"
-                : "-1");
+        form.setEb05( bi.eb05a.isChecked() ? "1"
+                : bi.eb05b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("e0202d", bi.e0202da.isChecked() ? "1"
-                : bi.e0202db.isChecked() ? "2"
-                : "-1");
+        form.setEb06( bi.eb06a.isChecked() ? "1"
+                : bi.eb06b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("e0202e", bi.e0202ea.isChecked() ? "1"
-                : bi.e0202eb.isChecked() ? "2"
-                : "-1");
+        form.setEb07( bi.eb07a.isChecked() ? "1"
+                : bi.eb07b.isChecked() ? "2"
+                : bi.eb07c.isChecked() ? "3"
+                :  "-1");
 
-        json.put("e0202f", bi.e0202fa.isChecked() ? "1"
-                : bi.e0202fb.isChecked() ? "2"
-                : "-1");
+        form.setEb08a(bi.eb08a.isChecked() ? "1" : "-1");
 
-        json.put("e0203a", bi.e0203aa.isChecked() ? "1"
-                : bi.e0203ab.isChecked() ? "2"
-                : bi.e0203ac.isChecked() ? "3"
-                : "-1");
+        form.setEb08b(bi.eb08b.isChecked() ? "2" : "-1");
 
-        json.put("e0203b", bi.e0203ba.isChecked() ? "1"
-                : bi.e0203bb.isChecked() ? "2"
-                : bi.e0203bc.isChecked() ? "3"
-                : "-1");
+        form.setEb08c(bi.eb08c.isChecked() ? "3" : "-1");
 
-        json.put("e0204a", bi.e0204aa.isChecked() ? "1"
-                : bi.e0204ab.isChecked() ? "2"
-                : "-1");
+        form.setEb08d(bi.eb08d.isChecked() ? "4" : "-1");
 
-        json.put("e0204b", bi.e0204b.getText().toString().trim().isEmpty() ? "-1" : bi.e0204b.getText().toString());
+        form.setEb0896(bi.eb0896.isChecked() ? "96" : "-1");
 
-        json.put("e0204c", bi.e0204c.getText().toString().trim().isEmpty() ? "-1" : bi.e0204c.getText().toString());
+        form.setEb0896x(bi.eb0896x.getText().toString());*/
 
-        json.put("e0204d", bi.e0204da.isChecked() ? "1"
-                : bi.e0204dx.isChecked() ? "96"
-                : "-1");
-        json.put("e0204dxx", bi.e0204dxx.getText().toString().trim().isEmpty() ? "-1" : bi.e0204dxx.getText().toString());
-
-        try {
-            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsE()), json);
-
-            fc.setsE(String.valueOf(json_merge));
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-
-    private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
 
@@ -146,7 +116,7 @@ public class SectionE2Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionE31Activity.class));
+            startActivity(new Intent(this, SectionE3Activity.class));
         }
     }
 
@@ -156,9 +126,8 @@ public class SectionE2Activity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
+    private boolean formValidation() {
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
 

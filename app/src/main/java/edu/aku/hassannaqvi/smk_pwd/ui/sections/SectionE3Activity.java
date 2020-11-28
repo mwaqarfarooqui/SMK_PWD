@@ -16,18 +16,19 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionE102Binding;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionE3Binding;
+import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
-public class SectionE102Activity extends AppCompatActivity {
+public class SectionE3Activity extends AppCompatActivity {
 
-    ActivitySectionE102Binding bi;
+    ActivitySectionE3Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e102);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e3);
         bi.setCallback(this);
         setupSkips();
     }
@@ -35,9 +36,39 @@ public class SectionE102Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.eb03.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.eb03b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVeb03y);
+        bi.ec01a.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ec01y.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVec02s);
+            }
+        }));
+
+        bi.ec03a.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ec03y.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVec04s);
+            }
+        }));
+
+        bi.ec05a.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ec05y.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVec06s);
+            }
+        }));
+
+        bi.ec07a.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ec07y.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVec08s);
+            }
+        }));
+
+        bi.ec09a.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ec09y.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVec10s);
+            }
+        }));
+
+        bi.ec11a.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ec11y.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVec12s);
             }
         }));
 
@@ -59,50 +90,42 @@ public class SectionE102Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        /*form.setEb01( bi.eb01a.isChecked() ? "1"
-                : bi.eb01b.isChecked() ? "2"
-                : bi.eb01c.isChecked() ? "3"
+       /* form.setEc01a( bi.ec01y.isChecked() ? "1"
+                : bi.ec01n.isChecked() ? "2"
                 :  "-1");
 
-        form.setEb02( bi.eb02a.isChecked() ? "1"
-                : bi.eb02b.isChecked() ? "2"
-                : bi.eb02c.isChecked() ? "3"
+        form.setEc02d(bi.ec02d.getText().toString());
+        form.setEc02m(bi.ec02m.getText().toString());
+        form.setEc03a( bi.ec03y.isChecked() ? "1"
+                : bi.ec03n.isChecked() ? "2"
                 :  "-1");
 
-        form.setEb03( bi.eb03a.isChecked() ? "1"
-                : bi.eb03b.isChecked() ? "2"
+        form.setEc04d(bi.ec04d.getText().toString());
+        form.setEc04m(bi.ec04m.getText().toString());
+        form.setEc05a( bi.ec05y.isChecked() ? "1"
+                : bi.ec05n.isChecked() ? "2"
                 :  "-1");
 
-        form.setEb03t(bi.eb03t.getText().toString());
-        form.setEb04( bi.eb04a.isChecked() ? "1"
-                : bi.eb04b.isChecked() ? "2"
-                : bi.eb04c.isChecked() ? "3"
+        form.setEc06d(bi.ec06d.getText().toString());
+        form.setEc06m(bi.ec06m.getText().toString());
+        form.setEc07a( bi.ec07y.isChecked() ? "1"
+                : bi.ec07n.isChecked() ? "2"
                 :  "-1");
 
-        form.setEb05( bi.eb05a.isChecked() ? "1"
-                : bi.eb05b.isChecked() ? "2"
+        form.setEc08d(bi.ec08d.getText().toString());
+        form.setEc08m(bi.ec08m.getText().toString());
+        form.setEc09a( bi.ec09y.isChecked() ? "1"
+                : bi.ec09n.isChecked() ? "2"
                 :  "-1");
 
-        form.setEb06( bi.eb06a.isChecked() ? "1"
-                : bi.eb06b.isChecked() ? "2"
+        form.setEc10d(bi.ec10d.getText().toString());
+        form.setEc10m(bi.ec10m.getText().toString());
+        form.setEc11a( bi.ec11y.isChecked() ? "1"
+                : bi.ec11n.isChecked() ? "2"
                 :  "-1");
 
-        form.setEb07( bi.eb07a.isChecked() ? "1"
-                : bi.eb07b.isChecked() ? "2"
-                : bi.eb07c.isChecked() ? "3"
-                :  "-1");
-
-        form.setEb08a(bi.eb08a.isChecked() ? "1" : "-1");
-
-        form.setEb08b(bi.eb08b.isChecked() ? "2" : "-1");
-
-        form.setEb08c(bi.eb08c.isChecked() ? "3" : "-1");
-
-        form.setEb08d(bi.eb08d.isChecked() ? "4" : "-1");
-
-        form.setEb0896(bi.eb0896.isChecked() ? "96" : "-1");
-
-        form.setEb0896x(bi.eb0896x.getText().toString());*/
+        form.setEc12d(bi.ec12d.getText().toString());
+        form.setEc12m(bi.ec12m.getText().toString());*/
 
     }
 
@@ -116,7 +139,7 @@ public class SectionE102Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionE103Activity.class));
+            startActivity(new Intent(this, SectionMainActivity.class));
         }
     }
 

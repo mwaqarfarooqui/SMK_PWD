@@ -16,18 +16,13 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
-import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
-import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD2Binding;
-import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD102Binding;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionD102Activity extends AppCompatActivity {
 
-    ActivitySectionD2Binding bi;
+    ActivitySectionD102Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

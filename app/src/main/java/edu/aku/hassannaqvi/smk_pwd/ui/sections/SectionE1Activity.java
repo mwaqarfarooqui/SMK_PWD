@@ -15,18 +15,18 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionE101Binding;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionE1Binding;
 
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
-public class SectionE101Activity extends AppCompatActivity {
+public class SectionE1Activity extends AppCompatActivity {
 
-    ActivitySectionE101Binding bi;
+    ActivitySectionE1Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e101);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e1);
         bi.setCallback(this);
         setupSkips();
     }
@@ -149,7 +149,7 @@ public class SectionE101Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionE102Activity.class));
+            startActivity(new Intent(this, SectionE2Activity.class));
         }
     }
 
