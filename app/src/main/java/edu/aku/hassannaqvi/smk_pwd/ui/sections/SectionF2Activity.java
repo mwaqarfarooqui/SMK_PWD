@@ -49,18 +49,26 @@ public class SectionF2Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
+        json.put("fb01", bi.fb01a.isChecked() ? "1"
+                : bi.fb01b.isChecked() ? "2"
+                :  "-1");
 
-        json.put("f0201", bi.f0201a.isChecked() ? "1"
-                : bi.f0201b.isChecked() ? "2"
-                : "-1");
+        json.put("fb02", bi.fb02a.isChecked() ? "1"
+                : bi.fb02b.isChecked() ? "2"
+                : bi.fb02c.isChecked() ? "3"
+                :  "-1");
 
-        json.put("f0202", bi.f0202a.isChecked() ? "1"
-                : bi.f0202b.isChecked() ? "2"
-                : "-1");
+        json.put("fb03", bi.fb03a.isChecked() ? "1"
+                : bi.fb03b.isChecked() ? "2"
+                : bi.fb03c.isChecked() ? "3"
+                : bi.fb03d.isChecked() ? "4"
+                :  "-1");
 
-        json.put("f0203", bi.f0203a.isChecked() ? "1"
-                : bi.f0203b.isChecked() ? "2"
-                : "-1");
+        json.put("fb04", bi.fb04a.isChecked() ? "1"
+                : bi.fb04b.isChecked() ? "2"
+                : bi.fb04c.isChecked() ? "3"
+                : bi.fb04d.isChecked() ? "4"
+                :  "-1");
 
         try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
