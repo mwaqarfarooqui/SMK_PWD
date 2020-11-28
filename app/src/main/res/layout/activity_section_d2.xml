@@ -100,7 +100,7 @@
                 android:orientation="vertical"
                 android:visibility='@{da14b.checked? View.GONE : View.VISIBLE}'>
 
-            <!-- da15  Radio   -->
+                <!-- da15  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVda15"
                     style="@style/cardView">
@@ -1195,8 +1195,7 @@
             <!-- da20da  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVda20da"
-                style="@style/cardView"
-                >
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -3627,7 +3626,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVda24cf"
                 style="@style/cardView"
-                android:visibility='@{da24cab.checked?View.GONE : View.VISIBLE}' >
+                android:visibility='@{da24cab.checked?View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"

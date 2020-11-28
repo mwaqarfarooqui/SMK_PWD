@@ -14,16 +14,10 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
-import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
-import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionE102Binding;
-import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionE102Activity extends AppCompatActivity {
@@ -41,99 +35,9 @@ public class SectionE102Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.e151aav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e151aavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe151af);
-            }
-        }));
-
-        bi.e151bav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e151bavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe151bf);
-            }
-        }));
-
-        bi.e151cav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e151cavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe151cf);
-            }
-        }));
-
-        bi.e151dav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e151davn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe151df);
-            }
-        }));
-
-        bi.e151eav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e151eavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe151ef);
-            }
-        }));
-
-        bi.e152aav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e152aavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe152af);
-            }
-        }));
-
-        bi.e152bav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e152bavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe152bf);
-            }
-        }));
-
-        bi.e152cav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e152cavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe152cf);
-            }
-        }));
-
-        bi.e152dav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e152davn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe152df);
-            }
-        }));
-
-        bi.e152eav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e152eavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe152ef);
-            }
-        }));
-
-        bi.e152fav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e152favn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe152ff);
-            }
-        }));
-
-        bi.e152gav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e152gavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe152gf);
-            }
-        }));
-
-        bi.e153av.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e153aavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe153af);
-            }
-        }));
-
-        bi.e153bav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e153bavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe153bf);
-            }
-        }));
-
-        bi.e153cav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e153cavn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe153cf);
-            }
-        }));
-
-        bi.e153dav.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e153davn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVe153df);
+        bi.eb03.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.eb03b.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVeb03y);
             }
         }));
 
@@ -141,157 +45,64 @@ public class SectionE102Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SE, fc.getsE());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
-
-        json.put("e151aav", bi.e151aavy.isChecked() ? "1"
-                : bi.e151aavn.isChecked() ? "2"
+        /*form.setEb01( bi.eb01a.isChecked() ? "1"
+                : bi.eb01b.isChecked() ? "2"
+                : bi.eb01c.isChecked() ? "3"
                 :  "-1");
 
-        json.put("e151af", bi.e151afy.isChecked() ? "1"
-                : bi.e151afn.isChecked() ? "2"
+        form.setEb02( bi.eb02a.isChecked() ? "1"
+                : bi.eb02b.isChecked() ? "2"
+                : bi.eb02c.isChecked() ? "3"
                 :  "-1");
 
-        json.put("e151bav", bi.e151bavy.isChecked() ? "1"
-                : bi.e151bavn.isChecked() ? "2"
+        form.setEb03( bi.eb03a.isChecked() ? "1"
+                : bi.eb03b.isChecked() ? "2"
                 :  "-1");
 
-        json.put("e151bf", bi.e151bfy.isChecked() ? "1"
-                : bi.e151bfn.isChecked() ? "2"
+        form.setEb03t(bi.eb03t.getText().toString());
+        form.setEb04( bi.eb04a.isChecked() ? "1"
+                : bi.eb04b.isChecked() ? "2"
+                : bi.eb04c.isChecked() ? "3"
                 :  "-1");
 
-        json.put("e151cav", bi.e151cavy.isChecked() ? "1"
-                : bi.e151cavn.isChecked() ? "2"
+        form.setEb05( bi.eb05a.isChecked() ? "1"
+                : bi.eb05b.isChecked() ? "2"
                 :  "-1");
 
-        json.put("e151cf", bi.e151cfy.isChecked() ? "1"
-                : bi.e151cfn.isChecked() ? "2"
+        form.setEb06( bi.eb06a.isChecked() ? "1"
+                : bi.eb06b.isChecked() ? "2"
                 :  "-1");
 
-        json.put("e151dav", bi.e151davy.isChecked() ? "1"
-                : bi.e151davn.isChecked() ? "2"
+        form.setEb07( bi.eb07a.isChecked() ? "1"
+                : bi.eb07b.isChecked() ? "2"
+                : bi.eb07c.isChecked() ? "3"
                 :  "-1");
 
-        json.put("e151df", bi.e151dfy.isChecked() ? "1"
-                : bi.e151dfn.isChecked() ? "2"
-                :  "-1");
+        form.setEb08a(bi.eb08a.isChecked() ? "1" : "-1");
 
-        json.put("e151eav", bi.e151eavy.isChecked() ? "1"
-                : bi.e151eavn.isChecked() ? "2"
-                :  "-1");
+        form.setEb08b(bi.eb08b.isChecked() ? "2" : "-1");
 
-        json.put("e151ef", bi.e151efy.isChecked() ? "1"
-                : bi.e151efn.isChecked() ? "2"
-                :  "-1");
+        form.setEb08c(bi.eb08c.isChecked() ? "3" : "-1");
 
-        json.put("e152aav", bi.e152aavy.isChecked() ? "1"
-                : bi.e152aavn.isChecked() ? "2"
-                :  "-1");
+        form.setEb08d(bi.eb08d.isChecked() ? "4" : "-1");
 
-        json.put("e152af", bi.e152afy.isChecked() ? "1"
-                : bi.e152afn.isChecked() ? "2"
-                :  "-1");
+        form.setEb0896(bi.eb0896.isChecked() ? "96" : "-1");
 
-        json.put("e152bav", bi.e152bavy.isChecked() ? "1"
-                : bi.e152bavn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152bf", bi.e152bfy.isChecked() ? "1"
-                : bi.e152bfn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152cav", bi.e152cavy.isChecked() ? "1"
-                : bi.e152cavn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152cf", bi.e152cfy.isChecked() ? "1"
-                : bi.e152cfn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152dav", bi.e152davy.isChecked() ? "1"
-                : bi.e152davn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152df", bi.e152dfy.isChecked() ? "1"
-                : bi.e152dfn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152eav", bi.e152eavy.isChecked() ? "1"
-                : bi.e152eavn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152ef", bi.e152efy.isChecked() ? "1"
-                : bi.e152efn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152fav", bi.e152favy.isChecked() ? "1"
-                : bi.e152favn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152ff", bi.e152ffy.isChecked() ? "1"
-                : bi.e152ffn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152gav", bi.e152gavy.isChecked() ? "1"
-                : bi.e152gavn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e152gf", bi.e152gfy.isChecked() ? "1"
-                : bi.e152gfn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e153av", bi.e153aavy.isChecked() ? "1"
-                : bi.e153aavn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e153af", bi.e153afy.isChecked() ? "1"
-                : bi.e153afn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e153bav", bi.e153bavy.isChecked() ? "1"
-                : bi.e153bavn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e153bf", bi.e153bfy.isChecked() ? "1"
-                : bi.e153bfn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e153cav", bi.e153cavy.isChecked() ? "1"
-                : bi.e153cavn.isChecked() ? "2"
-                :  "-1");
-
-        json.put("e153cf", bi.e153cfy.isChecked() ? "1"
-                : bi.e153cfn.isChecked() ? "2"
-                : "-1");
-
-        json.put("e153dav", bi.e153davy.isChecked() ? "1"
-                : bi.e153davn.isChecked() ? "2"
-                : "-1");
-
-        json.put("e153df", bi.e153dfy.isChecked() ? "1"
-                : bi.e153dfn.isChecked() ? "2"
-                : "-1");
-
-        try {
-            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsE()), json);
-
-            fc.setsE(String.valueOf(json_merge));
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        form.setEb0896x(bi.eb0896x.getText().toString());*/
 
     }
 
