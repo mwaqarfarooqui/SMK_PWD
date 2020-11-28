@@ -1,9 +1,332 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.sections.SectionF15Activity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <import type="android.view.View" />
+        <!--<variable
+            name="form"
+            type="edu.aku.hassannaqvi.sk.models.Form" />-->
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF15Activity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/GrpName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- secfotitle  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVsecfotitle"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/secfotitle" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- hint  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVhint"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- fo01  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVfo01"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo01" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo01a" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/fo01a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fo01a"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        app:maxValue="100"
+
+                        app:type="range" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo01b" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/fo01b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fo01b"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        app:maxValue="100"
+
+                        app:type="range" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- fo02  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVfo02"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo02" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo02a" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/fo02a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fo02a"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        app:maxValue="100"
+
+                        app:type="range" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo02b" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/fo02b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fo02b"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        app:maxValue="100"
+
+                        app:type="range" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- fo03  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVfo03"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo03" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo03a" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/fo03a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fo03a"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        app:maxValue="100"
+
+                        app:type="range" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo03b" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/fo03b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fo03b"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        app:maxValue="100"
+
+                        app:type="range" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- fo04  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVfo04"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo04" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo04a" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/fo04a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fo04a"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        app:maxValue="100"
+
+                        app:type="range" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo04b" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/fo04b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fo04b"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        app:maxValue="100"
+
+                        app:type="range" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- fo05  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVfo05"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo05" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo05a" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/fo05a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fo05a"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        app:maxValue="100"
+
+                        app:type="range" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fo05b" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/fo05b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fo05b"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        app:maxValue="100"
+
+                        app:type="range" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_End"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/red_overlay"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="Cancel"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_Continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/green_overlay"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="Save"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>
