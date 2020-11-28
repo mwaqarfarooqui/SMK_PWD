@@ -11,10 +11,8 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
-import edu.aku.hassannaqvi.smk_pwd.CONSTANTS;
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI3Binding;
-import edu.aku.hassannaqvi.smk_pwd.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivityI;
@@ -29,20 +27,6 @@ public class SectionI3Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i3);
         bi.setCallback(this);
         setupSkips();
-        setupContent();
-    }
-
-    private void setupContent() {
-
-       /* psc = new PatientsContract();
-
-        bi.hfType.setText(MainApp.fc.getA10().equals("1") ? getString(R.string.hfpublic) : getString(R.string.hfprivate));
-        bi.countI.setText(new StringBuilder("Entries: 0").append(SectionMainActivity.countI));*/
-
-        /*if (MainApp.fc.getA10().equals("1")) {
-            if (SectionMainActivity.paedsCount == 3) bi.i0108a.setEnabled(false);
-            else if (SectionMainActivity.maternalCount == 3) bi.i0108b.setEnabled(false);
-        }*/
     }
 
 
@@ -132,12 +116,8 @@ public class SectionI3Activity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
+            startActivity(new Intent(this, SectionMainActivity.class));
             finish();
-            SectionMainActivity.countI++;
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true).putExtra(CONSTANTS.SECTION_MAIN_CHECK_FOR_END, true)
-                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-        } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -225,30 +205,9 @@ public class SectionI3Activity extends AppCompatActivity {
     }
 
 
-   /* @Override
-    public void endSecActivity(boolean flag) {
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
-            finish();
-            SectionMainActivity.countI++;
-            startActivity(new Intent(this, EndingActivity.class).putExtra(SECTION_MAIN_CHECK_FOR_END, true)
-                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-        } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-        }
-    }*/
-
-
     @Override
     public void onBackPressed() {
-        if (SectionMainActivity.countI > 0) {
             Toast.makeText(getApplicationContext(), "Back Press Not Allowed", Toast.LENGTH_LONG).show();
-        } else super.onBackPressed();
     }
-
 
 }
