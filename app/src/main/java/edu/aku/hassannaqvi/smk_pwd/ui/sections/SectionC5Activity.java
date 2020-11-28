@@ -14,6 +14,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC5Binding;
+import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
@@ -96,7 +97,14 @@ public class SectionC5Activity extends AppCompatActivity {
         json.put("ce08i",bi.ce08i.isChecked() ? "9" :"-1");
 
 
-        fc.setsC(String.valueOf(json));
+        try {
+            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsC()),json);
+
+            fc.setsC(String.valueOf(json_merge));
+        }
+        catch (JSONException e){
+            e.printStackTrace();
+        }
     }
 
     private boolean formValidation() {
