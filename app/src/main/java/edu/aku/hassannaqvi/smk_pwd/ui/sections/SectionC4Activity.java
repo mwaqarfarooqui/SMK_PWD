@@ -3,6 +3,10 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
@@ -10,8 +14,6 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC4Binding;
 import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
@@ -31,6 +33,7 @@ public class SectionC4Activity extends AppCompatActivity {
         setupSkips();
     }
 
+
     private void setupSkips() {
 
         bi.cd02.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc402));
@@ -43,6 +46,7 @@ public class SectionC4Activity extends AppCompatActivity {
 
     }
 
+
     private boolean UpdateDB() {
         /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, fc.getsC());
@@ -54,6 +58,7 @@ public class SectionC4Activity extends AppCompatActivity {
         }*/
         return true;
     }
+
 
     private void SaveDraft() throws JSONException {
         JSONObject json = new JSONObject();
@@ -155,6 +160,7 @@ public class SectionC4Activity extends AppCompatActivity {
         }
     }
 
+
     private boolean formValidation() {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName))
         return false;
@@ -189,6 +195,7 @@ public class SectionC4Activity extends AppCompatActivity {
         return true;
     }
 
+
     public void BtnContinue() {
         if (!formValidation()) return;
         try {
@@ -202,8 +209,15 @@ public class SectionC4Activity extends AppCompatActivity {
         }
     }
 
+
     public void BtnEnd() {
         openSectionMainActivity(this, "C");
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
 
 }

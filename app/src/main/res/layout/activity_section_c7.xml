@@ -54,6 +54,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/hint" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -125,6 +126,7 @@
                             android:text='@{cg01f.checked ? cg01fx.getText().toString() : ""}'
                             android:visibility='@{cg01f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -190,14 +192,15 @@
                             android:id="@+id/cg02fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg02f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg02f"
                             android:text='@{cg02f.checked ? cg02fx.getText().toString() : ""}'
-
                             android:visibility='@{cg02f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -263,14 +266,15 @@
                             android:id="@+id/cg03fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg03f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg03f"
                             android:text='@{cg03f.checked ? cg03fx.getText().toString() : ""}'
-
                             android:visibility='@{cg03f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -336,14 +340,15 @@
                             android:id="@+id/cg04fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg04f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg04f"
                             android:text='@{cg04f.checked ? cg04fx.getText().toString() : ""}'
-
                             android:visibility='@{cg04f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -409,14 +414,15 @@
                             android:id="@+id/cg05fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg05f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg05f"
                             android:text='@{cg05f.checked ? cg05fx.getText().toString() : ""}'
-
                             android:visibility='@{cg05f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -482,14 +488,15 @@
                             android:id="@+id/cg06fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg06f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg06f"
                             android:text='@{cg06f.checked ? cg06fx.getText().toString() : ""}'
-
                             android:visibility='@{cg06f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -555,14 +562,15 @@
                             android:id="@+id/cg07fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg07f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg07f"
                             android:text='@{cg07f.checked ? cg07fx.getText().toString() : ""}'
-
                             android:visibility='@{cg07f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -628,14 +636,15 @@
                             android:id="@+id/cg08fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg08f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg08f"
                             android:text='@{cg08f.checked ? cg08fx.getText().toString() : ""}'
-
                             android:visibility='@{cg08f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -701,14 +710,15 @@
                             android:id="@+id/cg09fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg09f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg09f"
                             android:text='@{cg09f.checked ? cg09fx.getText().toString() : ""}'
-
                             android:visibility='@{cg09f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -774,14 +784,15 @@
                             android:id="@+id/cg10fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg10f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg10f"
                             android:text='@{cg10f.checked ? cg10fx.getText().toString() : ""}'
-
                             android:visibility='@{cg10f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -847,14 +858,15 @@
                             android:id="@+id/cg11fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg11f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg11f"
                             android:text='@{cg11f.checked ? cg11fx.getText().toString() : ""}'
-
                             android:visibility='@{cg11f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -920,14 +932,15 @@
                             android:id="@+id/cg12fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg12f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg12f"
                             android:text='@{cg12f.checked ? cg12fx.getText().toString() : ""}'
-
                             android:visibility='@{cg12f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -993,14 +1006,15 @@
                             android:id="@+id/cg13fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg13f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg13f"
                             android:text='@{cg13f.checked ? cg13fx.getText().toString() : ""}'
-
                             android:visibility='@{cg13f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1066,14 +1080,15 @@
                             android:id="@+id/cg14fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg14f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg14f"
                             android:text='@{cg14f.checked ? cg14fx.getText().toString() : ""}'
-
                             android:visibility='@{cg14f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1139,14 +1154,15 @@
                             android:id="@+id/cg15fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg15f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg15f"
                             android:text='@{cg15f.checked ? cg15fx.getText().toString() : ""}'
-
                             android:visibility='@{cg15f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1212,14 +1228,15 @@
                             android:id="@+id/cg16fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg16f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg16f"
                             android:text='@{cg16f.checked ? cg16fx.getText().toString() : ""}'
-
                             android:visibility='@{cg16f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1285,14 +1302,15 @@
                             android:id="@+id/cg17fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg17f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg17f"
                             android:text='@{cg17f.checked ? cg17fx.getText().toString() : ""}'
-
                             android:visibility='@{cg17f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1358,14 +1376,15 @@
                             android:id="@+id/cg18fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg18f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg18f"
                             android:text='@{cg18f.checked ? cg18fx.getText().toString() : ""}'
-
                             android:visibility='@{cg18f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1431,14 +1450,15 @@
                             android:id="@+id/cg19fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg19f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg19f"
                             android:text='@{cg19f.checked ? cg19fx.getText().toString() : ""}'
-
                             android:visibility='@{cg19f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1504,14 +1524,15 @@
                             android:id="@+id/cg20fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg20f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg20f"
                             android:text='@{cg20f.checked ? cg20fx.getText().toString() : ""}'
-
                             android:visibility='@{cg20f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1577,14 +1598,15 @@
                             android:id="@+id/cg21fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg21f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg21f"
                             android:text='@{cg21f.checked ? cg21fx.getText().toString() : ""}'
-
                             android:visibility='@{cg21f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1650,14 +1672,15 @@
                             android:id="@+id/cg22fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg22f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg22f"
                             android:text='@{cg22f.checked ? cg22fx.getText().toString() : ""}'
-
                             android:visibility='@{cg22f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1723,14 +1746,15 @@
                             android:id="@+id/cg23fx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cg23f"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cg23f"
                             android:text='@{cg23f.checked ? cg23fx.getText().toString() : ""}'
-
                             android:visibility='@{cg23f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
                     </RadioGroup>
                 </LinearLayout>

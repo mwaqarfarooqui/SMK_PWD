@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -9,12 +10,9 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC6Binding;
-
-
 
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
@@ -29,6 +27,7 @@ public class SectionC6Activity extends AppCompatActivity {
         bi.setCallback(this);
     }
 
+
     private boolean UpdateDB() {
         /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, fc.getsC());
@@ -40,6 +39,7 @@ public class SectionC6Activity extends AppCompatActivity {
         }*/
         return true;
     }
+
 
     private void SaveDraft() throws JSONException {
        /* JSONObject json = new JSONObject();
@@ -87,9 +87,11 @@ public class SectionC6Activity extends AppCompatActivity {
         }*/
     }
 
+
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
+
 
     public void BtnContinue() {
         if (!formValidation()) return;
@@ -104,8 +106,15 @@ public class SectionC6Activity extends AppCompatActivity {
         }
     }
 
+
     public void BtnEnd() {
         openSectionMainActivity(this, "C");
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
 
 }
