@@ -100,7 +100,7 @@ public class SectionF7Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionMainActivity.class));
+            startActivity(new Intent(this, SectionF8Activity.class));
         }
     }
 
