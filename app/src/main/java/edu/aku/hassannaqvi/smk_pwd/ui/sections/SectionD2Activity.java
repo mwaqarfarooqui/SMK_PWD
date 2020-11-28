@@ -14,18 +14,19 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD2Binding;
+import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
+
+import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
+
 /*import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;*/
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD2Binding;
-import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 /*import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;*/
-import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionD2Activity extends AppCompatActivity {
 
@@ -36,6 +37,7 @@ public class SectionD2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d2);
         bi.setCallback(this);
+        setupSkips();
     }
 
 
