@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -18,7 +19,7 @@ import org.json.JSONException;
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI2Binding;
 
-import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivityI;
+import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionI2Activity extends AppCompatActivity {
 
@@ -89,13 +90,6 @@ public class SectionI2Activity extends AppCompatActivity {
             startActivity(new Intent(this, SectionI3Activity.class));
             finish();
         }
-    }
-
-
-    public void BtnEnd() {
-        /*if (!Validator.emptyCheckingContainer(this, bi.fldGrpEndForm)) return;
-        contextEndActivity(this);*/
-        openSectionMainActivityI(this);
     }
 
 
@@ -194,6 +188,11 @@ public class SectionI2Activity extends AppCompatActivity {
     }
 
 
+    public void BtnEnd() {
+        openSectionMainActivity(this, "I");
+    }
+
+
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
        /* if (!Validator.emptyCheckingContainer(this, bi.GrpName))
@@ -206,6 +205,12 @@ public class SectionI2Activity extends AppCompatActivity {
             }
         }
         return true;*/
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
 
 }

@@ -87,7 +87,7 @@ public class SectionI1Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        openSectionMainActivity(this, "B");
+        openSectionMainActivity(this, "I");
     }
 
 
