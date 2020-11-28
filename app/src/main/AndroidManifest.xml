@@ -22,7 +22,15 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme1">
-        <activity android:name=".ui.sections.SectionD103Activity"></activity>
+        <activity android:name=".ui.sections.SectionF16Activity"></activity>
+        <activity android:name=".ui.sections.SectionF15Activity" />
+        <activity android:name=".ui.sections.SectionF14Activity" />
+        <activity android:name=".ui.sections.SectionF13Activity" />
+        <activity android:name=".ui.sections.SectionF12Activity" />
+        <activity android:name=".ui.sections.SectionF11Activity" />
+        <activity android:name=".ui.sections.SectionF10Activity" />
+        <activity android:name=".ui.sections.SectionF9Activity" />
+        <activity android:name=".ui.sections.SectionD103Activity" />
         <activity android:name=".ui.sections.SectionF8Activity" />
         <activity android:name=".ui.sections.SectionC7Activity" />
         <activity android:name=".ui.sections.SectionC6Activity" />

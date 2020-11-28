@@ -15,7 +15,7 @@ import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI3Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
-import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivityI;
+import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionI3Activity extends AppCompatActivity {
     ActivitySectionI3Binding bi;
@@ -123,9 +123,7 @@ public class SectionI3Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        /*if (!Validator.emptyCheckingContainer(this, bi.fldGrpEndForm)) return;
-        contextEndActivity(this);*/
-        openSectionMainActivityI(this);
+        openSectionMainActivity(this, "I");
     }
 
 

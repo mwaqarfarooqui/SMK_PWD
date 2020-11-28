@@ -113,6 +113,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/hint1" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -165,14 +166,15 @@
                             android:id="@+id/cd02yx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cd02y"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cd02y"
                             android:text='@{cd02y.checked ? cd02yx.getText().toString() : ""}'
-
                             android:visibility='@{cd02y.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -239,14 +241,15 @@
                                 android:id="@+id/cd03yx"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:hint="@string/cd03y"
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="cd03y"
                                 android:text='@{cd03y.checked ? cd03yx.getText().toString() : ""}'
-
                                 android:visibility='@{cd03y.checked? View.VISIBLE : View.GONE}'
                                 app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
 
                             <RadioButton
@@ -306,14 +309,15 @@
                             android:id="@+id/cd04yx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cd04y"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cd04y"
                             android:text='@{cd04y.checked ? cd04yx.getText().toString() : ""}'
-
                             android:visibility='@{cd04y.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -380,14 +384,15 @@
                                 android:id="@+id/cd05yx"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:hint="@string/cd05y"
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="cd05y"
                                 android:text='@{cd05y.checked ? cd05yx.getText().toString() : ""}'
-
                                 android:visibility='@{cd05y.checked? View.VISIBLE : View.GONE}'
                                 app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
 
                             <RadioButton
@@ -447,14 +452,15 @@
                             android:id="@+id/cd06yx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cd06y"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cd06y"
                             android:text='@{cd06y.checked ? cd06yx.getText().toString() : ""}'
-
                             android:visibility='@{cd06y.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -521,14 +527,15 @@
                                 android:id="@+id/cd07yx"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:hint="@string/cd07y"
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="cd07y"
                                 android:text='@{cd07y.checked ? cd07yx.getText().toString() : ""}'
-
                                 android:visibility='@{cd07y.checked? View.VISIBLE : View.GONE}'
                                 app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
 
                             <RadioButton
@@ -588,14 +595,15 @@
                             android:id="@+id/cd08yx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="@string/cd08y"
                             android:inputType="number"
                             android:maxLength="3"
                             android:tag="cd08y"
                             android:text='@{cd08y.checked ? cd08yx.getText().toString() : ""}'
-
                             android:visibility='@{cd08y.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
+                            app:minValue="0"
                             app:type="range" />
 
                         <RadioButton
@@ -662,14 +670,15 @@
                                 android:id="@+id/cd09yx"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:hint="@string/cd09y"
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="cd09y"
                                 android:text='@{cd09y.checked ? cd09yx.getText().toString() : ""}'
-
                                 android:visibility='@{cd09y.checked? View.VISIBLE : View.GONE}'
                                 app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
 
                             <RadioButton
@@ -695,6 +704,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/hint2" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

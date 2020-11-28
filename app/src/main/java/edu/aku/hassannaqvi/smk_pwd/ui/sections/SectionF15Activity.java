@@ -1,5 +1,14 @@
 package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF15Binding;
+import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -9,27 +18,17 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
-import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
-import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF8Binding;
-import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
-import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
-
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
-public class SectionF8Activity extends AppCompatActivity {
+public class SectionF15Activity extends AppCompatActivity {
 
-    ActivitySectionF8Binding bi;
+    ActivitySectionF15Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_f8);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_f15);
         bi.setCallback(this);
         setupSkips();
     }
@@ -53,34 +52,25 @@ public class SectionF8Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-        json.put("fh01", bi.fh01a.isChecked() ? "1"
-                : bi.fh01b.isChecked() ? "2"
-                : "-1");
+        json.put("fo01a", bi.fo01a.getText().toString());
 
-        json.put("fh02", bi.fh02a.isChecked() ? "1"
-                : bi.fh02b.isChecked() ? "2"
-                : "-1");
+        json.put("fo01b", bi.fo01b.getText().toString());
 
-        json.put("fh03", bi.fh03a.isChecked() ? "1"
-                : bi.fh03b.isChecked() ? "2"
-                : "-1");
+        json.put("fo02a", bi.fo02a.getText().toString());
 
-        json.put("fh04", bi.fh04a.isChecked() ? "1"
-                : bi.fh04b.isChecked() ? "2"
-                : "-1");
+        json.put("fo02b", bi.fo02b.getText().toString());
 
-        json.put("fh05", bi.fh05a.isChecked() ? "1"
-                : bi.fh05b.isChecked() ? "2"
-                : "-1");
+        json.put("fo03a", bi.fo03a.getText().toString());
 
-        json.put("fh06", bi.fh06a.isChecked() ? "1"
-                : bi.fh06b.isChecked() ? "2"
-                : "-1");
+        json.put("fo03b", bi.fo03b.getText().toString());
 
-        json.put("fh07", bi.fh07a.isChecked() ? "1"
-                : bi.fh07b.isChecked() ? "2"
-                : "-1");
+        json.put("fo04a", bi.fo04a.getText().toString());
 
+        json.put("fo04b", bi.fo04b.getText().toString());
+
+        json.put("fo05a", bi.fo05a.getText().toString());
+
+        json.put("fo05b", bi.fo05b.getText().toString());
 
         try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
@@ -108,7 +98,7 @@ public class SectionF8Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionF9Activity.class));
+            startActivity(new Intent(this, SectionF16Activity.class));
         }
     }
 

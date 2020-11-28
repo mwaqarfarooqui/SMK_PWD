@@ -15,21 +15,20 @@ import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
-import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF8Binding;
-import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
+import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF14Binding;
 import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
-public class SectionF8Activity extends AppCompatActivity {
+public class SectionF14Activity extends AppCompatActivity {
 
-    ActivitySectionF8Binding bi;
+    ActivitySectionF14Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_f8);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_f14);
         bi.setCallback(this);
         setupSkips();
     }
@@ -53,32 +52,20 @@ public class SectionF8Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-        json.put("fh01", bi.fh01a.isChecked() ? "1"
-                : bi.fh01b.isChecked() ? "2"
+        json.put("fn01", bi.fn01a.isChecked() ? "1"
+                : bi.fn01b.isChecked() ? "2"
+                : bi.fn01c.isChecked() ? "3"
+                : bi.fn01d.isChecked() ? "4"
+                : bi.fn01e.isChecked() ? "5"
+                : bi.fn01f.isChecked() ? "6"
                 : "-1");
 
-        json.put("fh02", bi.fh02a.isChecked() ? "1"
-                : bi.fh02b.isChecked() ? "2"
+        json.put("fn02", bi.fn02a.isChecked() ? "1"
+                : bi.fn02b.isChecked() ? "2"
                 : "-1");
 
-        json.put("fh03", bi.fh03a.isChecked() ? "1"
-                : bi.fh03b.isChecked() ? "2"
-                : "-1");
-
-        json.put("fh04", bi.fh04a.isChecked() ? "1"
-                : bi.fh04b.isChecked() ? "2"
-                : "-1");
-
-        json.put("fh05", bi.fh05a.isChecked() ? "1"
-                : bi.fh05b.isChecked() ? "2"
-                : "-1");
-
-        json.put("fh06", bi.fh06a.isChecked() ? "1"
-                : bi.fh06b.isChecked() ? "2"
-                : "-1");
-
-        json.put("fh07", bi.fh07a.isChecked() ? "1"
-                : bi.fh07b.isChecked() ? "2"
+        json.put("fn03", bi.fn03a.isChecked() ? "1"
+                : bi.fn03b.isChecked() ? "2"
                 : "-1");
 
 
@@ -108,7 +95,7 @@ public class SectionF8Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionF9Activity.class));
+            startActivity(new Intent(this, SectionF15Activity.class));
         }
     }
 

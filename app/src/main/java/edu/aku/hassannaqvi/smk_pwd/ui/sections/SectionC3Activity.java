@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -40,6 +41,7 @@ public class SectionC3Activity extends AppCompatActivity {
         }*/
         return true;
     }
+
 
     private void SaveDraft() throws JSONException {
         JSONObject json = new JSONObject();
@@ -96,9 +98,11 @@ public class SectionC3Activity extends AppCompatActivity {
         }
     }
 
+
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
+
 
     public void BtnContinue() {
         if (!formValidation()) return;
@@ -113,8 +117,15 @@ public class SectionC3Activity extends AppCompatActivity {
         }
     }
 
+
     public void BtnEnd() {
         openSectionMainActivity(this, "C");
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
 
 }

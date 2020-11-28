@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -13,6 +14,8 @@ import org.json.JSONException;
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionH2Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
+
 
 public class SectionH2Activity extends AppCompatActivity {
 
@@ -23,7 +26,6 @@ public class SectionH2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_h2);
         bi.setCallback(this);
-
     }
 
 
@@ -99,6 +101,17 @@ public class SectionH2Activity extends AppCompatActivity {
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
+    }
+
+
+    public void BtnEnd() {
+        openSectionMainActivity(this, "H");
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
 
 }
