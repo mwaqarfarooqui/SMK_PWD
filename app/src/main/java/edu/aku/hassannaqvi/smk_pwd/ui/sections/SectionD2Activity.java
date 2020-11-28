@@ -9,7 +9,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
@@ -17,13 +16,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+/*import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
-import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;*/
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD2Binding;
-import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
+import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
+/*import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;*/
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionD2Activity extends AppCompatActivity {
@@ -35,280 +35,61 @@ public class SectionD2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d2);
         bi.setCallback(this);
-        setupSkips();
-    }
-
-
-    private void setupSkips() {
-
-      /*  bi.d0201.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.cvd0202);
-            Clear.clearAllFields(bi.cvd0203);
-        }));*/
-        bi.da14.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.da14b.getId()) {
-                Clear.clearAllFields(bi.fldGrpskipda14b);
-            }
-        }));
-        bi.da19aa.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.da19aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda19af);
-            }
-        }));
-        bi.da19ba.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.da19bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda19bf);
-            }
-        }));
-        bi.da19ca.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.da19cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda19cf);
-            }
-        }));
-        bi.da19da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da19dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda19df);
-            }
-        }));
-        bi.da20aa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20af);
-            }
-        }));
-        bi.da20ba.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20bf);
-            }
-        }));
-        bi.da20ca.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20cf);
-            }
-        }));
-        bi.da20da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20df);
-            }
-        }));
-        bi.da20ea.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20eab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20ef);
-            }
-        }));
-        bi.da20fa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20fab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20ff);
-            }
-        }));
-        bi.da20ga.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20gab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20gf);
-            }
-        }));
-        bi.da21aa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da21aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda21af);
-            }
-        }));
-        bi.da21ba.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da21bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda21bf);
-            }
-        }));
-        bi.da21ca.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da21cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda21cf);
-            }
-        }));
-        bi.da21da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da21dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda21df);
-            }
-        }));
-        bi.da22aa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22af);
-            }
-        }));
-        bi.da22ba.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22bf);
-            }
-        }));
-        bi.da22ca.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22cf);
-            }
-        }));
-        bi.da22da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22df);
-            }
-        }));
-        bi.da22ea.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22eab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22ef);
-            }
-        }));
-        bi.da22fa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22fab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22ff);
-            }
-        }));
-        bi.da22ga.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22gab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22gf);
-            }
-        }));
-        bi.da22ha.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da22hab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda22hf);
-            }
-        }));
-        bi.da23aa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da23aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda23af);
-            }
-        }));
-        bi.da23ba.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da23bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda23bf);
-            }
-        }));
-        bi.da23ca.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da23cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda23cf);
-            }
-        }));
-        bi.da23da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da23dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda23df);
-            }
-        }));
-        bi.da24aa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24af);
-            }
-        }));
-        bi.da24ba.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24bf);
-            }
-        }));
-        bi.da24ca.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24cf);
-            }
-        }));
-        bi.da24da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24df);
-            }
-        }));
-        bi.da24ea.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24eab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24ef);
-            }
-        }));
-        bi.da24fa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24fab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24ff);
-            }
-        }));
-        bi.da24ga.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24gab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24gf);
-            }
-        }));
-        bi.da24ha.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da24hab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda24hf);
-            }
-        }));
-
-
-
     }
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, MainApp.fc.getsD());
+      /*  DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, fc.getsD());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/return false;
+        }*/
+        return false;
     }
 
 
     private void SaveDraft() throws JSONException {
 
-/*
-        form.setDb01( bi.db01a.isChecked() ? "1"
-                : bi.db01b.isChecked() ? "2"
-                :  "-1");
+      /*  JSONObject json = new JSONObject();
 
-        form.setDb02( bi.db02a.isChecked() ? "1"
-                : bi.db02b.isChecked() ? "2"
-                :  "-1");
+        json.put("d0301", bi.d0301a.isChecked() ? "1"
+                : bi.d0301b.isChecked() ? "2"
+                : bi.d0301c.isChecked() ? "3"
+                : bi.d0301d.isChecked() ? "4"
+                : "-1");
 
-        form.setDb03( bi.db03a.isChecked() ? "1"
-                : bi.db03b.isChecked() ? "2"
-                :  "-1");
+        json.put("d0302", bi.d0302a.isChecked() ? "1"
+                : bi.d0302b.isChecked() ? "2"
+                : bi.d0302c.isChecked() ? "3"
+                : bi.d0302d.isChecked() ? "4"
+                : bi.d0302e.isChecked() ? "5"
+                : "-1");
 
-        form.setDb04( bi.db04a.isChecked() ? "1"
-                : bi.db04b.isChecked() ? "2"
-                :  "-1");
+        json.put("d0303", bi.d0303a.isChecked() ? "1"
+                : bi.d0303b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb05( bi.db05a.isChecked() ? "1"
-                : bi.db05b.isChecked() ? "2"
-                :  "-1");
+        json.put("d0304", bi.d0304a.isChecked() ? "1"
+                : bi.d0304b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb06( bi.db06a.isChecked() ? "1"
-                : bi.db06b.isChecked() ? "2"
-                :  "-1");
+        json.put("d0305", bi.d0305a.isChecked() ? "1"
+                : bi.d0305b.isChecked() ? "2"
+                : bi.d0305c.isChecked() ? "3"
+                : "-1");*/
 
-        form.setDb07( bi.db07a.isChecked() ? "1"
-                : bi.db07b.isChecked() ? "2"
-                :  "-1");
+    /*    try {
+            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsD()), json);
 
-        form.setDb08( bi.db08a.isChecked() ? "1"
-                : bi.db08b.isChecked() ? "2"
-                :  "-1");
+            fc.setsD(String.valueOf(json_merge));
 
-        form.setDb09( bi.db09a.isChecked() ? "1"
-                : bi.db09b.isChecked() ? "2"
-                :  "-1");
-
-        form.setDb10( bi.db10a.isChecked() ? "1"
-                : bi.db10b.isChecked() ? "2"
-                :  "-1");
-
-        form.setDb11( bi.db11a.isChecked() ? "1"
-                : bi.db11b.isChecked() ? "2"
-                :  "-1");
-
-        form.setDb12( bi.db12a.isChecked() ? "1"
-                : bi.db12b.isChecked() ? "2"
-                : bi.db12c.isChecked() ? "3"
-                :  "-1");
-
-        form.setDb13( bi.db13a.isChecked() ? "1"
-                : bi.db13b.isChecked() ? "2"
-                :  "-1");
-
-        form.setDb14(bi.db14.getText().toString());
-
-        form.setDb15(bi.db15.getText().toString());
-
-        form.setDb16( bi.db16a.isChecked() ? "1"
-                : bi.db1696.isChecked() ? "96"
-                :  "-1");
-
-        form.setDb1696x(bi.db1696x.getText().toString());*/
-
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+*/
     }
 
 
@@ -326,7 +107,7 @@ public class SectionD2Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionD3Activity.class));
+            startActivity(new Intent(this, SectionMainActivity.class));
         }
     }
 

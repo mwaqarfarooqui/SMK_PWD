@@ -19,14 +19,14 @@ import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD1Binding;
 
 
-public class SectionD1Activity extends AppCompatActivity {
+public class SectionD101Activity extends AppCompatActivity {
 
     ActivitySectionD1Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d1);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d101);
         bi.setCallback(this);
         setupSkips();
     }

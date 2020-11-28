@@ -123,7 +123,6 @@
                             android:maxLength="3"
                             android:tag="cg01f"
                             android:text='@{cg01f.checked ? cg01fx.getText().toString() : ""}'
-
                             android:visibility='@{cg01f.checked? View.VISIBLE : View.GONE}'
                             app:maxValue="100"
                             app:type="range" />

@@ -63,7 +63,7 @@
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionD3Activity"
+            android:name=".ui.sections.SectionD2Activity"
             android:label="@string/modetitle"
             android:screenOrientation="portrait" />
         <activity
