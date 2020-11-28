@@ -2,21 +2,15 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
-import com.edittextpicker.aliazaz.EditTextPicker;
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
@@ -39,72 +33,9 @@ public class SectionF7Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_f7);
         bi.setCallback(this);
         setupSkips();
-        setupTextWatchers();
     }
-
-
-    private void setupTextWatchers() {
-        editTextImplementation(bi.f0701aaa0ayx, bi.f0701aaa0fyx);
-        editTextImplementation(bi.f0701aab0ayx, bi.f0701aab0fyx);
-        editTextImplementation(bi.f0701aac0ayx, bi.f0701aac0fyx);
-        editTextImplementation(bi.f0701aad0ayx, bi.f0701aad0fyx);
-    }
-
-
-    public void editTextImplementation(EditTextPicker edit01, EditTextPicker edit02) {
-
-        edit01.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (TextUtils.isEmpty(edit01.getText()))
-                    return;
-                edit02.setMaxvalue(Integer.parseInt(edit01.getText().toString()));
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
-
-    }
-
 
     private void setupSkips() {
-
-        bi.f0701.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.f0701b.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecf701);
-            }
-        });
-
-        bi.f0701aaa0a.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.f0701aaa0an.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVf0701aaa0f);
-            }
-        });
-
-        bi.f0701aab0a.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.f0701aab0an.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVf0701aab0f);
-            }
-        });
-
-        bi.f0701aac0a.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.f0701aac0an.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVf0701aac0f);
-            }
-        });
-
-        bi.f0701aad0a.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.f0701aad0an.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVf0701aad0f);
-            }
-        });
-
     }
 
 
@@ -123,55 +54,25 @@ public class SectionF7Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-
-        json.put("f0701", bi.f0701a.isChecked() ? "1"
-                : bi.f0701b.isChecked() ? "2"
+        json.put("fg01", bi.fg01a.isChecked() ? "1"
+                : bi.fg01b.isChecked() ? "2"
                 : "-1");
 
-
-        json.put("f0701aaa0a", bi.f0701aaa0ay.isChecked() ? "1"
-                : bi.f0701aaa0an.isChecked() ? "2"
+        json.put("fg02", bi.fg02a.isChecked() ? "1"
+                : bi.fg02b.isChecked() ? "2"
                 : "-1");
-        json.put("f0701aaa0ayx", bi.f0701aaa0ayx.getText().toString().trim().isEmpty() ? "-1" : bi.f0701aaa0ayx.getText().toString());
 
-        json.put("f0701aaa0f", bi.f0701aaa0fy.isChecked() ? "1"
-                : bi.f0701aaa0fn.isChecked() ? "2"
+        json.put("fg03", bi.fg03a.isChecked() ? "1"
+                : bi.fg03b.isChecked() ? "2"
                 : "-1");
-        json.put("f0701aaa0fyx", bi.f0701aaa0fyx.getText().toString().trim().isEmpty() ? "-1" : bi.f0701aaa0fyx.getText().toString());
 
-
-        json.put("f0701aab0a", bi.f0701aab0ay.isChecked() ? "1"
-                : bi.f0701aab0an.isChecked() ? "2"
+        json.put("fg04", bi.fg04a.isChecked() ? "1"
+                : bi.fg04b.isChecked() ? "2"
                 : "-1");
-        json.put("f0701aab0ayx", bi.f0701aab0ayx.getText().toString().trim().isEmpty() ? "-1" : bi.f0701aab0ayx.getText().toString());
 
-        json.put("f0701aab0f", bi.f0701aab0fy.isChecked() ? "1"
-                : bi.f0701aab0fn.isChecked() ? "2"
+        json.put("fg05", bi.fg05a.isChecked() ? "1"
+                : bi.fg05b.isChecked() ? "2"
                 : "-1");
-        json.put("f0701aab0fyx", bi.f0701aab0fyx.getText().toString().trim().isEmpty() ? "-1" : bi.f0701aab0fyx.getText().toString());
-
-
-        json.put("f0701aac0a", bi.f0701aac0ay.isChecked() ? "1"
-                : bi.f0701aac0an.isChecked() ? "2"
-                : "-1");
-        json.put("f0701aac0ayx", bi.f0701aac0ayx.getText().toString().trim().isEmpty() ? "-1" : bi.f0701aac0ayx.getText().toString());
-
-        json.put("f0701aac0f", bi.f0701aac0fy.isChecked() ? "1"
-                : bi.f0701aac0fn.isChecked() ? "2"
-                : "-1");
-        json.put("f0701aac0fyx", bi.f0701aac0fyx.getText().toString().trim().isEmpty() ? "-1" : bi.f0701aac0fyx.getText().toString());
-
-
-        json.put("f0701aad0a", bi.f0701aad0ay.isChecked() ? "1"
-                : bi.f0701aad0an.isChecked() ? "2"
-                : "-1");
-        json.put("f0701aad0ayx", bi.f0701aad0ayx.getText().toString().trim().isEmpty() ? "-1" : bi.f0701aad0ayx.getText().toString());
-
-        json.put("f0701aad0f", bi.f0701aad0fy.isChecked() ? "1"
-                : bi.f0701aad0fn.isChecked() ? "2"
-                : "-1");
-        json.put("f0701aad0fyx", bi.f0701aad0fyx.getText().toString().trim().isEmpty() ? "-1" : bi.f0701aad0fyx.getText().toString());
-
 
         try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
