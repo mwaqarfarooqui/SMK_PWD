@@ -2,20 +2,15 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
-import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
@@ -39,28 +34,6 @@ public class SectionF5Activity extends AppCompatActivity {
     }
 
 
-    public void editTextImplementation(EditTextPicker edit01, EditTextPicker edit02) {
-
-        edit01.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (TextUtils.isEmpty(edit01.getText()))
-                    return;
-                edit02.setMaxvalue(Integer.parseInt(edit01.getText().toString()));
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
-
-    }
-
-
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, fc.getsF());
@@ -76,10 +49,13 @@ public class SectionF5Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-
-        json.put("f0501", bi.f0501a.isChecked() ? "1"
-                : bi.f0501b.isChecked() ? "2"
+        json.put("fe01", bi.fe01a.isChecked() ? "1"
+                : bi.fe01b.isChecked() ? "2"
+                : bi.fe01c.isChecked() ? "3"
+                : bi.fe0196.isChecked() ? "96"
                 : "-1");
+
+        json.put("fe0196x", bi.fe0196x.getText().toString());
 
         try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
