@@ -2,20 +2,15 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
-import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
@@ -38,29 +33,6 @@ public class SectionF4Activity extends AppCompatActivity {
         bi.setCallback(this);
     }
 
-
-    public void editTextImplementation(EditTextPicker edit01, EditTextPicker edit02) {
-
-        edit01.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (TextUtils.isEmpty(edit01.getText()))
-                    return;
-                edit02.setMaxvalue(Integer.parseInt(edit01.getText().toString()));
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
-
-    }
-
-
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, fc.getsF());
@@ -76,22 +48,15 @@ public class SectionF4Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-
-        json.put("f0401", bi.f0401a.isChecked() ? "1"
-                : bi.f0401b.isChecked() ? "2"
+        json.put("fd01", bi.fd01a.isChecked() ? "1"
+                : bi.fd01b.isChecked() ? "2"
+                : bi.fd01c.isChecked() ? "3"
+                : bi.fd01d.isChecked() ? "4"
+                : bi.fd0196.isChecked() ? "96"
                 : "-1");
 
-        json.put("f0402", bi.f0402a.isChecked() ? "1"
-                : bi.f0402b.isChecked() ? "2"
-                : "-1");
+        json.put("fd0196x", bi.fd0196x.getText().toString());
 
-        json.put("f0403", bi.f0403a.isChecked() ? "1"
-                : bi.f0403b.isChecked() ? "2"
-                : "-1");
-
-        json.put("f0404", bi.f0404a.isChecked() ? "1"
-                : bi.f0404b.isChecked() ? "2"
-                : "-1");
 
         try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
