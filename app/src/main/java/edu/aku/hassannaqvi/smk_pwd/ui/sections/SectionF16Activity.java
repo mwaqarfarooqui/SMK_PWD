@@ -4,13 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF16Binding;
 
@@ -29,6 +29,27 @@ public class SectionF16Activity extends AppCompatActivity {
     }
 
     private void setupSkips() {
+
+        bi.fp01a.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1601a));
+
+        bi.fp01c.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1601d));
+
+        bi.fp02a.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1602a));
+
+        bi.fp02c.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1602c));
+
+        bi.fp03a.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1603a));
+
+        bi.fp03c.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1603C));
+
+        bi.fp04a.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1604a));
+
+        bi.fp04c.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1604c));
+
+        bi.fp05a.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1605a));
+
+        bi.fp05c.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1605c));
+
     }
 
 
