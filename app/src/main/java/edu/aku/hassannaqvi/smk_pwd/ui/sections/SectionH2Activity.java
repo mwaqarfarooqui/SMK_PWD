@@ -2,11 +2,14 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -26,6 +29,34 @@ public class SectionH2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_h2);
         bi.setCallback(this);
+    }
+
+
+    private void setupSkips() {
+        radioGroup(bi.hb01);
+        radioGroup(bi.hb02);
+        radioGroup(bi.hb03);
+        radioGroup(bi.hb04);
+        radioGroup(bi.hb05);
+        radioGroup(bi.hb06);
+
+
+    }
+
+
+    public void radioGroup(RadioGroup grp) {
+
+        grp.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (bi.hb01b.isChecked() || bi.hb02b.isChecked() || bi.hb03b.isChecked()
+                    || bi.hb04b.isChecked() || bi.hb05b.isChecked() || bi.hb06b.isChecked()) {
+                Clear.clearAllFields(bi.fldGrpCVhb07);
+                bi.fldGrpCVhb07.setVisibility(View.VISIBLE);
+            } else {
+                Clear.clearAllFields(bi.fldGrpCVhb07);
+                bi.fldGrpCVhb07.setVisibility(View.GONE);
+            }
+        }));
+
     }
 
 

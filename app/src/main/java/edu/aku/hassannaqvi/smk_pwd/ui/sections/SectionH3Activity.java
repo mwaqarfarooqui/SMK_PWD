@@ -3,12 +3,14 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,6 +32,34 @@ public class SectionH3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_h3);
         bi.setCallback(this);
+    }
+
+
+    private void setupSkips() {
+        radioGroup(bi.hc01);
+        radioGroup(bi.hc02);
+        radioGroup(bi.hc03);
+        radioGroup(bi.hc04);
+        radioGroup(bi.hc05);
+
+
+
+    }
+
+
+    public void radioGroup(RadioGroup grp) {
+
+        grp.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (bi.hc01b.isChecked() || bi.hc02b.isChecked() || bi.hc03b.isChecked()
+                    || bi.hc04b.isChecked() || bi.hc05b.isChecked() ) {
+                Clear.clearAllFields(bi.fldGrpCVhc06);
+                bi.fldGrpCVhc06.setVisibility(View.VISIBLE);
+            } else {
+                Clear.clearAllFields(bi.fldGrpCVhc06);
+                bi.fldGrpCVhc06.setVisibility(View.GONE);
+            }
+        }));
+
     }
 
 
