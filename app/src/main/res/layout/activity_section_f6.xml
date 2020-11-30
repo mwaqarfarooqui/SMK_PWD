@@ -91,6 +91,14 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+        <!--Skip FF02-->
+        <LinearLayout
+            android:id="@+id/fldGrpF602"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility='@{ff01b.checked? View.GONE : View.VISIBLE}'>
+
             <!-- ff02  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVff02"
@@ -152,6 +160,7 @@
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
             <!-- ff03  Radio   -->
             <androidx.cardview.widget.CardView
@@ -205,6 +214,13 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+        <!--Skip FF03-->
+        <LinearLayout
+            android:id="@+id/fldGrpF604"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility='@{ff03b.checked? View.GONE : View.VISIBLE}'>
             <!-- hint1  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhint1"
@@ -393,7 +409,10 @@
                             android:text="@string/ff06b" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
