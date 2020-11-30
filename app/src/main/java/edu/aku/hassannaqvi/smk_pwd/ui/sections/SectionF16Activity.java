@@ -32,7 +32,7 @@ public class SectionF16Activity extends AppCompatActivity {
 
         bi.fp01a.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1601a));
 
-        bi.fp01c.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1601d));
+        bi.fp01c.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1601c));
 
         bi.fp02a.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF1602a));
 
