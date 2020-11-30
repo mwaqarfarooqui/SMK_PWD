@@ -32,6 +32,7 @@ public class SectionH3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_h3);
         bi.setCallback(this);
+        setupSkips();
     }
 
 
