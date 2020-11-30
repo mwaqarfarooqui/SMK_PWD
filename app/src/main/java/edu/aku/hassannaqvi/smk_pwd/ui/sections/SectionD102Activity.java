@@ -130,7 +130,8 @@ public class SectionD102Activity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/return false;
+        }*/
+        return true;
     }
 
 
@@ -217,7 +218,7 @@ public class SectionD102Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, bi.da14a.isChecked() ? SectionD103Activity.class : SectionD2Activity.class));
+            startActivity(new Intent(this, SectionD103Activity.class));
         }
     }
 
