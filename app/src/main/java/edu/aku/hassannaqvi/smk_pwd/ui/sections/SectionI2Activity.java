@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.edittextpicker.aliazaz.EditTextPicker;
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -31,33 +30,23 @@ public class SectionI2Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i2);
         bi.setCallback(this);
         setupSkips();
-        setupTextWatchers();
     }
 
 
     private void setupSkips() {
-
-        bi.ib01.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.llgrp1b01);
-        }));
-
+        watcherSetMax(bi.ib01dx, bi.ib01ex);
+        watcherSetMax(bi.ib02dx, bi.ib02ex);
+        watcherSetMax(bi.ib03dx, bi.ib03ex);
+        watcherSetMax(bi.ib04dx, bi.ib04ex);
+        watcherSetMax(bi.ib05dx, bi.ib05ex);
+        watcherSetMax(bi.ib06dx, bi.ib06ex);
+        watcherSetMax(bi.ib07dx, bi.ib07ex);
+        watcherSetMax(bi.ib08dx, bi.ib08ex);
     }
 
 
-    private void setupTextWatchers() {
-       /* editTextImplementation(bi.k00611q, bi.k00612q);
-        editTextImplementation(bi.k00621q, bi.k00622q);
-        editTextImplementation(bi.k00631q, bi.k00632q);
-        editTextImplementation(bi.k00641q, bi.k00642q);
-        editTextImplementation(bi.k00651q, bi.k00652q);
-        editTextImplementation(bi.k00661q, bi.k00662q);
-        editTextImplementation(bi.k00671q, bi.k00672q);
-        editTextImplementation(bi.k00681q, bi.k00682q);
-        editTextImplementation(bi.k00691q, bi.k00692q);*/
-    }
 
-
-    public void editTextImplementation(EditTextPicker edit01, EditTextPicker edit02) {
+    public void watcherSetMax(EditTextPicker edit01, EditTextPicker edit02) {
 
         edit01.addTextChangedListener(new TextWatcher() {
             @Override
