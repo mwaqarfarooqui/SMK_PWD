@@ -230,10 +230,10 @@
                     </RadioGroup>
 
                     <LinearLayout
+                        android:id="@+id/llib02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:visibility='@{ib02a.checked ? View.GONE : View.VISIBLE}'>
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -257,7 +257,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib02d"
-                                android:text='@{ib02a.checked ? "" : ib02dx.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -286,7 +285,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib02e"
-                                android:text='@{ib02a.checked ? "" : ib02ex.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -359,10 +357,10 @@
                     </RadioGroup>
 
                     <LinearLayout
+                        android:id="@+id/llib03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:visibility='@{ib03a.checked ? View.GONE : View.VISIBLE}'>
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -386,7 +384,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib03d"
-                                android:text='@{ib03a.checked ? "" : ib03dx.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -415,7 +412,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib03e"
-                                android:text='@{ib03a.checked ? "" : ib03ex.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -488,10 +484,10 @@
                     </RadioGroup>
 
                     <LinearLayout
+                        android:id="@+id/llib04"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:visibility='@{ib04a.checked ? View.GONE : View.VISIBLE}'>
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -515,7 +511,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib04d"
-                                android:text='@{ib04a.checked ? "" : ib04dx.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -544,7 +539,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib04e"
-                                android:text='@{ib04a.checked ? "" : ib04ex.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -617,10 +611,10 @@
                     </RadioGroup>
 
                     <LinearLayout
+                        android:id="@+id/llib05"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:visibility='@{ib05a.checked ? View.GONE : View.VISIBLE}'>
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -644,7 +638,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib05d"
-                                android:text='@{ib05a.checked ? "" : ib05dx.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -673,7 +666,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib05e"
-                                android:text='@{ib05a.checked ? "" : ib05ex.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -746,10 +738,10 @@
                     </RadioGroup>
 
                     <LinearLayout
+                        android:id="@+id/llib06"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:visibility='@{ib06a.checked ? View.GONE : View.VISIBLE}'>
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -773,7 +765,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib06d"
-                                android:text='@{ib06a.checked ? "" : ib06dx.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -802,7 +793,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib06e"
-                                android:text='@{ib06a.checked ? "" : ib06ex.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -875,10 +865,10 @@
                     </RadioGroup>
 
                     <LinearLayout
+                        android:id="@+id/llib07"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:visibility='@{ib07a.checked ? View.GONE : View.VISIBLE}'>
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -902,7 +892,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib07d"
-                                android:text='@{ib07a.checked ? "" : ib07dx.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -931,7 +920,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib07e"
-                                android:text='@{ib07a.checked ? "" : ib07ex.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -1004,10 +992,10 @@
                     </RadioGroup>
 
                     <LinearLayout
+                        android:id="@+id/llib08"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:visibility='@{ib08a.checked ? View.GONE : View.VISIBLE}'>
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -1031,7 +1019,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib08d"
-                                android:text='@{ib08a.checked ? "" : ib08dx.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />
@@ -1060,7 +1047,6 @@
                                 android:inputType="number"
                                 android:maxLength="3"
                                 android:tag="ib08e"
-                                android:text='@{ib08a.checked ? "" : ib08ex.getText().toString()}'
                                 app:maxValue="100"
                                 app:minValue="0"
                                 app:type="range" />

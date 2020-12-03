@@ -41,6 +41,13 @@ public class SectionI2Activity extends AppCompatActivity {
 
     private void setupSkips() {
         radioGroupListener(bi.ib01, bi.ib01a, bi.llib01);
+        radioGroupListener(bi.ib02, bi.ib02a, bi.llib02);
+        radioGroupListener(bi.ib03, bi.ib03a, bi.llib03);
+        radioGroupListener(bi.ib04, bi.ib04a, bi.llib04);
+        radioGroupListener(bi.ib05, bi.ib05a, bi.llib05);
+        radioGroupListener(bi.ib06, bi.ib06a, bi.llib06);
+        radioGroupListener(bi.ib07, bi.ib07a, bi.llib07);
+        radioGroupListener(bi.ib08, bi.ib08a, bi.llib08);
         watcherSetMax(bi.ib01dx, bi.ib01ex);
         watcherSetMax(bi.ib02dx, bi.ib02ex);
         watcherSetMax(bi.ib03dx, bi.ib03ex);
