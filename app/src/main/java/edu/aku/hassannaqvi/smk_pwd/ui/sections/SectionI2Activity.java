@@ -5,14 +5,20 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.edittextpicker.aliazaz.EditTextPicker;
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
@@ -34,6 +40,7 @@ public class SectionI2Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
+        radioGroupListener(bi.ib01, bi.ib01a, bi.llib01);
         watcherSetMax(bi.ib01dx, bi.ib01ex);
         watcherSetMax(bi.ib02dx, bi.ib02ex);
         watcherSetMax(bi.ib03dx, bi.ib03ex);
@@ -42,6 +49,15 @@ public class SectionI2Activity extends AppCompatActivity {
         watcherSetMax(bi.ib06dx, bi.ib06ex);
         watcherSetMax(bi.ib07dx, bi.ib07ex);
         watcherSetMax(bi.ib08dx, bi.ib08ex);
+    }
+
+
+    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+        rg.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(vg);
+            vg.setVisibility(View.GONE);
+            if (i != rb.getId()) vg.setVisibility(View.VISIBLE);
+        });
     }
 
 
