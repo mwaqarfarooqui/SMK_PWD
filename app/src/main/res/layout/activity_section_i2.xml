@@ -38,9 +38,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/secibtitle" />
-                    
+
                 </LinearLayout>
-                
+
             </androidx.cardview.widget.CardView>
 
 
@@ -74,7 +74,7 @@
                             android:layout_alignTop="@id/qtxt_ib01"
                             android:layout_alignBottom="@id/qtxt_ib01"
                             android:text="@string/Q_ib01" />
-                        
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -108,35 +108,63 @@
                         android:orientation="horizontal"
                         android:visibility='@{ib01a.checked ? View.GONE : View.VISIBLE}'>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib01dx"
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib01d"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib01d"
-                            android:text='@{ib01a.checked ? "" : ib01dx.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib01ex"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib01d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib01dx"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib01d"
+                                android:text='@{ib01a.checked ? "" : ib01dx.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib01e"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib01e"
-                            android:text='@{ib01a.checked ? "" : ib01ex.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib01e" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib01ex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib01e"
+                                android:text='@{ib01a.checked ? "" : ib01ex.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -175,7 +203,7 @@
                             android:layout_alignTop="@id/qtxt_ib02"
                             android:layout_alignBottom="@id/qtxt_ib02"
                             android:text="@string/Q_ib02" />
-                        
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -202,47 +230,75 @@
                             android:text="@string/ib02c" />
 
                     </RadioGroup>
-                    
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:visibility='@{ib02a.checked ? View.GONE : View.VISIBLE}'>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib02dx"
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib02d"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib02d"
-                            android:text='@{ib02a.checked ? "" : ib02dx.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib02ex"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib02d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib02dx"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib02d"
+                                android:text='@{ib02a.checked ? "" : ib02dx.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib02e"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib02e"
-                            android:text='@{ib02a.checked ? "" : ib02ex.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib02e" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib02ex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib02e"
+                                android:text='@{ib02a.checked ? "" : ib02ex.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    
+
                 </LinearLayout>
-                
+
             </androidx.cardview.widget.CardView>
 
 
@@ -276,7 +332,7 @@
                             android:layout_alignTop="@id/qtxt_ib03"
                             android:layout_alignBottom="@id/qtxt_ib03"
                             android:text="@string/Q_ib03" />
-                        
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -301,7 +357,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ib03c" />
-                        
+
                     </RadioGroup>
 
                     <LinearLayout
@@ -310,40 +366,68 @@
                         android:orientation="horizontal"
                         android:visibility='@{ib03a.checked ? View.GONE : View.VISIBLE}'>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib03dx"
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib03d"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib03d"
-                            android:text='@{ib03a.checked ? "" : ib03dx.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib03ex"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib03d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib03dx"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib03d"
+                                android:text='@{ib03a.checked ? "" : ib03dx.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib03e"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib03e"
-                            android:text='@{ib03a.checked ? "" : ib03ex.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib03e" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib03ex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib03e"
+                                android:text='@{ib03a.checked ? "" : ib03ex.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    
+
                 </LinearLayout>
-                
+
             </androidx.cardview.widget.CardView>
 
 
@@ -377,7 +461,7 @@
                             android:layout_alignTop="@id/qtxt_ib04"
                             android:layout_alignBottom="@id/qtxt_ib04"
                             android:text="@string/Q_ib04" />
-                        
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -402,7 +486,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ib04c" />
-                        
+
                     </RadioGroup>
 
                     <LinearLayout
@@ -411,40 +495,68 @@
                         android:orientation="horizontal"
                         android:visibility='@{ib04a.checked ? View.GONE : View.VISIBLE}'>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib04dx"
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib04d"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib04d"
-                            android:text='@{ib04a.checked ? "" : ib04dx.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib04ex"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib04d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib04dx"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib04d"
+                                android:text='@{ib04a.checked ? "" : ib04dx.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib04e"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib04e"
-                            android:text='@{ib04a.checked ? "" : ib04ex.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib04e" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib04ex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib04e"
+                                android:text='@{ib04a.checked ? "" : ib04ex.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    
+
                 </LinearLayout>
-                
+
             </androidx.cardview.widget.CardView>
 
 
@@ -478,7 +590,7 @@
                             android:layout_alignTop="@id/qtxt_ib05"
                             android:layout_alignBottom="@id/qtxt_ib05"
                             android:text="@string/Q_ib05" />
-                        
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -503,7 +615,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ib05c" />
-                        
+
                     </RadioGroup>
 
                     <LinearLayout
@@ -512,40 +624,68 @@
                         android:orientation="horizontal"
                         android:visibility='@{ib05a.checked ? View.GONE : View.VISIBLE}'>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib05dx"
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib05d"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib05d"
-                            android:text='@{ib05a.checked ? "" : ib05dx.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib05ex"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib05d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib05dx"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib05d"
+                                android:text='@{ib05a.checked ? "" : ib05dx.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib05e"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib05e"
-                            android:text='@{ib05a.checked ? "" : ib05ex.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib05e" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib05ex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib05e"
+                                android:text='@{ib05a.checked ? "" : ib05ex.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    
+
                 </LinearLayout>
-                
+
             </androidx.cardview.widget.CardView>
 
 
@@ -579,7 +719,7 @@
                             android:layout_alignTop="@id/qtxt_ib06"
                             android:layout_alignBottom="@id/qtxt_ib06"
                             android:text="@string/Q_ib06" />
-                        
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -604,7 +744,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ib06c" />
-                        
+
                     </RadioGroup>
 
                     <LinearLayout
@@ -613,40 +753,68 @@
                         android:orientation="horizontal"
                         android:visibility='@{ib06a.checked ? View.GONE : View.VISIBLE}'>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib06dx"
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib06d"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib06d"
-                            android:text='@{ib06a.checked ? "" : ib06dx.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib06ex"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib06d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib06dx"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib06d"
+                                android:text='@{ib06a.checked ? "" : ib06dx.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib06e"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib06e"
-                            android:text='@{ib06a.checked ? "" : ib06ex.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib06e" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib06ex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib06e"
+                                android:text='@{ib06a.checked ? "" : ib06ex.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    
+
                 </LinearLayout>
-                
+
             </androidx.cardview.widget.CardView>
 
 
@@ -680,7 +848,7 @@
                             android:layout_alignTop="@id/qtxt_ib07"
                             android:layout_alignBottom="@id/qtxt_ib07"
                             android:text="@string/Q_ib07" />
-                        
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -705,7 +873,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ib07c" />
-                        
+
                     </RadioGroup>
 
                     <LinearLayout
@@ -714,40 +882,68 @@
                         android:orientation="horizontal"
                         android:visibility='@{ib07a.checked ? View.GONE : View.VISIBLE}'>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib07dx"
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib07d"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib07d"
-                            android:text='@{ib07a.checked ? "" : ib07dx.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib07ex"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib07d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib07dx"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib07d"
+                                android:text='@{ib07a.checked ? "" : ib07dx.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib07e"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib07e"
-                            android:text='@{ib07a.checked ? "" : ib07ex.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib07e" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib07ex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib07e"
+                                android:text='@{ib07a.checked ? "" : ib07ex.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    
+
                 </LinearLayout>
-                
+
             </androidx.cardview.widget.CardView>
 
 
@@ -781,7 +977,7 @@
                             android:layout_alignTop="@id/qtxt_ib08"
                             android:layout_alignBottom="@id/qtxt_ib08"
                             android:text="@string/Q_ib08" />
-                        
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -806,7 +1002,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ib08c" />
-                        
+
                     </RadioGroup>
 
                     <LinearLayout
@@ -815,41 +1011,71 @@
                         android:orientation="horizontal"
                         android:visibility='@{ib08a.checked ? View.GONE : View.VISIBLE}'>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib08dx"
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib08d"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib08d"
-                            android:text='@{ib08a.checked ? "" : ib08dx.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ib08ex"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib08d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib08dx"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib08d"
+                                android:text='@{ib08a.checked ? "" : ib08dx.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="@string/ib08e"
-                            android:inputType="number"
-                            android:maxLength="3"
-                            android:tag="ib08e"
-                            android:text='@{ib08a.checked ? "" : ib08ex.getText().toString()}'
-                            app:maxValue="100"
-                            app:minValue="0"
-                            app:type="range" />
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/ib08e" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/ib08ex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="###"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:tag="ib08e"
+                                android:text='@{ib08a.checked ? "" : ib08ex.getText().toString()}'
+                                app:maxValue="100"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    
+
                 </LinearLayout>
-                
+
             </androidx.cardview.widget.CardView>
+
+
 
 
             <!--EndButton LinearLayout-->
