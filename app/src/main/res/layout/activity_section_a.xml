@@ -31,11 +31,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
+                        style="@style/textView3Head"
                         android:text="@string/modatitle" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -69,6 +69,7 @@
                             android:layout_alignTop="@id/qtxt_aa01"
                             android:layout_alignBottom="@id/qtxt_aa01"
                             android:text="@string/Q_aa01" />
+
                     </RelativeLayout>
 
                     <LinearLayout
@@ -94,7 +95,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:hint="@string/aa01d"
+                                android:hint="##"
                                 android:inputType="number"
                                 android:maxLength="2"
                                 app:maxValue="31"
@@ -120,7 +121,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:hint="@string/aa01m"
+                                android:hint="##"
                                 android:inputType="number"
                                 android:maxLength="2"
                                 app:maxValue="12"
@@ -146,7 +147,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:hint="@string/aa01y"
+                                android:hint="####"
                                 android:inputType="number"
                                 android:maxLength="4"
                                 app:maxValue="2021"

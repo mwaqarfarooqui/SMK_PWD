@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <data>
 
         <import type="android.view.View" />
@@ -12,6 +13,7 @@
             type="edu.aku.hassannaqvi.smk_pwd.adapter.SyncListAdapter" />
     </data>
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +21,7 @@
         android:background="@color/white"
         app:cardCornerRadius="2dp"
         app:cardElevation="1dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,12 +64,12 @@
                         android:textColor="@color/colorPrimary"
                         tools:text="Table Name" />
 
-
                     <ProgressBar
                         android:id="@+id/pb"
                         style="@android:style/Widget.ProgressBar.Small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
+
                 </LinearLayout>
 
                 <TextView
@@ -91,9 +94,12 @@
                     android:layout_marginLeft="17.50dp"
                     android:layout_marginRight="17.50dp"
                     android:layout_marginBottom="17.50dp"
-
                     tools:text="Results:    " />
+
             </LinearLayout>
+
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
 </layout>

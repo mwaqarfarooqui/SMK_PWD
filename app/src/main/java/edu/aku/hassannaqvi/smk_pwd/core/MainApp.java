@@ -22,6 +22,7 @@ import androidx.core.app.ActivityCompat;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
 
+import java.text.Normalizer;
 import java.util.List;
 
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
@@ -366,6 +367,7 @@ public class MainApp extends Application {
         public void onStatusChanged(String s, int i, Bundle b) {
             showCurrentLocation();
         }
+
 
         public void onProviderDisabled(String s) {
 

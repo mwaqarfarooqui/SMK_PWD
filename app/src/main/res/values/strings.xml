@@ -88,7 +88,7 @@
 
     <!-- PWD Form Start -->
     <string name="facilityidentification_mainheading">FACILITY IDENTIFICATION: </string>
-    <string name="modatitle">MODULE-A: FACILITY IDENTIFICATION</string>
+    <string name="modatitle"> MODULE A: \nFACILITY IDENTIFICATION </string>
     <string name="aa01">Date of visit</string>
     <string name="aa01d">Date of visit</string>
     <string name="aa01m">Month of Visit</string>

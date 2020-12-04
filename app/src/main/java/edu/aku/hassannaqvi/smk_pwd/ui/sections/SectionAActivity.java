@@ -3,10 +3,12 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import java.text.SimpleDateFormat;
@@ -50,6 +52,25 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     private void initializingComponents() {
+
+        bi.aa02.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(bi.fldGrpCVaa03, false);
+            if (i == bi.aa02a.getId()) {
+               bi.aa03a.setEnabled(true);
+               bi.aa03b.setEnabled(true);
+            } else if (i == bi.aa02b.getId()) {
+                bi.aa03c.setEnabled(true);
+                bi.aa03d.setEnabled(true);
+                bi.aa03e.setEnabled(true);
+                bi.aa03f.setEnabled(true);
+                bi.aa03g.setEnabled(true);
+                bi.aa03h.setEnabled(true);
+            } else if (i == bi.aa02c.getId()) {
+                bi.aa03i.setEnabled(true);
+                bi.aa03j.setEnabled(true);
+            }
+        });
+
         // Databinding Edit Mode (only in first activity for every contract)
         fc = new FormsContract();
         db = MainApp.appInfo.getDbHelper();
@@ -240,7 +261,7 @@ public class SectionAActivity extends AppCompatActivity {
         fc.setDevicetagID(MainApp.appInfo.getTagName());
         fc.setAppversion(MainApp.appInfo.getAppVersion());
 
-       /* form.setAa01d(bi.aa01d.getText().toString());
+        /*form.setAa01d(bi.aa01d.getText().toString());
         form.setAa01m(bi.aa01m.getText().toString());
         form.setAa01y(bi.aa01y.getText().toString());
         form.setAa02( bi.aa02a.isChecked() ? "1"
