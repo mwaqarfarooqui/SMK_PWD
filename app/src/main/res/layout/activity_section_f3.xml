@@ -1,6 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <data>
 
         <import type="android.view.View" />
@@ -12,15 +13,19 @@
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF3Activity" />
     </data>
 
+    
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:id="@+id/GrpName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
 
             <!-- secfctitle  Title   -->
             <androidx.cardview.widget.CardView
@@ -33,11 +38,15 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/textView3Head"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/secfctitle" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- hint1  Title   -->
             <androidx.cardview.widget.CardView
@@ -53,8 +62,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/hint1" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- hint2  Title   -->
             <androidx.cardview.widget.CardView
@@ -70,10 +82,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/hint2" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc01  Title   -->
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc01 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc01"
                 style="@style/cardView">
@@ -83,61 +99,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc01" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc01"
+                            android:text="@string/fc01" />
+
+                        <TextView
+                            android:id="@+id/q_fc01"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc01"
+                            android:layout_alignBottom="@id/qtxt_fc01"
+                            android:text="@string/Q_fc01" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc01m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc01m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc01m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc01m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc01m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc01m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc01m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc01m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc01m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc01m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc01m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc01m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc01m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc01m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc01m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc01a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc01a"
@@ -168,29 +230,38 @@
                             android:layout_alignTop="@id/qtxt_fc01a"
                             android:layout_alignBottom="@id/qtxt_fc01a"
                             android:text="@string/Q_fc01a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc01a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc01aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc01aa" />
 
                         <RadioButton
                             android:id="@+id/fc01ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc01ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc02  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc02 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc02"
                 style="@style/cardView">
@@ -200,61 +271,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc02" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc02"
+                            android:text="@string/fc02" />
+
+                        <TextView
+                            android:id="@+id/q_fc02"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc02"
+                            android:layout_alignBottom="@id/qtxt_fc02"
+                            android:text="@string/Q_fc02" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc02m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc02m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc02m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc02m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc02m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc02m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc02m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc02m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc02m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc02m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc02m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc02m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc02m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc02m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc02m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc02a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc02a"
@@ -285,29 +402,38 @@
                             android:layout_alignTop="@id/qtxt_fc02a"
                             android:layout_alignBottom="@id/qtxt_fc02a"
                             android:text="@string/Q_fc02a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc02a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc02aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc02aa" />
 
                         <RadioButton
                             android:id="@+id/fc02ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc02ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc03  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc03 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc03"
                 style="@style/cardView">
@@ -317,61 +443,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc03" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc03"
+                            android:text="@string/fc03" />
+
+                        <TextView
+                            android:id="@+id/q_fc03"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc03"
+                            android:layout_alignBottom="@id/qtxt_fc03"
+                            android:text="@string/Q_fc03" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc03m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc03m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc03m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc03m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc03m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc03m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc03m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc03m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc03m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc03m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc03m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc03m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc03m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc03m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc03m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc03a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc03a"
@@ -402,29 +574,38 @@
                             android:layout_alignTop="@id/qtxt_fc03a"
                             android:layout_alignBottom="@id/qtxt_fc03a"
                             android:text="@string/Q_fc03a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc03a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc03aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc03aa" />
 
                         <RadioButton
                             android:id="@+id/fc03ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc03ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc04  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc04 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc04"
                 style="@style/cardView">
@@ -434,61 +615,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc04" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc04"
+                            android:text="@string/fc04" />
+
+                        <TextView
+                            android:id="@+id/q_fc04"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc04"
+                            android:layout_alignBottom="@id/qtxt_fc04"
+                            android:text="@string/Q_fc04" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc04m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc04m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc04m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc04m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc04m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc04m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc04m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc04m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc04m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc04m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc04m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc04m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc04m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc04m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc04m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc04a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc04a"
@@ -519,29 +746,38 @@
                             android:layout_alignTop="@id/qtxt_fc04a"
                             android:layout_alignBottom="@id/qtxt_fc04a"
                             android:text="@string/Q_fc04a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc04a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc04aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc04aa" />
 
                         <RadioButton
                             android:id="@+id/fc04ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc04ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc05  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc05 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc05"
                 style="@style/cardView">
@@ -551,61 +787,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc05" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc05"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc05"
+                            android:text="@string/fc05" />
+
+                        <TextView
+                            android:id="@+id/q_fc05"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc05"
+                            android:layout_alignBottom="@id/qtxt_fc05"
+                            android:text="@string/Q_fc05" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc05m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc05m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc05m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc05m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc05m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc05m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc05m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc05m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc05m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc05m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc05m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc05m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc05m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc05m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc05m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc05a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc05a"
@@ -636,29 +918,38 @@
                             android:layout_alignTop="@id/qtxt_fc05a"
                             android:layout_alignBottom="@id/qtxt_fc05a"
                             android:text="@string/Q_fc05a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc05a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc05aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc05aa" />
 
                         <RadioButton
                             android:id="@+id/fc05ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc05ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc06  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc06 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc06"
                 style="@style/cardView">
@@ -668,61 +959,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc06" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc06"
+                            android:text="@string/fc06" />
+
+                        <TextView
+                            android:id="@+id/q_fc06"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc06"
+                            android:layout_alignBottom="@id/qtxt_fc06"
+                            android:text="@string/Q_fc06" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc06m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc06m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc06m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc06m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc06m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc06m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc06m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc06m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc06m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc06m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc06m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc06m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc06m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc06m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc06m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc06a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc06a"
@@ -753,29 +1090,38 @@
                             android:layout_alignTop="@id/qtxt_fc06a"
                             android:layout_alignBottom="@id/qtxt_fc06a"
                             android:text="@string/Q_fc06a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc06a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc06aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc06aa" />
 
                         <RadioButton
                             android:id="@+id/fc06ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc06ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc07  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc07 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc07"
                 style="@style/cardView">
@@ -785,61 +1131,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc07" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc07"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc07"
+                            android:text="@string/fc07" />
+
+                        <TextView
+                            android:id="@+id/q_fc07"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc07"
+                            android:layout_alignBottom="@id/qtxt_fc07"
+                            android:text="@string/Q_fc07" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc07m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc07m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc07m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc07m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc07m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc07m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc07m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc07m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc07m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc07m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc07m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc07m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc07m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc07m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc07m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc07a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc07a"
@@ -870,29 +1262,38 @@
                             android:layout_alignTop="@id/qtxt_fc07a"
                             android:layout_alignBottom="@id/qtxt_fc07a"
                             android:text="@string/Q_fc07a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc07a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc07aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc07aa" />
 
                         <RadioButton
                             android:id="@+id/fc07ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc07ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc08  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc08 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc08"
                 style="@style/cardView">
@@ -902,61 +1303,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc08" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc08"
+                            android:text="@string/fc08" />
+
+                        <TextView
+                            android:id="@+id/q_fc08"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc08"
+                            android:layout_alignBottom="@id/qtxt_fc08"
+                            android:text="@string/Q_fc08" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc08m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc08m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc08m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc08m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc08m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc08m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc08m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc08m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc08m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc08m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc08m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc08m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc08m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc08m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc08m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc08a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc08a"
@@ -987,29 +1434,38 @@
                             android:layout_alignTop="@id/qtxt_fc08a"
                             android:layout_alignBottom="@id/qtxt_fc08a"
                             android:text="@string/Q_fc08a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc08a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc08aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc08aa" />
 
                         <RadioButton
                             android:id="@+id/fc08ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc08ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc09  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc09 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc09"
                 style="@style/cardView">
@@ -1019,61 +1475,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc09" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc09"
+                            android:text="@string/fc09" />
+
+                        <TextView
+                            android:id="@+id/q_fc09"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc09"
+                            android:layout_alignBottom="@id/qtxt_fc09"
+                            android:text="@string/Q_fc09" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc09m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc09m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc09m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc09m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc09m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc09m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc09m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc09m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc09m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc09m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc09m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc09m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc09m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc09m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc09m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc09a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc09a"
@@ -1104,29 +1606,38 @@
                             android:layout_alignTop="@id/qtxt_fc09a"
                             android:layout_alignBottom="@id/qtxt_fc09a"
                             android:text="@string/Q_fc09a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc09a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc09aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc09aa" />
 
                         <RadioButton
                             android:id="@+id/fc09ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc09ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc10  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc10 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc10"
                 style="@style/cardView">
@@ -1136,61 +1647,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc10" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc10"
+                            android:text="@string/fc10" />
+
+                        <TextView
+                            android:id="@+id/q_fc10"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc10"
+                            android:layout_alignBottom="@id/qtxt_fc10"
+                            android:text="@string/Q_fc10" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc10m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc10m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc10m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc10m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc10m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc10m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc10m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc10m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc10m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc10m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc10m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc10m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc10m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc10m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc10m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc10a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc10a"
@@ -1221,29 +1778,38 @@
                             android:layout_alignTop="@id/qtxt_fc10a"
                             android:layout_alignBottom="@id/qtxt_fc10a"
                             android:text="@string/Q_fc10a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc10a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc10aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc10aa" />
 
                         <RadioButton
                             android:id="@+id/fc10ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc10ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc11  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc11 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc11"
                 style="@style/cardView">
@@ -1253,61 +1819,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc11" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc11"
+                            android:text="@string/fc11" />
+
+                        <TextView
+                            android:id="@+id/q_fc11"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc11"
+                            android:layout_alignBottom="@id/qtxt_fc11"
+                            android:text="@string/Q_fc11" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc11m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc11m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc11m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc11m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc11m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc11m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc11m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc11m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc11m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc11m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc11m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc11m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc11m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc11m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc11m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc11a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc11a"
@@ -1338,29 +1950,38 @@
                             android:layout_alignTop="@id/qtxt_fc11a"
                             android:layout_alignBottom="@id/qtxt_fc11a"
                             android:text="@string/Q_fc11a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc11a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc11aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc11aa" />
 
                         <RadioButton
                             android:id="@+id/fc11ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc11ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc12  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc12 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc12"
                 style="@style/cardView">
@@ -1370,61 +1991,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc12" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc12"
+                            android:text="@string/fc12" />
+
+                        <TextView
+                            android:id="@+id/q_fc12"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc12"
+                            android:layout_alignBottom="@id/qtxt_fc12"
+                            android:text="@string/Q_fc12" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc12m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc12m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc12m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc12m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc12m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc12m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc12m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc12m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc12m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc12m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc12m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc12m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc12m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc12m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc12m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc12a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc12a"
@@ -1455,29 +2122,38 @@
                             android:layout_alignTop="@id/qtxt_fc12a"
                             android:layout_alignBottom="@id/qtxt_fc12a"
                             android:text="@string/Q_fc12a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc12a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc12aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc12aa" />
 
                         <RadioButton
                             android:id="@+id/fc12ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc12ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc13  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc13 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc13"
                 style="@style/cardView">
@@ -1487,61 +2163,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc13" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc13"
+                            android:text="@string/fc13" />
+
+                        <TextView
+                            android:id="@+id/q_fc13"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc13"
+                            android:layout_alignBottom="@id/qtxt_fc13"
+                            android:text="@string/Q_fc13" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc13m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc13m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc13m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc13m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc13m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc13m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc13m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc13m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc13m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc13m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc13m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc13m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc13m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc13m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc13m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc13a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc13a"
@@ -1572,29 +2294,38 @@
                             android:layout_alignTop="@id/qtxt_fc13a"
                             android:layout_alignBottom="@id/qtxt_fc13a"
                             android:text="@string/Q_fc13a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc13a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc13aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc13aa" />
 
                         <RadioButton
                             android:id="@+id/fc13ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc13ab" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- fc14  Title   -->
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            
+
+
+            <!-- fc14 3EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc14"
                 style="@style/cardView">
@@ -1604,61 +2335,107 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc14" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
+                        <TextView
+                            android:id="@+id/qtxt_fc14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fc14"
+                            android:text="@string/fc14" />
+
+                        <TextView
+                            android:id="@+id/q_fc14"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fc14"
+                            android:layout_alignBottom="@id/qtxt_fc14"
+                            android:text="@string/Q_fc14" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fc14m1" />
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc14m1"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc14m1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc14m2" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fc14m3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fc14m1"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        android:orientation="horizontal">
 
-                        app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc14m1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc14m2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc14m2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc14m2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc14m2"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fc14m3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="1000"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        app:type="range" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fc14m3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fc14m3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fc14m3"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="1000"
-
-                        app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
+            
             <!-- fc14a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfc14a"
@@ -1689,27 +2466,39 @@
                             android:layout_alignTop="@id/qtxt_fc14a"
                             android:layout_alignBottom="@id/qtxt_fc14a"
                             android:text="@string/Q_fc14a" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/fc14a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/fc14aa"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc14aa" />
 
                         <RadioButton
                             android:id="@+id/fc14ab"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/fc14ab" />
+
                     </RadioGroup>
+
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+
+            </androidx.cardview.widget.CardView>
+
+
+            
+            
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1736,7 +2525,15 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
+                
             </LinearLayout>
+            <!--EndButton LinearLayout-->
+            
+            
         </LinearLayout>
+        
+        
     </ScrollView>
+    
+    
 </layout>

@@ -1022,7 +1022,7 @@
     <string name="fb04b">Mostly (all staff have received training but not in the past two years)</string>
     <string name="fb04c">Partly (some staff have received training)</string>
     <string name="fb04d">Not at all</string>
-    <string name="secfctitle">SECTION-H3- INDICATOR DEFINITIONS AND REPORTING  NUMBERS OVER TIME</string>
+    <string name="secfctitle"> SECTION H3: \nINDICATOR DEFINITIONS &#38; REPORTING  NUMBERS OVER TIME </string>
     <string name="hintfc1">List of Indicators</string>
     <string name="hintfc2">Review the SOURCE REGISTERS for following indicators for 3 months</string>
     <string name="fc01">Total FP Counseling Clients</string>
