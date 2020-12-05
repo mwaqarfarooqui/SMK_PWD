@@ -11,6 +11,7 @@
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionBActivity" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -20,6 +21,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+
+            <!-- ba01  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVba01"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/textView3Head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ba01" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
 
             <!-- title1  Title   -->
@@ -37,7 +59,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/title1" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -56,26 +80,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/title2" />
+
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-
-            <!-- ba01  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVba01"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/ba01" />
-                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
 
