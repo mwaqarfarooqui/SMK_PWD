@@ -22,23 +22,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- modftitle  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVmodftitle"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/modftitle" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
             <!-- secfatitle  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVsecfatitle"
@@ -50,6 +33,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/textView3Head"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/secfatitle" />
@@ -72,6 +56,7 @@
                         android:text="@string/hint" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+            
 
             <!-- fam1  Title   -->
             <androidx.cardview.widget.CardView
@@ -83,44 +68,88 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fam1" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fam1m" />
+                        <TextView
+                            android:id="@+id/qtxt_fam1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fam1"
+                            android:text="@string/fam1" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fam1m"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fam1m"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="12"
-                        app:minValue="1"
-                        app:type="range" />
+                        <TextView
+                            android:id="@+id/q_fam1"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fam1"
+                            android:layout_alignBottom="@id/qtxt_fam1"
+                            android:text="@string/Q_fam1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fam1y" />
+                    </RelativeLayout>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fam1y"
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fam1y"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="2020"
-                        app:minValue="2018"
-                        app:type="range" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fam1m" />
+                        
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fam1y" />
+
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fam1m"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="##"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:maxValue="12"
+                            app:minValue="1"
+                            app:type="range" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fam1y"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="2020"
+                            app:minValue="2018"
+                            app:type="range" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+            
 
             <!-- fam2  Title   -->
             <androidx.cardview.widget.CardView
@@ -132,44 +161,88 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fam2" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fam2m" />
+                        <TextView
+                            android:id="@+id/qtxt_fam2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fam2"
+                            android:text="@string/fam2" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fam2m"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fam2m"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="12"
-                        app:minValue="1"
-                        app:type="range" />
+                        <TextView
+                            android:id="@+id/q_fam2"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fam2"
+                            android:layout_alignBottom="@id/qtxt_fam2"
+                            android:text="@string/Q_fam2" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fam2y" />
+                    </RelativeLayout>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fam2y"
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fam2y"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="2020"
-                        app:minValue="2018"
-                        app:type="range" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fam2m" />
+                        
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fam2y" />
+
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fam2m"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="##"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:maxValue="12"
+                            app:minValue="1"
+                            app:type="range" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fam2y"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="2020"
+                            app:minValue="2018"
+                            app:type="range" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+            
 
             <!-- fam3  Title   -->
             <androidx.cardview.widget.CardView
@@ -181,44 +254,90 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fam3" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fam3m" />
+                        <TextView
+                            android:id="@+id/qtxt_fam3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_fam3"
+                            android:text="@string/fam3" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fam3m"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fam3m"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="12"
-                        app:minValue="1"
-                        app:type="range" />
+                        <TextView
+                            android:id="@+id/q_fam3"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_fam3"
+                            android:layout_alignBottom="@id/qtxt_fam3"
+                            android:text="@string/Q_fam3" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fam3y" />
+                    </RelativeLayout>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/fam3y"
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/fam3y"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        app:maxValue="2020"
-                        app:minValue="2018"
-                        app:type="range" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fam3m" />
+                        
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fam3y" />
+
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fam3m"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="##"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:maxValue="12"
+                            app:minValue="1"
+                            app:type="range" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/fam3y"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="2020"
+                            app:minValue="2018"
+                            app:type="range" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+
+            </androidx.cardview.widget.CardView>
+            
+            
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

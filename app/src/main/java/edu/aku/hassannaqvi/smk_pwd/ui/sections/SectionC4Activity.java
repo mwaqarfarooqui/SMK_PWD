@@ -107,6 +107,7 @@ public class SectionC4Activity extends AppCompatActivity {
                 : "-1");
 
         json.put("cd09yx", bi.cd09yx.getText().toString());
+
         json.put("cd10", bi.cd10a.isChecked() ? "1"
                 : bi.cd10b.isChecked() ? "2"
                 : "-1");
