@@ -1,6 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <data>
 
         <import type="android.view.View" />
@@ -12,9 +13,11 @@
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF1Activity" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -22,7 +25,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- secfatitle  Title   -->
+
+        <!-- secfatitle  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVsecfatitle"
                 style="@style/cardView">
@@ -37,8 +41,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/secfatitle" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- hint  Title   -->
             <androidx.cardview.widget.CardView
@@ -54,11 +61,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/hint" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            
 
-            <!-- fam1  Title   -->
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- fam1 2EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfam1"
                 style="@style/cardView">
@@ -149,9 +158,9 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-            
 
-            <!-- fam2  Title   -->
+
+            <!-- fam2 2EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfam2"
                 style="@style/cardView">
@@ -242,9 +251,9 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-            
 
-            <!-- fam3  Title   -->
+
+            <!-- fam3 2EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVfam3"
                 style="@style/cardView">
@@ -364,7 +373,15 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+            <!--EndButton LinearLayout-->
+
+
         </LinearLayout>
+
+
     </ScrollView>
+
+
 </layout>
