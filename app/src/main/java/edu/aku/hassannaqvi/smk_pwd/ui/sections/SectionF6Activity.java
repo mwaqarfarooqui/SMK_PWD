@@ -11,12 +11,9 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF6Binding;
-import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
@@ -57,7 +54,7 @@ public class SectionF6Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
+        /*JSONObject json = new JSONObject();
         json.put("ff01", bi.ff01a.isChecked() ? "1"
                 : bi.ff01b.isChecked() ? "2"
                 : "-1");
@@ -87,7 +84,7 @@ public class SectionF6Activity extends AppCompatActivity {
 
         } catch (JSONException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 
