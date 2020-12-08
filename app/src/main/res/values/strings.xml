@@ -1308,7 +1308,7 @@
     <string name="fo05">Calculator</string>
     <string name="fo05a">Total quantity</string>
     <string name="fo05b">Total quantity that are in working condition</string>
-    <string name="secfptitle">SECTION-FP- AVAILABILITY OF REGISTERS/FORMS</string>
+    <string name="secfptitle"> SECTION FP: \nAVAILABILITY OF REGISTERS / FORMS </string>
     <string name="hintfp">List of Type of recording, tally sheets, or reports</string>
     <string name="fp01">FP Register </string>
     <string name="fp01a">Is the tool available?</string>
