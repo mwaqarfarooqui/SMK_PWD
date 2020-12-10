@@ -132,6 +132,7 @@
                             android:layout_alignTop="@id/qtxt_ca02"
                             android:layout_alignBottom="@id/qtxt_ca02"
                             android:text="@string/Q_ca02" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -188,7 +189,9 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+            <!--EndButton LinearLayout-->
 
 
         </LinearLayout>
