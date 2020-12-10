@@ -57,7 +57,7 @@ public class SectionAActivity extends AppCompatActivity {
 
     private void initializingComponents() {
 
-        bi.aa01.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", 2));
+        bi.aa01.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -2));
 
         /*bi.aa01d.setMaxvalue(Float.parseFloat(new SimpleDateFormat("dd", Locale.getDefault()).format(new Date().getTime())));
         bi.aa01m.setMaxvalue(Float.parseFloat(new SimpleDateFormat("MM", Locale.getDefault()).format(new Date().getTime())));
