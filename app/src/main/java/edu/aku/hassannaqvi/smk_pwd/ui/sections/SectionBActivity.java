@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -13,12 +14,16 @@ import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionBBinding;
-import edu.aku.hassannaqvi.smk_pwd.models.Forms;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 import static java.lang.Float.parseFloat;
 
@@ -142,15 +147,14 @@ public class SectionBActivity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SB, fc.getsB());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
@@ -162,50 +166,57 @@ public class SectionBActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        Forms form = new Forms();
+        JSONObject json = new JSONObject();
 
-        /*form.setBa01a1(bi.ba01a1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a1.getText().toString());
-        form.setBa01a2(bi.ba01a2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a2.getText().toString());
-        form.setBa01a3(bi.ba01a3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a3.getText().toString());
-        form.setBa01a4(bi.ba01a4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a4.getText().toString());
-        form.setBa01a5(bi.ba01a5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a5.getText().toString());
+        json.put("ba01a1", bi.ba01a1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a1.getText().toString());
+        json.put("ba01a2", bi.ba01a2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a2.getText().toString());
+        json.put("ba01a3", bi.ba01a3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a3.getText().toString());
+        json.put("ba01a4", bi.ba01a4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a4.getText().toString());
+        json.put("ba01a5", bi.ba01a5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a5.getText().toString());
 
-        form.setBa01b1(bi.ba01b1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b1.getText().toString());
-        form.setBa01b2(bi.ba01b2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b2.getText().toString());
-        form.setBa01b3(bi.ba01b3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b3.getText().toString());
-        form.setBa01b4(bi.ba01b4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b4.getText().toString());
-        form.setBa01b5(bi.ba01b5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b5.getText().toString());
+        json.put("ba01b1", bi.ba01b1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b1.getText().toString());
+        json.put("ba01b2", bi.ba01b2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b2.getText().toString());
+        json.put("ba01b3", bi.ba01b3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b3.getText().toString());
+        json.put("ba01b4", bi.ba01b4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b4.getText().toString());
+        json.put("ba01b5", bi.ba01b5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b5.getText().toString());
 
-        form.setBa01c1(bi.ba01c1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c1.getText().toString());
-        form.setBa01c2(bi.ba01c2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c2.getText().toString());
-        form.setBa01c3(bi.ba01c3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c3.getText().toString());
-        form.setBa01c4(bi.ba01c4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c4.getText().toString());
-        form.setBa01c5(bi.ba01c5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c5.getText().toString());
-        form.setBa01d1(bi.ba01d1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d1.getText().toString());
-        form.setBa01d2(bi.ba01d2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d2.getText().toString());
-        form.setBa01d3(bi.ba01d3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d3.getText().toString());
-        form.setBa01d4(bi.ba01d4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d4.getText().toString());
-        form.setBa01d5(bi.ba01d5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d5.getText().toString());
-        form.setBa01e1(bi.ba01e1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e1.getText().toString());
-        form.setBa01e2(bi.ba01e2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e2.getText().toString());
-        form.setBa01e3(bi.ba01e3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e3.getText().toString());
-        form.setBa01e4(bi.ba01e4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e4.getText().toString());
-        form.setBa01e5(bi.ba01e5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e5.getText().toString());
-        form.setBa01f1(bi.ba01f1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f1.getText().toString());
-        form.setBa01f2(bi.ba01f2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f2.getText().toString());
-        form.setBa01f3(bi.ba01f3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f3.getText().toString());
-        form.setBa01f4(bi.ba01f4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f4.getText().toString());
-        form.setBa01f5(bi.ba01f5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f5.getText().toString());
-        form.setBa01g1(bi.ba01g1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g1.getText().toString());
-        form.setBa01g2(bi.ba01g2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g2.getText().toString());
-        form.setBa01g3(bi.ba01g3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g3.getText().toString());
-        form.setBa01g4(bi.ba01g4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g4.getText().toString());
-        form.setBa01g5(bi.ba01g5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g5.getText().toString());
-        form.setBa01h1(bi.ba01h1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h1.getText().toString());
-        form.setBa01h2(bi.ba01h2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h2.getText().toString());
-        form.setBa01h3(bi.ba01h3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h3.getText().toString());
-        form.setBa01h4(bi.ba01h4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h4.getText().toString());
-        form.setBa01h5(bi.ba01h5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h5.getText().toString());*/
+        json.put("ba01c1", bi.ba01c1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c1.getText().toString());
+        json.put("ba01c2", bi.ba01c2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c2.getText().toString());
+        json.put("ba01c3", bi.ba01c3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c3.getText().toString());
+        json.put("ba01c4", bi.ba01c4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c4.getText().toString());
+        json.put("ba01c5", bi.ba01c5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c5.getText().toString());
+
+        json.put("ba01d1", bi.ba01d1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d1.getText().toString());
+        json.put("ba01d2", bi.ba01d2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d2.getText().toString());
+        json.put("ba01d3", bi.ba01d3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d3.getText().toString());
+        json.put("ba01d4", bi.ba01d4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d4.getText().toString());
+        json.put("ba01d5", bi.ba01d5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01d5.getText().toString());
+
+        json.put("ba01e1", bi.ba01e1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e1.getText().toString());
+        json.put("ba01e2", bi.ba01e2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e2.getText().toString());
+        json.put("ba01e3", bi.ba01e3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e3.getText().toString());
+        json.put("ba01e4", bi.ba01e4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e4.getText().toString());
+        json.put("ba01e5", bi.ba01e5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01e5.getText().toString());
+
+        json.put("ba01f1", bi.ba01f1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f1.getText().toString());
+        json.put("ba01f2", bi.ba01f2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f2.getText().toString());
+        json.put("ba01f3", bi.ba01f3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f3.getText().toString());
+        json.put("ba01f4", bi.ba01f4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f4.getText().toString());
+        json.put("ba01f5", bi.ba01f5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01f5.getText().toString());
+
+        json.put("ba01g1", bi.ba01g1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g1.getText().toString());
+        json.put("ba01g2", bi.ba01g2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g2.getText().toString());
+        json.put("ba01g3", bi.ba01g3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g3.getText().toString());
+        json.put("ba01g4", bi.ba01g4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g4.getText().toString());
+        json.put("ba01g5", bi.ba01g5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01g5.getText().toString());
+
+        json.put("ba01h1", bi.ba01h1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h1.getText().toString());
+        json.put("ba01h2", bi.ba01h2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h2.getText().toString());
+        json.put("ba01h3", bi.ba01h3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h3.getText().toString());
+        json.put("ba01h4", bi.ba01h4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h4.getText().toString());
+        json.put("ba01h5", bi.ba01h5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01h5.getText().toString());
+
+        MainApp.fc.setsB(json.toString());
 
     }
 
