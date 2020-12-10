@@ -28,6 +28,7 @@ import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
+import edu.aku.hassannaqvi.smk_pwd.utils.DateUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 
@@ -55,6 +56,12 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     private void initializingComponents() {
+
+        bi.aa01.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", 2));
+
+        /*bi.aa01d.setMaxvalue(Float.parseFloat(new SimpleDateFormat("dd", Locale.getDefault()).format(new Date().getTime())));
+        bi.aa01m.setMaxvalue(Float.parseFloat(new SimpleDateFormat("MM", Locale.getDefault()).format(new Date().getTime())));
+        bi.aa01y.setMaxvalue(Float.parseFloat(new SimpleDateFormat("yyyy", Locale.getDefault()).format(new Date().getTime())));*/
 
         bi.aa02.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(bi.fldGrpCVaa03, false);
@@ -269,11 +276,11 @@ public class SectionAActivity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
-        json.put("aa01d", bi.aa01d.getText().toString());
+        json.put("aa01d", "needToWork");
 
-        json.put("aa01m", bi.aa01m.getText().toString());
+        json.put("aa01m", "needToWork");
 
-        json.put("aa01y", bi.aa01y.getText().toString());
+        json.put("aa01y", "needToWork");
 
         json.put("aa02", bi.aa02a.isChecked() ? "1"
                 : bi.aa02b.isChecked() ? "2"

@@ -4,6 +4,7 @@
     <color name="colorPrimary">#311b92</color>
     <color name="colorPrimaryAlpha">#d7311b92</color>
     <color name="colorPrimaryBeta">#3d311b92</color>
+    <color name="colorPrimaryDark_overlay">#7f2B6A35</color>
     <color name="colorPrimaryBeta1">#f7311b92</color>
     <color name="colorPrimaryDark">#000063</color>
     <color name="colorPrimaryDark1">#d7000063</color>
