@@ -16,6 +16,7 @@ import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionBBinding;
+import edu.aku.hassannaqvi.smk_pwd.models.Forms;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
@@ -161,16 +162,20 @@ public class SectionBActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-       /* form.setBa01a1(bi.ba01a1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a1.getText().toString());
+        Forms form = new Forms();
+
+        /*form.setBa01a1(bi.ba01a1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a1.getText().toString());
         form.setBa01a2(bi.ba01a2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a2.getText().toString());
         form.setBa01a3(bi.ba01a3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a3.getText().toString());
         form.setBa01a4(bi.ba01a4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a4.getText().toString());
         form.setBa01a5(bi.ba01a5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a5.getText().toString());
+
         form.setBa01b1(bi.ba01b1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b1.getText().toString());
         form.setBa01b2(bi.ba01b2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b2.getText().toString());
         form.setBa01b3(bi.ba01b3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b3.getText().toString());
         form.setBa01b4(bi.ba01b4.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b4.getText().toString());
         form.setBa01b5(bi.ba01b5.getText().toString().trim().isEmpty() ? "-1" : bi.ba01b5.getText().toString());
+
         form.setBa01c1(bi.ba01c1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c1.getText().toString());
         form.setBa01c2(bi.ba01c2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c2.getText().toString());
         form.setBa01c3(bi.ba01c3.getText().toString().trim().isEmpty() ? "-1" : bi.ba01c3.getText().toString());

@@ -353,6 +353,7 @@
                             android:layout_alignTop="@id/qtxt_aa04"
                             android:layout_alignBottom="@id/qtxt_aa04"
                             android:text="@string/Q_aa04" />
+
                     </RelativeLayout>
 
                     <EditText
@@ -360,7 +361,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/aa04" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -394,6 +397,7 @@
                             android:layout_alignTop="@id/qtxt_aa05"
                             android:layout_alignBottom="@id/qtxt_aa05"
                             android:text="@string/Q_aa05" />
+
                     </RelativeLayout>
 
                     <EditText
@@ -401,7 +405,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/aa05" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -500,6 +506,7 @@
                             android:layout_alignTop="@id/qtxt_aa07"
                             android:layout_alignBottom="@id/qtxt_aa07"
                             android:text="@string/Q_aa07" />
+
                     </RelativeLayout>
 
                     <EditText
@@ -507,7 +514,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/aa07" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -732,7 +741,9 @@
                             android:text="@string/aa11b" />
 
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -766,6 +777,7 @@
                             android:layout_alignTop="@id/qtxt_aa12"
                             android:layout_alignBottom="@id/qtxt_aa12"
                             android:text="@string/Q_aa12" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -796,8 +808,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/aa12d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -831,6 +846,7 @@
                             android:layout_alignTop="@id/qtxt_aa13"
                             android:layout_alignBottom="@id/qtxt_aa13"
                             android:text="@string/Q_aa13" />
+
                     </RelativeLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -843,7 +859,9 @@
                         app:maxValue="7"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

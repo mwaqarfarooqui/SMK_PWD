@@ -11,6 +11,7 @@
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionC2Activity" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -267,6 +268,7 @@
                             android:layout_alignTop="@id/qtxt_cb04"
                             android:layout_alignBottom="@id/qtxt_cb04"
                             android:text="@string/Q_cb04" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -326,6 +328,7 @@
                             android:layout_alignTop="@id/qtxt_cb05"
                             android:layout_alignBottom="@id/qtxt_cb05"
                             android:text="@string/Q_cb05" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -350,8 +353,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/cb05c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

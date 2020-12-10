@@ -38,7 +38,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/secdatitle" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -72,6 +74,7 @@
                             android:layout_alignTop="@id/qtxt_da01"
                             android:layout_alignBottom="@id/qtxt_da01"
                             android:text="@string/Q_da01" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -93,8 +96,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/da01b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

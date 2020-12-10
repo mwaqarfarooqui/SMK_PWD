@@ -59,7 +59,7 @@
     </style>
 
     <style name="EditTextAlpha" parent="@style/textInput">
-        <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ,.</item>
     </style>
 
     <style name="EditTextAlphaNmeric" parent="@style/textInput">

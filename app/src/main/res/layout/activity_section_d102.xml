@@ -89,6 +89,7 @@
                             android:layout_alignTop="@id/qtxt_da14"
                             android:layout_alignBottom="@id/qtxt_da14"
                             android:text="@string/Q_da14" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -107,9 +108,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/da14b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!--Skip Pattern on da14b-->
             <LinearLayout
@@ -201,14 +206,17 @@
                                 android:layout_alignTop="@id/qtxt_da16"
                                 android:layout_alignBottom="@id/qtxt_da16"
                                 android:text="@string/Q_da16" />
+
                         </RelativeLayout>
 
                         <EditText
                             android:id="@+id/da16"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextAlpha"
+                            android:maxLength="30"
                             android:hint="@string/da16" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- da17  Input-Numeric   -->
