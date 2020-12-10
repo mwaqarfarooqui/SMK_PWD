@@ -68,7 +68,6 @@
             </androidx.cardview.widget.CardView>
 
 
-
             <!-- fp01a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvfp01a"
@@ -82,6 +81,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/lightBluelight"
                         android:gravity="center"
                         android:text="@string/fp01"
                         android:textAllCaps="true"
@@ -363,6 +363,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/lightBluelight"
                         android:gravity="center"
                         android:text="@string/fp02"
                         android:textAllCaps="true"
