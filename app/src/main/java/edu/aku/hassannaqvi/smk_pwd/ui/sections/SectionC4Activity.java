@@ -3,6 +3,10 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,10 +15,14 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC4Binding;
 import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
@@ -35,33 +43,38 @@ public class SectionC4Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
+        radioGroupListener(bi.cd02, bi.cd02n, bi.cvcd03);
+        radioGroupListener(bi.cd04, bi.cd04n, bi.cvcd05);
+        radioGroupListener(bi.cd06, bi.cd06n, bi.cvcd07);
+        radioGroupListener(bi.cd08, bi.cd08n, bi.cvcd09);
+    }
 
-        bi.cd02.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc402));
 
-        bi.cd04.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc404));
-
-        bi.cd06.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc406));
-
-        bi.cd08.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc408));
-
+    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+        rg.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(vg);
+            vg.setVisibility(View.VISIBLE);
+            if (i == rb.getId()) vg.setVisibility(View.GONE);
+        });
     }
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, fc.getsC());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
     private void SaveDraft() throws JSONException {
+
         JSONObject json = new JSONObject();
+
         json.put("cd01", bi.cd01a.isChecked() ? "1"
                 : bi.cd01b.isChecked() ? "2"
                 : bi.cd01c.isChecked() ? "3"
