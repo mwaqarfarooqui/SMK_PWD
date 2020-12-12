@@ -38,9 +38,6 @@
 
                     <TextView
                         style="@style/textView3Head"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:text="@string/seceatitle" />
 
                 </LinearLayout>
@@ -78,6 +75,7 @@
                             android:layout_alignTop="@id/qtxt_ea01"
                             android:layout_alignBottom="@id/qtxt_ea01"
                             android:text="@string/Q_ea01" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -231,6 +229,7 @@
                             android:layout_alignTop="@id/qtxt_ea03"
                             android:layout_alignBottom="@id/qtxt_ea03"
                             android:text="@string/Q_ea03" />
+
                     </RelativeLayout>
 
                     <RadioGroup
