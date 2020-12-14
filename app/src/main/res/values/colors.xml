@@ -4,7 +4,7 @@
     <color name="colorPrimary">#311b92</color>
     <color name="colorPrimaryAlpha">#d7311b92</color>
     <color name="colorPrimaryBeta">#3d311b92</color>
-    <color name="colorPrimaryDark_overlay">#7f2B6A35</color>
+    <color name="colorPrimaryDark_overlay">#0277BD</color>
     <color name="colorPrimaryBeta1">#f7311b92</color>
     <color name="colorPrimaryDark">#000063</color>
     <color name="colorPrimaryDark1">#d7000063</color>
@@ -24,7 +24,7 @@
     <color name="red700">#D32F2F</color>
     <color name="orange600">#F4511E</color>
 
-    <color name="green_overlay">#7f009900</color>
+    <color name="green_overlay">#d7000063</color>
     <color name="red_overlay">#7f990000</color>
 
 

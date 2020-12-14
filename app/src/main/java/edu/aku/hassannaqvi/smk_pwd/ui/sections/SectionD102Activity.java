@@ -3,6 +3,9 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -37,88 +40,39 @@ public class SectionD102Activity extends AppCompatActivity {
 
         bi.da14.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.da14b.getId()) {
-                Clear.clearAllFields(bi.fldGrpskipda14b);
-            }
-        }));
-        bi.da19aa.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.da19aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda19af);
-            }
-        }));
-        bi.da19ba.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.da19bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda19bf);
-            }
-        }));
-        bi.da19ca.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.da19cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda19cf);
-            }
-        }));
-        bi.da19da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da19dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda19df);
-            }
-        }));
-        bi.da20aa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20af);
-            }
-        }));
-        bi.da20ba.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20bf);
-            }
-        }));
-        bi.da20ca.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20cf);
-            }
-        }));
-        bi.da20da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20df);
-            }
-        }));
-        bi.da20ea.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20eab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20ef);
-            }
-        }));
-        bi.da20fa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20fab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20ff);
-            }
-        }));
-        bi.da20ga.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da20gab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda20gf);
-            }
-        }));
-        bi.da21aa.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da21aab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda21af);
-            }
-        }));
-        bi.da21ba.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da21bab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda21bf);
-            }
-        }));
-        bi.da21ca.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da21cab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda21cf);
-            }
-        }));
-        bi.da21da.setOnCheckedChangeListener(((radioGroup,i)->{
-            if (i == bi.da21dab.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVda21df);
+                Clear.clearAllFields(bi.llda14b);
             }
         }));
 
+        radioGroupListener(bi.da1911, bi.da1911a, bi.da1912);
+        radioGroupListener(bi.da1921, bi.da1921a, bi.da1922);
+        radioGroupListener(bi.da1931, bi.da1931a, bi.da1932);
+        radioGroupListener(bi.da1941, bi.da1941a, bi.da1942);
+        radioGroupListener(bi.da1951, bi.da1951a, bi.da1952);
+
+        radioGroupListener(bi.da2011, bi.da2011a, bi.da2012);
+        radioGroupListener(bi.da2021, bi.da2021a, bi.da2022);
+        radioGroupListener(bi.da2031, bi.da2031a, bi.da2032);
+        radioGroupListener(bi.da2041, bi.da2041a, bi.da2042);
+        radioGroupListener(bi.da2051, bi.da2051a, bi.da2052);
+        radioGroupListener(bi.da2061, bi.da2061a, bi.da2062);
+        radioGroupListener(bi.da2071, bi.da2071a, bi.da2072);
+
+        radioGroupListener(bi.da2111, bi.da2111a, bi.da2112);
+        radioGroupListener(bi.da2121, bi.da2121a, bi.da2122);
+        radioGroupListener(bi.da2131, bi.da2131a, bi.da2132);
+        radioGroupListener(bi.da2141, bi.da2141a, bi.da2142);
+    }
 
 
+    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
 
+        rg.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(vg, false);
+            if (i == rb.getId()) {
+                Clear.clearAllFields(vg, true);
+            }
+        });
     }
 
 

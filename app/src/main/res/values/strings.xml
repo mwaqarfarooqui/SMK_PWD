@@ -574,7 +574,48 @@
     <string name="da1896">Others (Specify)</string>
     <string name="hintda5">I would like to know if the following basic equipment items are available in this service area (for IUCD, Implant, Vasectomy and Tubal Ligation) today. For each equipment or item, please tell me if it is available today and functioning. Ask to see the items</string>
     <string name="da19">PPIUCD Insertion Kit Instruments</string>
-    <string name="da19aa">Kidney Dish 700ml clear - Availability</string>
+
+    <string name="da191"> Kidney Dish 700ml clear </string>
+    <string name="da1911"> Availability </string>
+    <string name="da1911a"> Yes </string>
+    <string name="da1911b"> No </string>
+    <string name="da1912"> Functionality </string>
+    <string name="da1912a"> Yes </string>
+    <string name="da1912b"> No </string>
+
+    <string name="da192"> Gallipots 150ml </string>
+    <string name="da1921"> Availability </string>
+    <string name="da1921a"> Yes </string>
+    <string name="da1921b"> No </string>
+    <string name="da1922"> Functionality </string>
+    <string name="da1922a"> Yes </string>
+    <string name="da1922b"> No </string>
+
+    <string name="da193"> Sims Speculum Large </string>
+    <string name="da1931"> Availability </string>
+    <string name="da1931a"> Yes </string>
+    <string name="da1931b"> No </string>
+    <string name="da1932"> Functionality </string>
+    <string name="da1932a"> Yes </string>
+    <string name="da1932b"> No </string>
+
+    <string name="da194"> Sponge Holder 19cm Plastic </string>
+    <string name="da1941"> Availability </string>
+    <string name="da1941a"> Yes </string>
+    <string name="da1941b"> No </string>
+    <string name="da1942"> Functionality </string>
+    <string name="da1942a"> Yes </string>
+    <string name="da1942b"> No </string>
+
+    <string name="da195"> Kelly’s Forceps </string>
+    <string name="da1951"> Availability </string>
+    <string name="da1951a"> Yes </string>
+    <string name="da1951b"> No </string>
+    <string name="da1952"> Functionality </string>
+    <string name="da1952a"> Yes </string>
+    <string name="da1952b"> No </string>
+
+    <string name="da19aa"> Kidney Dish 700ml clear - Availability </string>
     <string name="da19aaa"> Yes </string>
     <string name="da19aab"> No </string>
     <string name="da19af">Kidney Dish 700ml clear - Functionality</string>
@@ -604,7 +645,66 @@
     <string name="da19ef">Kelly’s Forceps  - Functionality</string>
     <string name="da19efa"> Yes </string>
     <string name="da19efb"> No </string>
+
+
     <string name="da20">IUCD Insertion / Removal Kit Instruments</string>
+
+    <string name="da201"> Gallipots 150ml </string>
+    <string name="da2011"> Availability </string>
+    <string name="da2011a"> Yes </string>
+    <string name="da2011b"> No </string>
+    <string name="da2012"> Functionality </string>
+    <string name="da2012a"> Yes </string>
+    <string name="da2012b"> No </string>
+
+    <string name="da202"> Kidney Dish 700ml clear </string>
+    <string name="da2021"> Availability </string>
+    <string name="da2021a"> Yes </string>
+    <string name="da2021b"> No </string>
+    <string name="da2022"> Functionality </string>
+    <string name="da2022a"> Yes </string>
+    <string name="da2022b"> No </string>
+
+    <string name="da203"> Vaginal Speculum Large </string>
+    <string name="da2031"> Availability </string>
+    <string name="da2031a"> Yes </string>
+    <string name="da2031b"> No </string>
+    <string name="da2032"> Functionality </string>
+    <string name="da2032a"> Yes </string>
+    <string name="da2032b"> No </string>
+
+    <string name="da204"> Tenaculum Forcep 25cm with Green Handles </string>
+    <string name="da2041"> Availability </string>
+    <string name="da2041a"> Yes </string>
+    <string name="da2041b"> No </string>
+    <string name="da2042"> Functionality </string>
+    <string name="da2042a"> Yes </string>
+    <string name="da2042b"> No </string>
+
+    <string name="da205"> Sponge Holder 19cm Plastic </string>
+    <string name="da2051"> Availability </string>
+    <string name="da2051a"> Yes </string>
+    <string name="da2051b"> No </string>
+    <string name="da2052"> Functionality </string>
+    <string name="da2052a"> Yes </string>
+    <string name="da2052b"> No </string>
+
+    <string name="da206"> Cusco’s Vaginal Speculum </string>
+    <string name="da2061"> Availability </string>
+    <string name="da2061a"> Yes </string>
+    <string name="da2061b"> No </string>
+    <string name="da2062"> Functionality </string>
+    <string name="da2062a"> Yes </string>
+    <string name="da2062b"> No </string>
+
+    <string name="da207"> Uterine Sound (Hysterometer CH14) 4.67mm with Nozzle </string>
+    <string name="da2071"> Availability </string>
+    <string name="da2071a"> Yes </string>
+    <string name="da2071b"> No </string>
+    <string name="da2072"> Functionality </string>
+    <string name="da2072a"> Yes </string>
+    <string name="da2072b"> No </string>
+
     <string name="da20aa">Gallipots 150ml - Availability</string>
     <string name="da20aaa"> Yes </string>
     <string name="da20aab"> No </string>
@@ -647,7 +747,41 @@
     <string name="da20gf">Uterine Sound (Hysterometer CH14) 4.67mm with Nozzle - Functionality</string>
     <string name="da20gfa"> Yes </string>
     <string name="da20gfb"> No </string>
+
     <string name="da21">Implant Insertion / Removal Kit Instruments</string>
+
+    <string name="da211"> Scalpel Blade with Handel </string>
+    <string name="da2111"> Availability </string>
+    <string name="da2111a"> Yes </string>
+    <string name="da2111b"> No </string>
+    <string name="da2112"> Functionality </string>
+    <string name="da2112a"> Yes </string>
+    <string name="da2112b"> No </string>
+
+    <string name="da212"> Kidney Dish 700ml clear </string>
+    <string name="da2121"> Availability </string>
+    <string name="da2121a"> Yes </string>
+    <string name="da2121b"> No </string>
+    <string name="da2122"> Functionality </string>
+    <string name="da2122a"> Yes </string>
+    <string name="da2122b"> No </string>
+
+    <string name="da213"> Small Gallipot 150ml </string>
+    <string name="da2131"> Availability </string>
+    <string name="da2131a"> Yes </string>
+    <string name="da2131b"> No </string>
+    <string name="da2132"> Functionality </string>
+    <string name="da2132a"> Yes </string>
+    <string name="da2132b"> No </string>
+
+    <string name="da214"> Curved Artery Forceps </string>
+    <string name="da2141"> Availability </string>
+    <string name="da2141a"> Yes </string>
+    <string name="da2141b"> No </string>
+    <string name="da2142"> Functionality </string>
+    <string name="da2142a"> Yes </string>
+    <string name="da2142b"> No </string>
+
     <string name="da21aa">Scalpel Blade with Handel - Availability</string>
     <string name="da21aaa"> Yes </string>
     <string name="da21aab"> No </string>
@@ -2140,7 +2274,14 @@
     <string name='Q_da16'>da16</string>
     <string name='Q_da17'>da17</string>
     <string name='Q_da18'>da18</string>
+
     <string name='Q_da19'>da19</string>
+    <string name='Q_da191'>da191</string>
+    <string name='Q_da192'>da192</string>
+    <string name='Q_da193'>da193</string>
+    <string name='Q_da194'>da194</string>
+    <string name='Q_da195'>da195</string>
+
     <string name='Q_da19aa'>da19aa</string>
     <string name='Q_da19af'>da19af</string>
     <string name='Q_da19ba'>da19ba</string>
@@ -2151,7 +2292,15 @@
     <string name='Q_da19df'>da19df</string>
     <string name='Q_da19ea'>da19ea</string>
     <string name='Q_da19ef'>da19ef</string>
+
     <string name='Q_da20'>da20</string>
+    <string name='Q_da201'>da201</string>
+    <string name='Q_da202'>da202</string>
+    <string name='Q_da203'>da203</string>
+    <string name='Q_da204'>da204</string>
+    <string name='Q_da205'>da205</string>
+    <string name='Q_da206'>da206</string>
+    <string name='Q_da207'>da207</string>
     <string name='Q_da20aa'>da20aa</string>
     <string name='Q_da20af'>da20af</string>
     <string name='Q_da20ba'>da20ba</string>
@@ -2167,6 +2316,10 @@
     <string name='Q_da20ga'>da20ga</string>
     <string name='Q_da20gf'>da20gf</string>
     <string name='Q_da21'>da21</string>
+    <string name='Q_da211'>da211</string>
+    <string name='Q_da212'>da212</string>
+    <string name='Q_da213'>da213</string>
+    <string name='Q_da214'>da214</string>
     <string name='Q_da21aa'>da21aa</string>
     <string name='Q_da21af'>da21af</string>
     <string name='Q_da21ba'>da21ba</string>
