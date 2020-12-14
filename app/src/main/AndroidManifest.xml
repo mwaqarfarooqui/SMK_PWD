@@ -69,7 +69,7 @@
             android:label="@string/modctitle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.sections.SectionC7Activity"
+            android:name=".ui.other.SplashscreenActivity"
             android:label="@string/modctitle"
             android:screenOrientation="portrait" />
         <activity
@@ -193,9 +193,9 @@
             android:label="@string/modititle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.other.SplashscreenActivity"
+            android:name=".ui.sections.SectionC7Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
