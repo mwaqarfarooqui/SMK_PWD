@@ -92,6 +92,7 @@
                             android:layout_alignTop="@id/qtxt_cg01"
                             android:layout_alignBottom="@id/qtxt_cg01"
                             android:text="@string/Q_cg01" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -130,8 +131,11 @@
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
