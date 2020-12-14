@@ -2,6 +2,10 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,12 +14,17 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC7Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionC7Activity extends AppCompatActivity {
@@ -42,19 +51,50 @@ public class SectionC7Activity extends AppCompatActivity {
             }
         });
 
+        radioGroupListener(bi.cg01, bi.cg01y, bi.cvcg02);
+        radioGroupListener(bi.cg03, bi.cg03y, bi.cvcg04);
+        radioGroupListener(bi.cg05, bi.cg05y, bi.cvcg06);
+        radioGroupListener(bi.cg07, bi.cg07y, bi.cvcg08);
+        radioGroupListener(bi.cg09, bi.cg09y, bi.cvcg10);
+        radioGroupListener(bi.cg11, bi.cg11y, bi.cvcg12);
+        radioGroupListener(bi.cg13, bi.cg13y, bi.cvcg14);
+        radioGroupListener(bi.cg15, bi.cg15y, bi.cvcg16);
+        radioGroupListener(bi.cg17, bi.cg17y, bi.cvcg18);
+        radioGroupListener(bi.cg19, bi.cg19y, bi.cvcg20);
+        radioGroupListener(bi.cg21, bi.cg21y, bi.cvcg22);
+        radioGroupListener(bi.cg23, bi.cg23y, bi.cvcg24);
+        radioGroupListener(bi.cg25, bi.cg25y, bi.cvcg26);
+        radioGroupListener(bi.cg27, bi.cg27y, bi.cvcg28);
+        radioGroupListener(bi.cg29, bi.cg29y, bi.cvcg30);
+        radioGroupListener(bi.cg31, bi.cg31y, bi.cvcg32);
+        radioGroupListener(bi.cg33, bi.cg33y, bi.cvcg34);
+        radioGroupListener(bi.cg35, bi.cg35y, bi.cvcg36);
+        radioGroupListener(bi.cg37, bi.cg37y, bi.cvcg38);
+        radioGroupListener(bi.cg39, bi.cg39y, bi.cvcg40);
+        radioGroupListener(bi.cg41, bi.cg41y, bi.cvcg42);
+        radioGroupListener(bi.cg43, bi.cg43y, bi.cvcg44);
+        radioGroupListener(bi.cg45, bi.cg45y, bi.cvcg46);
+    }
+
+
+    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+        rg.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(vg);
+            vg.setVisibility(View.GONE);
+            if (i == rb.getId()) vg.setVisibility(View.VISIBLE);
+        });
     }
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, fc.getsC());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-       return true;
+        }
     }
 
 

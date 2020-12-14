@@ -26,7 +26,7 @@
 
             <!-- seccgtitle  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVseccgtitle"
+                android:id="@+id/cvseccgtitle"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -46,7 +46,7 @@
 
             <!-- hint  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVhint"
+                android:id="@+id/cvhint"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -235,7 +235,7 @@
 
             <!-- cg01  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg01"
+                android:id="@+id/cvcg01"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -295,9 +295,8 @@
 
             <!-- cg02  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg02"
-                style="@style/cardView"
-                android:visibility='@{cg01y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg02"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -350,7 +349,6 @@
                             android:maxLength="3"
                             app:maxValue="100"
                             app:minValue="0"
-                            android:text='@{cg01y.checked ? cg02f.getText().toString() : ""}'
                             app:type="range" />
 
                     </LinearLayout>
@@ -362,7 +360,7 @@
 
             <!-- cg03  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg03"
+                android:id="@+id/cvcg03"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -422,9 +420,8 @@
 
             <!-- cg04  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg04"
-                style="@style/cardView"
-                android:visibility='@{cg03y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg04"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -475,7 +472,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg03y.checked ? cg04f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -489,7 +485,7 @@
 
             <!-- cg05  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg05"
+                android:id="@+id/cvcg05"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -549,9 +545,8 @@
 
             <!-- cg06  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg06"
-                style="@style/cardView"
-                android:visibility='@{cg05y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg06"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -602,7 +597,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg05y.checked ? cg06f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -616,7 +610,7 @@
 
             <!-- cg07  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg07"
+                android:id="@+id/cvcg07"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -676,9 +670,8 @@
 
             <!-- cg08  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg08"
-                style="@style/cardView"
-                android:visibility='@{cg07y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg08"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -729,7 +722,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg07y.checked ? cg08f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -743,7 +735,7 @@
 
             <!-- cg09  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg09"
+                android:id="@+id/cvcg09"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -803,9 +795,8 @@
 
             <!-- cg10  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg10"
-                style="@style/cardView"
-                android:visibility='@{cg09y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg10"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -856,7 +847,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg09y.checked ? cg10f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -870,7 +860,7 @@
 
             <!-- cg11  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg11"
+                android:id="@+id/cvcg11"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -930,9 +920,8 @@
 
             <!-- cg12  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg12"
-                style="@style/cardView"
-                android:visibility='@{cg11y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg12"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -983,7 +972,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg11y.checked ? cg12f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -997,7 +985,7 @@
 
             <!-- cg13  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg13"
+                android:id="@+id/cvcg13"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1057,9 +1045,8 @@
 
             <!-- cg14  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg14"
-                style="@style/cardView"
-                android:visibility='@{cg13y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg14"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1110,7 +1097,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg13y.checked ? cg14f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -1124,7 +1110,7 @@
 
             <!-- cg15  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg15"
+                android:id="@+id/cvcg15"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1184,9 +1170,8 @@
 
             <!-- cg16  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg16"
-                style="@style/cardView"
-                android:visibility='@{cg15y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg16"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1237,7 +1222,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg15y.checked ? cg16f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -1251,7 +1235,7 @@
 
             <!-- cg17  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg17"
+                android:id="@+id/cvcg17"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1311,9 +1295,8 @@
 
             <!-- cg18  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg18"
-                style="@style/cardView"
-                android:visibility='@{cg17y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg18"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1364,7 +1347,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg17y.checked ? cg18f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -1378,7 +1360,7 @@
 
             <!-- cg19  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg19"
+                android:id="@+id/cvcg19"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1438,9 +1420,8 @@
 
             <!-- cg20  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg20"
-                style="@style/cardView"
-                android:visibility='@{cg19y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg20"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1491,7 +1472,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg19y.checked ? cg20f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -1505,7 +1485,7 @@
 
             <!-- cg21  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg21"
+                android:id="@+id/cvcg21"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1565,9 +1545,8 @@
 
             <!-- cg22  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg22"
-                style="@style/cardView"
-                android:visibility='@{cg21y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg22"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1618,7 +1597,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg21y.checked ? cg22f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -1632,7 +1610,7 @@
 
             <!-- cg23  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg23"
+                android:id="@+id/cvcg23"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1692,9 +1670,8 @@
 
             <!-- cg24  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg24"
-                style="@style/cardView"
-                android:visibility='@{cg23y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg24"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1745,7 +1722,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg23y.checked ? cg24f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -1759,7 +1735,7 @@
 
             <!-- cg25  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg25"
+                android:id="@+id/cvcg25"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1819,9 +1795,8 @@
 
             <!-- cg26  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg26"
-                style="@style/cardView"
-                android:visibility='@{cg25y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg26"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1872,7 +1847,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg25y.checked ? cg26f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -1886,7 +1860,7 @@
 
             <!-- cg27  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg27"
+                android:id="@+id/cvcg27"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1946,9 +1920,8 @@
 
             <!-- cg28  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg28"
-                style="@style/cardView"
-                android:visibility='@{cg27y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg28"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1999,7 +1972,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg27y.checked ? cg28f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -2013,7 +1985,7 @@
 
             <!-- cg29  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg29"
+                android:id="@+id/cvcg29"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -2073,9 +2045,8 @@
 
             <!-- cg30  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg30"
-                style="@style/cardView"
-                android:visibility='@{cg29y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg30"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2126,7 +2097,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg29y.checked ? cg30f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -2140,7 +2110,7 @@
 
             <!-- cg31  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg31"
+                android:id="@+id/cvcg31"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -2200,9 +2170,8 @@
 
             <!-- cg32  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg32"
-                style="@style/cardView"
-                android:visibility='@{cg31y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg32"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2253,7 +2222,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg31y.checked ? cg32f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -2267,7 +2235,7 @@
 
             <!-- cg33  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg33"
+                android:id="@+id/cvcg33"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -2327,9 +2295,8 @@
 
             <!-- cg34  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg34"
-                style="@style/cardView"
-                android:visibility='@{cg33y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg34"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2380,7 +2347,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg33y.checked ? cg34f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -2394,7 +2360,7 @@
 
             <!-- cg35  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg35"
+                android:id="@+id/cvcg35"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -2454,9 +2420,8 @@
 
             <!-- cg36  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg36"
-                style="@style/cardView"
-                android:visibility='@{cg35y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg36"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2507,7 +2472,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg35y.checked ? cg36f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -2521,7 +2485,7 @@
 
             <!-- cg37  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg37"
+                android:id="@+id/cvcg37"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -2581,9 +2545,8 @@
 
             <!-- cg38  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg38"
-                style="@style/cardView"
-                android:visibility='@{cg37y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg38"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2634,7 +2597,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg37y.checked ? cg38f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -2648,7 +2610,7 @@
 
             <!-- cg39  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg39"
+                android:id="@+id/cvcg39"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -2708,9 +2670,8 @@
 
             <!-- cg40  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg40"
-                style="@style/cardView"
-                android:visibility='@{cg39y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg40"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2761,7 +2722,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg39y.checked ? cg40f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -2775,7 +2735,7 @@
 
             <!-- cg41  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg41"
+                android:id="@+id/cvcg41"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -2835,9 +2795,8 @@
 
             <!-- cg42  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg42"
-                style="@style/cardView"
-                android:visibility='@{cg41y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg42"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2888,7 +2847,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg41y.checked ? cg42f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -2902,7 +2860,7 @@
 
             <!-- cg43  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg43"
+                android:id="@+id/cvcg43"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -2962,9 +2920,8 @@
 
             <!-- cg44  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg44"
-                style="@style/cardView"
-                android:visibility='@{cg43y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg44"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -3015,7 +2972,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg43y.checked ? cg44f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -3029,7 +2985,7 @@
 
             <!-- cg45  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg45"
+                android:id="@+id/cvcg45"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -3089,9 +3045,8 @@
 
             <!-- cg46  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcg46"
-                style="@style/cardView"
-                android:visibility='@{cg45y.checked ? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvcg46"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -3142,7 +3097,6 @@
                             android:hint="###"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:text='@{cg45y.checked ? cg46f.getText().toString() : ""}'
                             app:maxValue="100"
                             app:minValue="0"
                             app:type="range" />
@@ -3181,7 +3135,9 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+            <!--EndButton LinearLayout-->
 
 
         </LinearLayout>
