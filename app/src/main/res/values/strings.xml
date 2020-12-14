@@ -395,7 +395,7 @@
 
     <string name="seccgtitle"> SECTION CG: \nBASIC OUTPATIENT EQUIPMENT </string>
     <string name="hintcg"> Please tell me if the following basic equipment and supplies used in the provision of client services are available and functional in this facility today </string>
-    <string name="cg01">Adult weighing scale-Availability</string>
+    <string name="cg01"> Adult weighing scale-Availability </string>
     <string name="cg01y">Yes Observed</string>
     <string name="cg01n">Not Available</string>
     <string name="cg02">Adult weighing scale-Functionality</string>
@@ -505,11 +505,11 @@
     <string name="cg43n">Not Available</string>
     <string name="cg44">OT lights-Functionality</string>
     <string name="cg44f">Quantity</string>
-    <string name="cg45">Almirah / Cupboard in OT room (To store supplies and equipment’s)-Availability</string>
-    <string name="cg45y">Yes Observed</string>
-    <string name="cg45n">Not Available</string>
-    <string name="cg46">Almirah / Cupboard in OT room (To store supplies and equipment’s)-Functionality</string>
-    <string name="cg46f"></string>
+    <string name="cg45"> Almirah / Cupboard in OT room (To store supplies and equipment’s)-Availability </string>
+    <string name="cg45y"> Yes Observed </string>
+    <string name="cg45n"> Not Available </string>
+    <string name="cg46"> Almirah / Cupboard in OT room (To store supplies and equipment’s)-Functionality </string>
+    <string name="cg46f"> Quantity </string>
 
     <string name="familyplanningservices_mainheading"> FAMILY PLANNING SERVICES: </string>
     <string name="adolescenthealth_mainheading"> ADOLESCENT HEALTH: </string>

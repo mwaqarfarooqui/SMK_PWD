@@ -2,11 +2,13 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -31,6 +33,21 @@ public class SectionC2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c2);
         bi.setCallback(this);
+        setupSkips();
+
+    }
+
+
+    private void setupSkips() {
+
+        bi.cb02.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(bi.cvcb03);
+            bi.cvcb03.setVisibility(View.GONE);
+            if (i == bi.cb02e.getId()) {
+                bi.cvcb03.setVisibility(View.VISIBLE);
+            }
+        });
+
     }
 
     private boolean UpdateDB() {

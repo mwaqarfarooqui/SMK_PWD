@@ -25,7 +25,7 @@
 
             <!-- seccbtitle  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVseccbtitle"
+                android:id="@+id/cvseccbtitle"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -47,7 +47,7 @@
 
             <!-- cb01  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb01"
+                android:id="@+id/cvcb01"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -116,7 +116,7 @@
 
             <!-- cb02  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb02"
+                android:id="@+id/cvcb02"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -191,7 +191,7 @@
 
             <!-- cb03  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb03"
+                android:id="@+id/cvcb03"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -219,6 +219,7 @@
                             android:layout_alignTop="@id/qtxt_cb03"
                             android:layout_alignBottom="@id/qtxt_cb03"
                             android:text="@string/Q_cb03" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -250,7 +251,7 @@
 
             <!-- cb04  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb04"
+                android:id="@+id/cvcb04"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -310,7 +311,7 @@
 
             <!-- cb05  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb05"
+                android:id="@+id/cvcb05"
                 style="@style/cardView">
 
                 <LinearLayout

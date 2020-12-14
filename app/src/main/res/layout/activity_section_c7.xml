@@ -85,7 +85,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_toEndOf="@id/q_cg011"
-                            android:text="@string/cg01" />
+                            android:text="Adult weighing scale" />
 
                         <TextView
                             android:id="@+id/q_cg011"
