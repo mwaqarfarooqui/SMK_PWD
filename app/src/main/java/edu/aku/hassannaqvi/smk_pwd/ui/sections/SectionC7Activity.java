@@ -27,6 +27,12 @@ public class SectionC7Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c7);
         bi.setCallback(this);
+        setupSkips();
+
+    }
+
+
+    private void setupSkips() {
 
         bi.cg111.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(bi.cg112, false);
