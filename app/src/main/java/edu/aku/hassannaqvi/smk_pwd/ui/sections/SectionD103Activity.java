@@ -3,6 +3,9 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -41,7 +44,7 @@ public class SectionD103Activity extends AppCompatActivity {
         }));*/
 
 
-        bi.da22aa.setOnCheckedChangeListener(((radioGroup,i)->{
+        /*bi.da22aa.setOnCheckedChangeListener(((radioGroup,i)->{
             if (i == bi.da22aab.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVda22af);
             }
@@ -80,7 +83,7 @@ public class SectionD103Activity extends AppCompatActivity {
             if (i == bi.da22hab.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVda22hf);
             }
-        }));
+        }));*/
         bi.da23aa.setOnCheckedChangeListener(((radioGroup,i)->{
             if (i == bi.da23aab.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVda23af);
@@ -136,14 +139,32 @@ public class SectionD103Activity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpCVda24gf);
             }
         }));
-        bi.da24ha.setOnCheckedChangeListener(((radioGroup,i)->{
+        bi.da24ha.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.da24hab.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVda24hf);
             }
         }));
 
+        radioGroupListener(bi.da2211, bi.da2211a, bi.da2212);
+        radioGroupListener(bi.da2221, bi.da2221a, bi.da2222);
+        radioGroupListener(bi.da2231, bi.da2231a, bi.da2232);
+        radioGroupListener(bi.da2241, bi.da2241a, bi.da2242);
+        radioGroupListener(bi.da2251, bi.da2251a, bi.da2252);
+        radioGroupListener(bi.da2261, bi.da2261a, bi.da2262);
+        radioGroupListener(bi.da2271, bi.da2271a, bi.da2272);
+        radioGroupListener(bi.da2281, bi.da2281a, bi.da2282);
+
+    }
 
 
+    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+
+        rg.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(vg, false);
+            if (i == rb.getId()) {
+                Clear.clearAllFields(vg, true);
+            }
+        });
     }
 
 

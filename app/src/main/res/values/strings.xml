@@ -806,7 +806,74 @@
     <string name="da21df">Curved Artery Forceps - Functionality</string>
     <string name="da21dfa"> Yes </string>
     <string name="da21dfb"> No </string>
+
+
     <string name="da22">Basic Supplies</string>
+
+    <string name="da221"> Drape / Sterile Sheet (36x36 centimeters) </string>
+    <string name="da2211"> Availability </string>
+    <string name="da2211a"> Yes </string>
+    <string name="da2211b"> No </string>
+    <string name="da2212"> Functionality </string>
+    <string name="da2212a"> Yes </string>
+    <string name="da2212b"> No </string>
+
+    <string name="da222"> Drape / Sterile Sheet (40x40 Inches) </string>
+    <string name="da2221"> Availability </string>
+    <string name="da2221a"> Yes </string>
+    <string name="da2221b"> No </string>
+    <string name="da2222"> Functionality </string>
+    <string name="da2222a"> Yes </string>
+    <string name="da2222b"> No </string>
+
+    <string name="da223"> Swabs 10x10cm </string>
+    <string name="da2231"> Availability </string>
+    <string name="da2231a"> Yes </string>
+    <string name="da2231b"> No </string>
+    <string name="da2232"> Functionality </string>
+    <string name="da2232a"> Yes </string>
+    <string name="da2232b"> No </string>
+
+    <string name="da224"> Syringes 3ml / 5ml </string>
+    <string name="da2241"> Availability </string>
+    <string name="da2241a"> Yes </string>
+    <string name="da2241b"> No </string>
+    <string name="da2242"> Functionality </string>
+    <string name="da2242a"> Yes </string>
+    <string name="da2242b"> No </string>
+
+    <string name="da225"> Dressings / Bandages (3&quot;) </string>
+    <string name="da2251"> Availability </string>
+    <string name="da2251a"> Yes </string>
+    <string name="da2251b"> No </string>
+    <string name="da2252"> Functionality </string>
+    <string name="da2252a"> Yes </string>
+    <string name="da2252b"> No </string>
+
+    <string name="da226"> Surgical Gloves </string>
+    <string name="da2261"> Availability </string>
+    <string name="da2261a"> Yes </string>
+    <string name="da2261b"> No </string>
+    <string name="da2262"> Functionality </string>
+    <string name="da2262a"> Yes </string>
+    <string name="da2262b"> No </string>
+
+    <string name="da227"> Surgical Gloves </string>
+    <string name="da2271"> Availability </string>
+    <string name="da2271a"> Yes </string>
+    <string name="da2271b"> No </string>
+    <string name="da2272"> Functionality </string>
+    <string name="da2272a"> Yes </string>
+    <string name="da2272b"> No </string>
+
+    <string name="da228"> Inj. Lidocaine 2% </string>
+    <string name="da2281"> Availability </string>
+    <string name="da2281a"> Yes </string>
+    <string name="da2281b"> No </string>
+    <string name="da2282"> Functionality </string>
+    <string name="da2282a"> Yes </string>
+    <string name="da2282b"> No </string>
+
     <string name="da22aa">Drape / Sterile Sheet (36x36 centimeters) - Availability</string>
     <string name="da22aaa"> Yes </string>
     <string name="da22aab"> No </string>
@@ -855,6 +922,8 @@
     <string name="da22hf">Inj. Lidocaine 2% - Functionality</string>
     <string name="da22hfa"> Yes </string>
     <string name="da22hfb"> No </string>
+
+
     <string name="da23">Vasectomy (NSV)</string>
     <string name="da23aa">Ring Forceps for Fixation - Availability</string>
     <string name="da23aaa"> Yes </string>
@@ -2315,6 +2384,7 @@
     <string name='Q_da20ff'>da20ff</string>
     <string name='Q_da20ga'>da20ga</string>
     <string name='Q_da20gf'>da20gf</string>
+
     <string name='Q_da21'>da21</string>
     <string name='Q_da211'>da211</string>
     <string name='Q_da212'>da212</string>
@@ -2328,7 +2398,16 @@
     <string name='Q_da21cf'>da21cf</string>
     <string name='Q_da21da'>da21da</string>
     <string name='Q_da21df'>da21df</string>
+
     <string name='Q_da22'>da22</string>
+    <string name='Q_da221'>da221</string>
+    <string name='Q_da222'>da222</string>
+    <string name='Q_da223'>da223</string>
+    <string name='Q_da224'>da224</string>
+    <string name='Q_da225'>da225</string>
+    <string name='Q_da226'>da226</string>
+    <string name='Q_da227'>da227</string>
+    <string name='Q_da228'>da228</string>
     <string name='Q_da22aa'>da22aa</string>
     <string name='Q_da22af'>da22af</string>
     <string name='Q_da22ba'>da22ba</string>
@@ -2345,7 +2424,12 @@
     <string name='Q_da22gf'>da22gf</string>
     <string name='Q_da22ha'>da22ha</string>
     <string name='Q_da22hf'>da22hf</string>
+
     <string name='Q_da23'>da23</string>
+    <string name='Q_da231'>da231</string>
+    <string name='Q_da232'>da232</string>
+    <string name='Q_da233'>da233</string>
+    <string name='Q_da234'>da234</string>
     <string name='Q_da23aa'>da23aa</string>
     <string name='Q_da23af'>da23af</string>
     <string name='Q_da23ba'>da23ba</string>
@@ -2354,7 +2438,16 @@
     <string name='Q_da23cf'>da23cf</string>
     <string name='Q_da23da'>da23da</string>
     <string name='Q_da23df'>da23df</string>
+
     <string name='Q_da24'>da24</string>
+    <string name='Q_da241'>da241</string>
+    <string name='Q_da242'>da242</string>
+    <string name='Q_da243'>da243</string>
+    <string name='Q_da244'>da244</string>
+    <string name='Q_da245'>da245</string>
+    <string name='Q_da246'>da246</string>
+    <string name='Q_da247'>da247</string>
+    <string name='Q_da248'>da248</string>
     <string name='Q_da24aa'>da24aa</string>
     <string name='Q_da24af'>da24af</string>
     <string name='Q_da24ba'>da24ba</string>
