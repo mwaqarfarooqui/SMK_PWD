@@ -16,6 +16,10 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionGBinding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
@@ -34,6 +38,16 @@ public class SectionGActivity extends AppCompatActivity {
 
 
     private void setupSkips() {
+        Clear.clearAllFields(bi.cvga02, false);
+        String dd = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss", Locale.getDefault()).format(new Date().getTime());
+        String[] dA = dd.split("-");
+        bi.ga02d.setText(dA[0]);
+        bi.ga02m.setText(dA[1]);
+        bi.ga02y.setText(dA[2]);
+        bi.ga02h.setText(dA[3]);
+        bi.ga02mi.setText(dA[4]);
+        bi.ga02s.setText(dA[5]);
+
         radioGroupListener(bi.ga03, bi.ga03a, bi.cvga04);
     }
 
