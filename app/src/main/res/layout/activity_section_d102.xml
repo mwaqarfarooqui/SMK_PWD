@@ -63,7 +63,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/hintda4" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -377,27 +379,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/hintda5" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
-
-            <!-- da19  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVda19"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/da19" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
 
             <!-- da191  Radio   -->
@@ -409,6 +395,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/da19"
+                        android:textStyle="bold" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -880,23 +873,6 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- da20  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVda20"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/da20" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
 
             <!-- da201  Radio   -->
@@ -908,6 +884,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/da20"
+                        android:textStyle="bold" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -1571,9 +1554,10 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- da21  Title   -->
+
+            <!-- da211  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVda21"
+                android:id="@+id/cvda211"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1585,20 +1569,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/da21" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-
-            <!-- da211  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvda211"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        android:text="@string/da21"
+                        android:textStyle="bold" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"

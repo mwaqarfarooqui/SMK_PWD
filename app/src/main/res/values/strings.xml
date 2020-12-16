@@ -925,6 +925,39 @@
 
 
     <string name="da23">Vasectomy (NSV)</string>
+
+    <string name="da231"> Ring Forceps for Fixation </string>
+    <string name="da2311"> Availability </string>
+    <string name="da2311a"> Yes </string>
+    <string name="da2311b"> No </string>
+    <string name="da2312"> Functionality </string>
+    <string name="da2312a"> Yes </string>
+    <string name="da2312b"> No </string>
+
+    <string name="da232"> Vasectomy Hook </string>
+    <string name="da2321"> Availability </string>
+    <string name="da2321a"> Yes </string>
+    <string name="da2321b"> No </string>
+    <string name="da2322"> Functionality </string>
+    <string name="da2322a"> Yes </string>
+    <string name="da2322b"> No </string>
+
+    <string name="da233"> Artery Forceps </string>
+    <string name="da2331"> Availability </string>
+    <string name="da2331a"> Yes </string>
+    <string name="da2331b"> No </string>
+    <string name="da2332"> Functionality </string>
+    <string name="da2332a"> Yes </string>
+    <string name="da2332b"> No </string>
+
+    <string name="da234"> Iris Scissors Straight </string>
+    <string name="da2341"> Availability </string>
+    <string name="da2341a"> Yes </string>
+    <string name="da2341b"> No </string>
+    <string name="da2342"> Functionality </string>
+    <string name="da2342a"> Yes </string>
+    <string name="da2342b"> No </string>
+
     <string name="da23aa">Ring Forceps for Fixation - Availability</string>
     <string name="da23aaa"> Yes </string>
     <string name="da23aab"> No </string>
@@ -949,7 +982,75 @@
     <string name="da23df">Iris Scissors Straight - Functionality</string>
     <string name="da23dfa"> Yes </string>
     <string name="da23dfb"> No </string>
+
+
     <string name="da24">Tubal Ligation Instruments</string>
+
+    <string name="da241"> Babcock forceps </string>
+    <string name="da2411"> Availability </string>
+    <string name="da2411a"> Yes </string>
+    <string name="da2411b"> No </string>
+    <string name="da2412"> Functionality </string>
+    <string name="da2412a"> Yes </string>
+    <string name="da2412b"> No </string>
+
+    <string name="da242"> Mayo Towel clip </string>
+    <string name="da2421"> Availability </string>
+    <string name="da2421a"> Yes </string>
+    <string name="da2421b"> No </string>
+    <string name="da2422"> Functionality </string>
+    <string name="da2422a"> Yes </string>
+    <string name="da2422b"> No </string>
+
+    <string name="da243"> Plain ends Dissecting Forceps size 5 </string>
+    <string name="da2431"> Availability </string>
+    <string name="da2431a"> Yes </string>
+    <string name="da2431b"> No </string>
+    <string name="da2432"> Functionality </string>
+    <string name="da2432a"> Yes </string>
+    <string name="da2432b"> No </string>
+
+    <string name="da244"> Lane  Dissecting Forceps size 7 </string>
+    <string name="da2441"> Availability </string>
+    <string name="da2441a"> Yes </string>
+    <string name="da2441b"> No </string>
+    <string name="da2442"> Functionality </string>
+    <string name="da2442a"> Yes </string>
+    <string name="da2442b"> No </string>
+
+    <string name="da245"> Artery Forceps size  8” </string>
+    <string name="da2451"> Availability </string>
+    <string name="da2451a"> Yes </string>
+    <string name="da2451b"> No </string>
+    <string name="da2452"> Functionality </string>
+    <string name="da2452a"> Yes </string>
+    <string name="da2452b"> No </string>
+
+    <string name="da246"> Needle Holders </string>
+    <string name="da2461"> Availability </string>
+    <string name="da2461a"> Yes </string>
+    <string name="da2461b"> No </string>
+    <string name="da2462"> Functionality </string>
+    <string name="da2462a"> Yes </string>
+    <string name="da2462b"> No </string>
+
+    <string name="da247"> Mayo  Scissors: Straight &amp; curved  size 5 1 /2” </string>
+    <string name="da2471"> Availability </string>
+    <string name="da2471a"> Yes </string>
+    <string name="da2471b"> No </string>
+    <string name="da2472"> Functionality </string>
+    <string name="da2472a"> Yes </string>
+    <string name="da2472b"> No </string>
+
+    <string name="da248"> Retractors (Small and large) </string>
+    <string name="da2481"> Availability </string>
+    <string name="da2481a"> Yes </string>
+    <string name="da2481b"> No </string>
+    <string name="da2482"> Functionality </string>
+    <string name="da2482a"> Yes </string>
+    <string name="da2482b"> No </string>
+
+
     <string name="da24aa">Babcock forceps - Availability</string>
     <string name="da24aaa"> Yes </string>
     <string name="da24aab"> No </string>
@@ -998,7 +1099,9 @@
     <string name="da24hf">Retractors (Small and large) - Functionality</string>
     <string name="da24hfa"> Yes </string>
     <string name="da24hfb"> No </string>
-    <string name="secdbtitle">SECTION DB ADOLESCENT HEALTH</string>
+
+
+    <string name="secdbtitle"> SECTION DB: \nADOLESCENT HEALTH </string>
     <string name="db01">Does this facility provide care for Adolescent Health?</string>
     <string name="db01a"> Yes </string>
     <string name="db01b"> No </string>
