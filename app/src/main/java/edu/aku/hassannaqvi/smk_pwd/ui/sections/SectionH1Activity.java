@@ -47,17 +47,16 @@ public class SectionH1Activity extends AppCompatActivity {
 
 
     public void radioGroup(RadioGroup grp) {
-
         grp.setOnCheckedChangeListener(((radioGroup, i) -> {
+            Clear.clearAllFields(bi.fldGrpCVha14);
+            bi.fldGrpCVha14.setVisibility(View.GONE);
             if (bi.ha01b.isChecked() || bi.ha02b.isChecked() || bi.ha03b.isChecked()
                     || bi.ha04b.isChecked() || bi.ha05b.isChecked() || bi.ha06b.isChecked()
                     || bi.ha07b.isChecked() || bi.ha08b.isChecked() || bi.ha09b.isChecked()
-                    || bi.ha10b.isChecked() || bi.ha11b.isChecked() || bi.ha12b.isChecked() || bi.ha13b.isChecked()) {
+                    || bi.ha10b.isChecked() || bi.ha11b.isChecked() || bi.ha12b.isChecked()
+                    || bi.ha13b.isChecked()) {
                 Clear.clearAllFields(bi.fldGrpCVha14);
                 bi.fldGrpCVha14.setVisibility(View.VISIBLE);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVha14);
-                bi.fldGrpCVha14.setVisibility(View.GONE);
             }
         }));
 

@@ -48,13 +48,12 @@ public class SectionH2Activity extends AppCompatActivity {
     public void radioGroup(RadioGroup grp) {
 
         grp.setOnCheckedChangeListener(((radioGroup, i) -> {
+            Clear.clearAllFields(bi.fldGrpCVhb07);
+            bi.fldGrpCVhb07.setVisibility(View.GONE);
             if (bi.hb01b.isChecked() || bi.hb02b.isChecked() || bi.hb03b.isChecked()
                     || bi.hb04b.isChecked() || bi.hb05b.isChecked() || bi.hb06b.isChecked()) {
                 Clear.clearAllFields(bi.fldGrpCVhb07);
                 bi.fldGrpCVhb07.setVisibility(View.VISIBLE);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVhb07);
-                bi.fldGrpCVhb07.setVisibility(View.GONE);
             }
         }));
 

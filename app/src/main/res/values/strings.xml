@@ -1953,7 +1953,8 @@
     <string name="ia07">Does training of staff members on recommended guidelines for COVID-19 and breastfeeding and sexual reproductive health conducted in this facility?</string>
     <string name="ia07a"> Yes </string>
     <string name="ia07b"> No </string>
-    <string name="secibtitle">SECTION-K6-Medical Supplies and Equipment </string>
+
+    <string name="secibtitle"> SECTION K6: \nMedical Supplies and Equipment </string>
     <string name="ib01">Infrared thermometer</string>
     <string name="ib01a">Not Available</string>
     <string name="ib01b">Yes, Available before COVID</string>

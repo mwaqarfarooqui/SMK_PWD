@@ -42,22 +42,20 @@ public class SectionH3Activity extends AppCompatActivity {
         radioGroup(bi.hc03);
         radioGroup(bi.hc04);
         radioGroup(bi.hc05);
-
-
-
     }
 
 
     public void radioGroup(RadioGroup grp) {
-
         grp.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (bi.hc01b.isChecked() || bi.hc02b.isChecked() || bi.hc03b.isChecked()
-                    || bi.hc04b.isChecked() || bi.hc05b.isChecked() ) {
+            Clear.clearAllFields(bi.fldGrpCVhc06);
+            bi.fldGrpCVhc06.setVisibility(View.GONE);
+            if (bi.hc01b.isChecked()
+                    || bi.hc02b.isChecked()
+                    || bi.hc03b.isChecked()
+                    || bi.hc04b.isChecked()
+                    || bi.hc05b.isChecked()) {
                 Clear.clearAllFields(bi.fldGrpCVhc06);
                 bi.fldGrpCVhc06.setVisibility(View.VISIBLE);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVhc06);
-                bi.fldGrpCVhc06.setVisibility(View.GONE);
             }
         }));
 
