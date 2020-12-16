@@ -1503,7 +1503,8 @@
     <string name="fg05">Does the health facility maintain records of feedback to staff on data quality self-assessment findings? (OBSERVE)</string>
     <string name="fg05a"> Yes </string>
     <string name="fg05b"> No </string>
-    <string name="secfhtitle">SECTION-FH- DATA PROCESSING AND ANALYSIS</string>
+
+    <string name="secfhtitle"> SECTION FH: \nDATA PROCESSING AND ANALYSIS </string>
     <string name="hintfh">Ask relevant staff in the health facility office to show up-to-date (i.e., not more than one year old) reports, documents, and/or displays that contain the following. The assessor should record the observations accordingly.</string>
     <string name="fh01">Aggregated/summary PWD report within the past three months. (OBSERVE)</string>
     <string name="fh01a">Yes Observed</string>
@@ -1526,14 +1527,17 @@
     <string name="fh07">Comparisons of service coverage (e.g., ANC, TT immunization, SBA). (OBSERVE)</string>
     <string name="fh07a">Yes Observed</string>
     <string name="fh07b"> No </string>
-    <string name="secfititle">SECTION-FI- INFORMATION USE GUIDELINES AND STRATEGIC DOCUMENTS</string>
+
+
+    <string name="secfititle"> SECTION FI: \nINFORMATION USE GUIDELINES AND STRATEGIC DOCUMENTS </string>
     <string name="fi01">Are there written national/provincial guidelines on PWD information display and use at health facilities? (OBSERVE)</string>
     <string name="fi01a">Yes Observed</string>
     <string name="fi01b"> No </string>
     <string name="fi02">Does the health facility have copies of the national/district strategic plans, health facility annual plans, and/or health facility performance targets? (OBSERVE)</string>
     <string name="fi02a">Yes Observed</string>
     <string name="fi02b"> No </string>
-    <string name="secfjtitle">SECTION-FJ- DATA VISUALIZATION</string>
+
+    <string name="secfjtitle"> SECTION FJ: \nDATA VISUALIZATION </string>
     <string name="fj01">Does the health facility prepare data visuals (graphs, tables, maps, etc.) showing achievements toward targets (indicators, geographic and/or temporal trends, and situation data)? (OBSERVE)</string>
     <string name="fj01a">Yes, paper or electronic copies of data visuals observed at the health facility</string>
     <string name="fj01b"> No </string>
@@ -1544,7 +1548,8 @@
     <string name="fj03"> Long-term Contraceptive Coverage </string>
     <string name="fj03a">Yes Observed</string>
     <string name="fj03b"> No </string>
-    <string name="secfktitle">SECTION-FK- FEEDBACK TO HEALTH FACILITIES</string>
+
+    <string name="secfktitle"> SECTION FK: \nFEEDBACK TO HEALTH FACILITIES </string>
     <string name="fk01">Did the health facility receive feedback reports from the district office / MOH based on PWD information in the past three months?</string>
     <string name="fk01a">Yes Observed</string>
     <string name="fk01b"> No </string>
@@ -1555,7 +1560,8 @@
     <string name="fk03">Feedback on service performance based on reported PWD data (e.g., appreciation/acknowledgement of good performance; resource allocation/mobilization) (OBSERVE)</string>
     <string name="fk03a">Yes Observed</string>
     <string name="fk03b"> No </string>
-    <string name="secfltitile">SECTION-FL- ROUTINE DECISION-MAKING FORUMS AND PROCESSES AT THE HEALTH FACILITY</string>
+
+    <string name="secfltitile"> SECTION FL: \nROUTINE DECISION-MAKING FORUMS AND PROCESSES AT THE HEALTH FACILITY </string>
     <string name="fl01">Does the health facility have a performance monitoring or management team?</string>
     <string name="fl01a"> Yes </string>
     <string name="fl01b"> No </string>
@@ -1582,7 +1588,7 @@
     <string name="fl06">Did they have discussions on PWD management, such as data quality, completeness, or timeliness of reporting?</string>
     <string name="fl06a"> Yes </string>
     <string name="fl06b"> No </string>
-    <string name="secfmtitle">SECTION-FM- ANNUAL PLANNING</string>
+    <string name="secfmtitle"> SECTION FM: \nANNUAL PLANNING </string>
     <string name="fm01">Does the health facility have an annual plan for the current year?</string>
     <string name="fm01a"> Yes </string>
     <string name="fm01b"> No </string>

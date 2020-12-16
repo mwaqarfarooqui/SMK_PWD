@@ -26,7 +26,9 @@ public class SectionF9Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_f9);
         bi.setCallback(this);
         setupSkips();
+
     }
+
 
     private void setupSkips() {
     }
