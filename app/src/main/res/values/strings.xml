@@ -1897,7 +1897,8 @@
     <string name="hb07c">No separate space is available for counseling / maintaining confidentiality</string>
     <string name="hb07d">Partition curtains are not available</string>
     <string name="hb0796">Others (Specify)</string>
-    <string name="sechctitle">SECTION-HC- Referral and Linkages</string>
+
+    <string name="sechctitle"> SECTION HC: \nReferral and Linkages </string>
     <string name="hinthc">Verify by direct observation or by role play or by reviewing medical record</string>
     <string name="hc01">The provider receive patients from community through LHW referral (Referral In)</string>
     <string name="hc01a"> Yes </string>
