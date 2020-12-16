@@ -38,7 +38,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/seccetitle" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -327,6 +329,7 @@
                             android:layout_alignTop="@id/qtxt_ce05"
                             android:layout_alignBottom="@id/qtxt_ce05"
                             android:text="@string/Q_ce05" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -355,21 +358,22 @@
 
             </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:id="@+id/fldGrpc505"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility='@{ce05b.checked? View.GONE : View.VISIBLE}'>
 
-            <!-- ce06  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVce06"
-                style="@style/cardView">
+            <LinearLayout
+                android:id="@+id/fldGrpc505"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+
+                <!-- ce06  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVce06"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <RelativeLayout
@@ -478,7 +482,9 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-        </LinearLayout>
+
+            </LinearLayout>
+
 
             <!-- ce08  CheckBox   -->
             <androidx.cardview.widget.CardView

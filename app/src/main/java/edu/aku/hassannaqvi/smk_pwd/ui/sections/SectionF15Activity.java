@@ -2,11 +2,15 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -29,6 +33,33 @@ public class SectionF15Activity extends AppCompatActivity {
     }
 
     private void setupSkips() {
+        watcherSetMax(bi.fo01a, bi.fo01b);
+        watcherSetMax(bi.fo02a, bi.fo02b);
+        watcherSetMax(bi.fo03a, bi.fo03b);
+        watcherSetMax(bi.fo04a, bi.fo04b);
+        watcherSetMax(bi.fo05a, bi.fo05b);
+    }
+
+
+    public void watcherSetMax(EditTextPicker edit01, EditTextPicker edit02) {
+
+        edit01.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (TextUtils.isEmpty(edit01.getText()))
+                    return;
+                edit02.setMaxvalue(Integer.parseInt(edit01.getText().toString()));
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
     }
 
 

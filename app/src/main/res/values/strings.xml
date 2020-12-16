@@ -330,7 +330,8 @@
     <string name="cd20">Medistel / Chlorine Solution</string>
     <string name="cd20a"> Yes </string>
     <string name="cd20b"> No </string>
-    <string name="seccetitle">SECTION-CE- HEALTH CARE WASTE MANAGEMENT</string>
+
+    <string name="seccetitle">SECTION CE: \nHEALTH CARE WASTE MANAGEMENT </string>
     <string name="hintce">The health facility has leak proof, covered, labeled waste bins available in every treatment areas as per main 04 categories</string>
     <string name="ce01">Sharps (Like used needles, surgical blades, syringes, ampules, vials etc.)</string>
     <string name="ce01a"> Yes </string>
@@ -1614,7 +1615,8 @@
     <string name="fm08">Gender disparity in health services coverage</string>
     <string name="fm08a"> Yes </string>
     <string name="fm08b"> No </string>
-    <string name="secfntitle">SECTION-FN- SUPERVISION BY THE DISTRICT</string>
+
+    <string name="secfntitle"> SECTION FN: \nSUPERVISION BY THE DISTRICT </string>
     <string name="fn01">How many times did the district supervisor visit your health facility over the past three months?</string>
     <string name="fn01a">More than four times</string>
     <string name="fn01b">Four times</string>
@@ -1628,23 +1630,26 @@
     <string name="fn03">During the visit, did the district supervisor discuss your health facility’s performance based on the PWD information?</string>
     <string name="fn03a"> Yes </string>
     <string name="fn03b"> No </string>
-    <string name="secfotitle">SECTION-FO- FACILITY CHECKLIST: EQUIPMENT INVENTORY AND CONDITION FOR DATA RECORDING &amp; REPORTING</string>
+
+    <string name="secfotitle">SECTION FO: \nFACILITY CHECKLIST: EQUIPMENT INVENTORY AND CONDITION FOR DATA RECORDING &amp; REPORTING </string>
     <string name="hintfo">Please verify if the following equipment or type of service is available in the facility or office.</string>
-    <string name="fo01">Laptop computer</string>
-    <string name="fo01a">Total quantity</string>
-    <string name="fo01b">Total quantity that are in working condition</string>
-    <string name="fo02">Desktop computer</string>
-    <string name="fo02a">Total quantity</string>
-    <string name="fo02b">Total quantity that are in working condition</string>
-    <string name="fo03">Printers</string>
-    <string name="fo03a">Total quantity</string>
-    <string name="fo03b">Total quantity that are in working condition</string>
-    <string name="fo04">Modems</string>
-    <string name="fo04a">Total quantity</string>
-    <string name="fo04b">Total quantity that are in working condition</string>
-    <string name="fo05">Calculator</string>
-    <string name="fo05a">Total quantity</string>
-    <string name="fo05b">Total quantity that are in working condition</string>
+    <string name="fo01"> Laptop Computer </string>
+    <string name="fo01a"> Total Quantity </string>
+    <string name="fo01b"> In Working Condition </string>
+    <string name="fo02"> Desktop Computer </string>
+    <string name="fo02a"> Total quantity </string>
+    <string name="fo02b"> In Working Condition </string>
+    <string name="fo03"> Printers </string>
+    <string name="fo03a"> Total Quantity </string>
+    <string name="fo03b"> In Working Condition </string>
+    <string name="fo04"> Modems </string>
+    <string name="fo04a"> Total Quantity </string>
+    <string name="fo04b"> In Working Condition </string>
+    <string name="fo05"> Calculator </string>
+    <string name="fo05a"> Total Quantity </string>
+    <string name="fo05b"> In Working Condition </string>
+
+
     <string name="secfptitle"> SECTION FP: \nAVAILABILITY OF REGISTERS / FORMS </string>
     <string name="hintfp">List of Type of recording, tally sheets, or reports</string>
     <string name="fp01">FP Register </string>

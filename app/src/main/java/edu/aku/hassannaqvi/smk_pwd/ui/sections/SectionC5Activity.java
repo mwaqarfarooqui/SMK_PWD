@@ -2,6 +2,10 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +14,7 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
@@ -31,8 +36,18 @@ public class SectionC5Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
+        radioGroupListener(bi.ce05, bi.ce05b, bi.fldGrpc505);
+    }
 
-        bi.ce05.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpc505));
+
+    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+        rg.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(vg);
+            vg.setVisibility(View.VISIBLE);
+            if (i == rb.getId()) {
+                vg.setVisibility(View.GONE);
+            }
+        });
     }
 
 

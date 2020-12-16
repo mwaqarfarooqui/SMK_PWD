@@ -50,7 +50,6 @@ public class SectionD2Activity extends AppCompatActivity {
 
 
     public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
-
         rg.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(vg);
             vg.setVisibility(View.VISIBLE);
