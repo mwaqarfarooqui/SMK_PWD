@@ -1870,7 +1870,8 @@
     <string name="ha14e">Increased Work load / Shortage of Time</string>
     <string name="ha14f">Staff don’t consider this thing important</string>
     <string name="ha1496">Others (Specify)</string>
-    <string name="sechbtitle">SECTION-HB- Communication, Respect and Confidentiality</string>
+
+    <string name="sechbtitle"> SECTION HB: \nCommunication, Respect and Confidentiality </string>
     <string name="hinthb">Verify by direct observation or by role play or by reviewing medical record</string>
     <string name="hb01">The provider maintain privacy around the time, and patients confidentiality is respected</string>
     <string name="hb01a"> Yes </string>

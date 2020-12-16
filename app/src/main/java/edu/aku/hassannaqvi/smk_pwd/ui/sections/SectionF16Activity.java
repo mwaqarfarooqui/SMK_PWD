@@ -19,6 +19,7 @@ import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF16Binding;
+import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
@@ -182,7 +183,7 @@ public class SectionF16Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionGActivity.class));
+            startActivity(new Intent(this, SectionMainActivity.class));
         }
     }
 
