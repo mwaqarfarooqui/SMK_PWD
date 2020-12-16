@@ -12,15 +12,18 @@
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionD2Activity" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:id="@+id/GrpName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
 
 
             <!-- secdbtitle  Title   -->
@@ -39,7 +42,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/secdbtitle" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -73,6 +78,7 @@
                             android:layout_alignTop="@id/qtxt_db01"
                             android:layout_alignBottom="@id/qtxt_db01"
                             android:text="@string/Q_db01" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -94,17 +100,22 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/db01b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
 
           <!-- Skip Pattern on db01b -->
             <LinearLayout
-                android:id="@+id/fldGrpskipdb01b"
+                android:id="@+id/lldb01b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility='@{db01a.checked ? View.VISIBLE : View.GONE}'>
 
                 <!-- hint1  Title   -->
                 <androidx.cardview.widget.CardView
@@ -121,8 +132,11 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="@string/hintdb1" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- hint2  Title   -->
                 <androidx.cardview.widget.CardView
@@ -139,8 +153,11 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="@string/hintdb2" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db02  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -172,6 +189,7 @@
                                 android:layout_alignTop="@id/qtxt_db02"
                                 android:layout_alignBottom="@id/qtxt_db02"
                                 android:text="@string/Q_db02" />
+
                         </RelativeLayout>
 
                         <RadioGroup
@@ -193,9 +211,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/db02b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db03  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -227,7 +249,9 @@
                                 android:layout_alignTop="@id/qtxt_db03"
                                 android:layout_alignBottom="@id/qtxt_db03"
                                 android:text="@string/Q_db03" />
+
                         </RelativeLayout>
+
 
                         <RadioGroup
                             android:id="@+id/db03"
@@ -248,9 +272,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/db03b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db04  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -282,27 +310,35 @@
                                 android:layout_alignTop="@id/qtxt_db04"
                                 android:layout_alignBottom="@id/qtxt_db04"
                                 android:text="@string/Q_db04" />
+
                         </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/db04"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/db04a"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db04a" />
 
                             <RadioButton
                                 android:id="@+id/db04b"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db04b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db05  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -334,27 +370,35 @@
                                 android:layout_alignTop="@id/qtxt_db05"
                                 android:layout_alignBottom="@id/qtxt_db05"
                                 android:text="@string/Q_db05" />
+
                         </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/db05"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/db05a"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db05a" />
 
                             <RadioButton
                                 android:id="@+id/db05b"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db05b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db06  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -386,27 +430,35 @@
                                 android:layout_alignTop="@id/qtxt_db06"
                                 android:layout_alignBottom="@id/qtxt_db06"
                                 android:text="@string/Q_db06" />
+
                         </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/db06"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/db06a"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db06a" />
 
                             <RadioButton
                                 android:id="@+id/db06b"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db06b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db07  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -438,27 +490,35 @@
                                 android:layout_alignTop="@id/qtxt_db07"
                                 android:layout_alignBottom="@id/qtxt_db07"
                                 android:text="@string/Q_db07" />
+
                         </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/db07"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/db07a"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db07a" />
 
                             <RadioButton
                                 android:id="@+id/db07b"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db07b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db08  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -490,27 +550,35 @@
                                 android:layout_alignTop="@id/qtxt_db08"
                                 android:layout_alignBottom="@id/qtxt_db08"
                                 android:text="@string/Q_db08" />
+
                         </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/db08"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/db08a"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db08a" />
 
                             <RadioButton
                                 android:id="@+id/db08b"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db08b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db09  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -542,27 +610,35 @@
                                 android:layout_alignTop="@id/qtxt_db09"
                                 android:layout_alignBottom="@id/qtxt_db09"
                                 android:text="@string/Q_db09" />
+
                         </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/db09"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/db09a"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db09a" />
 
                             <RadioButton
                                 android:id="@+id/db09b"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db09b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db10  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -594,27 +670,35 @@
                                 android:layout_alignTop="@id/qtxt_db10"
                                 android:layout_alignBottom="@id/qtxt_db10"
                                 android:text="@string/Q_db10" />
+
                         </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/db10"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/db10a"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db10a" />
 
                             <RadioButton
                                 android:id="@+id/db10b"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db10b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db11  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -646,27 +730,35 @@
                                 android:layout_alignTop="@id/qtxt_db11"
                                 android:layout_alignBottom="@id/qtxt_db11"
                                 android:text="@string/Q_db11" />
+
                         </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/db11"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/db11a"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db11a" />
 
                             <RadioButton
                                 android:id="@+id/db11b"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db11b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- hint3  Title   -->
                 <androidx.cardview.widget.CardView
@@ -683,8 +775,11 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="@string/hintdb3" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db12  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -716,6 +811,7 @@
                                 android:layout_alignTop="@id/qtxt_db12"
                                 android:layout_alignBottom="@id/qtxt_db12"
                                 android:text="@string/Q_db12" />
+
                         </RelativeLayout>
 
                         <RadioGroup
@@ -740,9 +836,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/db12c" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- hint4  Title   -->
                 <androidx.cardview.widget.CardView
@@ -759,8 +859,11 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="@string/hintdb4" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db13  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -792,27 +895,35 @@
                                 android:layout_alignTop="@id/qtxt_db13"
                                 android:layout_alignBottom="@id/qtxt_db13"
                                 android:text="@string/Q_db13" />
+
                         </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/db13"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/db13a"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db13a" />
 
                             <RadioButton
                                 android:id="@+id/db13b"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db13b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db14  Input   -->
                 <androidx.cardview.widget.CardView
@@ -844,15 +955,20 @@
                                 android:layout_alignTop="@id/qtxt_db14"
                                 android:layout_alignBottom="@id/qtxt_db14"
                                 android:text="@string/Q_db14" />
+
                         </RelativeLayout>
 
                         <EditText
                             android:id="@+id/db14"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/db14" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db15  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
@@ -884,20 +1000,22 @@
                                 android:layout_alignTop="@id/qtxt_db15"
                                 android:layout_alignBottom="@id/qtxt_db15"
                                 android:text="@string/Q_db15" />
+
                         </RelativeLayout>
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/db15"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/db15"
-                            android:inputType="number"
+                            style="@style/EditTextNum"
+                            android:hint="##"
                             android:maxLength="2"
                             app:maxValue="10"
                             app:minValue="1"
                             app:type="range" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- db16  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -929,37 +1047,43 @@
                                 android:layout_alignTop="@id/qtxt_db16"
                                 android:layout_alignBottom="@id/qtxt_db16"
                                 android:text="@string/Q_db16" />
+
                         </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/db16"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/db16a"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db16a" />
 
                             <RadioButton
                                 android:id="@+id/db1696"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/db1696" />
 
-                            <EditText
-                                android:id="@+id/db1696x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/db1696"
-                                android:tag="db1696"
-                                android:text='@{db1696.checked ? db1696x.getText().toString() : ""}'
-                                android:visibility='@{db1696.checked? View.VISIBLE : View.GONE}' />
                         </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/db1696x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/db1696"
+                            android:tag="db1696"
+                            android:text='@{db1696.checked ? db1696x.getText().toString() : ""}'
+                            android:visibility='@{db1696.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
             </LinearLayout>
 

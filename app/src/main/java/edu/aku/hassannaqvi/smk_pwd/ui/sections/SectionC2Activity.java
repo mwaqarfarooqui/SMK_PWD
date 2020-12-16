@@ -3,6 +3,9 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +14,7 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -39,16 +43,21 @@ public class SectionC2Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
+        radioGroupListener(bi.cb02, bi.cb02e, bi.cvcb03);
+    }
 
-        bi.cb02.setOnCheckedChangeListener((radioGroup, i) -> {
-            Clear.clearAllFields(bi.cvcb03);
-            bi.cvcb03.setVisibility(View.GONE);
-            if (i == bi.cb02e.getId()) {
-                bi.cvcb03.setVisibility(View.VISIBLE);
+
+    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+
+        rg.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(vg);
+            vg.setVisibility(View.VISIBLE);
+            if (i == rb.getId()) {
+                vg.setVisibility(View.GONE);
             }
         });
-
     }
+
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
