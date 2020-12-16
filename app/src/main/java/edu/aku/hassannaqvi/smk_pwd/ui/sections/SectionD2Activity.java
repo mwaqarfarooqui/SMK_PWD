@@ -3,6 +3,9 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -42,7 +45,19 @@ public class SectionD2Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
-        bi.db01.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.lldb01b));
+        radioGroupListener(bi.db01, bi.db01b, bi.lldb01b);
+    }
+
+
+    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+
+        rg.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(vg);
+            vg.setVisibility(View.VISIBLE);
+            if (i == rb.getId()) {
+                vg.setVisibility(View.GONE);
+            }
+        });
     }
 
 

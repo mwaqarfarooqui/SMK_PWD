@@ -2,6 +2,10 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +14,7 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
@@ -30,12 +35,20 @@ public class SectionF6Activity extends AppCompatActivity {
         setupSkips();
     }
 
-    public void setupSkips(){
+    public void setupSkips() {
+        radioGroupListener(bi.ff01, bi.ff01b, bi.fldGrpCVff02);
+        radioGroupListener(bi.ff03, bi.ff03b, bi.fldGrpF604);
+    }
 
-        bi.ff01.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF602));
 
-        bi.ff03.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpF604));
-
+    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+        rg.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(vg);
+            vg.setVisibility(View.VISIBLE);
+            if (i == rb.getId()) {
+                vg.setVisibility(View.GONE);
+            }
+        });
     }
 
 

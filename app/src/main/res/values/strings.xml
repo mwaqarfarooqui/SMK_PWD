@@ -1487,7 +1487,7 @@
     <string name="ff06">MONTH-3</string>
     <string name="ff06a"> Yes </string>
     <string name="ff06b"> No </string>
-    <string name="secfgtitle">SECTION-FG- DATA QUALITY ASSESSMENT MECHANISM</string>
+    <string name="secfgtitle"> SECTION FG: \nDATA QUALITY ASSESSMENT MECHANISM </string>
     <string name="fg01">Does the health facility have written instructions/guidelines on how to perform a data quality review or data quality check? (OBSERVE)</string>
     <string name="fg01a"> Yes </string>
     <string name="fg01b"> No </string>

@@ -129,7 +129,6 @@
             </androidx.cardview.widget.CardView>
 
 
-
             <!--Skip Pattern on da14b-->
             <LinearLayout
                 android:id="@+id/llda14b"
@@ -235,8 +234,8 @@
                         <EditText
                             android:id="@+id/da16"
                             style="@style/EditTextAlpha"
-                            android:maxLength="30"
-                            android:hint="@string/da16" />
+                            android:hint="@string/da16"
+                            android:maxLength="30" />
 
                     </LinearLayout>
 
@@ -292,77 +291,77 @@
                 </androidx.cardview.widget.CardView>
 
 
-            </LinearLayout>
+                <!-- da18  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVda18"
+                    style="@style/cardView">
 
-
-            <!-- da18  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVda18"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
+                        android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/qtxt_da18"
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_da18"
-                            android:text="@string/da18" />
+                            android:background="@drawable/bottom">
 
-                        <TextView
-                            android:id="@+id/q_da18"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
+                            <TextView
+                                android:id="@+id/qtxt_da18"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_da18"
+                                android:text="@string/da18" />
+
+                            <TextView
+                                android:id="@+id/q_da18"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_da18"
+                                android:layout_alignBottom="@id/qtxt_da18"
+                                android:text="@string/Q_da18" />
+
+                        </RelativeLayout>
+
+                        <RadioGroup
+                            android:id="@+id/da18"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_da18"
-                            android:layout_alignBottom="@id/qtxt_da18"
-                            android:text="@string/Q_da18" />
+                            android:orientation="horizontal">
 
-                    </RelativeLayout>
+                            <RadioButton
+                                android:id="@+id/da18a"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/da18a" />
 
-                    <RadioGroup
-                        android:id="@+id/da18"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                            <RadioButton
+                                android:id="@+id/da1896"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/da1896" />
 
-                        <RadioButton
-                            android:id="@+id/da18a"
-                            android:layout_width="0dp"
+                        </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/da1896x"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/da18a" />
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
+                            android:hint="@string/da1896"
+                            android:tag="da1896"
+                            android:text='@{da1896.checked ? da1896x.getText().toString() : ""}'
+                            android:visibility='@{da1896.checked ? View.VISIBLE : View.GONE}' />
 
-                        <RadioButton
-                            android:id="@+id/da1896"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/da1896" />
+                    </LinearLayout>
 
-                    </RadioGroup>
+                </androidx.cardview.widget.CardView>
 
-                    <EditText
-                        android:id="@+id/da1896x"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
-                        android:hint="@string/da1896"
-                        android:tag="da1896"
-                        android:text='@{da1896.checked ? da1896x.getText().toString() : ""}'
-                        android:visibility='@{da1896.checked ? View.VISIBLE : View.GONE}' />
 
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
 
             <!-- hint5  Title   -->
@@ -383,7 +382,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
 
             <!-- da191  Radio   -->
@@ -871,8 +869,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
-
 
 
             <!-- da201  Radio   -->
@@ -1552,7 +1548,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
 
             <!-- da211  Radio   -->

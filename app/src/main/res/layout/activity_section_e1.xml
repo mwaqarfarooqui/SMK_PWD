@@ -395,7 +395,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:hint="@string/ea05d"
+                                android:hint="##"
                                 android:inputType="number"
                                 android:maxLength="2"
                                 app:maxValue="31"
@@ -421,10 +421,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:hint="@string/ea05m"
+                                android:hint="##"
                                 android:inputType="number"
                                 android:maxLength="2"
-                                app:maxValue="12"
+                                app:maxValue="24"
                                 app:minValue="1"
                                 app:type="range" />
 
