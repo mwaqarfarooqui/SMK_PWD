@@ -1223,10 +1223,11 @@
     <string name="ea14c"> Yes, Only Emergency medicines </string>
     <string name="ea14d"> Partially </string>
     <string name="ea14e"> No </string>
-    <string name="secebtitle">SECTION-EB- PROTECTION FROM ENVIRONMENT</string>
-    <string name="eb01">Are the Drugs properly Shelved?</string>
-    <string name="eb01a">Yes Observed</string>
-    <string name="eb01b">Yes, reported but not observed</string>
+
+    <string name="secebtitle">SECTION EB: \nPROTECTION FROM ENVIRONMENT </string>
+    <string name="eb01"> Are the Drugs properly Shelved ? </string>
+    <string name="eb01a"> Yes Observed </string>
+    <string name="eb01b"> Yes, reported but not observed </string>
     <string name="eb01c"> No </string>
     <string name="eb02">Are the medicines protected from water?</string>
     <string name="eb02a">Yes Observed</string>

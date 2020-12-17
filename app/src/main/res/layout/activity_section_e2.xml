@@ -12,9 +12,11 @@
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE2Activity" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -25,7 +27,7 @@
 
             <!-- secebtitle  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVsecebtitle"
+                android:id="@+id/cvsecebtitle"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -35,17 +37,16 @@
 
                     <TextView
                         style="@style/textView3Head"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:text="@string/secebtitle" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
             <!-- eb01  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVeb01"
+                android:id="@+id/cveb01"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -73,6 +74,7 @@
                             android:layout_alignTop="@id/qtxt_eb01"
                             android:layout_alignBottom="@id/qtxt_eb01"
                             android:text="@string/Q_eb01" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -97,14 +99,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/eb01c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
             <!-- eb02  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVeb02"
+                android:id="@+id/cveb02"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -132,6 +137,7 @@
                             android:layout_alignTop="@id/qtxt_eb02"
                             android:layout_alignBottom="@id/qtxt_eb02"
                             android:text="@string/Q_eb02" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -156,14 +162,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/eb02c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
             <!-- eb03  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVeb03"
+                android:id="@+id/cveb03"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -191,6 +200,7 @@
                             android:layout_alignTop="@id/qtxt_eb03"
                             android:layout_alignBottom="@id/qtxt_eb03"
                             android:text="@string/Q_eb03" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -222,9 +232,8 @@
 
             <!-- eb03y  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVeb03y"
-                style="@style/cardView"
-                android:visibility='@{eb03b.checked? View.GONE : View.VISIBLE}'>
+                android:id="@+id/cveb03y"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -251,6 +260,7 @@
                             android:layout_alignTop="@id/qtxt_eb03y"
                             android:layout_alignBottom="@id/qtxt_eb03y"
                             android:text="@string/Q_eb03y" />
+
                     </RelativeLayout>
 
                     <LinearLayout
@@ -287,7 +297,7 @@
 
             <!-- eb04  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVeb04"
+                android:id="@+id/cveb04"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -315,6 +325,7 @@
                             android:layout_alignTop="@id/qtxt_eb04"
                             android:layout_alignBottom="@id/qtxt_eb04"
                             android:text="@string/Q_eb04" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -339,14 +350,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/eb04c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
             <!-- eb05  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVeb05"
+                android:id="@+id/cveb05"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -374,6 +388,7 @@
                             android:layout_alignTop="@id/qtxt_eb05"
                             android:layout_alignBottom="@id/qtxt_eb05"
                             android:text="@string/Q_eb05" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -405,7 +420,7 @@
 
             <!-- eb06  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVeb06"
+                android:id="@+id/cveb06"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -433,6 +448,7 @@
                             android:layout_alignTop="@id/qtxt_eb06"
                             android:layout_alignBottom="@id/qtxt_eb06"
                             android:text="@string/Q_eb06" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -464,7 +480,7 @@
 
             <!-- eb07  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVeb07"
+                android:id="@+id/cveb07"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -492,6 +508,7 @@
                             android:layout_alignTop="@id/qtxt_eb07"
                             android:layout_alignBottom="@id/qtxt_eb07"
                             android:text="@string/Q_eb07" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -516,14 +533,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/eb07c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
             <!-- eb08  CheckBox   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVeb08"
+                android:id="@+id/cveb08"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -635,7 +655,9 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+            <!--EndButton LinearLayout-->
 
 
         </LinearLayout>

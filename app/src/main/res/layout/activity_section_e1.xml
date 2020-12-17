@@ -28,7 +28,7 @@
 
             <!-- seceatitle  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVseceatitle"
+                android:id="@+id/cvseceatitle"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -50,7 +50,7 @@
 
             <!-- ea01  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea01"
+                android:id="@+id/cvea01"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -146,7 +146,7 @@
 
             <!-- ea02  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea02"
+                android:id="@+id/cvea02"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -174,6 +174,7 @@
                             android:layout_alignTop="@id/qtxt_ea02"
                             android:layout_alignBottom="@id/qtxt_ea02"
                             android:text="@string/Q_ea02" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -192,14 +193,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ea02b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
             <!-- ea03  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea03"
+                android:id="@+id/cvea03"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -271,7 +275,7 @@
 
             <!-- ea04  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea04"
+                android:id="@+id/cvea04"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -299,6 +303,7 @@
                             android:layout_alignTop="@id/qtxt_ea04"
                             android:layout_alignBottom="@id/qtxt_ea04"
                             android:text="@string/Q_ea04" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -347,14 +352,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ea04g" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
             <!-- ea05  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea05"
+                android:id="@+id/cvea05"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -450,7 +458,7 @@
 
             <!-- ea06  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea06"
+                android:id="@+id/cvea06"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -535,7 +543,7 @@
 
             <!-- ea07  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea07"
+                android:id="@+id/cvea07"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -603,7 +611,7 @@
                             android:hint="@string/ea0796"
                             android:tag="ea0796"
                             android:text='@{ea0796.checked ? ea0796x.getText().toString() : ""}'
-                            android:visibility='@{ea0796.checked? View.VISIBLE : View.GONE}' />
+                            android:visibility='@{ea0796.checked ? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 
@@ -614,7 +622,7 @@
 
             <!-- ea08  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea08"
+                android:id="@+id/cvea08"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -683,7 +691,7 @@
 
             <!-- ea09  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea09"
+                android:id="@+id/cvea09"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -780,7 +788,7 @@
 
             <!-- ea10  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea10"
+                android:id="@+id/cvea10"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -839,7 +847,7 @@
 
             <!-- ea11  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea11"
+                android:id="@+id/cvea11"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -867,6 +875,7 @@
                             android:layout_alignTop="@id/qtxt_ea11"
                             android:layout_alignBottom="@id/qtxt_ea11"
                             android:text="@string/Q_ea11" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -891,14 +900,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ea11c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
             <!-- ea12  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea12"
+                android:id="@+id/cvea12"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -957,7 +969,7 @@
 
             <!-- ea13  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea13"
+                android:id="@+id/cvea13"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1016,7 +1028,7 @@
 
             <!-- ea14  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVea14"
+                android:id="@+id/cvea14"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1112,7 +1124,9 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+            <!--EndButton LinearLayout-->
 
 
         </LinearLayout>
