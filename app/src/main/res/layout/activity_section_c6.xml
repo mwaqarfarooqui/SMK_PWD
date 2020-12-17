@@ -38,7 +38,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/seccftitle" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -107,13 +109,16 @@
                             android:id="@+id/cf0196x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/cf0196"
                             android:tag="cf0196"
                             android:text='@{cf0196.checked ? cf0196x.getText().toString() : ""}'
                             android:visibility='@{cf0196.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -194,13 +199,16 @@
                             android:id="@+id/cf0296x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/cf0296"
                             android:tag="cf0296"
                             android:text='@{cf0296.checked ? cf0296x.getText().toString() : ""}'
                             android:visibility='@{cf0296.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -234,6 +242,7 @@
                             android:layout_alignTop="@id/qtxt_cf03"
                             android:layout_alignBottom="@id/qtxt_cf03"
                             android:text="@string/Q_cf03" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -264,8 +273,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/cf03d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -284,7 +296,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/hintcf" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -318,6 +332,7 @@
                             android:layout_alignTop="@id/qtxt_cf04"
                             android:layout_alignBottom="@id/qtxt_cf04"
                             android:text="@string/Q_cf04" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -377,6 +392,7 @@
                             android:layout_alignTop="@id/qtxt_cf05"
                             android:layout_alignBottom="@id/qtxt_cf05"
                             android:text="@string/Q_cf05" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -436,6 +452,7 @@
                             android:layout_alignTop="@id/qtxt_cf06"
                             android:layout_alignBottom="@id/qtxt_cf06"
                             android:text="@string/Q_cf06" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -492,7 +509,9 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+            <!--EndButton LinearLayout-->
 
 
         </LinearLayout>
