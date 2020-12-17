@@ -499,7 +499,7 @@
                             android:id="@+id/hb0796x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/hb0796"
                             android:tag="hb0796"
                             android:text='@{hb0796.checked ? hb0796x.getText().toString() : ""}'

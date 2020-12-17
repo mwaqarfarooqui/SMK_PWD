@@ -1336,51 +1336,54 @@
                     <RadioGroup
                         android:id="@+id/ga11"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/ga11a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga11a" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ga11ax"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:hint="@string/ga11a"
-                            android:inputType="number"
-                            android:maxLength="4"
-                            android:tag="ga11a"
-                            android:text='@{ga11a.checked ? ga11ax.getText().toString() : ""}'
-                            android:visibility='@{ga11a.checked? View.VISIBLE : View.GONE}'
-                            app:maxValue="9999"
-                            app:minValue="0"
-                            app:type="range" />
 
                         <RadioButton
                             android:id="@+id/ga11b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga11b" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ga11bx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:hint="@string/ga11b"
-                            android:inputType="number"
-                            android:maxLength="4"
-                            android:tag="ga11b"
-                            android:text='@{ga11b.checked ? ga11bx.getText().toString() : ""}'
-                            android:visibility='@{ga11b.checked? View.VISIBLE : View.GONE}'
-                            app:maxValue="9999"
-                            app:minValue="0"
-                            app:type="range" />
-
                     </RadioGroup>
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/ga11ax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/ga11a"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:tag="ga11a"
+                        android:text='@{ga11a.checked ? ga11ax.getText().toString() : ""}'
+                        android:visibility='@{ga11a.checked ? View.VISIBLE : View.GONE}'
+                        app:maxValue="9999"
+                        app:minValue="0"
+                        app:type="range" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/ga11bx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/ga11b"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:tag="ga11b"
+                        android:text='@{ga11b.checked ? ga11bx.getText().toString() : ""}'
+                        android:visibility='@{ga11b.checked ? View.VISIBLE : View.GONE}'
+                        app:maxValue="9999"
+                        app:minValue="0"
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -1417,26 +1420,33 @@
                             android:layout_alignTop="@id/qtxt_ga12"
                             android:layout_alignBottom="@id/qtxt_ga12"
                             android:text="@string/Q_ga12" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/ga12"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/ga12a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga12a" />
 
                         <RadioButton
                             android:id="@+id/ga12b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ga12b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -1470,6 +1480,7 @@
                             android:layout_alignTop="@id/qtxt_ga13"
                             android:layout_alignBottom="@id/qtxt_ga13"
                             android:text="@string/Q_ga13" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -1491,8 +1502,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/ga13b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -1526,6 +1540,7 @@
                             android:layout_alignTop="@id/qtxt_ga14"
                             android:layout_alignBottom="@id/qtxt_ga14"
                             android:text="@string/Q_ga14" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -1538,21 +1553,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ga14a" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ga14ax"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:hint="@string/ga14a"
-                            android:inputType="number"
-                            android:maxLength="4"
-                            android:tag="ga14a"
-                            android:text='@{ga14a.checked ? ga14ax.getText().toString() : ""}'
-                            android:visibility='@{ga14a.checked? View.VISIBLE : View.GONE}'
-                            app:maxValue="9999"
-                            app:minValue="0"
-                            app:type="range" />
 
                         <RadioButton
                             android:id="@+id/ga14b"
@@ -1595,8 +1595,11 @@
                             app:maxValue="9999"
                             app:minValue="0"
                             app:type="range" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -1630,6 +1633,7 @@
                             android:layout_alignTop="@id/qtxt_ga15"
                             android:layout_alignBottom="@id/qtxt_ga15"
                             android:text="@string/Q_ga15" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -1683,13 +1687,16 @@
                             android:id="@+id/ga1596x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/ga1596"
                             android:tag="ga1596"
                             android:text='@{ga1596.checked ? ga1596x.getText().toString() : ""}'
                             android:visibility='@{ga1596.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

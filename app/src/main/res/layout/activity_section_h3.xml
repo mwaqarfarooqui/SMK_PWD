@@ -395,6 +395,7 @@
                             android:layout_alignTop="@id/qtxt_hc06"
                             android:layout_alignBottom="@id/qtxt_hc06"
                             android:text="@string/Q_hc06" />
+
                     </RelativeLayout>
 
                     <LinearLayout
@@ -444,13 +445,16 @@
                             android:id="@+id/hc0696x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/hc0696"
                             android:tag="hc0696"
                             android:text='@{hc0696.checked ? hc0696x.getText().toString() : ""}'
                             android:visibility='@{hc0696.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

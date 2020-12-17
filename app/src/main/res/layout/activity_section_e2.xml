@@ -551,6 +551,7 @@
                             android:layout_alignTop="@id/qtxt_eb08"
                             android:layout_alignBottom="@id/qtxt_eb08"
                             android:text="@string/Q_eb08" />
+
                     </RelativeLayout>
 
                     <LinearLayout
@@ -594,13 +595,16 @@
                             android:id="@+id/eb0896x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/eb0896"
                             android:tag="eb0896"
                             android:text='@{eb0896.checked ? eb0896x.getText().toString() : ""}'
                             android:visibility='@{eb0896.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
