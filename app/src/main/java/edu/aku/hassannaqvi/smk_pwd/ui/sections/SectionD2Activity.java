@@ -46,6 +46,7 @@ public class SectionD2Activity extends AppCompatActivity {
 
     private void setupSkips() {
         radioGroupListener(bi.db01, bi.db01b, bi.lldb01b);
+        radioGroupListener(bi.db13, bi.db13b, bi.lldb13b);
     }
 
 
