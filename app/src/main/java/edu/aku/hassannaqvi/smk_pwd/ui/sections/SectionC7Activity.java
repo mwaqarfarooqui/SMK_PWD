@@ -42,15 +42,6 @@ public class SectionC7Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
-
-        bi.cg111.setOnCheckedChangeListener((radioGroup, i) -> {
-            Clear.clearAllFields(bi.cg112, false);
-            if (i == bi.cg111a.getId()) {
-                Clear.clearAllFields(bi.cg112, true);
-                bi.cg112c.setEnabled(false);
-            }
-        });
-
         radioGroupListener(bi.cg01, bi.cg01y, bi.cvcg02);
         radioGroupListener(bi.cg03, bi.cg03y, bi.cvcg04);
         radioGroupListener(bi.cg05, bi.cg05y, bi.cvcg06);

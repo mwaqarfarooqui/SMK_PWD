@@ -266,12 +266,55 @@
     <string name="cc08"> The facility has client waiting area with ventilation (working fans) </string>
     <string name="cc08a"> Yes, observed </string>
     <string name="cc08b"> No </string>
+
     <string name="seccdtitle"> SECTION CD: \nINFECTION CONTROL </string>
     <string name="cd01">Does this facility have any guidelines on standard precautions for infection prevention? If yes, ask to see the document</string>
     <string name="cd01a">Yes, observed</string>
     <string name="cd01b">Yes, reported not seen</string>
     <string name="cd01c"> No </string>
+
     <string name="hintcd1">Please tell me if the following items used for processing of equipment for reuse are available and functional in the facility today.</string>
+
+    <string name="cd021"> Electric Autoclave (Pressure &amp; Wet Heat) </string>
+    <string name="cd0211"> Availability </string>
+    <string name="cd0211a"> Yes </string>
+    <string name="cd0211b"> No </string>
+    <string name="cd0211c"> Quantity </string>
+    <string name="cd0212"> Functionality </string>
+    <string name="cd0212a"> Yes </string>
+    <string name="cd0212b"> No </string>
+    <string name="cd0212c"> Quantity </string>
+
+    <string name="cd022"> Non-Electric Autoclave (Functioning Through Gas) </string>
+    <string name="cd0221"> Availability </string>
+    <string name="cd0221a"> Yes </string>
+    <string name="cd0221b"> No </string>
+    <string name="cd0221c"> Quantity </string>
+    <string name="cd0222"> Functionality </string>
+    <string name="cd0222a"> Yes </string>
+    <string name="cd0222b"> No </string>
+    <string name="cd0222c"> Quantity </string>
+
+    <string name="cd023"> Electric Boiler or Steamer (No Pressure) </string>
+    <string name="cd0231"> Availability </string>
+    <string name="cd0231a"> Yes </string>
+    <string name="cd0231b"> No </string>
+    <string name="cd0231c"> Quantity </string>
+    <string name="cd0232"> Functionality </string>
+    <string name="cd0232a"> Yes </string>
+    <string name="cd0232b"> No </string>
+    <string name="cd0232c"> Quantity </string>
+
+    <string name="cd024"> Non-Electric Pot with Cover for Boiling / Steam </string>
+    <string name="cd0241"> Availability </string>
+    <string name="cd0241a"> Yes </string>
+    <string name="cd0241b"> No </string>
+    <string name="cd0241c"> Quantity </string>
+    <string name="cd0242"> Functionality </string>
+    <string name="cd0242a"> Yes </string>
+    <string name="cd0242b"> No </string>
+    <string name="cd0242c"> Quantity </string>
+
     <string name="cd02">Electric autoclave (pressure &amp; wet heat)-Availability</string>
     <string name="cd02y">Yes (Quantity)</string>
     <string name="cd02n"> No </string>
@@ -2237,6 +2280,10 @@
     <string name='Q_cc07'>cc07</string>
     <string name='Q_cc08'>cc08</string>
     <string name='Q_cd01'>cd01</string>
+    <string name='Q_cd021'>cd021</string>
+    <string name='Q_cd022'>cd022</string>
+    <string name='Q_cd023'>cd023</string>
+    <string name='Q_cd024'>cd024</string>
     <string name='Q_cd02'>cd02</string>
     <string name='Q_cd03'>cd03</string>
     <string name='Q_cd04'>cd04</string>

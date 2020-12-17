@@ -2,9 +2,9 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
-import android.view.View;
-import android.view.ViewGroup;
+import android.text.TextWatcher;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -43,19 +44,46 @@ public class SectionC4Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
-        radioGroupListener(bi.cd02, bi.cd02n, bi.cvcd03);
-        radioGroupListener(bi.cd04, bi.cd04n, bi.cvcd05);
-        radioGroupListener(bi.cd06, bi.cd06n, bi.cvcd07);
-        radioGroupListener(bi.cd08, bi.cd08n, bi.cvcd09);
+        radioGroupListener(bi.cd0211, bi.cd0211a, bi.cd0212, bi.cd0212c);
+        radioGroupListener(bi.cd0221, bi.cd0221a, bi.cd0222, bi.cd0222c);
+        radioGroupListener(bi.cd0231, bi.cd0231a, bi.cd0232, bi.cd0232c);
+        radioGroupListener(bi.cd0241, bi.cd0241a, bi.cd0242, bi.cd0242c);
+        watcherSetMax(bi.cd0211c, bi.cd0212c);
+        watcherSetMax(bi.cd0221c, bi.cd0222c);
+        watcherSetMax(bi.cd0231c, bi.cd0232c);
+        watcherSetMax(bi.cd0241c, bi.cd0242c);
     }
 
 
-    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, RadioGroup rG, EditTextPicker etp) {
         rg.setOnCheckedChangeListener((radioGroup, i) -> {
-            Clear.clearAllFields(vg);
-            vg.setVisibility(View.VISIBLE);
-            if (i == rb.getId()) vg.setVisibility(View.GONE);
+            Clear.clearAllFields(rG, false);
+            if (i == rb.getId()) {
+                Clear.clearAllFields(rG, true);
+                etp.setEnabled(false);
+            }
         });
+    }
+
+
+    public void watcherSetMax(EditTextPicker edit01, EditTextPicker edit02) {
+        edit01.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (TextUtils.isEmpty(edit01.getText()))
+                    return;
+                edit02.setMaxvalue(Integer.parseInt(edit01.getText().toString()));
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
     }
 
 
@@ -80,46 +108,50 @@ public class SectionC4Activity extends AppCompatActivity {
                 : bi.cd01c.isChecked() ? "3"
                 : "-1");
 
-        json.put("cd02", bi.cd02y.isChecked() ? "1"
-                : bi.cd02n.isChecked() ? "2"
-                : "-1");
 
-        json.put("cd02yx", bi.cd02yx.getText().toString());
-        json.put("cd03", bi.cd03y.isChecked() ? "1"
-                : bi.cd03n.isChecked() ? "2"
+        json.put("cd0211", bi.cd0211a.isChecked() ? "1"
+                : bi.cd0211b.isChecked() ? "2"
                 : "-1");
+        json.put("cd0211c", bi.cd0211c.getText().toString().trim().isEmpty() ? "-1" : bi.cd0211c.getText().toString());
 
-        json.put("cd03yx", bi.cd03yx.getText().toString());
-        json.put("cd04", bi.cd04y.isChecked() ? "1"
-                : bi.cd04n.isChecked() ? "2"
+        json.put("cd0212", bi.cd0212a.isChecked() ? "1"
+                : bi.cd0212b.isChecked() ? "2"
                 : "-1");
+        json.put("cd0212c", bi.cd0212c.getText().toString().trim().isEmpty() ? "-1" : bi.cd0212c.getText().toString());
 
-        json.put("cd04yx", bi.cd04yx.getText().toString());
-        json.put("cd05", bi.cd05y.isChecked() ? "1"
-                : bi.cd05n.isChecked() ? "2"
+
+        json.put("cd0221", bi.cd0221a.isChecked() ? "1"
+                : bi.cd0221b.isChecked() ? "2"
                 : "-1");
+        json.put("cd0221c", bi.cd0221c.getText().toString().trim().isEmpty() ? "-1" : bi.cd0221c.getText().toString());
 
-        json.put("cd05yx", bi.cd05yx.getText().toString());
-        json.put("cd06", bi.cd06y.isChecked() ? "1"
-                : bi.cd06n.isChecked() ? "2"
+        json.put("cd0222", bi.cd0222a.isChecked() ? "1"
+                : bi.cd0222b.isChecked() ? "2"
                 : "-1");
+        json.put("cd0222c", bi.cd0222c.getText().toString().trim().isEmpty() ? "-1" : bi.cd0222c.getText().toString());
 
-        json.put("cd06yx", bi.cd06yx.getText().toString());
-        json.put("cd07", bi.cd07y.isChecked() ? "1"
-                : bi.cd07n.isChecked() ? "2"
+
+        json.put("cd0231", bi.cd0231a.isChecked() ? "1"
+                : bi.cd0231b.isChecked() ? "2"
                 : "-1");
+        json.put("cd0231c", bi.cd0231c.getText().toString().trim().isEmpty() ? "-1" : bi.cd0231c.getText().toString());
 
-        json.put("cd07yx", bi.cd07yx.getText().toString());
-        json.put("cd08", bi.cd08y.isChecked() ? "1"
-                : bi.cd08n.isChecked() ? "2"
+        json.put("cd0232", bi.cd0232a.isChecked() ? "1"
+                : bi.cd0232b.isChecked() ? "2"
                 : "-1");
+        json.put("cd0232c", bi.cd0232c.getText().toString().trim().isEmpty() ? "-1" : bi.cd0232c.getText().toString());
 
-        json.put("cd08yx", bi.cd08yx.getText().toString());
-        json.put("cd09", bi.cd09y.isChecked() ? "1"
-                : bi.cd09n.isChecked() ? "2"
+
+        json.put("cd0241", bi.cd0241a.isChecked() ? "1"
+                : bi.cd0241b.isChecked() ? "2"
                 : "-1");
+        json.put("cd0241c", bi.cd0241c.getText().toString().trim().isEmpty() ? "-1" : bi.cd0241c.getText().toString());
 
-        json.put("cd09yx", bi.cd09yx.getText().toString());
+        json.put("cd0242", bi.cd0242a.isChecked() ? "1"
+                : bi.cd0242b.isChecked() ? "2"
+                : "-1");
+        json.put("cd0242c", bi.cd0242c.getText().toString().trim().isEmpty() ? "-1" : bi.cd0242c.getText().toString());
+
 
         json.put("cd10", bi.cd10a.isChecked() ? "1"
                 : bi.cd10b.isChecked() ? "2"
@@ -176,37 +208,7 @@ public class SectionC4Activity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        if (!Validator.emptyCheckingContainer(this, bi.GrpName))
-        return false;
-
-        int countcd02yx = (TextUtils.isEmpty(bi.cd02yx.getText()) ? 0 : Integer.parseInt(bi.cd02yx.getText().toString().trim()));
-        int countcd03yx = (TextUtils.isEmpty(bi.cd03yx.getText()) ? 0 : Integer.parseInt(bi.cd03yx.getText().toString().trim()));
-
-        if (countcd03yx > countcd02yx){
-            return Validator.emptyCustomTextBox(this, bi.cd03yx, "cannot greater than CD02YX");
-        }
-
-        int countcd04yx = (TextUtils.isEmpty(bi.cd04yx.getText()) ? 0 : Integer.parseInt(bi.cd04yx.getText().toString().trim()));
-        int countcd05yx = (TextUtils.isEmpty(bi.cd05yx.getText()) ? 0 : Integer.parseInt(bi.cd05yx.getText().toString().trim()));
-
-        if (countcd05yx > countcd04yx){
-            return Validator.emptyCustomTextBox(this, bi.cd05yx, "cannot greater than CD04YX");
-        }
-
-        int countcd06yx = (TextUtils.isEmpty(bi.cd06yx.getText()) ? 0 : Integer.parseInt(bi.cd06yx.getText().toString().trim()));
-        int countcd07yx = (TextUtils.isEmpty(bi.cd07yx.getText()) ? 0 : Integer.parseInt(bi.cd07yx.getText().toString().trim()));
-
-        if (countcd07yx > countcd06yx){
-            return Validator.emptyCustomTextBox(this, bi.cd07yx, "cannot greater than CD06YX");
-        }
-
-        int countcd08yx = (TextUtils.isEmpty(bi.cd08yx.getText()) ? 0 : Integer.parseInt(bi.cd08yx.getText().toString().trim()));
-        int countcd09yx = (TextUtils.isEmpty(bi.cd09yx.getText()) ? 0 : Integer.parseInt(bi.cd09yx.getText().toString().trim()));
-
-        if (countcd09yx > countcd08yx){
-            return Validator.emptyCustomTextBox(this, bi.cd09yx, "cannot greater than CD08YX");
-        }
-        return true;
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
 

@@ -68,7 +68,6 @@ public class SectionI2Activity extends AppCompatActivity {
     }
 
 
-
     public void watcherSetMax(EditTextPicker edit01, EditTextPicker edit02) {
 
         edit01.addTextChangedListener(new TextWatcher() {

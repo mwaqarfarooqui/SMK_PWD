@@ -816,6 +816,7 @@
                             android:layout_alignTop="@id/qtxt_ea10"
                             android:layout_alignBottom="@id/qtxt_ea10"
                             android:text="@string/Q_ea10" />
+
                     </RelativeLayout>
 
                     <RadioGroup
