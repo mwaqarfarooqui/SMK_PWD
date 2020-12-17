@@ -1,5 +1,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <data>
 
         <import type="android.view.View" />
@@ -11,9 +12,11 @@
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionC1Activity" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -34,8 +37,6 @@
 
                     <TextView
                         style="@style/textView3Head"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/seccatitle" />
 
                 </LinearLayout>
@@ -73,6 +74,7 @@
                             android:layout_alignTop="@id/qtxt_ca01"
                             android:layout_alignBottom="@id/qtxt_ca01"
                             android:text="@string/Q_ca01" />
+
                     </RelativeLayout>
 
                     <RadioGroup

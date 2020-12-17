@@ -1,5 +1,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <data>
 
         <import type="android.view.View" />
@@ -15,6 +16,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -35,9 +37,6 @@
 
                     <TextView
                         style="@style/textView3Head"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:text="@string/seccbtitle" />
 
                 </LinearLayout>
@@ -399,7 +398,9 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+            <!--EndButton LinearLayout-->
 
 
         </LinearLayout>
