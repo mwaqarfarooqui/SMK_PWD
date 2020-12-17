@@ -1,6 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <data>
 
         <import type="android.view.View" />
@@ -12,9 +13,11 @@
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionE1Activity" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -39,7 +42,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/seceatitle" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -126,13 +131,16 @@
                             android:id="@+id/ea0196x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/ea0196"
                             android:tag="ea0196"
                             android:text='@{ea0196.checked ? ea0196x.getText().toString() : ""}'
                             android:visibility='@{ea0196.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -248,13 +256,16 @@
                             android:id="@+id/ea0396x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/ea0396"
                             android:tag="ea0396"
                             android:text='@{ea0396.checked ? ea0396x.getText().toString() : ""}'
                             android:visibility='@{ea0396.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -467,6 +478,7 @@
                             android:layout_alignTop="@id/qtxt_ea06"
                             android:layout_alignBottom="@id/qtxt_ea06"
                             android:text="@string/Q_ea06" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -508,13 +520,16 @@
                             android:id="@+id/ea0696x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/ea0696"
                             android:tag="ea0696"
                             android:text='@{ea0696.checked ? ea0696x.getText().toString() : ""}'
                             android:visibility='@{ea0696.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -548,6 +563,7 @@
                             android:layout_alignTop="@id/qtxt_ea07"
                             android:layout_alignBottom="@id/qtxt_ea07"
                             android:text="@string/Q_ea07" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -583,13 +599,16 @@
                             android:id="@+id/ea0796x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/ea0796"
                             android:tag="ea0796"
                             android:text='@{ea0796.checked ? ea0796x.getText().toString() : ""}'
                             android:visibility='@{ea0796.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -623,6 +642,7 @@
                             android:layout_alignTop="@id/qtxt_ea08"
                             android:layout_alignBottom="@id/qtxt_ea08"
                             android:text="@string/Q_ea08" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -653,8 +673,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ea08d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -688,6 +711,7 @@
                             android:layout_alignTop="@id/qtxt_ea09"
                             android:layout_alignBottom="@id/qtxt_ea09"
                             android:text="@string/Q_ea09" />
+
                     </RelativeLayout>
 
                     <LinearLayout

@@ -1,5 +1,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <data>
 
         <import type="android.view.View" />
@@ -11,15 +12,18 @@
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF4Activity" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:id="@+id/GrpName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
 
             <!-- secfdtitle  Title   -->
             <androidx.cardview.widget.CardView
@@ -36,8 +40,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/secfdtitle" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- fd01  Radio   -->
             <androidx.cardview.widget.CardView
@@ -69,6 +76,7 @@
                             android:layout_alignTop="@id/qtxt_fd01"
                             android:layout_alignBottom="@id/qtxt_fd01"
                             android:text="@string/Q_fd01" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -110,14 +118,20 @@
                             android:id="@+id/fd0196x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/fd0196"
                             android:tag="fd0196"
                             android:text='@{fd0196.checked ? fd0196x.getText().toString() : ""}'
                             android:visibility='@{fd0196.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -144,7 +158,13 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+            <!--EndButton LinearLayout-->
+
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>

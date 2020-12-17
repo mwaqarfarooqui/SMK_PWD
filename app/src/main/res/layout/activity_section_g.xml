@@ -26,7 +26,7 @@
             android:orientation="vertical">
 
 
-            <!-- secgatitle  Title   -->
+        <!-- secgatitle  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvsecgatitle"
                 style="@style/cardView">

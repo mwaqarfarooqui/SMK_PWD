@@ -1455,14 +1455,16 @@
     <string name="fc14a">Is the HF staff report correctly as per standard definition?</string>
     <string name="fc14aa"> Yes </string>
     <string name="fc14ab"> No </string>
-    <string name="secfdtitle">SECTION-FD- DATA COMPLETENESS</string>
+
+    <string name="secfdtitle"> SECTION FD: \nDATA COMPLETENESS </string>
     <string name="fd01">If the source registers and/or monthly reports are not completely filled in, what are the possible reasons for the missing data?</string>
     <string name="fd01a">Storage or archiving problems</string>
     <string name="fd01b">Staffing issues</string>
     <string name="fd01c">Not understanding the data element(s)</string>
     <string name="fd01d">Presence of other vertical reporting requirements</string>
     <string name="fd0196">Others (Specify)</string>
-    <string name="secfetitle">SECTION-FE- DISCREPANCIES</string>
+
+    <string name="secfetitle"> SECTION FE: \nDISCREPANCIES </string>
     <string name="fe01">If there was a discrepancy observed between the main source document and the monthly reports, what are the reasons for the discrepancy?</string>
     <string name="fe01a">Data entry errors</string>
     <string name="fe01b">Arithmetic errors</string>
