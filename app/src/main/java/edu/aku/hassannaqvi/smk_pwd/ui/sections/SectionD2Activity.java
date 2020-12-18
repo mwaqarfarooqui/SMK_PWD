@@ -16,12 +16,15 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD2Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 /*import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
@@ -45,12 +48,12 @@ public class SectionD2Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
-        radioGroupListener(bi.db01, bi.db01b, bi.lldb01b);
-        radioGroupListener(bi.db13, bi.db13b, bi.lldb13b);
+        rgListener(bi.db01, bi.db01b, bi.lldb01b);
+        rgListener(bi.db13, bi.db13b, bi.lldb13b);
     }
 
 
-    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+    public void rgListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
         rg.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(vg);
             vg.setVisibility(View.VISIBLE);
@@ -62,57 +65,93 @@ public class SectionD2Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-      /*  DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, fc.getsD());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, form.getsD());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-      /*  JSONObject json = new JSONObject();
-
-        json.put("d0301", bi.d0301a.isChecked() ? "1"
-                : bi.d0301b.isChecked() ? "2"
-                : bi.d0301c.isChecked() ? "3"
-                : bi.d0301d.isChecked() ? "4"
+        form.setDb01(bi.db01a.isChecked() ? "1"
+                : bi.db01b.isChecked() ? "2"
                 : "-1");
 
-        json.put("d0302", bi.d0302a.isChecked() ? "1"
-                : bi.d0302b.isChecked() ? "2"
-                : bi.d0302c.isChecked() ? "3"
-                : bi.d0302d.isChecked() ? "4"
-                : bi.d0302e.isChecked() ? "5"
+        form.setDb02(bi.db02a.isChecked() ? "1"
+                : bi.db02b.isChecked() ? "2"
                 : "-1");
 
-        json.put("d0303", bi.d0303a.isChecked() ? "1"
-                : bi.d0303b.isChecked() ? "2"
+        form.setDb03(bi.db03a.isChecked() ? "1"
+                : bi.db03b.isChecked() ? "2"
                 : "-1");
 
-        json.put("d0304", bi.d0304a.isChecked() ? "1"
-                : bi.d0304b.isChecked() ? "2"
+        form.setDb04(bi.db04a.isChecked() ? "1"
+                : bi.db04b.isChecked() ? "2"
                 : "-1");
 
-        json.put("d0305", bi.d0305a.isChecked() ? "1"
-                : bi.d0305b.isChecked() ? "2"
-                : bi.d0305c.isChecked() ? "3"
-                : "-1");*/
+        form.setDb05(bi.db05a.isChecked() ? "1"
+                : bi.db05b.isChecked() ? "2"
+                : "-1");
 
-    /*    try {
+        form.setDb06(bi.db06a.isChecked() ? "1"
+                : bi.db06b.isChecked() ? "2"
+                : "-1");
+
+        form.setDb07(bi.db07a.isChecked() ? "1"
+                : bi.db07b.isChecked() ? "2"
+                : "-1");
+
+        form.setDb08(bi.db08a.isChecked() ? "1"
+                : bi.db08b.isChecked() ? "2"
+                : "-1");
+
+        form.setDb09(bi.db09a.isChecked() ? "1"
+                : bi.db09b.isChecked() ? "2"
+                : "-1");
+
+        form.setDb10(bi.db10a.isChecked() ? "1"
+                : bi.db10b.isChecked() ? "2"
+                : "-1");
+
+        form.setDb11(bi.db11a.isChecked() ? "1"
+                : bi.db11b.isChecked() ? "2"
+                : "-1");
+
+        form.setDb12(bi.db12a.isChecked() ? "1"
+                : bi.db12b.isChecked() ? "2"
+                : bi.db12c.isChecked() ? "3"
+                : "-1");
+
+        form.setDb13(bi.db13a.isChecked() ? "1"
+                : bi.db13b.isChecked() ? "2"
+                : "-1");
+
+        form.setDb14(bi.db14.getText().toString());
+
+        form.setDb15(bi.db15.getText().toString());
+
+        form.setDb16(bi.db16a.isChecked() ? "1"
+                : bi.db1696.isChecked() ? "96"
+                : "-1");
+
+        form.setDb1696x(bi.db1696x.getText().toString());
+
+
+        /*try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsD()), json);
 
             fc.setsD(String.valueOf(json_merge));
 
         } catch (JSONException e) {
             e.printStackTrace();
-        }
-*/
+        }*/
+
+
     }
 
 
@@ -123,11 +162,7 @@ public class SectionD2Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionMainActivity.class));

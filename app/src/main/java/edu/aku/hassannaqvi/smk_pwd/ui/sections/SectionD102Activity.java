@@ -2,13 +2,11 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -16,11 +14,14 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionD102Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionD102Activity extends AppCompatActivity {
@@ -77,83 +78,167 @@ public class SectionD102Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, MainApp.fc.getsD());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, form.getsD());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-/*
-        form.setDb01( bi.db01a.isChecked() ? "1"
-                : bi.db01b.isChecked() ? "2"
-                :  "-1");
+        form.setDa14(bi.da14a.isChecked() ? "1"
+                : bi.da14b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb02( bi.db02a.isChecked() ? "1"
-                : bi.db02b.isChecked() ? "2"
-                :  "-1");
+        form.setDa15(bi.da15a.isChecked() ? "1"
+                : bi.da15b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb03( bi.db03a.isChecked() ? "1"
-                : bi.db03b.isChecked() ? "2"
-                :  "-1");
+        form.setDa16(bi.da16.getText().toString());
 
-        form.setDb04( bi.db04a.isChecked() ? "1"
-                : bi.db04b.isChecked() ? "2"
-                :  "-1");
+        form.setDa17(bi.da17.getText().toString());
 
-        form.setDb05( bi.db05a.isChecked() ? "1"
-                : bi.db05b.isChecked() ? "2"
-                :  "-1");
+        form.setDa18(bi.da18a.isChecked() ? "1"
+                : bi.da1896.isChecked() ? "96"
+                : "-1");
 
-        form.setDb06( bi.db06a.isChecked() ? "1"
-                : bi.db06b.isChecked() ? "2"
-                :  "-1");
+        form.setDa1896x(bi.da1896x.getText().toString());
 
-        form.setDb07( bi.db07a.isChecked() ? "1"
-                : bi.db07b.isChecked() ? "2"
-                :  "-1");
 
-        form.setDb08( bi.db08a.isChecked() ? "1"
-                : bi.db08b.isChecked() ? "2"
-                :  "-1");
+        form.setDa1911(bi.da1911a.isChecked() ? "1"
+                : bi.da1911b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb09( bi.db09a.isChecked() ? "1"
-                : bi.db09b.isChecked() ? "2"
-                :  "-1");
+        form.setDa1912(bi.da1912a.isChecked() ? "1"
+                : bi.da1912b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb10( bi.db10a.isChecked() ? "1"
-                : bi.db10b.isChecked() ? "2"
-                :  "-1");
+        form.setDa1921(bi.da1921a.isChecked() ? "1"
+                : bi.da1921b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb11( bi.db11a.isChecked() ? "1"
-                : bi.db11b.isChecked() ? "2"
-                :  "-1");
+        form.setDa1922(bi.da1922a.isChecked() ? "1"
+                : bi.da1922b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb12( bi.db12a.isChecked() ? "1"
-                : bi.db12b.isChecked() ? "2"
-                : bi.db12c.isChecked() ? "3"
-                :  "-1");
+        form.setDa1931(bi.da1931a.isChecked() ? "1"
+                : bi.da1931b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb13( bi.db13a.isChecked() ? "1"
-                : bi.db13b.isChecked() ? "2"
-                :  "-1");
+        form.setDa1932(bi.da1932a.isChecked() ? "1"
+                : bi.da1932b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb14(bi.db14.getText().toString());
+        form.setDa1941(bi.da1941a.isChecked() ? "1"
+                : bi.da1941b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb15(bi.db15.getText().toString());
+        form.setDa1942(bi.da1942a.isChecked() ? "1"
+                : bi.da1942b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb16( bi.db16a.isChecked() ? "1"
-                : bi.db1696.isChecked() ? "96"
-                :  "-1");
+        form.setDa1951(bi.da1951a.isChecked() ? "1"
+                : bi.da1951b.isChecked() ? "2"
+                : "-1");
 
-        form.setDb1696x(bi.db1696x.getText().toString());*/
+        form.setDa1952(bi.da1952a.isChecked() ? "1"
+                : bi.da1952b.isChecked() ? "2"
+                : "-1");
+
+
+        form.setDa2011(bi.da2011a.isChecked() ? "1"
+                : bi.da2011b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2012(bi.da2012a.isChecked() ? "1"
+                : bi.da2012b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2021(bi.da2021a.isChecked() ? "1"
+                : bi.da2021b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2022(bi.da2022a.isChecked() ? "1"
+                : bi.da2022b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2031(bi.da2031a.isChecked() ? "1"
+                : bi.da2031b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2032(bi.da2032a.isChecked() ? "1"
+                : bi.da2032b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2041(bi.da2041a.isChecked() ? "1"
+                : bi.da2041b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2042(bi.da2042a.isChecked() ? "1"
+                : bi.da2042b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2051(bi.da2051a.isChecked() ? "1"
+                : bi.da2051b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2052(bi.da2052a.isChecked() ? "1"
+                : bi.da2052b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2061(bi.da2061a.isChecked() ? "1"
+                : bi.da2061b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2062(bi.da2062a.isChecked() ? "1"
+                : bi.da2062b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2071(bi.da2071a.isChecked() ? "1"
+                : bi.da2071b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2072(bi.da2072a.isChecked() ? "1"
+                : bi.da2072b.isChecked() ? "2"
+                : "-1");
+
+
+        form.setDa2111(bi.da2111a.isChecked() ? "1"
+                : bi.da2111b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2112(bi.da2112a.isChecked() ? "1"
+                : bi.da2112b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2121(bi.da2121a.isChecked() ? "1"
+                : bi.da2121b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2122(bi.da2122a.isChecked() ? "1"
+                : bi.da2122b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2131(bi.da2131a.isChecked() ? "1"
+                : bi.da2131b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2132(bi.da2132a.isChecked() ? "1"
+                : bi.da2132b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2141(bi.da2141a.isChecked() ? "1"
+                : bi.da2141b.isChecked() ? "2"
+                : "-1");
+
+        form.setDa2142(bi.da2142a.isChecked() ? "1"
+                : bi.da2142b.isChecked() ? "2"
+                : "-1");
 
     }
 
@@ -165,11 +250,7 @@ public class SectionD102Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionD103Activity.class));
@@ -185,30 +266,6 @@ public class SectionD102Activity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
-    }
-
-
-    public void showTooltip(@NotNull View view) {
-        if (view.getId() != View.NO_ID) {
-            String package_name = getApplicationContext().getPackageName();
-            String infoid = view.getResources().getResourceName(view.getId()).replace(package_name + ":id/q_", "");
-            int stringRes = this.getResources().getIdentifier(infoid + "_info", "string", getApplicationContext().getPackageName());
-            if (stringRes != 0) {
-                String infoText = (String) getResources().getText(stringRes);
-
-                new AlertDialog.Builder(this)
-                        .setTitle("Info: " + infoid.toUpperCase())
-                        .setMessage(infoText)
-                        .setIcon(android.R.drawable.ic_dialog_info)
-                        .show();
-            } else {
-                Toast.makeText(this, "No information available on this question.", Toast.LENGTH_SHORT).show();
-            }
-
-        } else {
-            Toast.makeText(this, "No ID Associated with this question.", Toast.LENGTH_SHORT).show();
-
-        }
     }
 
 }
