@@ -42,19 +42,17 @@ import java.util.Locale;
 import java.util.Objects;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.smk_pwd.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivityMainBinding;
+import edu.aku.hassannaqvi.smk_pwd.models.Forms;
 import edu.aku.hassannaqvi.smk_pwd.ui.list_activity.FormsReportDate;
 import edu.aku.hassannaqvi.smk_pwd.ui.list_activity.PendingFormsActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionAActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.smk_pwd.utils.CreateTable;
-
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -304,9 +302,9 @@ public class MainActivity extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
 
-        Collection<FormsContract> todaysForms = db.getTodayForms(sysdateToday);
-        Collection<FormsContract> unsyncedForms = db.getUnsyncedForms(1);
-        Collection<FormsContract> unclosedForms = db.getUnclosedForms();
+        Collection<Forms> todaysForms = db.getTodayForms(sysdateToday);
+        Collection<Forms> unsyncedForms = db.getUnsyncedForms(1);
+        Collection<Forms> unclosedForms = db.getUnclosedForms();
 
         rSumText += "TODAY'S RECORDS SUMMARY\r\n";
 
@@ -319,7 +317,7 @@ public class MainActivity extends AppCompatActivity {
             rSumText += "[    Health Facility   ][ S/P ][Form Status][Sync Status]\r\n";
             rSumText += "---------------------------------------------------------\r\n";
 
-            for (FormsContract fc : todaysForms) {
+            for (Forms form : todaysForms) {
                 Log.d(TAG, "onCreate: '" + form.getIstatus() + "'");
                 switch (form.getIstatus()) {
                     case "1":

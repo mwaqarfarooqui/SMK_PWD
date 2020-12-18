@@ -16,13 +16,13 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.adapter.FormsAdapter;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.models.Forms;
 
 
 public class FormsReportDate extends AppCompatActivity {
     DatabaseHelper db;
-    Collection<FormsContract> fc;
+    Collection<Forms> fc;
     String sysdateToday = new SimpleDateFormat("dd-MM-yy").format(new Date());
     TextView dtFilter;
     private RecyclerView recyclerView;
@@ -47,14 +47,14 @@ public class FormsReportDate extends AppCompatActivity {
         fc = db.getTodayForms(sysdateToday);
 
         // specify an adapter (see also next example)
-        formsAdapter = new FormsAdapter((List<FormsContract>) fc, this);
+        formsAdapter = new FormsAdapter((List<Forms>) fc, this);
         recyclerView.setAdapter(formsAdapter);
     }
 
     public void filterForms(View view) {
         Toast.makeText(this, "updated", Toast.LENGTH_SHORT).show();
         fc = db.getTodayForms(dtFilter.getText().toString());
-        formsAdapter = new FormsAdapter((List<FormsContract>) fc, this);
+        formsAdapter = new FormsAdapter((List<Forms>) fc, this);
         formsAdapter.notifyDataSetChanged();
         recyclerView.setAdapter(formsAdapter);
 

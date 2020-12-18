@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.List;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.models.Forms;
 
 
 /**
@@ -24,11 +24,11 @@ import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> {
     Context c;
     DatabaseHelper db;
-    private List<FormsContract> fc = Collections.emptyList();
+    private List<Forms> form = Collections.emptyList();
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public FormsAdapter(List<FormsContract> fc, Context c) {
-        this.fc = fc;
+    public FormsAdapter(List<Forms> form, Context c) {
+        this.form = form;
         this.c = c;
         Log.d("TAG:count", String.valueOf(getItemCount()));
     }
@@ -53,14 +53,14 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
         // - replace the contents of the view with that element
 
         int staffCount = 0;
-        staffCount = db.getStaffingsByUUID(fc.get(position).get_UID());
+        staffCount = db.getStaffingsByUUID(form.get(position).get_UID());
         int patientCount = 0;
-        patientCount = db.getPatientsByUUID(fc.get(position).get_UID());
+        patientCount = db.getPatientsByUUID(form.get(position).get_UID());
 
 
         String iStatus = "Status  Unknown";
         int iColor = 0;
-        switch (fc.get(position).getIstatus()) {
+        switch (form.get(position).getIstatus()) {
             case "1":
                 iStatus = "Complete";
                 iColor = Color.GREEN;
@@ -97,9 +97,9 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
         }
 
 
-        fc.get(position).setHfName(fc.get(position).getHfName() + ".......................");
-        holder.cluster.setText(fc.get(position).getHfName().substring(0, 21));
-        holder.hhno.setText("(" + fc.get(position).getSysdate() + ")");
+        form.get(position).setHf(form.get(position).getHf() + ".......................");
+        holder.cluster.setText(form.get(position).getHf().substring(0, 21));
+        holder.hhno.setText("(" + form.get(position).getSysdate() + ")");
         holder.istatus.setText(iStatus);
         holder.sysdate.setText("  Staffing Count: " + staffCount + " \t\t\t Patient's Count: " + patientCount);
         holder.istatus.setTextColor(iColor);
@@ -111,7 +111,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return fc.size();
+        return form.size();
     }
 
     // Provide a reference to the views for each data item

@@ -11,8 +11,6 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -29,7 +27,6 @@ import edu.aku.hassannaqvi.smk_pwd.models.Forms;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 import edu.aku.hassannaqvi.smk_pwd.utils.DateUtils;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 
 public class SectionAActivity extends AppCompatActivity {
@@ -82,7 +79,7 @@ public class SectionAActivity extends AppCompatActivity {
         });
 
         // Databinding Edit Mode (only in first activity for every contract)
-        fc = new FormsContract();
+        form = new Forms();
         db = MainApp.appInfo.getDbHelper();
         populateSpinner(this);
     }
@@ -232,11 +229,7 @@ public class SectionAActivity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionMainActivity.class));
@@ -262,7 +255,7 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
         if (!form.get_ID().equals("")) return;
 

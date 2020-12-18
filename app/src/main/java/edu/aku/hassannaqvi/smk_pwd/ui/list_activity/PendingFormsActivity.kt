@@ -6,9 +6,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.aku.hassannaqvi.smk_pwd.R
 import edu.aku.hassannaqvi.smk_pwd.adapter.PendingListAdapter
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivityPendingFormsBinding
+import edu.aku.hassannaqvi.smk_pwd.models.Forms
 
 
 class PendingFormsActivity : AppCompatActivity() {
@@ -25,7 +25,7 @@ class PendingFormsActivity : AppCompatActivity() {
         setupRecyclerView(unclosedForms)
     }
 
-    private fun setupRecyclerView(forms_lst: MutableList<FormsContract>) {
+    private fun setupRecyclerView(forms_lst: MutableList<Forms>) {
         adapter = PendingListAdapter(this, forms_lst)
         bi.recyclerView.layoutManager = LinearLayoutManager(this)
         bi.recyclerView.adapter = adapter

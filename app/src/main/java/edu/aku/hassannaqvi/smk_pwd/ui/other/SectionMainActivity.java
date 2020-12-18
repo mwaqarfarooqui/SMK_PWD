@@ -26,7 +26,7 @@ import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionI1Activity;
 import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 
 public class SectionMainActivity extends AppCompatActivity {
     public static int countC2 = 0, countI = 0;
@@ -50,55 +50,55 @@ public class SectionMainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             try {
-                JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsC()), json);
-                fc.setsC(String.valueOf(json_merge));
+                JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(form.getsC()), json);
+                form.setsC(String.valueOf(json_merge));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
             DatabaseHelper db = MainApp.appInfo.getDbHelper();
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, MainApp.fc.getsC());
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, form.getsC());
             Toast.makeText(this, "countC2: 0" + countC2, Toast.LENGTH_SHORT).show();
         }
 
 
-        if (fc.getsB() != null) {
+        if (!form.getsB().isEmpty()) {
             bi.form01.setEnabled(false);
             bi.form01.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (fc.getsC() != null) {
+        if (!form.getsC().isEmpty()) {
             bi.form02.setEnabled(false);
             bi.form02.setBackgroundResource(R.color.dullWhite);
             flag = true;
         }
 
-        if (fc.getsD() != null) {
+        if (!form.getsD().isEmpty()) {
             bi.form03.setEnabled(false);
             bi.form03.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (fc.getsE() != null) {
+        if (!form.getsE().isEmpty()) {
             bi.form04.setEnabled(false);
             bi.form04.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (fc.getsF() != null) {
+        if (!form.getsF().isEmpty()) {
             bi.form05.setEnabled(false);
             bi.form05.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (fc.getsG() != null) {
+        if (!form.getsG().isEmpty()) {
             bi.form06.setEnabled(false);
             bi.form06.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (fc.getsH() != null) {
+        if (!form.getsH().isEmpty()) {
             bi.form07.setEnabled(false);
             bi.form07.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (fc.getsI() != null) {
+        if (!form.getsI().isEmpty()) {
             bi.form08.setEnabled(false);
             bi.form08.setBackgroundResource(R.color.dullWhite);
         }

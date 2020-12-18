@@ -66,9 +66,7 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     private Class<?> routingSelectionForChildEnding() {
-        if (MainApp.fc.getA10().equals("1") && SectionMainActivity.countI == 6)
-            return SectionMainActivity.class;
-        else if (MainApp.fc.getA10().equals("2") && SectionMainActivity.countI == 3)
+        if (SectionMainActivity.countI == 4)
             return SectionMainActivity.class;
         else
             return SectionI1Activity.class;
@@ -82,15 +80,15 @@ public class EndingActivity extends AppCompatActivity {
                     : bi.istatusb.isChecked() ? "2"
                     : bi.istatus96.isChecked() ? "96"
                     : "0");
-            MainApp.fc.setsI(String.valueOf(SectionMainActivity.countI));
+            MainApp.form.setsI(String.valueOf(SectionMainActivity.countI));
         } else {
-            MainApp.fc.setIstatus(bi.istatusa.isChecked() ? "1"
+            MainApp.form.setIstatus(bi.istatusa.isChecked() ? "1"
                     : bi.istatusb.isChecked() ? "2"
                     : bi.istatus96.isChecked() ? "96"
                     : "0");
 
-            MainApp.fc.setIstatus88x(bi.istatus96x.getText().toString());
-            MainApp.fc.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
+            MainApp.form.setIstatus96x(bi.istatus96x.getText().toString());
+            MainApp.form.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
         }
     }
 
@@ -101,14 +99,14 @@ public class EndingActivity extends AppCompatActivity {
         if (sectionMainCheck) {
             updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_STATUS, MainApp.psc.getStatus());
             if (updcount == 1)
-                updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, MainApp.fc.getsI());
+                updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, MainApp.form.getsI());
         } else
             updcount = db.updateEnding();
 
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
         }
 

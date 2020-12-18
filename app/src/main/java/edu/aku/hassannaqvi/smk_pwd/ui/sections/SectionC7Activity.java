@@ -24,7 +24,7 @@ import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC7Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionC7Activity extends AppCompatActivity {
@@ -79,7 +79,7 @@ public class SectionC7Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, fc.getsC());
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, form.getsC());
         if (updcount == 1) {
             return true;
         } else {

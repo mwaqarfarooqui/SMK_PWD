@@ -146,7 +146,7 @@ public class SectionBActivity extends AppCompatActivity {
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Failed to update DB", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
         }
     }
