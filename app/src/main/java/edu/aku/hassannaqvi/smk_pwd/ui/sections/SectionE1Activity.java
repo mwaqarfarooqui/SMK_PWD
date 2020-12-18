@@ -8,7 +8,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -16,11 +15,14 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionE1Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionE1Activity extends AppCompatActivity {
@@ -37,11 +39,11 @@ public class SectionE1Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
-        radioGroupListener(bi.ea10, bi.ea10b, bi.cvea11);
+        rgListener(bi.ea10, bi.ea10b, bi.cvea11);
     }
 
 
-    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+    public void rgListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
         rg.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(vg);
             vg.setVisibility(View.VISIBLE);
@@ -53,28 +55,27 @@ public class SectionE1Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SE, fc.getsE());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SE, form.getsE());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-        /*form.setEa01( bi.ea01a.isChecked() ? "1"
+        form.setEa01(bi.ea01a.isChecked() ? "1"
                 : bi.ea01b.isChecked() ? "2"
                 : bi.ea01c.isChecked() ? "3"
                 : bi.ea01d.isChecked() ? "4"
                 : bi.ea01e.isChecked() ? "5"
                 : bi.ea01f.isChecked() ? "6"
                 : bi.ea0196.isChecked() ? "96"
-                :  "-1");
+                : "-1");
 
         form.setEa0196x(bi.ea0196x.getText().toString());
         form.setEa02( bi.ea02a.isChecked() ? "1"
@@ -139,23 +140,19 @@ public class SectionE1Activity extends AppCompatActivity {
                 : bi.ea13b.isChecked() ? "2"
                 :  "-1");
 
-        form.setEa14( bi.ea14a.isChecked() ? "1"
+        form.setEa14(bi.ea14a.isChecked() ? "1"
                 : bi.ea14b.isChecked() ? "2"
                 : bi.ea14c.isChecked() ? "3"
                 : bi.ea14d.isChecked() ? "4"
                 : bi.ea14e.isChecked() ? "5"
-                :  "-1");*/
+                : "-1");
 
     }
 
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionE2Activity.class));
@@ -170,31 +167,6 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
-    }
-
-
-    public void showTooltip(@NotNull View view) {
-        if (view.getId() != View.NO_ID) {
-            String package_name = getApplicationContext().getPackageName();
-            String infoid = view.getResources().getResourceName(view.getId()).replace(package_name + ":id/q_", "");
-            int stringRes = this.getResources().getIdentifier(infoid + "_info", "string", getApplicationContext().getPackageName());
-            //String infoText = (String) getResources().getText(stringRes);
-            if (stringRes != 0) {
-                String infoText = (String) getResources().getText(stringRes);
-
-                new AlertDialog.Builder(this)
-                        .setTitle("Info: " + infoid.toUpperCase())
-                        .setMessage(infoText)
-                        .setIcon(android.R.drawable.ic_dialog_info)
-                        .show();
-            } else {
-                Toast.makeText(this, "No information available on this question.", Toast.LENGTH_SHORT).show();
-            }
-
-        } else {
-            Toast.makeText(this, "No ID Associated with this question.", Toast.LENGTH_SHORT).show();
-
-        }
     }
 
 }
