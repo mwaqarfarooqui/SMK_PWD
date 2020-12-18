@@ -35,8 +35,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/textView3Head"
                         android:text="@string/secfbtitle" />
 
                 </LinearLayout>
@@ -178,8 +177,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/textviewh"
                         android:text="@string/hint" />
 
                 </LinearLayout>

@@ -1380,7 +1380,8 @@
     <string name="fam3">Month 3</string>
     <string name="fam3m">MONTH</string>
     <string name="fam3y">YEAR</string>
-    <string name="secfbtitle">SECTION-FB- HUMAN RESOURCES FOR DATA ASSESSMENT</string>
+
+    <string name="secfbtitle"> SECTION FB: \nHUMAN RESOURCES FOR DATA ASSESSMENT </string>
     <string name="fb01">Is there a designated person to enter data/compile reports from the different units in the same health facility?</string>
     <string name="fb01a"> Yes </string>
     <string name="fb01b"> No </string>

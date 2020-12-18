@@ -2,17 +2,20 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF1Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionF1Activity extends AppCompatActivity {
@@ -27,59 +30,51 @@ public class SectionF1Activity extends AppCompatActivity {
         setupSkips();
     }
 
+
     private void setupSkips() {
     }
 
+
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, fc.getsF());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, form.getsF());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
-    private void SaveDraft() throws JSONException {
 
-        /*JSONObject json = new JSONObject();
-        json.put("fam1m", bi.fam1m.getText().toString());
-
-        json.put("fam1y", bi.fam1y.getText().toString());
-
-        json.put("fam2m", bi.fam2m.getText().toString());
-
-        json.put("fam2y", bi.fam2y.getText().toString());
-
-        json.put("fam3m", bi.fam3m.getText().toString());
-
-        json.put("fam3y", bi.fam3y.getText().toString());
-
-        MainApp.fc.setsF(String.valueOf(json));*/
-
+    private void SaveDraft() {
+        form.setFam1m(bi.fam1m.getText().toString().trim().isEmpty() ? "-1" : bi.fam1m.getText().toString());
+        form.setFam1y(bi.fam1y.getText().toString().trim().isEmpty() ? "-1" : bi.fam1y.getText().toString());
+        form.setFam2m(bi.fam2m.getText().toString().trim().isEmpty() ? "-1" : bi.fam2m.getText().toString());
+        form.setFam2y(bi.fam2y.getText().toString().trim().isEmpty() ? "-1" : bi.fam2y.getText().toString());
+        form.setFam3m(bi.fam3m.getText().toString().trim().isEmpty() ? "-1" : bi.fam3m.getText().toString());
+        form.setFam3y(bi.fam3y.getText().toString().trim().isEmpty() ? "-1" : bi.fam3y.getText().toString());
     }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
+
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionF2Activity.class));
         }
     }
 
+
     public void BtnEnd() {
         openSectionMainActivity(this, "F");
     }
+
 
 }
