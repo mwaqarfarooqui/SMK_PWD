@@ -2,6 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
+
     <data>
 
         <import type="android.view.View" />
@@ -11,9 +12,11 @@
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionAActivity" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -74,9 +77,8 @@
 
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
                         android:id="@+id/aa01"
+                        style="@style/EditTextNum"
                         android:hint="dd-MM-yyyy"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:gravity="center"
                         app:dateFormat="dd-MM-yyyy"
                         app:maxDate="CR_DATE"
@@ -118,6 +120,7 @@
                             android:layout_alignTop="@id/qtxt_aa02"
                             android:layout_alignBottom="@id/qtxt_aa02"
                             android:text="@string/Q_aa02" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -142,8 +145,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/aa02c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -177,6 +183,7 @@
                             android:layout_alignTop="@id/qtxt_aa03"
                             android:layout_alignBottom="@id/qtxt_aa03"
                             android:text="@string/Q_aa03" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -243,8 +250,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/aa03j" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -283,6 +293,7 @@
 
                     <EditText
                         android:id="@+id/aa04"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/aa04" />
@@ -327,6 +338,7 @@
 
                     <EditText
                         android:id="@+id/aa05"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/aa05" />
@@ -366,6 +378,7 @@
                             android:layout_alignTop="@id/qtxt_aa06"
                             android:layout_alignBottom="@id/qtxt_aa06"
                             android:text="@string/Q_aa06" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -396,8 +409,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/aa06d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -436,6 +452,7 @@
 
                     <EditText
                         android:id="@+id/aa07"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/aa07" />
@@ -475,6 +492,7 @@
                             android:layout_alignTop="@id/qtxt_aa08"
                             android:layout_alignBottom="@id/qtxt_aa08"
                             android:text="@string/Q_aa08" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -599,10 +617,8 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/aa10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/aa10"
-                        android:inputType="number"
+                        style="@style/EditTextNum"
+                        android:hint="######"
                         android:maxLength="6"
                         app:maxValue="999999"
                         app:minValue="0"
@@ -643,6 +659,7 @@
                             android:layout_alignTop="@id/qtxt_aa11"
                             android:layout_alignBottom="@id/qtxt_aa11"
                             android:text="@string/Q_aa11" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -776,10 +793,8 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/aa13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/aa13"
-                        android:inputType="number"
+                        style="@style/EditTextNum"
+                        android:hint="#"
                         android:maxLength="1"
                         app:maxValue="7"
                         app:minValue="1"
@@ -820,6 +835,7 @@
                             android:layout_alignTop="@id/qtxt_aa14"
                             android:layout_alignBottom="@id/qtxt_aa14"
                             android:text="@string/Q_aa14" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -856,8 +872,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/aa14e" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

@@ -12,9 +12,9 @@ import edu.aku.hassannaqvi.smk_pwd.contracts.VersionAppContract;
 
 public final class CreateTable {
 
-    public static final String DATABASE_NAME = "smk_hfa.db";
-    public static final String DB_NAME = "smk_hfa_copy.db";
-    public static final String PROJECT_NAME = "SMK_HFA2020";
+    public static final String DATABASE_NAME = "smk_pwd.db";
+    public static final String DB_NAME = "smk_pwd_copy.db";
+    public static final String PROJECT_NAME = "SMK_PWD2020";
     public static final int DATABASE_VERSION = 1;
 
     public static final String SQL_CREATE_FORMS = "CREATE TABLE "
@@ -24,34 +24,8 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_UID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_USERNAME + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SYSDATE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_DISTRICT_CODE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_DISTRICT_TYPE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_TEHSIL_CODE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_UC_CODE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_HF_CODE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_HF_NAME + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A01 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A03D + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A03M + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A03Y + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A07 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A08 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A09 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A10 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A11 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A12 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_A13 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SB + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SC + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SD + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SF + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SG + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SH + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SI + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_APPVERSION + " TEXT,"
             + FormsContract.FormsTable.COLUMN_ISTATUS + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_ISTATUS88x + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_ISTATUS96x + " TEXT,"
             + FormsContract.FormsTable.COLUMN_ENDINGDATETIME + " TEXT,"
             + FormsContract.FormsTable.COLUMN_GPSLAT + " TEXT,"
             + FormsContract.FormsTable.COLUMN_GPSLNG + " TEXT,"
@@ -61,10 +35,25 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_DEVICETAGID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SYNCED + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SYNCED_DATE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SYNCED_02 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SYNCED_DATE_02 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SYNCED_03 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SYNCED_DATE_03 + " TEXT"
+            + FormsContract.FormsTable.COLUMN_APPVERSION + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_PROVINCE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_PROVINCE_CODE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_DISTRICT + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_DISTRICT_CODE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_TEHSIL + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_TEHSIL_CODE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_UC + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_UC_CODE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_HF + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_HF_CODE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_SB + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_SC + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_SD + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_SE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_SF + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_SG + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_SH + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_SI + " TEXT"
             + " );";
 
 

@@ -54,6 +54,8 @@ import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionAActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.smk_pwd.utils.CreateTable;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
+
 public class MainActivity extends AppCompatActivity {
 
     static File file;
@@ -318,8 +320,8 @@ public class MainActivity extends AppCompatActivity {
             rSumText += "---------------------------------------------------------\r\n";
 
             for (FormsContract fc : todaysForms) {
-                Log.d(TAG, "onCreate: '" + fc.getIstatus() + "'");
-                switch (fc.getIstatus()) {
+                Log.d(TAG, "onCreate: '" + form.getIstatus() + "'");
+                switch (form.getIstatus()) {
                     case "1":
                         iStatus = "Complete     ";
                         break;
@@ -330,21 +332,21 @@ public class MainActivity extends AppCompatActivity {
                         iStatus = "Open";
                         break;
                     default:
-                        iStatus = "\t\tN/A" + fc.getIstatus();
+                        iStatus = "\t\tN/A" + form.getIstatus();
                 }
 
-                fc.setHfName(fc.getHfName() + ".......................");
-                rSumText += fc.getHfName().substring(0, 21) + "...";
+                form.setHf(form.getHf() + ".......................");
+                rSumText += form.getHf().substring(0, 21) + "...";
 
 
-                int staffCount = db.getStaffingsByUUID(fc.get_UID());
-                int patientCount = db.getPatientsByUUID(fc.get_UID());
+                int staffCount = db.getStaffingsByUUID(form.get_UID());
+                int patientCount = db.getPatientsByUUID(form.get_UID());
                 rSumText += "  " + staffCount + "/" + patientCount + "  ";
 
 
                 rSumText += iStatus;
 
-                rSumText += (fc.getSynced() == null ? "Not Synced" : "Synced");
+                rSumText += (form.getSynced() == null ? "Not Synced" : "Synced");
                 rSumText += "\r\n";
                 rSumText += "---------------------------------------------------------\r\n";
             }

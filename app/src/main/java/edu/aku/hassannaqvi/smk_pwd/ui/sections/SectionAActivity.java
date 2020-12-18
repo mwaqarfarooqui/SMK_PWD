@@ -12,9 +12,7 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -27,10 +25,12 @@ import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionABinding;
+import edu.aku.hassannaqvi.smk_pwd.models.Forms;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 import edu.aku.hassannaqvi.smk_pwd.utils.DateUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.fc;
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 
 public class SectionAActivity extends AppCompatActivity {
 
@@ -246,13 +246,13 @@ public class SectionAActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        if (!fc.get_ID().equals("")) return true;
+        if (!form.get_ID().equals("")) return true;
 
-        long updcount = db.addForm(fc);
-        fc.set_ID(String.valueOf(updcount));
+        long updcount = db.addForm(form);
+        form.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
-            fc.set_UID(fc.getDeviceID() + fc.get_ID());
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, fc.get_UID());
+            form.set_UID(form.getDeviceID() + form.get_ID());
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, form.get_UID());
             return true;
         } else {
             Toast.makeText(this, "Failed to update DB", Toast.LENGTH_SHORT).show();
@@ -264,30 +264,27 @@ public class SectionAActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        if (!fc.get_ID().equals("")) return;
+        if (!form.get_ID().equals("")) return;
 
-        fc = new FormsContract();
-        fc.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
-        fc.setUserName(MainApp.userName);
-        fc.setA01(MainApp.userName);
-        fc.setDeviceID(MainApp.appInfo.getDeviceID());
-        fc.setDevicetagID(MainApp.appInfo.getTagName());
-        fc.setAppversion(MainApp.appInfo.getAppVersion());
+        form = new Forms();
+        form.setSysdate(new java.text.SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault()).format(new Date().getTime()));
+        form.setUsername(MainApp.userName);
+        form.setDeviceID(MainApp.appInfo.getDeviceID());
+        form.setDevicetagID(MainApp.appInfo.getTagName());
+        form.setAppversion(MainApp.appInfo.getAppVersion());
+        MainApp.setGPS(this);
 
-        JSONObject json = new JSONObject();
+        String[] dA = bi.aa01.getText().toString().split("-");
+        form.setAa01d(dA[0]);
+        form.setAa01m(dA[1]);
+        form.setAa01y(dA[2]);
 
-        json.put("aa01d", "needToWork");
-
-        json.put("aa01m", "needToWork");
-
-        json.put("aa01y", "needToWork");
-
-        json.put("aa02", bi.aa02a.isChecked() ? "1"
+        form.setAa02(bi.aa02a.isChecked() ? "1"
                 : bi.aa02b.isChecked() ? "2"
                 : bi.aa02c.isChecked() ? "3"
                 : "-1");
 
-        json.put("aa03", bi.aa03a.isChecked() ? "101"
+        form.setAa03(bi.aa03a.isChecked() ? "101"
                 : bi.aa03b.isChecked() ? "102"
                 : bi.aa03c.isChecked() ? "201"
                 : bi.aa03d.isChecked() ? "202"
@@ -299,48 +296,46 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.aa03j.isChecked() ? "302"
                 : "-1");
 
-        json.put("aa04", bi.aa04.getText().toString());
+        form.setAa04(bi.aa04.getText().toString());
 
-        json.put("aa05", bi.aa05.getText().toString());
+        form.setAa05(bi.aa05.getText().toString());
 
-        json.put("aa06", bi.aa06a.isChecked() ? "1"
+        form.setAa06(bi.aa06a.isChecked() ? "1"
                 : bi.aa06b.isChecked() ? "2"
                 : bi.aa06c.isChecked() ? "3"
                 : bi.aa06d.isChecked() ? "4"
                 : "-1");
 
-        json.put("aa07", bi.aa07.getText().toString());
+        form.setAa07(bi.aa07.getText().toString());
 
-        json.put("aa08", bi.aa08a.isChecked() ? "1"
+        form.setAa08(bi.aa08a.isChecked() ? "1"
                 : bi.aa08b.isChecked() ? "2"
                 : "-1");
 
-        json.put("aa09", bi.aa09a.isChecked() ? "1"
+        form.setAa09(bi.aa09a.isChecked() ? "1"
                 : bi.aa09b.isChecked() ? "2"
                 : "-1");
 
-        json.put("aa10", bi.aa10.getText().toString());
+        form.setAa10(bi.aa10.getText().toString());
 
-        json.put("aa11", bi.aa11a.isChecked() ? "1"
+        form.setAa11(bi.aa11a.isChecked() ? "1"
                 : bi.aa11b.isChecked() ? "2"
                 : "-1");
 
-        json.put("aa12", bi.aa12a.isChecked() ? "1"
+        form.setAa12(bi.aa12a.isChecked() ? "1"
                 : bi.aa12b.isChecked() ? "2"
                 : bi.aa12c.isChecked() ? "3"
                 : bi.aa12d.isChecked() ? "4"
                 : "-1");
 
-        json.put("aa13", bi.aa13.getText().toString());
+        form.setAa13(bi.aa13.getText().toString());
 
-        json.put("aa14", bi.aa14a.isChecked() ? "1"
+        form.setAa14(bi.aa14a.isChecked() ? "1"
                 : bi.aa14b.isChecked() ? "2"
                 : bi.aa14c.isChecked() ? "3"
                 : bi.aa14d.isChecked() ? "4"
                 : bi.aa14e.isChecked() ? "5"
                 : "-1");
-
-        MainApp.setGPS(this); // Set GPS
 
     }
 

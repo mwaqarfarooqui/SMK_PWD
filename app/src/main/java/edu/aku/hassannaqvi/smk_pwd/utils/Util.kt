@@ -78,14 +78,14 @@ fun openSectionMainActivity(activity: Activity, item: String) {
     dialog.findViewById<View>(R.id.btnOk).setOnClickListener { view: View? ->
 
         when (item) {
-            "B" -> MainApp.fc.setsB(null)
-            "C" -> MainApp.fc.setsC(null)
-            "D" -> MainApp.fc.setsD(null)
-            "E" -> MainApp.fc.setsE(null)
-            "F" -> MainApp.fc.setsF(null)
-            "G" -> MainApp.fc.setsG(null)
-            "H" -> MainApp.fc.setsH(null)
-            "I" -> MainApp.fc.setsI(null)
+            "B" -> MainApp.form.setsB(null)
+            "C" -> MainApp.form.setsC(null)
+            "D" -> MainApp.form.setsD(null)
+            "E" -> MainApp.form.setsE(null)
+            "F" -> MainApp.form.setsF(null)
+            "G" -> MainApp.form.setsG(null)
+            "H" -> MainApp.form.setsH(null)
+            "I" -> MainApp.form.setsI(null)
         }
 
         activity.finish()
@@ -109,7 +109,7 @@ fun openSectionMainActivityI(activity: Activity) {
     dialog.window!!.attributes = params
     dialog.findViewById<View>(R.id.btnOk).setOnClickListener { view: View? ->
 
-        if (MainApp.fc.getsI() != null) MainApp.fc.setsI(null)
+        if (MainApp.form.getsI() != null) MainApp.form.setsI(null)
         if (MainApp.psc.getsI1() != null) MainApp.psc.setsI1(null)
         if (MainApp.psc.getsI2() != null) MainApp.psc.setsI2(null)
         if (MainApp.psc.getsI3() != null) MainApp.psc.setsI3(null)

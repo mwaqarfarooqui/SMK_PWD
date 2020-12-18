@@ -22,11 +22,11 @@ import androidx.core.app.ActivityCompat;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
 
-import java.text.Normalizer;
 import java.util.List;
 
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
+import edu.aku.hassannaqvi.smk_pwd.models.Forms;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.EndingActivity;
 import kotlin.Pair;
 
@@ -83,6 +83,7 @@ public class MainApp extends Application {
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
 
+    public static Forms form;
     public static String Mon1;
     public static String Mon2;
 
@@ -138,11 +139,11 @@ public class MainApp extends Application {
 
             String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
 
-            MainApp.fc.setGpsLat(GPSPref.getString("Latitude", "0"));
-            MainApp.fc.setGpsLng(GPSPref.getString("Longitude", "0"));
-            MainApp.fc.setGpsAcc(GPSPref.getString("Accuracy", "0"));
+            MainApp.form.setGpsLat(GPSPref.getString("Latitude", "0"));
+            MainApp.form.setGpsLng(GPSPref.getString("Longitude", "0"));
+            MainApp.form.setGpsAcc(GPSPref.getString("Accuracy", "0"));
 //            MainApp.fc.setGpsTime(GPSPref.getString(date, "0")); // Timestamp is converted to date above
-            MainApp.fc.setGpsDT(date); // Timestamp is converted to date above
+            MainApp.form.setGpsDT(date); // Timestamp is converted to date above
 
         } catch (Exception e) {
             Log.e("GPS", "setGPS: " + e.getMessage());
