@@ -1301,15 +1301,16 @@
     <string name="eb08c">Computer System Not Updated Daily, But There Is Daily Record Of Distributed Vaccines</string>
     <string name="eb08d">Ledger/Stock Card Not Updated Daily, But There Is Daily Record Of Distributed Medicines</string>
     <string name="eb0896">Any Other System</string>
-    <string name="secectitle">SECTION-EC- REPRODUCTIVE COMMODITIES and supplies</string>
-    <string name="ec01">Condoms</string>
-    <string name="ec01a">Availability of M/C/V at facility</string>
+
+    <string name="secectitle"> SECTION EC: \nREPRODUCTIVE COMMODITIES and supplies </string>
+    <string name="ec01"> Condoms </string>
+    <string name="ec01a"> Availability of M/C/V at facility </string>
     <string name="ec01y"> Yes </string>
     <string name="ec01n"> No </string>
-    <string name="ec02">Condoms</string>
-    <string name="ec02s">Stock Out Days ( Record Stock out if MCV is not available)</string>
-    <string name="ec02d">DAY(s)</string>
-    <string name="ec02m">MONTH(s)</string>
+    <string name="ec02"> Condoms </string>
+    <string name="ec02s"> Stock Out Days ( Record Stock out if MCV is not available) </string>
+    <string name="ec02d"> DAY(s)</string>
+    <string name="ec02m"> MONTH(s)</string>
     <string name="ec03">COCs</string>
     <string name="ec03a">Availability of M/C/V at facility</string>
     <string name="ec03y"> Yes </string>
