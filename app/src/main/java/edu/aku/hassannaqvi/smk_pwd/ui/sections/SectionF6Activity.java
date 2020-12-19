@@ -15,11 +15,14 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF6Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 
@@ -34,6 +37,7 @@ public class SectionF6Activity extends AppCompatActivity {
         bi.setCallback(this);
         setupSkips();
     }
+
 
     public void setupSkips() {
         radioGroupListener(bi.ff01, bi.ff01b, bi.fldGrpCVff02);
@@ -53,44 +57,44 @@ public class SectionF6Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, fc.getsF());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, form.getsF());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-        /*JSONObject json = new JSONObject();
-        json.put("ff01", bi.ff01a.isChecked() ? "1"
+        form.setFf01(bi.ff01a.isChecked() ? "1"
                 : bi.ff01b.isChecked() ? "2"
                 : "-1");
 
-        json.put("ff02d", bi.ff02d.getText().toString());
+        form.setFf02d(bi.ff02.getText().toString());
 
-        json.put("ff03", bi.ff03a.isChecked() ? "1"
+        form.setFf03(bi.ff03a.isChecked() ? "1"
                 : bi.ff03b.isChecked() ? "2"
                 : "-1");
 
-        json.put("ff04", bi.ff04a.isChecked() ? "1"
+        form.setFf04(bi.ff04a.isChecked() ? "1"
                 : bi.ff04b.isChecked() ? "2"
                 : "-1");
 
-        json.put("ff05", bi.ff05a.isChecked() ? "1"
+        form.setFf05(bi.ff05a.isChecked() ? "1"
                 : bi.ff05b.isChecked() ? "2"
                 : "-1");
 
-        json.put("ff06", bi.ff06a.isChecked() ? "1"
+        form.setFf06(bi.ff06a.isChecked() ? "1"
                 : bi.ff06b.isChecked() ? "2"
                 : "-1");
 
-        try {
+
+
+        /*try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
 
             MainApp.fc.setsF(String.valueOf(json_merge));
@@ -109,11 +113,7 @@ public class SectionF6Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionF7Activity.class));

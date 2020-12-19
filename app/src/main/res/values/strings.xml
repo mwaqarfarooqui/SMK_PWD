@@ -1516,7 +1516,8 @@
     <string name="fe01b">Arithmetic errors</string>
     <string name="fe01c">Information from all source documents not compiled correctly</string>
     <string name="fe0196">Others (Specify)</string>
-    <string name="secfftitle">SECTION-FF- REPORT TIMELINESS</string>
+
+    <string name="secfftitle"> SECTION FF: \nREPORT TIMELINESS </string>
     <string name="ff01">Is there a deadline for submission of the monthly report by the health facilities?</string>
     <string name="ff01a"> Yes </string>
     <string name="ff01b"> No </string>

@@ -1,6 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <data>
 
         <import type="android.view.View" />
@@ -36,8 +37,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/textView3Head"
                         android:text="@string/secfftitle" />
 
                 </LinearLayout>
