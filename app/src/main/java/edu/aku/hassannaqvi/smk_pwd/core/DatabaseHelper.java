@@ -621,6 +621,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_UC_CODE, form.getUcCode());
         values.put(FormsTable.COLUMN_HF, form.getHf());
         values.put(FormsTable.COLUMN_HF_CODE, form.getHfCode());
+        values.put(FormsTable.COLUMN_SA, form.getsA());
         values.put(FormsTable.COLUMN_SB, form.getsB());
         values.put(FormsTable.COLUMN_SC, form.getsC());
         values.put(FormsTable.COLUMN_SD, form.getsD());
@@ -862,6 +863,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_UC_CODE,
                 FormsTable.COLUMN_HF,
                 FormsTable.COLUMN_HF_CODE,
+                FormsTable.COLUMN_SA,
                 FormsTable.COLUMN_SB,
                 FormsTable.COLUMN_SC,
                 FormsTable.COLUMN_SD,
@@ -935,6 +937,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_UC_CODE,
                 FormsTable.COLUMN_HF,
                 FormsTable.COLUMN_HF_CODE,
+                FormsTable.COLUMN_SA,
                 FormsTable.COLUMN_SB,
                 FormsTable.COLUMN_SC,
                 FormsTable.COLUMN_SD,
@@ -1008,6 +1011,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_UC_CODE,
                 FormsTable.COLUMN_HF,
                 FormsTable.COLUMN_HF_CODE,
+                FormsTable.COLUMN_SA,
                 FormsTable.COLUMN_SB,
                 FormsTable.COLUMN_SC,
                 FormsTable.COLUMN_SD,
@@ -1291,6 +1295,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
+
     public Collection<Forms> getTodayForms(String sysdate) {
 
         // String sysdate =  spDateT.substring(0, 8).trim()
@@ -1345,6 +1350,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return allFC;
     }
+
 
     public int updateEnding() {
         SQLiteDatabase db = this.getReadableDatabase();

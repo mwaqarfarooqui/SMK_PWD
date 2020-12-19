@@ -43,6 +43,7 @@ public class FormsContract {
         public static final String COLUMN_UC_CODE = "uc_code";
         public static final String COLUMN_HF = "hf";
         public static final String COLUMN_HF_CODE = "hf_code";
+        public static final String COLUMN_SA = "sa";
         public static final String COLUMN_SB = "sb";
         public static final String COLUMN_SC = "sc";
         public static final String COLUMN_SD = "sd";

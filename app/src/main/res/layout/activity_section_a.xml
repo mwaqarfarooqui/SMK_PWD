@@ -78,7 +78,7 @@
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
                         android:id="@+id/aa01"
                         style="@style/EditTextNum"
-                        android:hint="dd-MM-yyyy"
+                        android:hint="DD-MM-YYYY"
                         android:gravity="center"
                         app:dateFormat="dd-MM-yyyy"
                         app:maxDate="CR_DATE"

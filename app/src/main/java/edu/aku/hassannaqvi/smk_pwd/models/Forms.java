@@ -44,6 +44,7 @@ public class Forms extends LiveData<Forms> {
     private String hf = "";
     private String hfCode = "";
 
+    private String sA = "";
     private String sB = "";
     private String sC = "";
     private String sD = "";
@@ -900,6 +901,15 @@ public class Forms extends LiveData<Forms> {
 
     public void setHfCode(String hfCode) {
         this.hfCode = hfCode;
+    }
+
+
+    public String getsA() {
+        return sA;
+    }
+
+    public void setsA(String sA) {
+        this.sA = sA;
     }
 
 
@@ -5891,6 +5901,7 @@ public class Forms extends LiveData<Forms> {
         this.hf = jsonObject.getString(FormsTable.COLUMN_HF);
         this.hfCode = jsonObject.getString(FormsTable.COLUMN_HF_CODE);
 
+        this.sA = jsonObject.getString(FormsTable.COLUMN_SA);
         this.sB = jsonObject.getString(FormsTable.COLUMN_SB);
         this.sC = jsonObject.getString(FormsTable.COLUMN_SC);
         this.sD = jsonObject.getString(FormsTable.COLUMN_SD);
@@ -5934,7 +5945,15 @@ public class Forms extends LiveData<Forms> {
         this.hf = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HF));
         this.hfCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HF_CODE));
 
-        sbHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SB)));
+        sAHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SA)));
+        sBHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SB)));
+        sCHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SC)));
+        sDHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SD)));
+        sEHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SE)));
+        sFHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SF)));
+        sGHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SG)));
+        sHHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SH)));
+        sIHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SI)));
 
         return this;
     }
@@ -5944,6 +5963,34 @@ public class Forms extends LiveData<Forms> {
     @Override
     public String toString() {
         return new GsonBuilder().create().toJson(this, Forms.class);
+    }
+
+
+    public String sAtoString() {
+        JSONObject json = new JSONObject();
+
+        try {
+            json.put("aa01d", aa01d)
+                    .put("aa01m", aa01m)
+                    .put("aa01y", aa01y)
+                    .put("aa02", aa02)
+                    .put("aa03", aa03)
+                    .put("aa04", aa04)
+                    .put("aa05", aa05)
+                    .put("aa06", aa06)
+                    .put("aa07", aa07)
+                    .put("aa08", aa08)
+                    .put("aa09", aa09)
+                    .put("aa10", aa10)
+                    .put("aa11", aa11)
+                    .put("aa12", aa12)
+                    .put("aa13", aa13)
+                    .put("aa14", aa14);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+        }
+        return json.toString();
     }
 
 
@@ -6001,6 +6048,644 @@ public class Forms extends LiveData<Forms> {
     }
 
 
+    public String sCtoString() {
+        JSONObject json = new JSONObject();
+
+        try {
+            json.put("ca01", ca01)
+                    .put("ca02", ca02)
+                    .put("cb01", cb01)
+                    .put("cb02", cb02)
+                    .put("cb03", cb03)
+                    .put("cb04", cb04)
+                    .put("cb05", cb05)
+                    .put("cc01", cc01)
+                    .put("cc02", cc02)
+                    .put("cc03", cc03)
+                    .put("cc04", cc04)
+                    .put("cc05", cc05)
+                    .put("cc06", cc06)
+                    .put("cc07", cc07)
+                    .put("cc08", cc08)
+                    .put("cd01", cd01)
+                    .put("cd0211", cd0211)
+                    .put("cd0211c", cd0211c)
+                    .put("cd0212", cd0212)
+                    .put("cd0212c", cd0212c)
+                    .put("cd0221", cd0221)
+                    .put("cd0221c", cd0221c)
+                    .put("cd0222", cd0222)
+                    .put("cd0222c", cd0222c)
+                    .put("cd0231", cd0231)
+                    .put("cd0231c", cd0231c)
+                    .put("cd0232", cd0232)
+                    .put("cd0232c", cd0232c)
+                    .put("cd0241", cd0241)
+                    .put("cd0241c", cd0241c)
+                    .put("cd0242", cd0242)
+                    .put("cd0242c", cd0242c)
+                    .put("cd10", cd10)
+                    .put("cd11", cd11)
+                    .put("cd12", cd12)
+                    .put("cd13", cd13)
+                    .put("cd14", cd14)
+                    .put("cd15", cd15)
+                    .put("cd16", cd16)
+                    .put("cd17", cd17)
+                    .put("cd18", cd18)
+                    .put("cd19", cd19)
+                    .put("cd20", cd20)
+                    .put("ce01", ce01)
+                    .put("ce02", ce02)
+                    .put("ce03", ce03)
+                    .put("ce04", ce04)
+                    .put("ce05", ce05)
+                    .put("ce06", ce06)
+                    .put("ce07", ce07)
+                    .put("ce08", ce08)
+                    .put("ce08a", ce08a)
+                    .put("ce08b", ce08b)
+                    .put("ce08c", ce08c)
+                    .put("ce08e", ce08e)
+                    .put("ce08d", ce08d)
+                    .put("ce08f", ce08f)
+                    .put("ce08g", ce08g)
+                    .put("ce08h", ce08h)
+                    .put("ce08i", ce08i)
+                    .put("cf01", cf01)
+                    .put("cf0196x", cf0196x)
+                    .put("cf02", cf02)
+                    .put("cf0296x", cf0296x)
+                    .put("cf03", cf03)
+                    .put("cf04", cf04)
+                    .put("cf05", cf05)
+                    .put("cf06", cf06)
+                    .put("cg01", cg01)
+                    .put("cg02f", cg02f)
+                    .put("cg03", cg03)
+                    .put("cg04f", cg04f)
+                    .put("cg05", cg05)
+                    .put("cg06f", cg06f)
+                    .put("cg07", cg07)
+                    .put("cg08f", cg08f)
+                    .put("cg09", cg09)
+                    .put("cg10f", cg10f)
+                    .put("cg11", cg11)
+                    .put("cg12f", cg12f)
+                    .put("cg13", cg13)
+                    .put("cg14f", cg14f)
+                    .put("cg15", cg15)
+                    .put("cg16f", cg16f)
+                    .put("cg17", cg17)
+                    .put("cg18f", cg18f)
+                    .put("cg19", cg19)
+                    .put("cg20f", cg20f)
+                    .put("cg21", cg21)
+                    .put("cg22f", cg22f)
+                    .put("cg23", cg23)
+                    .put("cg24f", cg24f)
+                    .put("cg25", cg25)
+                    .put("cg26f", cg26f)
+                    .put("cg27", cg27)
+                    .put("cg28f", cg28f)
+                    .put("cg29", cg29)
+                    .put("cg30f", cg30f)
+                    .put("cg31", cg31)
+                    .put("cg32f", cg32f)
+                    .put("cg33", cg33)
+                    .put("cg34f", cg34f)
+                    .put("cg35", cg35)
+                    .put("cg36f", cg36f)
+                    .put("cg37", cg37)
+                    .put("cg38f", cg38f)
+                    .put("cg39", cg39)
+                    .put("cg40f", cg40f)
+                    .put("cg41", cg41)
+                    .put("cg42f", cg42f)
+                    .put("cg43", cg43)
+                    .put("cg44f", cg44f)
+                    .put("cg45", cg45)
+                    .put("cg46f", cg46f);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
+        }
+        return json.toString();
+    }
+
+
+    public String sDtoString() {
+        JSONObject json = new JSONObject();
+
+        try {
+            json.put("da01", da01)
+                    .put("da02", da02)
+                    .put("da03", da03)
+                    .put("da04", da04)
+                    .put("da05", da05)
+                    .put("da06", da06)
+                    .put("da07", da07)
+                    .put("da08", da08)
+                    .put("da09", da09)
+                    .put("da10", da10)
+                    .put("da11", da11)
+                    .put("da12", da12)
+                    .put("da13", da13)
+                    .put("da14", da14)
+                    .put("da15", da15)
+                    .put("da16", da16)
+                    .put("da17", da17)
+                    .put("da18", da18)
+                    .put("da1896x", da1896x)
+                    .put("da1911", da1911)
+                    .put("da1912", da1912)
+                    .put("da1921", da1921)
+                    .put("da1922", da1922)
+                    .put("da1931", da1931)
+                    .put("da1932", da1932)
+                    .put("da1941", da1941)
+                    .put("da1942", da1942)
+                    .put("da1951", da1951)
+                    .put("da1952", da1952)
+                    .put("da2011", da2011)
+                    .put("da2012", da2012)
+                    .put("da2021", da2021)
+                    .put("da2022", da2022)
+                    .put("da2031", da2031)
+                    .put("da2032", da2032)
+                    .put("da2041", da2041)
+                    .put("da2042", da2042)
+                    .put("da2051", da2051)
+                    .put("da2052", da2052)
+                    .put("da2061", da2061)
+                    .put("da2062", da2062)
+                    .put("da2071", da2071)
+                    .put("da2072", da2072)
+                    .put("da2111", da2111)
+                    .put("da2112", da2112)
+                    .put("da2121", da2121)
+                    .put("da2122", da2122)
+                    .put("da2131", da2131)
+                    .put("da2132", da2132)
+                    .put("da2141", da2141)
+                    .put("da2142", da2142)
+                    .put("da2211", da2211)
+                    .put("da2212", da2212)
+                    .put("da2221", da2221)
+                    .put("da2222", da2222)
+                    .put("da2231", da2231)
+                    .put("da2232", da2232)
+                    .put("da2241", da2241)
+                    .put("da2242", da2242)
+                    .put("da2251", da2251)
+                    .put("da2252", da2252)
+                    .put("da2261", da2261)
+                    .put("da2262", da2262)
+                    .put("da2271", da2271)
+                    .put("da2272", da2272)
+                    .put("da2281", da2281)
+                    .put("da2282", da2282)
+                    .put("da2311", da2311)
+                    .put("da2312", da2312)
+                    .put("da2321", da2321)
+                    .put("da2322", da2322)
+                    .put("da2331", da2331)
+                    .put("da2332", da2332)
+                    .put("da2341", da2341)
+                    .put("da2342", da2342)
+                    .put("da2411", da2411)
+                    .put("da2412", da2412)
+                    .put("da2421", da2421)
+                    .put("da2422", da2422)
+                    .put("da2431", da2431)
+                    .put("da2432", da2432)
+                    .put("da2441", da2441)
+                    .put("da2442", da2442)
+                    .put("da2451", da2451)
+                    .put("da2452", da2452)
+                    .put("da2461", da2461)
+                    .put("da2462", da2462)
+                    .put("da2471", da2471)
+                    .put("da2472", da2472)
+                    .put("da2481", da2481)
+                    .put("da2482", da2482)
+                    .put("db01", db01)
+                    .put("db02", db02)
+                    .put("db03", db03)
+                    .put("db04", db04)
+                    .put("db05", db05)
+                    .put("db06", db06)
+                    .put("db07", db07)
+                    .put("db08", db08)
+                    .put("db09", db09)
+                    .put("db10", db10)
+                    .put("db11", db11)
+                    .put("db12", db12)
+                    .put("db13", db13)
+                    .put("db14", db14)
+                    .put("db15", db15)
+                    .put("db16", db16)
+                    .put("db1696x", db1696x);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
+        }
+        return json.toString();
+    }
+
+
+    public String sEtoString() {
+        JSONObject json = new JSONObject();
+
+        try {
+            json.put("ea01", ea01)
+                    .put("ea0196x", ea0196x)
+                    .put("ea02", ea02)
+                    .put("ea03", ea03)
+                    .put("ea0396x", ea0396x)
+                    .put("ea04", ea04)
+                    .put("ea05d", ea05d)
+                    .put("ea05m", ea05m)
+                    .put("ea06", ea06)
+                    .put("ea0696x", ea0696x)
+                    .put("ea07", ea07)
+                    .put("ea0796x", ea0796x)
+                    .put("ea08", ea08)
+                    .put("ea09d", ea09d)
+                    .put("ea09m", ea09m)
+                    .put("ea10", ea10)
+                    .put("ea11", ea11)
+                    .put("ea12", ea12)
+                    .put("ea13", ea13)
+                    .put("ea14", ea14)
+                    .put("eb01", eb01)
+                    .put("eb02", eb02)
+                    .put("eb03", eb03)
+                    .put("eb03t", eb03t)
+                    .put("eb04", eb04)
+                    .put("eb05", eb05)
+                    .put("eb06", eb06)
+                    .put("eb07", eb07)
+                    .put("eb08", eb08)
+                    .put("eb08a", eb08a)
+                    .put("eb08b", eb08b)
+                    .put("eb08c", eb08c)
+                    .put("eb08d", eb08d)
+                    .put("eb0896", eb0896)
+                    .put("eb0896x", eb0896x)
+                    .put("ec01a", ec01a)
+                    .put("ec02d", ec02d)
+                    .put("ec02m", ec02m)
+                    .put("ec03a", ec03a)
+                    .put("ec04d", ec04d)
+                    .put("ec04m", ec04m)
+                    .put("ec05a", ec05a)
+                    .put("ec06d", ec06d)
+                    .put("ec06m", ec06m)
+                    .put("ec07a", ec07a)
+                    .put("ec08d", ec08d)
+                    .put("ec08m", ec08m)
+                    .put("ec09a", ec09a)
+                    .put("ec10d", ec10d)
+                    .put("ec10m", ec10m)
+                    .put("ec11a", ec11a)
+                    .put("ec12d", ec12d)
+                    .put("ec12m", ec12m);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
+        }
+        return json.toString();
+    }
+
+
+    public String sFtoString() {
+        JSONObject json = new JSONObject();
+
+        try {
+            json.put("fam1m", fam1m)
+                    .put("fam1y", fam1y)
+                    .put("fam2m", fam2m)
+                    .put("fam2y", fam2y)
+                    .put("fam3m", fam3m)
+                    .put("fam3y", fam3y)
+                    .put("fb01", fb01)
+                    .put("fb02", fb02)
+                    .put("fb03", fb03)
+                    .put("fb04", fb04)
+                    .put("fc01m1", fc01m1)
+                    .put("fc01m2", fc01m2)
+                    .put("fc01m3", fc01m3)
+                    .put("fc01a", fc01a)
+                    .put("fc02m1", fc02m1)
+                    .put("fc02m2", fc02m2)
+                    .put("fc02m3", fc02m3)
+                    .put("fc02a", fc02a)
+                    .put("fc03m1", fc03m1)
+                    .put("fc03m2", fc03m2)
+                    .put("fc03m3", fc03m3)
+                    .put("fc03a", fc03a)
+                    .put("fc04m1", fc04m1)
+                    .put("fc04m2", fc04m2)
+                    .put("fc04m3", fc04m3)
+                    .put("fc04a", fc04a)
+                    .put("fc05m1", fc05m1)
+                    .put("fc05m2", fc05m2)
+                    .put("fc05m3", fc05m3)
+                    .put("fc05a", fc05a)
+                    .put("fc06m1", fc06m1)
+                    .put("fc06m2", fc06m2)
+                    .put("fc06m3", fc06m3)
+                    .put("fc06a", fc06a)
+                    .put("fc07m1", fc07m1)
+                    .put("fc07m2", fc07m2)
+                    .put("fc07m3", fc07m3)
+                    .put("fc07a", fc07a)
+                    .put("fc08m1", fc08m1)
+                    .put("fc08m2", fc08m2)
+                    .put("fc08m3", fc08m3)
+                    .put("fc08a", fc08a)
+                    .put("fc09m1", fc09m1)
+                    .put("fc09m2", fc09m2)
+                    .put("fc09m3", fc09m3)
+                    .put("fc09a", fc09a)
+                    .put("fc10m1", fc10m1)
+                    .put("fc10m2", fc10m2)
+                    .put("fc10m3", fc10m3)
+                    .put("fc10a", fc10a)
+                    .put("fc11m1", fc11m1)
+                    .put("fc11m2", fc11m2)
+                    .put("fc11m3", fc11m3)
+                    .put("fc11a", fc11a)
+                    .put("fc12m1", fc12m1)
+                    .put("fc12m2", fc12m2)
+                    .put("fc12m3", fc12m3)
+                    .put("fc12a", fc12a)
+                    .put("fc13m1", fc13m1)
+                    .put("fc13m2", fc13m2)
+                    .put("fc13m3", fc13m3)
+                    .put("fc13a", fc13a)
+                    .put("fc14m1", fc14m1)
+                    .put("fc14m2", fc14m2)
+                    .put("fc14m3", fc14m3)
+                    .put("fc14a", fc14a)
+                    .put("fd01", fd01)
+                    .put("fd0196x", fd0196x)
+                    .put("fe01", fe01)
+                    .put("fe0196x", fe0196x)
+                    .put("ff01", ff01)
+                    .put("ff02d", ff02d)
+                    .put("ff03", ff03)
+                    .put("ff04", ff04)
+                    .put("ff05", ff05)
+                    .put("ff06", ff06)
+                    .put("fg01", fg01)
+                    .put("fg02", fg02)
+                    .put("fg03", fg03)
+                    .put("fg04", fg04)
+                    .put("fg05", fg05)
+                    .put("fh01", fh01)
+                    .put("fh02", fh02)
+                    .put("fh03", fh03)
+                    .put("fh04", fh04)
+                    .put("fh05", fh05)
+                    .put("fh06", fh06)
+                    .put("fh07", fh07)
+                    .put("fi01", fi01)
+                    .put("fi02", fi02)
+                    .put("fj01", fj01)
+                    .put("fj02", fj02)
+                    .put("fj03", fj03)
+                    .put("fk01", fk01)
+                    .put("fk02", fk02)
+                    .put("fk03", fk03)
+                    .put("fl01", fl01)
+                    .put("fl02", fl02)
+                    .put("fl03", fl03)
+                    .put("fl04", fl04)
+                    .put("fl05", fl05)
+                    .put("fl06", fl06)
+                    .put("fm01", fm01)
+                    .put("fm02", fm02)
+                    .put("fm03", fm03)
+                    .put("fm04", fm04)
+                    .put("fm05", fm05)
+                    .put("fm06", fm06)
+                    .put("fm07", fm07)
+                    .put("fm08", fm08)
+                    .put("fn01", fn01)
+                    .put("fn02", fn02)
+                    .put("fn03", fn03)
+                    .put("fo01a", fo01a)
+                    .put("fo01b", fo01b)
+                    .put("fo02a", fo02a)
+                    .put("fo02b", fo02b)
+                    .put("fo03a", fo03a)
+                    .put("fo03b", fo03b)
+                    .put("fo04a", fo04a)
+                    .put("fo04b", fo04b)
+                    .put("fo05a", fo05a)
+                    .put("fo05b", fo05b)
+                    .put("fp01a", fp01a)
+                    .put("fp01b", fp01b)
+                    .put("fp01c", fp01c)
+                    .put("fp01dd", fp01dd)
+                    .put("fp01dm", fp01dm)
+                    .put("fp02a", fp02a)
+                    .put("fp02b", fp02b)
+                    .put("fp02c", fp02c)
+                    .put("fp02dd", fp02dd)
+                    .put("fp02dm", fp02dm)
+                    .put("fp03a", fp03a)
+                    .put("fp03b", fp03b)
+                    .put("fp03c", fp03c)
+                    .put("fp03dd", fp03dd)
+                    .put("fp03dm", fp03dm)
+                    .put("fp04a", fp04a)
+                    .put("fp04b", fp04b)
+                    .put("fp04c", fp04c)
+                    .put("fp04dd", fp04dd)
+                    .put("fp04dm", fp04dm)
+                    .put("fp05a", fp05a)
+                    .put("fp05b", fp05b)
+                    .put("fp05c", fp05c)
+                    .put("fp05dd", fp05dd)
+                    .put("fp05dm", fp05dm);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
+        }
+        return json.toString();
+    }
+
+
+    public String sGtoString() {
+        JSONObject json = new JSONObject();
+
+        try {
+            json.put("ga01", ga01)
+                    .put("ga02d", ga02d)
+                    .put("ga02m", ga02m)
+                    .put("ga02y", ga02y)
+                    .put("ga02h", ga02h)
+                    .put("ga02mi", ga02mi)
+                    .put("ga02s", ga02s)
+                    .put("ga03", ga03)
+                    .put("ga04", ga04)
+                    .put("ga05", ga05)
+                    .put("ga06y", ga06y)
+                    .put("ga06m", ga06m)
+                    .put("ga07", ga07)
+                    .put("ga08a", ga08a)
+                    .put("ga08b", ga08b)
+                    .put("ga08c", ga08c)
+                    .put("ga08d", ga08d)
+                    .put("ga08e", ga08e)
+                    .put("ga08f", ga08f)
+                    .put("ga09", ga09)
+                    .put("ga09bx", ga09bx)
+                    .put("ga09cx", ga09cx)
+                    .put("ga10", ga10)
+                    .put("ga10bx", ga10bx)
+                    .put("ga10cx", ga10cx)
+                    .put("ga11", ga11)
+                    .put("ga11ax", ga11ax)
+                    .put("ga11bx", ga11bx)
+                    .put("ga12", ga12)
+                    .put("ga13", ga13)
+                    .put("ga14", ga14)
+                    .put("ga14ax", ga14ax)
+                    .put("ga14bx", ga14bx)
+                    .put("ga14cx", ga14cx)
+                    .put("ga15", ga15)
+                    .put("ga1596x", ga1596x)
+                    .put("ga16", ga16);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
+        }
+        return json.toString();
+    }
+
+
+    public String sHtoString() {
+        JSONObject json = new JSONObject();
+
+        try {
+            json.put("ha01", ha01)
+                    .put("ha02", ha02)
+                    .put("ha03", ha03)
+                    .put("ha04", ha04)
+                    .put("ha05", ha05)
+                    .put("ha06", ha06)
+                    .put("ha07", ha07)
+                    .put("ha08", ha08)
+                    .put("ha09", ha09)
+                    .put("ha10", ha10)
+                    .put("ha11", ha11)
+                    .put("ha12", ha12)
+                    .put("ha13", ha13)
+                    .put("ha14", ha14)
+                    .put("ha14a", ha14a)
+                    .put("ha14b", ha14b)
+                    .put("ha14c", ha14c)
+                    .put("ha14d", ha14d)
+                    .put("ha14e", ha14e)
+                    .put("ha14f", ha14f)
+                    .put("ha1496", ha1496)
+                    .put("ha1496x", ha1496x)
+                    .put("hb01", hb01)
+                    .put("hb02", hb02)
+                    .put("hb03", hb03)
+                    .put("hb04", hb04)
+                    .put("hb05", hb05)
+                    .put("hb06", hb06)
+                    .put("hb07", hb07)
+                    .put("hb07a", hb07a)
+                    .put("hb07b", hb07b)
+                    .put("hb07c", hb07c)
+                    .put("hb07d", hb07d)
+                    .put("hb0796", hb0796)
+                    .put("hb0796x", hb0796x)
+                    .put("hc01", hc01)
+                    .put("hc02", hc02)
+                    .put("hc03", hc03)
+                    .put("hc04", hc04)
+                    .put("hc05", hc05)
+                    .put("hc06", hc06)
+                    .put("hc06a", hc06a)
+                    .put("hc06b", hc06b)
+                    .put("hc06c", hc06c)
+                    .put("hc06d", hc06d)
+                    .put("hc06e", hc06e)
+                    .put("hc0696", hc0696)
+                    .put("hc0696x", hc0696x);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
+        }
+        return json.toString();
+    }
+
+
+    public String sItoString() {
+        JSONObject json = new JSONObject();
+
+        try {
+            json.put("ia01", ia01)
+                    .put("ia02", ia02)
+                    .put("ia03", ia03)
+                    .put("ia04", ia04)
+                    .put("ia05", ia05)
+                    .put("ia06", ia06)
+                    .put("ia07", ia07)
+                    .put("ib01", ib01)
+                    .put("ib01dx", ib01dx)
+                    .put("ib01ex", ib01ex)
+                    .put("ib02", ib02)
+                    .put("ib02dx", ib02dx)
+                    .put("ib02ex", ib02ex)
+                    .put("ib03", ib03)
+                    .put("ib03dx", ib03dx)
+                    .put("ib03ex", ib03ex)
+                    .put("ib04", ib04)
+                    .put("ib04dx", ib04dx)
+                    .put("ib04ex", ib04ex)
+                    .put("ib05", ib05)
+                    .put("ib05dx", ib05dx)
+                    .put("ib05ex", ib05ex)
+                    .put("ib06", ib06)
+                    .put("ib06dx", ib06dx)
+                    .put("ib06ex", ib06ex)
+                    .put("ib07", ib07)
+                    .put("ib07dx", ib07dx)
+                    .put("ib07ex", ib07ex)
+                    .put("ib08", ib08)
+                    .put("ib08dx", ib08dx)
+                    .put("ib08ex", ib08ex)
+                    .put("ic01", ic01)
+                    .put("ic02", ic02)
+                    .put("ic03", ic03)
+                    .put("ic04", ic04)
+                    .put("ic05", ic05)
+                    .put("ic06", ic06)
+                    .put("ic07", ic07)
+                    .put("ic08", ic08);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
+        }
+        return json.toString();
+    }
+
+
     public JSONObject toJSONObject() {
 
         JSONObject json = new JSONObject();
@@ -6014,7 +6699,15 @@ public class Forms extends LiveData<Forms> {
             json.put(FormsTable.COLUMN_ISTATUS96x, this.istatus96x == null ? JSONObject.NULL : this.istatus96x);
             json.put(FormsTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);
 
+            json.put(FormsTable.COLUMN_SA, new JSONObject(sAtoString()));
             json.put(FormsTable.COLUMN_SB, new JSONObject(sBtoString()));
+            json.put(FormsTable.COLUMN_SC, new JSONObject(sCtoString()));
+            json.put(FormsTable.COLUMN_SD, new JSONObject(sDtoString()));
+            json.put(FormsTable.COLUMN_SE, new JSONObject(sEtoString()));
+            json.put(FormsTable.COLUMN_SF, new JSONObject(sFtoString()));
+            json.put(FormsTable.COLUMN_SG, new JSONObject(sGtoString()));
+            json.put(FormsTable.COLUMN_SH, new JSONObject(sHtoString()));
+            json.put(FormsTable.COLUMN_SI, new JSONObject(sItoString()));
 
             json.put(FormsTable.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
             json.put(FormsTable.COLUMN_GPSLNG, this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
@@ -6024,8 +6717,40 @@ public class Forms extends LiveData<Forms> {
             json.put(FormsTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
             json.put(FormsTable.COLUMN_APPVERSION, this.appversion == null ? JSONObject.NULL : this.appversion);
 
+            if (this.sA != null && !this.sA.equals("")) {
+                json.put(FormsTable.COLUMN_SA, new JSONObject(this.sA));
+            }
+
             if (this.sB != null && !this.sB.equals("")) {
                 json.put(FormsTable.COLUMN_SB, new JSONObject(this.sB));
+            }
+
+            if (this.sC != null && !this.sC.equals("")) {
+                json.put(FormsTable.COLUMN_SC, new JSONObject(this.sC));
+            }
+
+            if (this.sD != null && !this.sD.equals("")) {
+                json.put(FormsTable.COLUMN_SD, new JSONObject(this.sD));
+            }
+
+            if (this.sE != null && !this.sE.equals("")) {
+                json.put(FormsTable.COLUMN_SE, new JSONObject(this.sE));
+            }
+
+            if (this.sF != null && !this.sF.equals("")) {
+                json.put(FormsTable.COLUMN_SF, new JSONObject(this.sF));
+            }
+
+            if (this.sG != null && !this.sG.equals("")) {
+                json.put(FormsTable.COLUMN_SG, new JSONObject(this.sG));
+            }
+
+            if (this.sH != null && !this.sH.equals("")) {
+                json.put(FormsTable.COLUMN_SH, new JSONObject(this.sH));
+            }
+
+            if (this.sI != null && !this.sI.equals("")) {
+                json.put(FormsTable.COLUMN_SI, new JSONObject(this.sI));
             }
 
             return json;
@@ -6036,7 +6761,429 @@ public class Forms extends LiveData<Forms> {
     }
 
 
-    private void sbHydrate(String string) {
+    private void sAHydrate(String string) {
+
+        if (string != null) {
+
+            try {
+                JSONObject json = null;
+                json = new JSONObject(string);
+                this.aa01d = json.getString("aa01d");
+                this.aa01m = json.getString("aa01m");
+                this.aa01y = json.getString("aa01y");
+                this.aa02 = json.getString("aa02");
+                this.aa03 = json.getString("aa03");
+                this.aa04 = json.getString("aa04");
+                this.aa05 = json.getString("aa05");
+                this.aa06 = json.getString("aa06");
+                this.aa07 = json.getString("aa07");
+                this.aa08 = json.getString("aa08");
+                this.aa09 = json.getString("aa09");
+                this.aa10 = json.getString("aa10");
+                this.aa11 = json.getString("aa11");
+                this.aa12 = json.getString("aa12");
+                this.aa13 = json.getString("aa13");
+                this.aa14 = json.getString("aa14");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private void sBHydrate(String string) {
+
+        if (string != null) {
+
+            try {
+                JSONObject json = null;
+                json = new JSONObject(string);
+
+                this.ba01a1 = json.getString("ba01a1");
+                this.ba01a2 = json.getString("ba01a2");
+                this.ba01a3 = json.getString("ba01a3");
+                this.ba01a4 = json.getString("ba01a4");
+                this.ba01a5 = json.getString("ba01a5");
+                this.ba01b1 = json.getString("ba01b1");
+                this.ba01b2 = json.getString("ba01b2");
+                this.ba01b3 = json.getString("ba01b3");
+                this.ba01b4 = json.getString("ba01b4");
+                this.ba01b5 = json.getString("ba01b5");
+                this.ba01c1 = json.getString("ba01c1");
+                this.ba01c2 = json.getString("ba01c2");
+                this.ba01c3 = json.getString("ba01c3");
+                this.ba01c4 = json.getString("ba01c4");
+                this.ba01c5 = json.getString("ba01c5");
+                this.ba01d1 = json.getString("ba01d1");
+                this.ba01d2 = json.getString("ba01d2");
+                this.ba01d3 = json.getString("ba01d3");
+                this.ba01d4 = json.getString("ba01d4");
+                this.ba01d5 = json.getString("ba01d5");
+                this.ba01e1 = json.getString("ba01e1");
+                this.ba01e2 = json.getString("ba01e2");
+                this.ba01e3 = json.getString("ba01e3");
+                this.ba01e4 = json.getString("ba01e4");
+                this.ba01e5 = json.getString("ba01e5");
+                this.ba01f1 = json.getString("ba01f1");
+                this.ba01f2 = json.getString("ba01f2");
+                this.ba01f3 = json.getString("ba01f3");
+                this.ba01f4 = json.getString("ba01f4");
+                this.ba01f5 = json.getString("ba01f5");
+                this.ba01g1 = json.getString("ba01g1");
+                this.ba01g2 = json.getString("ba01g2");
+                this.ba01g3 = json.getString("ba01g3");
+                this.ba01g4 = json.getString("ba01g4");
+                this.ba01g5 = json.getString("ba01g5");
+                this.ba01h1 = json.getString("ba01h1");
+                this.ba01h2 = json.getString("ba01h2");
+                this.ba01h3 = json.getString("ba01h3");
+                this.ba01h4 = json.getString("ba01h4");
+                this.ba01h5 = json.getString("ba01h5");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private void sCHydrate(String string) {
+
+        if (string != null) {
+
+            try {
+                JSONObject json = null;
+                json = new JSONObject(string);
+
+                this.ba01a1 = json.getString("ba01a1");
+                this.ba01a2 = json.getString("ba01a2");
+                this.ba01a3 = json.getString("ba01a3");
+                this.ba01a4 = json.getString("ba01a4");
+                this.ba01a5 = json.getString("ba01a5");
+                this.ba01b1 = json.getString("ba01b1");
+                this.ba01b2 = json.getString("ba01b2");
+                this.ba01b3 = json.getString("ba01b3");
+                this.ba01b4 = json.getString("ba01b4");
+                this.ba01b5 = json.getString("ba01b5");
+                this.ba01c1 = json.getString("ba01c1");
+                this.ba01c2 = json.getString("ba01c2");
+                this.ba01c3 = json.getString("ba01c3");
+                this.ba01c4 = json.getString("ba01c4");
+                this.ba01c5 = json.getString("ba01c5");
+                this.ba01d1 = json.getString("ba01d1");
+                this.ba01d2 = json.getString("ba01d2");
+                this.ba01d3 = json.getString("ba01d3");
+                this.ba01d4 = json.getString("ba01d4");
+                this.ba01d5 = json.getString("ba01d5");
+                this.ba01e1 = json.getString("ba01e1");
+                this.ba01e2 = json.getString("ba01e2");
+                this.ba01e3 = json.getString("ba01e3");
+                this.ba01e4 = json.getString("ba01e4");
+                this.ba01e5 = json.getString("ba01e5");
+                this.ba01f1 = json.getString("ba01f1");
+                this.ba01f2 = json.getString("ba01f2");
+                this.ba01f3 = json.getString("ba01f3");
+                this.ba01f4 = json.getString("ba01f4");
+                this.ba01f5 = json.getString("ba01f5");
+                this.ba01g1 = json.getString("ba01g1");
+                this.ba01g2 = json.getString("ba01g2");
+                this.ba01g3 = json.getString("ba01g3");
+                this.ba01g4 = json.getString("ba01g4");
+                this.ba01g5 = json.getString("ba01g5");
+                this.ba01h1 = json.getString("ba01h1");
+                this.ba01h2 = json.getString("ba01h2");
+                this.ba01h3 = json.getString("ba01h3");
+                this.ba01h4 = json.getString("ba01h4");
+                this.ba01h5 = json.getString("ba01h5");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private void sDHydrate(String string) {
+
+        if (string != null) {
+
+            try {
+                JSONObject json = null;
+                json = new JSONObject(string);
+
+                this.ba01a1 = json.getString("ba01a1");
+                this.ba01a2 = json.getString("ba01a2");
+                this.ba01a3 = json.getString("ba01a3");
+                this.ba01a4 = json.getString("ba01a4");
+                this.ba01a5 = json.getString("ba01a5");
+                this.ba01b1 = json.getString("ba01b1");
+                this.ba01b2 = json.getString("ba01b2");
+                this.ba01b3 = json.getString("ba01b3");
+                this.ba01b4 = json.getString("ba01b4");
+                this.ba01b5 = json.getString("ba01b5");
+                this.ba01c1 = json.getString("ba01c1");
+                this.ba01c2 = json.getString("ba01c2");
+                this.ba01c3 = json.getString("ba01c3");
+                this.ba01c4 = json.getString("ba01c4");
+                this.ba01c5 = json.getString("ba01c5");
+                this.ba01d1 = json.getString("ba01d1");
+                this.ba01d2 = json.getString("ba01d2");
+                this.ba01d3 = json.getString("ba01d3");
+                this.ba01d4 = json.getString("ba01d4");
+                this.ba01d5 = json.getString("ba01d5");
+                this.ba01e1 = json.getString("ba01e1");
+                this.ba01e2 = json.getString("ba01e2");
+                this.ba01e3 = json.getString("ba01e3");
+                this.ba01e4 = json.getString("ba01e4");
+                this.ba01e5 = json.getString("ba01e5");
+                this.ba01f1 = json.getString("ba01f1");
+                this.ba01f2 = json.getString("ba01f2");
+                this.ba01f3 = json.getString("ba01f3");
+                this.ba01f4 = json.getString("ba01f4");
+                this.ba01f5 = json.getString("ba01f5");
+                this.ba01g1 = json.getString("ba01g1");
+                this.ba01g2 = json.getString("ba01g2");
+                this.ba01g3 = json.getString("ba01g3");
+                this.ba01g4 = json.getString("ba01g4");
+                this.ba01g5 = json.getString("ba01g5");
+                this.ba01h1 = json.getString("ba01h1");
+                this.ba01h2 = json.getString("ba01h2");
+                this.ba01h3 = json.getString("ba01h3");
+                this.ba01h4 = json.getString("ba01h4");
+                this.ba01h5 = json.getString("ba01h5");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private void sEHydrate(String string) {
+
+        if (string != null) {
+
+            try {
+                JSONObject json = null;
+                json = new JSONObject(string);
+
+                this.ba01a1 = json.getString("ba01a1");
+                this.ba01a2 = json.getString("ba01a2");
+                this.ba01a3 = json.getString("ba01a3");
+                this.ba01a4 = json.getString("ba01a4");
+                this.ba01a5 = json.getString("ba01a5");
+                this.ba01b1 = json.getString("ba01b1");
+                this.ba01b2 = json.getString("ba01b2");
+                this.ba01b3 = json.getString("ba01b3");
+                this.ba01b4 = json.getString("ba01b4");
+                this.ba01b5 = json.getString("ba01b5");
+                this.ba01c1 = json.getString("ba01c1");
+                this.ba01c2 = json.getString("ba01c2");
+                this.ba01c3 = json.getString("ba01c3");
+                this.ba01c4 = json.getString("ba01c4");
+                this.ba01c5 = json.getString("ba01c5");
+                this.ba01d1 = json.getString("ba01d1");
+                this.ba01d2 = json.getString("ba01d2");
+                this.ba01d3 = json.getString("ba01d3");
+                this.ba01d4 = json.getString("ba01d4");
+                this.ba01d5 = json.getString("ba01d5");
+                this.ba01e1 = json.getString("ba01e1");
+                this.ba01e2 = json.getString("ba01e2");
+                this.ba01e3 = json.getString("ba01e3");
+                this.ba01e4 = json.getString("ba01e4");
+                this.ba01e5 = json.getString("ba01e5");
+                this.ba01f1 = json.getString("ba01f1");
+                this.ba01f2 = json.getString("ba01f2");
+                this.ba01f3 = json.getString("ba01f3");
+                this.ba01f4 = json.getString("ba01f4");
+                this.ba01f5 = json.getString("ba01f5");
+                this.ba01g1 = json.getString("ba01g1");
+                this.ba01g2 = json.getString("ba01g2");
+                this.ba01g3 = json.getString("ba01g3");
+                this.ba01g4 = json.getString("ba01g4");
+                this.ba01g5 = json.getString("ba01g5");
+                this.ba01h1 = json.getString("ba01h1");
+                this.ba01h2 = json.getString("ba01h2");
+                this.ba01h3 = json.getString("ba01h3");
+                this.ba01h4 = json.getString("ba01h4");
+                this.ba01h5 = json.getString("ba01h5");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private void sFHydrate(String string) {
+
+        if (string != null) {
+
+            try {
+                JSONObject json = null;
+                json = new JSONObject(string);
+
+                this.ba01a1 = json.getString("ba01a1");
+                this.ba01a2 = json.getString("ba01a2");
+                this.ba01a3 = json.getString("ba01a3");
+                this.ba01a4 = json.getString("ba01a4");
+                this.ba01a5 = json.getString("ba01a5");
+                this.ba01b1 = json.getString("ba01b1");
+                this.ba01b2 = json.getString("ba01b2");
+                this.ba01b3 = json.getString("ba01b3");
+                this.ba01b4 = json.getString("ba01b4");
+                this.ba01b5 = json.getString("ba01b5");
+                this.ba01c1 = json.getString("ba01c1");
+                this.ba01c2 = json.getString("ba01c2");
+                this.ba01c3 = json.getString("ba01c3");
+                this.ba01c4 = json.getString("ba01c4");
+                this.ba01c5 = json.getString("ba01c5");
+                this.ba01d1 = json.getString("ba01d1");
+                this.ba01d2 = json.getString("ba01d2");
+                this.ba01d3 = json.getString("ba01d3");
+                this.ba01d4 = json.getString("ba01d4");
+                this.ba01d5 = json.getString("ba01d5");
+                this.ba01e1 = json.getString("ba01e1");
+                this.ba01e2 = json.getString("ba01e2");
+                this.ba01e3 = json.getString("ba01e3");
+                this.ba01e4 = json.getString("ba01e4");
+                this.ba01e5 = json.getString("ba01e5");
+                this.ba01f1 = json.getString("ba01f1");
+                this.ba01f2 = json.getString("ba01f2");
+                this.ba01f3 = json.getString("ba01f3");
+                this.ba01f4 = json.getString("ba01f4");
+                this.ba01f5 = json.getString("ba01f5");
+                this.ba01g1 = json.getString("ba01g1");
+                this.ba01g2 = json.getString("ba01g2");
+                this.ba01g3 = json.getString("ba01g3");
+                this.ba01g4 = json.getString("ba01g4");
+                this.ba01g5 = json.getString("ba01g5");
+                this.ba01h1 = json.getString("ba01h1");
+                this.ba01h2 = json.getString("ba01h2");
+                this.ba01h3 = json.getString("ba01h3");
+                this.ba01h4 = json.getString("ba01h4");
+                this.ba01h5 = json.getString("ba01h5");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private void sGHydrate(String string) {
+
+        if (string != null) {
+
+            try {
+                JSONObject json = null;
+                json = new JSONObject(string);
+
+                this.ba01a1 = json.getString("ba01a1");
+                this.ba01a2 = json.getString("ba01a2");
+                this.ba01a3 = json.getString("ba01a3");
+                this.ba01a4 = json.getString("ba01a4");
+                this.ba01a5 = json.getString("ba01a5");
+                this.ba01b1 = json.getString("ba01b1");
+                this.ba01b2 = json.getString("ba01b2");
+                this.ba01b3 = json.getString("ba01b3");
+                this.ba01b4 = json.getString("ba01b4");
+                this.ba01b5 = json.getString("ba01b5");
+                this.ba01c1 = json.getString("ba01c1");
+                this.ba01c2 = json.getString("ba01c2");
+                this.ba01c3 = json.getString("ba01c3");
+                this.ba01c4 = json.getString("ba01c4");
+                this.ba01c5 = json.getString("ba01c5");
+                this.ba01d1 = json.getString("ba01d1");
+                this.ba01d2 = json.getString("ba01d2");
+                this.ba01d3 = json.getString("ba01d3");
+                this.ba01d4 = json.getString("ba01d4");
+                this.ba01d5 = json.getString("ba01d5");
+                this.ba01e1 = json.getString("ba01e1");
+                this.ba01e2 = json.getString("ba01e2");
+                this.ba01e3 = json.getString("ba01e3");
+                this.ba01e4 = json.getString("ba01e4");
+                this.ba01e5 = json.getString("ba01e5");
+                this.ba01f1 = json.getString("ba01f1");
+                this.ba01f2 = json.getString("ba01f2");
+                this.ba01f3 = json.getString("ba01f3");
+                this.ba01f4 = json.getString("ba01f4");
+                this.ba01f5 = json.getString("ba01f5");
+                this.ba01g1 = json.getString("ba01g1");
+                this.ba01g2 = json.getString("ba01g2");
+                this.ba01g3 = json.getString("ba01g3");
+                this.ba01g4 = json.getString("ba01g4");
+                this.ba01g5 = json.getString("ba01g5");
+                this.ba01h1 = json.getString("ba01h1");
+                this.ba01h2 = json.getString("ba01h2");
+                this.ba01h3 = json.getString("ba01h3");
+                this.ba01h4 = json.getString("ba01h4");
+                this.ba01h5 = json.getString("ba01h5");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private void sHHydrate(String string) {
+
+        if (string != null) {
+
+            try {
+                JSONObject json = null;
+                json = new JSONObject(string);
+
+                this.ba01a1 = json.getString("ba01a1");
+                this.ba01a2 = json.getString("ba01a2");
+                this.ba01a3 = json.getString("ba01a3");
+                this.ba01a4 = json.getString("ba01a4");
+                this.ba01a5 = json.getString("ba01a5");
+                this.ba01b1 = json.getString("ba01b1");
+                this.ba01b2 = json.getString("ba01b2");
+                this.ba01b3 = json.getString("ba01b3");
+                this.ba01b4 = json.getString("ba01b4");
+                this.ba01b5 = json.getString("ba01b5");
+                this.ba01c1 = json.getString("ba01c1");
+                this.ba01c2 = json.getString("ba01c2");
+                this.ba01c3 = json.getString("ba01c3");
+                this.ba01c4 = json.getString("ba01c4");
+                this.ba01c5 = json.getString("ba01c5");
+                this.ba01d1 = json.getString("ba01d1");
+                this.ba01d2 = json.getString("ba01d2");
+                this.ba01d3 = json.getString("ba01d3");
+                this.ba01d4 = json.getString("ba01d4");
+                this.ba01d5 = json.getString("ba01d5");
+                this.ba01e1 = json.getString("ba01e1");
+                this.ba01e2 = json.getString("ba01e2");
+                this.ba01e3 = json.getString("ba01e3");
+                this.ba01e4 = json.getString("ba01e4");
+                this.ba01e5 = json.getString("ba01e5");
+                this.ba01f1 = json.getString("ba01f1");
+                this.ba01f2 = json.getString("ba01f2");
+                this.ba01f3 = json.getString("ba01f3");
+                this.ba01f4 = json.getString("ba01f4");
+                this.ba01f5 = json.getString("ba01f5");
+                this.ba01g1 = json.getString("ba01g1");
+                this.ba01g2 = json.getString("ba01g2");
+                this.ba01g3 = json.getString("ba01g3");
+                this.ba01g4 = json.getString("ba01g4");
+                this.ba01g5 = json.getString("ba01g5");
+                this.ba01h1 = json.getString("ba01h1");
+                this.ba01h2 = json.getString("ba01h2");
+                this.ba01h3 = json.getString("ba01h3");
+                this.ba01h4 = json.getString("ba01h4");
+                this.ba01h5 = json.getString("ba01h5");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private void sIHydrate(String string) {
 
         if (string != null) {
 
