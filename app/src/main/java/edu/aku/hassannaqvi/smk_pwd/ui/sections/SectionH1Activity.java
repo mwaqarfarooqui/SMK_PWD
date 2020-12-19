@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -11,10 +12,13 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionH1Binding;
+
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 
 public class SectionH1Activity extends AppCompatActivity {
 
@@ -65,11 +69,7 @@ public class SectionH1Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionH2Activity.class));
@@ -78,28 +78,27 @@ public class SectionH1Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, MainApp.fc.getsH());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, form.getsH());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
 
-        /*form.setHa01( bi.ha01a.isChecked() ? "1"
+        form.setHa01(bi.ha01a.isChecked() ? "1"
                 : bi.ha01b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setHa02( bi.ha02a.isChecked() ? "1"
+        form.setHa02(bi.ha02a.isChecked() ? "1"
                 : bi.ha02b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
         form.setHa03( bi.ha03a.isChecked() ? "1"
                 : bi.ha03b.isChecked() ? "2"
@@ -159,7 +158,7 @@ public class SectionH1Activity extends AppCompatActivity {
 
         form.setHa1496(bi.ha1496.isChecked() ? "96" : "-1");
 
-        form.setHa1496x(bi.ha1496x.getText().toString());*/
+        form.setHa1496x(bi.ha1496x.getText().toString());
 
     }
 
