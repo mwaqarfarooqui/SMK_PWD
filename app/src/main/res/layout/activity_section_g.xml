@@ -1554,6 +1554,21 @@
                             android:layout_height="wrap_content"
                             android:text="@string/ga14a" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/ga14ax"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/ga14a"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:tag="ga14a"
+                            android:text='@{ga14a.checked ? ga14ax.getText().toString() : ""}'
+                            android:visibility='@{ga14a.checked? View.VISIBLE : View.GONE}'
+                            app:maxValue="9999"
+                            app:minValue="0"
+                            app:type="range" />
+
                         <RadioButton
                             android:id="@+id/ga14b"
                             android:layout_width="match_parent"

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -14,15 +15,19 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionGBinding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
+
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 
 public class SectionGActivity extends AppCompatActivity {
 
@@ -64,24 +69,22 @@ public class SectionGActivity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SG, fc.getsG());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SG, form.getsG());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-
-       /* form.setGa01( bi.ga01a.isChecked() ? "1"
+        form.setGa01(bi.ga01a.isChecked() ? "1"
                 : bi.ga01b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
         form.setGa02d(bi.ga02d.getText().toString());
         form.setGa02m(bi.ga02m.getText().toString());
@@ -198,8 +201,6 @@ public class SectionGActivity extends AppCompatActivity {
         form.setGa16( bi.ga16a.isChecked() ? "1"
                 : bi.ga16b.isChecked() ? "2"
                 :  "-1");
-*/
-
 
     }
 
@@ -211,11 +212,7 @@ public class SectionGActivity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionMainActivity.class));
