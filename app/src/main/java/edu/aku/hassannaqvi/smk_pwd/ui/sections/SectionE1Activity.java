@@ -56,7 +56,7 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SE, form.getsE());
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SE, form.sEtoString());
         if (updcount == 1) {
             return true;
         } else {
