@@ -79,7 +79,7 @@ public class SectionH1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, form.getsH());
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, form.sHtoString());
         if (updcount == 1) {
             return true;
         } else {
