@@ -574,6 +574,7 @@ public class Forms extends LiveData<Forms> {
     private String ga15 = "";
     private String ga1596x = "";
     private String ga16 = "";
+
     private String ha01 = "";
     private String ha02 = "";
     private String ha03 = "";
@@ -622,6 +623,7 @@ public class Forms extends LiveData<Forms> {
     private String hc06e = "";
     private String hc0696 = "";
     private String hc0696x = "";
+
     private String ia01 = "";
     private String ia02 = "";
     private String ia03 = "";
@@ -7334,48 +7336,43 @@ public class Forms extends LiveData<Forms> {
             try {
                 JSONObject json = null;
                 json = new JSONObject(string);
-
-                this.ba01a1 = json.getString("ba01a1");
-                this.ba01a2 = json.getString("ba01a2");
-                this.ba01a3 = json.getString("ba01a3");
-                this.ba01a4 = json.getString("ba01a4");
-                this.ba01a5 = json.getString("ba01a5");
-                this.ba01b1 = json.getString("ba01b1");
-                this.ba01b2 = json.getString("ba01b2");
-                this.ba01b3 = json.getString("ba01b3");
-                this.ba01b4 = json.getString("ba01b4");
-                this.ba01b5 = json.getString("ba01b5");
-                this.ba01c1 = json.getString("ba01c1");
-                this.ba01c2 = json.getString("ba01c2");
-                this.ba01c3 = json.getString("ba01c3");
-                this.ba01c4 = json.getString("ba01c4");
-                this.ba01c5 = json.getString("ba01c5");
-                this.ba01d1 = json.getString("ba01d1");
-                this.ba01d2 = json.getString("ba01d2");
-                this.ba01d3 = json.getString("ba01d3");
-                this.ba01d4 = json.getString("ba01d4");
-                this.ba01d5 = json.getString("ba01d5");
-                this.ba01e1 = json.getString("ba01e1");
-                this.ba01e2 = json.getString("ba01e2");
-                this.ba01e3 = json.getString("ba01e3");
-                this.ba01e4 = json.getString("ba01e4");
-                this.ba01e5 = json.getString("ba01e5");
-                this.ba01f1 = json.getString("ba01f1");
-                this.ba01f2 = json.getString("ba01f2");
-                this.ba01f3 = json.getString("ba01f3");
-                this.ba01f4 = json.getString("ba01f4");
-                this.ba01f5 = json.getString("ba01f5");
-                this.ba01g1 = json.getString("ba01g1");
-                this.ba01g2 = json.getString("ba01g2");
-                this.ba01g3 = json.getString("ba01g3");
-                this.ba01g4 = json.getString("ba01g4");
-                this.ba01g5 = json.getString("ba01g5");
-                this.ba01h1 = json.getString("ba01h1");
-                this.ba01h2 = json.getString("ba01h2");
-                this.ba01h3 = json.getString("ba01h3");
-                this.ba01h4 = json.getString("ba01h4");
-                this.ba01h5 = json.getString("ba01h5");
-
+                this.ga01 = json.getString("ga01");
+                this.ga02d = json.getString("ga02d");
+                this.ga02m = json.getString("ga02m");
+                this.ga02y = json.getString("ga02y");
+                this.ga02h = json.getString("ga02h");
+                this.ga02mi = json.getString("ga02mi");
+                this.ga02s = json.getString("ga02s");
+                this.ga03 = json.getString("ga03");
+                this.ga04 = json.getString("ga04");
+                this.ga05 = json.getString("ga05");
+                this.ga06y = json.getString("ga06y");
+                this.ga06m = json.getString("ga06m");
+                this.ga07 = json.getString("ga07");
+                this.ga08a = json.getString("ga08a");
+                this.ga08b = json.getString("ga08b");
+                this.ga08c = json.getString("ga08c");
+                this.ga08d = json.getString("ga08d");
+                this.ga08e = json.getString("ga08e");
+                this.ga08f = json.getString("ga08f");
+                this.ga09 = json.getString("ga09");
+                this.ga09bx = json.getString("ga09bx");
+                this.ga09cx = json.getString("ga09cx");
+                this.ga10 = json.getString("ga10");
+                this.ga10bx = json.getString("ga10bx");
+                this.ga10cx = json.getString("ga10cx");
+                this.ga11 = json.getString("ga11");
+                this.ga11ax = json.getString("ga11ax");
+                this.ga11bx = json.getString("ga11bx");
+                this.ga12 = json.getString("ga12");
+                this.ga13 = json.getString("ga13");
+                this.ga14 = json.getString("ga14");
+                this.ga14ax = json.getString("ga14ax");
+                this.ga14bx = json.getString("ga14bx");
+                this.ga14cx = json.getString("ga14cx");
+                this.ga15 = json.getString("ga15");
+                this.ga1596x = json.getString("ga1596x");
+                this.ga16 = json.getString("ga16");
             } catch (JSONException e) {
                 e.printStackTrace();
             }
