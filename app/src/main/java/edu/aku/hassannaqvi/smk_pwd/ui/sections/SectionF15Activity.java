@@ -13,11 +13,13 @@ import androidx.databinding.DataBindingUtil;
 import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF15Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionF15Activity extends AppCompatActivity {
@@ -32,6 +34,7 @@ public class SectionF15Activity extends AppCompatActivity {
         setupSkips();
     }
 
+
     private void setupSkips() {
         watcherSetMax(bi.fo01a, bi.fo01b);
         watcherSetMax(bi.fo02a, bi.fo02b);
@@ -39,6 +42,7 @@ public class SectionF15Activity extends AppCompatActivity {
         watcherSetMax(bi.fo04a, bi.fo04b);
         watcherSetMax(bi.fo05a, bi.fo05b);
     }
+
 
 
     public void watcherSetMax(EditTextPicker edit01, EditTextPicker edit02) {
@@ -64,42 +68,31 @@ public class SectionF15Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, fc.getsF());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, form.getsF());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-        /*JSONObject json = new JSONObject();
-        json.put("fo01a", bi.fo01a.getText().toString());
+        form.setFo01a(bi.fo01a.getText().toString().trim().isEmpty() ? "-1" : bi.fo01a.getText().toString());
+        form.setFo01b(bi.fo01b.getText().toString().trim().isEmpty() ? "-1" : bi.fo01b.getText().toString());
+        form.setFo02a(bi.fo02a.getText().toString().trim().isEmpty() ? "-1" : bi.fo02a.getText().toString());
+        form.setFo02b(bi.fo02b.getText().toString().trim().isEmpty() ? "-1" : bi.fo02b.getText().toString());
+        form.setFo03a(bi.fo03a.getText().toString().trim().isEmpty() ? "-1" : bi.fo03a.getText().toString());
+        form.setFo03b(bi.fo03b.getText().toString().trim().isEmpty() ? "-1" : bi.fo03b.getText().toString());
+        form.setFo04a(bi.fo04a.getText().toString().trim().isEmpty() ? "-1" : bi.fo04a.getText().toString());
+        form.setFo04b(bi.fo04b.getText().toString().trim().isEmpty() ? "-1" : bi.fo04b.getText().toString());
+        form.setFo05a(bi.fo05a.getText().toString().trim().isEmpty() ? "-1" : bi.fo05a.getText().toString());
+        form.setFo05b(bi.fo05b.getText().toString().trim().isEmpty() ? "-1" : bi.fo05b.getText().toString());
 
-        json.put("fo01b", bi.fo01b.getText().toString());
-
-        json.put("fo02a", bi.fo02a.getText().toString());
-
-        json.put("fo02b", bi.fo02b.getText().toString());
-
-        json.put("fo03a", bi.fo03a.getText().toString());
-
-        json.put("fo03b", bi.fo03b.getText().toString());
-
-        json.put("fo04a", bi.fo04a.getText().toString());
-
-        json.put("fo04b", bi.fo04b.getText().toString());
-
-        json.put("fo05a", bi.fo05a.getText().toString());
-
-        json.put("fo05b", bi.fo05b.getText().toString());
-
-        try {
+        /*try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
 
             MainApp.fc.setsF(String.valueOf(json_merge));
@@ -118,11 +111,7 @@ public class SectionF15Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionF16Activity.class));
@@ -134,8 +123,11 @@ public class SectionF15Activity extends AppCompatActivity {
         openSectionMainActivity(this, "F");
     }
 
+
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
+
+
 }
