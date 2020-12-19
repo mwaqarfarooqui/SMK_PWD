@@ -9,12 +9,15 @@ import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI3Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionI3Activity extends AppCompatActivity {
@@ -110,11 +113,7 @@ public class SectionI3Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             startActivity(new Intent(this, SectionMainActivity.class));
             finish();
@@ -128,7 +127,7 @@ public class SectionI3Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addPSC(psc);
         psc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
@@ -136,16 +135,15 @@ public class SectionI3Activity extends AppCompatActivity {
             db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_UID, psc.get_UID());
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-        /*form.setIc01(bi.ic01a.isChecked() ? "1"
+        form.setIc01(bi.ic01a.isChecked() ? "1"
                 : bi.ic01b.isChecked() ? "2"
                 : bi.ic01c.isChecked() ? "3"
                 : "-1");
@@ -183,7 +181,7 @@ public class SectionI3Activity extends AppCompatActivity {
         form.setIc08(bi.ic08a.isChecked() ? "1"
                 : bi.ic08b.isChecked() ? "2"
                 : bi.ic08c.isChecked() ? "3"
-                : "-1");*/
+                : "-1");
 
     }
 
