@@ -19,11 +19,15 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI2Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionI2Activity extends AppCompatActivity {
@@ -92,11 +96,7 @@ public class SectionI2Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             startActivity(new Intent(this, SectionI3Activity.class));
             finish();
@@ -105,7 +105,7 @@ public class SectionI2Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addPSC(psc);
         psc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
@@ -113,21 +113,17 @@ public class SectionI2Activity extends AppCompatActivity {
             db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_UID, psc.get_UID());
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-
-        /*form.setIb01(bi.ib01a.isChecked() ? "1"
+        form.setIb01(bi.ib01a.isChecked() ? "1"
                 : bi.ib01b.isChecked() ? "2"
                 : bi.ib01c.isChecked() ? "3"
-                : bi.ib01d.isChecked() ? "4"
-                : bi.ib01e.isChecked() ? "5"
                 : "-1");
 
         form.setIb01dx(bi.ib01dx.getText().toString());
@@ -135,8 +131,6 @@ public class SectionI2Activity extends AppCompatActivity {
         form.setIb02(bi.ib02a.isChecked() ? "1"
                 : bi.ib02b.isChecked() ? "2"
                 : bi.ib02c.isChecked() ? "3"
-                : bi.ib02d.isChecked() ? "4"
-                : bi.ib02e.isChecked() ? "5"
                 : "-1");
 
         form.setIb02dx(bi.ib02dx.getText().toString());
@@ -144,8 +138,6 @@ public class SectionI2Activity extends AppCompatActivity {
         form.setIb03(bi.ib03a.isChecked() ? "1"
                 : bi.ib03b.isChecked() ? "2"
                 : bi.ib03c.isChecked() ? "3"
-                : bi.ib03d.isChecked() ? "4"
-                : bi.ib03e.isChecked() ? "5"
                 : "-1");
 
         form.setIb03dx(bi.ib03dx.getText().toString());
@@ -153,8 +145,6 @@ public class SectionI2Activity extends AppCompatActivity {
         form.setIb04(bi.ib04a.isChecked() ? "1"
                 : bi.ib04b.isChecked() ? "2"
                 : bi.ib04c.isChecked() ? "3"
-                : bi.ib04d.isChecked() ? "4"
-                : bi.ib04e.isChecked() ? "5"
                 : "-1");
 
         form.setIb04dx(bi.ib04dx.getText().toString());
@@ -162,8 +152,6 @@ public class SectionI2Activity extends AppCompatActivity {
         form.setIb05(bi.ib05a.isChecked() ? "1"
                 : bi.ib05b.isChecked() ? "2"
                 : bi.ib05c.isChecked() ? "3"
-                : bi.ib05d.isChecked() ? "4"
-                : bi.ib05e.isChecked() ? "5"
                 : "-1");
 
         form.setIb05dx(bi.ib05dx.getText().toString());
@@ -171,8 +159,6 @@ public class SectionI2Activity extends AppCompatActivity {
         form.setIb06(bi.ib06a.isChecked() ? "1"
                 : bi.ib06b.isChecked() ? "2"
                 : bi.ib06c.isChecked() ? "3"
-                : bi.ib06d.isChecked() ? "4"
-                : bi.ib06e.isChecked() ? "5"
                 : "-1");
 
         form.setIb06dx(bi.ib06dx.getText().toString());
@@ -180,8 +166,6 @@ public class SectionI2Activity extends AppCompatActivity {
         form.setIb07(bi.ib07a.isChecked() ? "1"
                 : bi.ib07b.isChecked() ? "2"
                 : bi.ib07c.isChecked() ? "3"
-                : bi.ib07d.isChecked() ? "4"
-                : bi.ib07e.isChecked() ? "5"
                 : "-1");
 
         form.setIb07dx(bi.ib07dx.getText().toString());
@@ -189,12 +173,10 @@ public class SectionI2Activity extends AppCompatActivity {
         form.setIb08(bi.ib08a.isChecked() ? "1"
                 : bi.ib08b.isChecked() ? "2"
                 : bi.ib08c.isChecked() ? "3"
-                : bi.ib08d.isChecked() ? "4"
-                : bi.ib08e.isChecked() ? "5"
                 : "-1");
 
         form.setIb08dx(bi.ib08dx.getText().toString());
-        form.setIb08ex(bi.ib08ex.getText().toString());*/
+        form.setIb08ex(bi.ib08ex.getText().toString());
 
     }
 
