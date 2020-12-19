@@ -12,11 +12,13 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionH2Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 
@@ -75,30 +77,28 @@ public class SectionH2Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, MainApp.fc.getsH());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, form.getsH());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-
-       /* form.setHb01( bi.hb01a.isChecked() ? "1"
+        form.setHb01(bi.hb01a.isChecked() ? "1"
                 : bi.hb01b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setHb02( bi.hb02a.isChecked() ? "1"
+        form.setHb02(bi.hb02a.isChecked() ? "1"
                 : bi.hb02b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setHb03( bi.hb03a.isChecked() ? "1"
+        form.setHb03(bi.hb03a.isChecked() ? "1"
                 : bi.hb03b.isChecked() ? "2"
                 :  "-1");
 
@@ -124,8 +124,7 @@ public class SectionH2Activity extends AppCompatActivity {
 
         form.setHb0796(bi.hb0796.isChecked() ? "96" : "-1");
 
-        form.setHb0796x(bi.hb0796x.getText().toString());*/
-
+        form.setHb0796x(bi.hb0796x.getText().toString());
 
     }
 
@@ -144,5 +143,6 @@ public class SectionH2Activity extends AppCompatActivity {
     public void onBackPressed() {
         Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
+
 
 }
