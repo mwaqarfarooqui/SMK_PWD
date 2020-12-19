@@ -6,20 +6,20 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionH3Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 
@@ -64,11 +64,7 @@ public class SectionH3Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionMainActivity.class));
@@ -77,29 +73,28 @@ public class SectionH3Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, MainApp.fc.getsH());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, form.getsH());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-       /* form.setHc01( bi.hc01a.isChecked() ? "1"
+        form.setHc01(bi.hc01a.isChecked() ? "1"
                 : bi.hc01b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setHc02( bi.hc02a.isChecked() ? "1"
+        form.setHc02(bi.hc02a.isChecked() ? "1"
                 : bi.hc02b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setHc03( bi.hc03a.isChecked() ? "1"
+        form.setHc03(bi.hc03a.isChecked() ? "1"
                 : bi.hc03b.isChecked() ? "2"
                 :  "-1");
 
@@ -123,7 +118,7 @@ public class SectionH3Activity extends AppCompatActivity {
 
         form.setHc0696(bi.hc0696.isChecked() ? "96" : "-1");
 
-        form.setHc0696x(bi.hc0696x.getText().toString());*/
+        form.setHc0696x(bi.hc0696x.getText().toString());
 
     }
 
@@ -143,29 +138,5 @@ public class SectionH3Activity extends AppCompatActivity {
         Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
 
-
-    public void showTooltip(@NotNull View view) {
-        if (view.getId() != View.NO_ID) {
-            String package_name = getApplicationContext().getPackageName();
-            String infoid = view.getResources().getResourceName(view.getId()).replace(package_name + ":id/q_", "");
-            int stringRes = this.getResources().getIdentifier(infoid + "_info", "string", getApplicationContext().getPackageName());
-            //String infoText = (String) getResources().getText(stringRes);
-            if (stringRes != 0) {
-                String infoText = (String) getResources().getText(stringRes);
-
-                new AlertDialog.Builder(this)
-                        .setTitle("Info: " + infoid.toUpperCase())
-                        .setMessage(infoText)
-                        .setIcon(android.R.drawable.ic_dialog_info)
-                        .show();
-            } else {
-                Toast.makeText(this, "No information available on this question.", Toast.LENGTH_SHORT).show();
-            }
-
-        } else {
-            Toast.makeText(this, "No ID Associated with this question.", Toast.LENGTH_SHORT).show();
-
-        }
-    }
 
 }
