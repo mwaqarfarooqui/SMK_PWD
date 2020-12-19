@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -14,11 +15,15 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI1Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 
@@ -67,7 +72,7 @@ public class SectionI1Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addPSC(psc);
         psc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
@@ -75,20 +80,15 @@ public class SectionI1Activity extends AppCompatActivity {
             db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_UID, psc.get_UID());
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             startActivity(new Intent(this, SectionI2Activity.class));
             finish();
@@ -101,17 +101,17 @@ public class SectionI1Activity extends AppCompatActivity {
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-       /* form.setIa01( bi.ia01a.isChecked() ? "1"
+        form.setIa01(bi.ia01a.isChecked() ? "1"
                 : bi.ia01b.isChecked() ? "2"
                 : bi.ia01c.isChecked() ? "3"
-                :  "-1");
+                : "-1");
 
-        form.setIa02( bi.ia02a.isChecked() ? "1"
+        form.setIa02(bi.ia02a.isChecked() ? "1"
                 : bi.ia02b.isChecked() ? "2"
                 : bi.ia02c.isChecked() ? "3"
-                :  "-1");
+                : "-1");
 
         form.setIa03( bi.ia03a.isChecked() ? "1"
                 : bi.ia03b.isChecked() ? "2"
@@ -134,8 +134,6 @@ public class SectionI1Activity extends AppCompatActivity {
         form.setIa07( bi.ia07a.isChecked() ? "1"
                 : bi.ia07b.isChecked() ? "2"
                 :  "-1");
-*/
-
 
     }
 
