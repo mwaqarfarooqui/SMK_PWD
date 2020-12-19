@@ -9,11 +9,13 @@ import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF14Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionF14Activity extends AppCompatActivity {
@@ -28,27 +30,26 @@ public class SectionF14Activity extends AppCompatActivity {
         setupSkips();
     }
 
+
     private void setupSkips() {
     }
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, fc.getsF());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, form.getsF());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-       /* JSONObject json = new JSONObject();
-        json.put("fn01", bi.fn01a.isChecked() ? "1"
+        form.setFn01(bi.fn01a.isChecked() ? "1"
                 : bi.fn01b.isChecked() ? "2"
                 : bi.fn01c.isChecked() ? "3"
                 : bi.fn01d.isChecked() ? "4"
@@ -56,16 +57,15 @@ public class SectionF14Activity extends AppCompatActivity {
                 : bi.fn01f.isChecked() ? "6"
                 : "-1");
 
-        json.put("fn02", bi.fn02a.isChecked() ? "1"
+        form.setFn02(bi.fn02a.isChecked() ? "1"
                 : bi.fn02b.isChecked() ? "2"
                 : "-1");
 
-        json.put("fn03", bi.fn03a.isChecked() ? "1"
+        form.setFn03(bi.fn03a.isChecked() ? "1"
                 : bi.fn03b.isChecked() ? "2"
                 : "-1");
 
-
-        try {
+        /*try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
 
             MainApp.fc.setsF(String.valueOf(json_merge));
@@ -84,11 +84,7 @@ public class SectionF14Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionF15Activity.class));
@@ -100,8 +96,11 @@ public class SectionF14Activity extends AppCompatActivity {
         openSectionMainActivity(this, "F");
     }
 
+
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
+
+
 }
