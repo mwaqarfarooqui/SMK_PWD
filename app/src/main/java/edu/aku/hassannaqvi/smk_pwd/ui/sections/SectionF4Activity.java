@@ -9,11 +9,13 @@ import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
+import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionF4Binding;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 
@@ -28,33 +30,32 @@ public class SectionF4Activity extends AppCompatActivity {
         bi.setCallback(this);
     }
 
+
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, fc.getsF());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, form.getsF());
         if (updcount == 1) {
             return true;
         } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-        /*JSONObject json = new JSONObject();
-        json.put("fd01", bi.fd01a.isChecked() ? "1"
+        form.setFd01(bi.fd01a.isChecked() ? "1"
                 : bi.fd01b.isChecked() ? "2"
                 : bi.fd01c.isChecked() ? "3"
                 : bi.fd01d.isChecked() ? "4"
                 : bi.fd0196.isChecked() ? "96"
                 : "-1");
 
-        json.put("fd0196x", bi.fd0196x.getText().toString());
+        form.setFd0196x(bi.fd0196x.getText().toString());
 
 
-        try {
+        /*try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
 
             MainApp.fc.setsF(String.valueOf(json_merge));
@@ -73,11 +74,7 @@ public class SectionF4Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        SaveDraft();
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionF5Activity.class));
@@ -85,9 +82,11 @@ public class SectionF4Activity extends AppCompatActivity {
     }
 
 
+
     public void BtnEnd() {
         openSectionMainActivity(this, "F");
     }
+
 
     @Override
     public void onBackPressed() {

@@ -37,13 +37,12 @@
 
                     <TextView
                         style="@style/textView3Head"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/secfdtitle" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
 
             <!-- fd01  Radio   -->
