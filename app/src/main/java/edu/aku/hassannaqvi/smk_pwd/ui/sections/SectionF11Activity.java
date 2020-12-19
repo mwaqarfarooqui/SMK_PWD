@@ -39,12 +39,11 @@ public class SectionF11Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
-        radioGroupListener(bi.fk01, bi.fk01b, bi.llfk1002);
+        rgListener(bi.fk01, bi.fk01b, bi.llfk1002);
     }
 
 
-
-    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+    public void rgListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
         rg.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(vg);
             vg.setVisibility(View.VISIBLE);
