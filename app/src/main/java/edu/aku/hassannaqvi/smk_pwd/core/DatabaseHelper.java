@@ -200,10 +200,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 ContentValues values = new ContentValues();
 
-                values.put(HFContract.singleHF.COLUMN_DIST_ID, Vc.getDist_id());
-                values.put(HFContract.singleHF.COLUMN_DISTRICT, Vc.getDistrict());
-                values.put(HFContract.singleHF.COLUMN_PRO_ID, Vc.getPro_id());
                 values.put(HFContract.singleHF.COLUMN_PROVINCE, Vc.getProvince());
+                values.put(HFContract.singleHF.COLUMN_PRO_ID, Vc.getPro_id());
+                values.put(HFContract.singleHF.COLUMN_DISTRICT, Vc.getDistrict());
+                values.put(HFContract.singleHF.COLUMN_DIST_ID, Vc.getDist_id());
+                values.put(HFContract.singleHF.COLUMN_TEHSIL, Vc.getTehsil());
+                values.put(HFContract.singleHF.COLUMN_TEHSIL_ID, Vc.getTehsil_id());
+                values.put(HFContract.singleHF.COLUMN_UC_NAME, Vc.getUc_name());
+                values.put(HFContract.singleHF.COLUMN_UC_ID, Vc.getUc_id());
+                values.put(HFContract.singleHF.COLUMN_HF_NAME, Vc.getHf_name());
+                values.put(HFContract.singleHF.COLUMN_HFCODE, Vc.getHfcode());
 
                 db.insert(HFContract.singleHF.TABLE_NAME, null, values);
             }
@@ -396,23 +402,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Collection<HFContract> getAllHFs(String tehsilCode) {
+    public Collection<HFContract> getAllHFs(String uc_id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
                 HFContract.singleHF.COLUMN_PROVINCE,
                 HFContract.singleHF.COLUMN_PRO_ID,
+                HFContract.singleHF.COLUMN_DISTRICT,
                 HFContract.singleHF.COLUMN_DIST_ID,
-                HFContract.singleHF.COLUMN_DISTRICT
+                HFContract.singleHF.COLUMN_TEHSIL,
+                HFContract.singleHF.COLUMN_TEHSIL_ID,
+                HFContract.singleHF.COLUMN_UC_NAME,
+                HFContract.singleHF.COLUMN_UC_ID,
+                HFContract.singleHF.COLUMN_HF_NAME,
+                HFContract.singleHF.COLUMN_HFCODE
         };
 
-        String whereClause = HFContract.singleHF.COLUMN_PROVINCE + "=?";
-        String[] whereArgs = new String[]{tehsilCode};
+        String whereClause = HFContract.singleHF.COLUMN_UC_ID + "=?";
+        String[] whereArgs = new String[]{uc_id};
         String groupBy = null;
         String having = null;
 
         String orderBy =
-                HFContract.singleHF.COLUMN_DISTRICT + " ASC";
+                HFContract.singleHF.COLUMN_UC_ID + " ASC";
 
         Collection<HFContract> allHF = new ArrayList<>();
         try {
@@ -441,18 +453,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Collection<HFContract> getAllHFs(String tehsilCode, String hfType) {
+    public Collection<HFContract> getHFbyDist(String dist_id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
                 HFContract.singleHF.COLUMN_PROVINCE,
                 HFContract.singleHF.COLUMN_PRO_ID,
+                HFContract.singleHF.COLUMN_DISTRICT,
                 HFContract.singleHF.COLUMN_DIST_ID,
-                HFContract.singleHF.COLUMN_DISTRICT
+                HFContract.singleHF.COLUMN_TEHSIL,
+                HFContract.singleHF.COLUMN_TEHSIL_ID,
+                HFContract.singleHF.COLUMN_UC_NAME,
+                HFContract.singleHF.COLUMN_UC_ID,
+                HFContract.singleHF.COLUMN_HF_NAME,
+                HFContract.singleHF.COLUMN_HFCODE
         };
 
-        String whereClause = HFContract.singleHF.COLUMN_PROVINCE + "=?" + " AND " + HFContract.singleHF.COLUMN_PRO_ID + "=?";
-        String[] whereArgs = new String[]{tehsilCode, hfType};
+        String whereClause = HFContract.singleHF.COLUMN_DIST_ID + "=?";
+        String[] whereArgs = new String[]{dist_id};
         String groupBy = null;
         String having = null;
 

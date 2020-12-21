@@ -162,7 +162,7 @@ public class HFContract {
 
     public static abstract class singleHF implements BaseColumns {
         public static final String _ID = "_id";
-        public static final String TABLE_NAME = "healthfacilities";
+        public static final String TABLE_NAME = "health_facilities";
         public static final String COLUMN_PROVINCE = "province";
         public static final String COLUMN_PRO_ID = "pro_id";
         public static final String COLUMN_DISTRICT = "district";

@@ -20,10 +20,7 @@ import java.net.URL;
 import java.util.List;
 
 import edu.aku.hassannaqvi.smk_pwd.adapter.SyncListAdapter;
-import edu.aku.hassannaqvi.smk_pwd.contracts.DistrictContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.HFContract;
-import edu.aku.hassannaqvi.smk_pwd.contracts.TehsilsContract;
-import edu.aku.hassannaqvi.smk_pwd.contracts.UCsContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.UsersContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
@@ -65,7 +62,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 1;
                 break;
-            case "Districts":
+            /*case "Districts":
                 position = 2;
                 break;
             case "Tehsils":
@@ -73,9 +70,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 break;
             case "UCs":
                 position = 4;
-                break;
+                break;*/
             case "HealthFacilities":
-                position = 5;
+                position = 2;
                 break;
         }
         list.get(position).settableName(syncClass);
@@ -105,7 +102,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 1;
                 break;
-            case "Districts":
+            /*case "Districts":
                 position = 2;
                 break;
             case "Tehsils":
@@ -113,9 +110,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 break;
             case "UCs":
                 position = 4;
-                break;
+                break;*/
             case "HealthFacilities":
-                position = 5;
+                position = 2;
                 break;
         }
         list.get(position).setstatus("Syncing");
@@ -142,7 +139,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable._URI);
                     position = 1;
                     break;
-                case "Districts":
+                /*case "Districts":
                     url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
                     tableName = DistrictContract.singleDistrict.TABLE_NAME;
                     position = 2;
@@ -156,11 +153,11 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
                     tableName = UCsContract.singleUCs.TABLE_NAME;
                     position = 4;
-                    break;
+                    break;*/
                 case "HealthFacilities":
                     url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
                     tableName = HFContract.singleHF.TABLE_NAME;
-                    position = 5;
+                    position = 2;
                     break;
             }
             Log.d(TAG, "doInBackground: " + url);
@@ -169,9 +166,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
             switch (syncClass) {
                 case "User":
-                case "Districts":
+                /*case "Districts":
                 case "Tehsils":
-                case "UCs":
+                case "UCs":*/
                 case "HealthFacilities":
                     urlConnection.setRequestMethod("POST");
                     urlConnection.setDoOutput(true);
@@ -239,7 +236,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             if (insertCount == 1) jsonArray.put("1");
                             position = 1;
                             break;
-                        case "Districts":
+                        /*case "Districts":
                             jsonArray = new JSONArray(result);
                             position = 2;
                             db.syncDistricts(jsonArray);
@@ -253,11 +250,11 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             jsonArray = new JSONArray(result);
                             position = 4;
                             db.syncUCs(jsonArray);
-                            break;
+                            break;*/
                         case "HealthFacilities":
                             jsonArray = new JSONArray(result);
                             db.syncHF(jsonArray);
-                            position = 5;
+                            position = 2;
                             break;
                     }
 
