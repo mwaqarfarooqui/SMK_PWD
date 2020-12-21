@@ -109,6 +109,7 @@ public final class CreateTable {
             + UsersContract.singleUser._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + UsersContract.singleUser.ROW_USERNAME + " TEXT,"
             + UsersContract.singleUser.ROW_PASSWORD + " TEXT,"
+            + UsersContract.singleUser.DESIGNATION + " TEXT,"
             + UsersContract.singleUser.DIST_ID + " TEXT"
             + " );";
 
@@ -144,9 +145,15 @@ public final class CreateTable {
 
     public static final String SQL_CREATE_HF = "CREATE TABLE " + HFContract.singleHF.TABLE_NAME + "("
             + HFContract.singleHF._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + HFContract.singleHF.COLUMN_HF_CODE + " TEXT,"
-            + HFContract.singleHF.COLUMN_TEHSIL_CODE + " TEXT,"
+            + HFContract.singleHF.COLUMN_PROVINCE + " TEXT,"
+            + HFContract.singleHF.COLUMN_PRO_ID + " TEXT,"
+            + HFContract.singleHF.COLUMN_DISTRICT + " TEXT,"
+            + HFContract.singleHF.COLUMN_DIST_ID + " TEXT,"
+            + HFContract.singleHF.COLUMN_TEHSIL + " TEXT,"
+            + HFContract.singleHF.COLUMN_TEHSIL_ID + " TEXT,"
+            + HFContract.singleHF.COLUMN_UC_NAME + " TEXT,"
+            + HFContract.singleHF.COLUMN_UC_ID + " TEXT,"
             + HFContract.singleHF.COLUMN_HF_NAME + " TEXT,"
-            + HFContract.singleHF.COLUMN_HF_TYPE + " TEXT );";
+            + HFContract.singleHF.COLUMN_HFCODE + " TEXT );";
 
 }

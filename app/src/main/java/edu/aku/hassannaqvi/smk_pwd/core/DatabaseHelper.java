@@ -96,6 +96,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 values.put(UsersContract.singleUser.ROW_USERNAME, user.getUserName());
                 values.put(UsersContract.singleUser.ROW_PASSWORD, user.getPassword());
+                values.put(UsersContract.singleUser.DESIGNATION, user.getDESIGNATION());
                 values.put(UsersContract.singleUser.DIST_ID, user.getDIST_ID());
                 db.insert(UsersContract.singleUser.TABLE_NAME, null, values);
             }
@@ -199,10 +200,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 ContentValues values = new ContentValues();
 
-                values.put(HFContract.singleHF.COLUMN_HF_CODE, Vc.getHf_code());
-                values.put(HFContract.singleHF.COLUMN_HF_NAME, Vc.getHf_name());
-                values.put(HFContract.singleHF.COLUMN_HF_TYPE, Vc.getHf_type());
-                values.put(HFContract.singleHF.COLUMN_TEHSIL_CODE, Vc.getTehsil_code());
+                values.put(HFContract.singleHF.COLUMN_DIST_ID, Vc.getDist_id());
+                values.put(HFContract.singleHF.COLUMN_DISTRICT, Vc.getDistrict());
+                values.put(HFContract.singleHF.COLUMN_PRO_ID, Vc.getPro_id());
+                values.put(HFContract.singleHF.COLUMN_PROVINCE, Vc.getProvince());
 
                 db.insert(HFContract.singleHF.TABLE_NAME, null, values);
             }
@@ -399,19 +400,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                HFContract.singleHF.COLUMN_TEHSIL_CODE,
-                HFContract.singleHF.COLUMN_HF_TYPE,
-                HFContract.singleHF.COLUMN_HF_CODE,
-                HFContract.singleHF.COLUMN_HF_NAME
+                HFContract.singleHF.COLUMN_PROVINCE,
+                HFContract.singleHF.COLUMN_PRO_ID,
+                HFContract.singleHF.COLUMN_DIST_ID,
+                HFContract.singleHF.COLUMN_DISTRICT
         };
 
-        String whereClause = HFContract.singleHF.COLUMN_TEHSIL_CODE + "=?";
+        String whereClause = HFContract.singleHF.COLUMN_PROVINCE + "=?";
         String[] whereArgs = new String[]{tehsilCode};
         String groupBy = null;
         String having = null;
 
         String orderBy =
-                HFContract.singleHF.COLUMN_HF_NAME + " ASC";
+                HFContract.singleHF.COLUMN_DISTRICT + " ASC";
 
         Collection<HFContract> allHF = new ArrayList<>();
         try {
@@ -444,19 +445,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                HFContract.singleHF.COLUMN_TEHSIL_CODE,
-                HFContract.singleHF.COLUMN_HF_TYPE,
-                HFContract.singleHF.COLUMN_HF_CODE,
-                HFContract.singleHF.COLUMN_HF_NAME
+                HFContract.singleHF.COLUMN_PROVINCE,
+                HFContract.singleHF.COLUMN_PRO_ID,
+                HFContract.singleHF.COLUMN_DIST_ID,
+                HFContract.singleHF.COLUMN_DISTRICT
         };
 
-        String whereClause = HFContract.singleHF.COLUMN_TEHSIL_CODE + "=?" + " AND " + HFContract.singleHF.COLUMN_HF_TYPE + "=?";
+        String whereClause = HFContract.singleHF.COLUMN_PROVINCE + "=?" + " AND " + HFContract.singleHF.COLUMN_PRO_ID + "=?";
         String[] whereArgs = new String[]{tehsilCode, hfType};
         String groupBy = null;
         String having = null;
 
         String orderBy =
-                HFContract.singleHF.COLUMN_HF_NAME + " ASC";
+                HFContract.singleHF.COLUMN_DISTRICT + " ASC";
 
         Collection<HFContract> allHF = new ArrayList<>();
         try {
@@ -1426,6 +1427,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
     }
 
+
     public int getStaffingsByUUID(String UUID) {
         String countQuery = "SELECT  * FROM " + StaffingTable.TABLE_NAME + " WHERE " + StaffingTable.COLUMN_UUID + " = '" + UUID + "' AND " + StaffingTable.COLUMN_STATUS + " = '1'";
         SQLiteDatabase db = this.getReadableDatabase();
@@ -1434,6 +1436,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         return count;
     }
+
 
     public int getPatientsByUUID(String UUID) {
         String countQuery = "SELECT  * FROM " + PatientsTable.TABLE_NAME + " WHERE " + PatientsTable.COLUMN_UUID + " = '" + UUID + "' AND " + PatientsTable.COLUMN_STATUS + " = '1'";
@@ -1490,6 +1493,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return alc;
         }
     }
+
 
     public ArrayList<Forms> getUnclosedForms() {
         SQLiteDatabase db = this.getReadableDatabase();
