@@ -83,10 +83,6 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     public void populateSpinner(final Context context) {
-        // Spinner Drop down elements
-        //Collection<UsersContract> us = db.getUserByName(MainApp.userName);
-        //Collection<UsersContract> wq = Collections.singleton(db.getDistByUserName());
-
 
         tehsilNames = new ArrayList<>();
         tehsilCodes = new ArrayList<>();
@@ -95,7 +91,6 @@ public class SectionAActivity extends AppCompatActivity {
         tehsilCodes.add("....");
 
         Collection<HFContract> dc = MainApp.Designation.contains("Test User") ? db.getAllTehsil(MainApp.DIST_ID) : db.getAllTehsils(MainApp.DIST_ID);
-        //Collection<HFContract> dc = db.getTehsils();
 
         for (HFContract d : dc) {
             tehsilNames.add(d.getTehsil());
