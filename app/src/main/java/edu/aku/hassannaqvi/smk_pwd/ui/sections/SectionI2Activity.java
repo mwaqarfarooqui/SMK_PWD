@@ -21,7 +21,6 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.jetbrains.annotations.NotNull;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
@@ -107,12 +106,8 @@ public class SectionI2Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        long updcount = db.addPSC(psc);
-        psc.set_ID(String.valueOf(updcount));
-        if (updcount > 0) {
-            psc.set_UID(psc.getDeviceID() + psc.get_ID());
-            db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_UID, psc.get_UID());
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, form.sItoString());
+        int updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_SI, psc.sItoString());
+        if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();

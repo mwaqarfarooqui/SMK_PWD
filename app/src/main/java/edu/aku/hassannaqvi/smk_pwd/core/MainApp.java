@@ -25,8 +25,8 @@ import com.jakewharton.threetenabp.AndroidThreeTen;
 import java.util.List;
 
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
-import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
 import edu.aku.hassannaqvi.smk_pwd.models.Forms;
+import edu.aku.hassannaqvi.smk_pwd.models.Patients;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.EndingActivity;
 import kotlin.Pair;
 
@@ -78,7 +78,7 @@ public class MainApp extends Application {
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static FormsContract fc;
-    public static PatientsContract psc;
+    public static Patients psc;
     public static String userName = "0000";
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";

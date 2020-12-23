@@ -28,6 +28,7 @@ import edu.aku.hassannaqvi.smk_pwd.contracts.UCsContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.UsersContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.smk_pwd.models.Forms;
+import edu.aku.hassannaqvi.smk_pwd.models.Patients;
 
 import static edu.aku.hassannaqvi.smk_pwd.contracts.StaffingContract.StaffingTable;
 import static edu.aku.hassannaqvi.smk_pwd.utils.CreateTable.DATABASE_NAME;
@@ -983,7 +984,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Long addPSC(PatientsContract psc) {
+    public Long addPSC(Patients psc) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
@@ -993,23 +994,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(PatientsTable.COLUMN_UID, psc.get_UID());
         values.put(PatientsTable.COLUMN_UUID, psc.get_UUID());
         values.put(PatientsTable.COLUMN_SYSDATE, psc.getSysdate());
-        values.put(PatientsTable.COLUMN_USERNAME, psc.getUserName());
+        values.put(PatientsTable.COLUMN_USERNAME, psc.getUsername());
         values.put(PatientsTable.COLUMN_SERIALNO, psc.getSerialno());
         values.put(PatientsTable.COLUMN_DISTRICT_CODE, psc.getDistrictCode());
-        values.put(PatientsTable.COLUMN_DISTRICT_TYPE, psc.getDistrictType());
         values.put(PatientsTable.COLUMN_TEHSIL_CODE, psc.getTehsilCode());
         values.put(PatientsTable.COLUMN_UC_CODE, psc.getUcCode());
         values.put(PatientsTable.COLUMN_HF_CODE, psc.getHfCode());
-        values.put(PatientsTable.COLUMN_SI1, psc.getsI1());
-        values.put(PatientsTable.COLUMN_SI2, psc.getsI2());
-        values.put(PatientsTable.COLUMN_SI3, psc.getsI3());
-        values.put(PatientsTable.COLUMN_SI4, psc.getsI4());
+        values.put(PatientsTable.COLUMN_SI, psc.getsI());
         values.put(PatientsTable.COLUMN_DEVICEID, psc.getDeviceID());
         values.put(PatientsTable.COLUMN_DEVICETAGID, psc.getDevicetagID());
-        values.put(PatientsTable.COLUMN_STATUS, psc.getStatus());
+        values.put(PatientsTable.COLUMN_ISTATUS, psc.getIstatus());
         values.put(PatientsTable.COLUMN_SYNCED, psc.getSynced());
         values.put(PatientsTable.COLUMN_SYNCED_DATE, psc.getSynced_date());
         values.put(PatientsTable.COLUMN_APPVERSION, psc.getAppversion());
+        values.put(PatientsTable.COLUMN_PROVINCE, psc.getProvince());
+        values.put(PatientsTable.COLUMN_PROVINCE_CODE, psc.getProvinceCode());
+        values.put(PatientsTable.COLUMN_DISTRICT, psc.getDistrict());
+        values.put(PatientsTable.COLUMN_DISTRICT_CODE, psc.getDistrictCode());
+        values.put(PatientsTable.COLUMN_TEHSIL, psc.getTehsil());
+        values.put(PatientsTable.COLUMN_TEHSIL_CODE, psc.getTehsilCode());
+        values.put(PatientsTable.COLUMN_UC, psc.getUc());
+        values.put(PatientsTable.COLUMN_UC_CODE, psc.getUcCode());
+        values.put(PatientsTable.COLUMN_HF, psc.getHf());
+        values.put(PatientsTable.COLUMN_HF_CODE, psc.getHfCode());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
@@ -1330,7 +1337,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         };
 
         String whereClause;
-                whereClause = FormsTable.COLUMN_SYNCED + " is null AND " + FormsTable.COLUMN_ISTATUS + "=?";
+        whereClause = FormsTable.COLUMN_SYNCED + " is null AND " + FormsTable.COLUMN_ISTATUS + "=?";
 
         String[] whereArgs = new String[]{"1"};
 
@@ -1427,34 +1434,40 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Collection<PatientsContract> getUnsyncedPatients() {
+    public Collection<Patients> getUnsyncedPatients() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                PatientsTable._ID,
                 PatientsTable.COLUMN_UID,
                 PatientsTable.COLUMN_UUID,
                 PatientsTable.COLUMN_SYSDATE,
                 PatientsTable.COLUMN_USERNAME,
                 PatientsTable.COLUMN_SERIALNO,
                 PatientsTable.COLUMN_DISTRICT_CODE,
-                PatientsTable.COLUMN_DISTRICT_TYPE,
                 PatientsTable.COLUMN_TEHSIL_CODE,
                 PatientsTable.COLUMN_UC_CODE,
                 PatientsTable.COLUMN_HF_CODE,
-                PatientsTable.COLUMN_SI1,
-                PatientsTable.COLUMN_SI2,
-                PatientsTable.COLUMN_SI3,
-                PatientsTable.COLUMN_SI4,
+                PatientsTable.COLUMN_SI,
                 PatientsTable.COLUMN_DEVICEID,
                 PatientsTable.COLUMN_DEVICETAGID,
-                PatientsTable.COLUMN_STATUS,
+                PatientsTable.COLUMN_ISTATUS,
                 PatientsTable.COLUMN_SYNCED,
                 PatientsTable.COLUMN_SYNCED_DATE,
                 PatientsTable.COLUMN_APPVERSION,
+                PatientsTable.COLUMN_PROVINCE,
+                PatientsTable.COLUMN_PROVINCE_CODE,
+                PatientsTable.COLUMN_DISTRICT,
+                PatientsTable.COLUMN_DISTRICT_CODE,
+                PatientsTable.COLUMN_TEHSIL,
+                PatientsTable.COLUMN_TEHSIL_CODE,
+                PatientsTable.COLUMN_UC,
+                PatientsTable.COLUMN_UC_CODE,
+                PatientsTable.COLUMN_HF,
+                PatientsTable.COLUMN_HF_CODE,
+
         };
 
-        String whereClause = "(" + PatientsContract.PatientsTable.COLUMN_SYNCED + " is null or " + PatientsContract.PatientsTable.COLUMN_SYNCED + " ='')  AND " + PatientsContract.PatientsTable.COLUMN_STATUS + " =?";
+        String whereClause = "(" + PatientsContract.PatientsTable.COLUMN_SYNCED + " is null or " + PatientsContract.PatientsTable.COLUMN_SYNCED + " ='')  AND " + PatientsTable.COLUMN_ISTATUS + " =?";
 
         String[] whereArgs = new String[]{"1"};
 
@@ -1464,7 +1477,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String orderBy =
                 PatientsContract.PatientsTable.COLUMN_ID + " ASC";
 
-        Collection<PatientsContract> allFC = new ArrayList<PatientsContract>();
+        Collection<Patients> allFC = new ArrayList<Patients>();
         try {
             c = db.query(
                     PatientsContract.PatientsTable.TABLE_NAME,  // The table to query
@@ -1476,8 +1489,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                PatientsContract psc = new PatientsContract();
-                allFC.add(psc.hydrate(c));
+                Patients psc = new Patients();
+                allFC.add(psc.Hydrate(c));
             }
         } finally {
             if (c != null) {
@@ -1735,7 +1748,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     public int getPatientsByUUID(String UUID) {
-        String countQuery = "SELECT  * FROM " + PatientsTable.TABLE_NAME + " WHERE " + PatientsTable.COLUMN_UUID + " = '" + UUID + "' AND " + PatientsTable.COLUMN_STATUS + " = '1'";
+        String countQuery = "SELECT  * FROM " + PatientsTable.TABLE_NAME + " WHERE " + PatientsTable.COLUMN_UUID + " = '" + UUID + "' AND " + PatientsTable.COLUMN_ISTATUS + " = '1'";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
         int count = cursor.getCount();
