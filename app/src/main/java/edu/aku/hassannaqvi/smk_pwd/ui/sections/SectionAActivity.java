@@ -117,7 +117,7 @@ public class SectionAActivity extends AppCompatActivity {
                 ucNames.add("....");
                 ucCodes.add("....");
 
-                Collection<HFContract> pc = db.getAllUCs(tehsilCodes.get(position));
+                Collection<HFContract> pc = MainApp.Designation.contains("Test User") ? db.getAllUC(tehsilCodes.get(position)) : db.getAllUCs(tehsilCodes.get(position));
                 for (HFContract p : pc) {
                     ucNames.add(p.getUc_name());
                     ucCodes.add(p.getUc_id());
