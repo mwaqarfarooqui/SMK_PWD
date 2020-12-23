@@ -94,7 +94,7 @@ public class SectionAActivity extends AppCompatActivity {
         tehsilNames.add("....");
         tehsilCodes.add("....");
 
-        Collection<HFContract> dc = db.getAllTehsils(MainApp.DIST_ID);
+        Collection<HFContract> dc = MainApp.Designation.contains("Test User") ? db.getAllTehsil(MainApp.DIST_ID) : db.getAllTehsils(MainApp.DIST_ID);
         //Collection<HFContract> dc = db.getTehsils();
 
         for (HFContract d : dc) {
