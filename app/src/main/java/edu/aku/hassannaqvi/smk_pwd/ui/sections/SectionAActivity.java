@@ -3,23 +3,25 @@ package edu.aku.hassannaqvi.smk_pwd.ui.sections;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
+import edu.aku.hassannaqvi.smk_pwd.contracts.HFContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionABinding;
@@ -32,13 +34,9 @@ import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 public class SectionAActivity extends AppCompatActivity {
 
     ActivitySectionABinding bi;
-    private List<String> districtNames, tehsilNames, ucNames;
-    private List<String> districtCodes, tehsilCodes, ucCodes;
-    private List<String> districtTypes;
+    private List<String> hfNames, tehsilNames, ucNames;
+    private List<String> hfCodes, tehsilCodes, ucCodes;
     private DatabaseHelper db;
-
-    private List<String> hfNamesPrv, hfNamesPub;
-    private Map<String, String> hfMap;
     private boolean fcFlag = false;
 
     @Override
@@ -48,7 +46,6 @@ public class SectionAActivity extends AppCompatActivity {
         bi.setCallback(this);
         //bi.setFormsContract(MainApp.fc);
         initializingComponents();
-        initializeHF();
     }
 
 
@@ -60,7 +57,7 @@ public class SectionAActivity extends AppCompatActivity {
         bi.aa01m.setMaxvalue(Float.parseFloat(new SimpleDateFormat("MM", Locale.getDefault()).format(new Date().getTime())));
         bi.aa01y.setMaxvalue(Float.parseFloat(new SimpleDateFormat("yyyy", Locale.getDefault()).format(new Date().getTime())));*/
 
-        bi.aa02.setOnCheckedChangeListener((radioGroup, i) -> {
+        /*bi.aa02.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(bi.fldGrpCVaa03, false);
             if (i == bi.aa02a.getId()) {
                 bi.aa03a.setEnabled(true);
@@ -76,7 +73,7 @@ public class SectionAActivity extends AppCompatActivity {
                 bi.aa03i.setEnabled(true);
                 bi.aa03j.setEnabled(true);
             }
-        });
+        });*/
 
         // Databinding Edit Mode (only in first activity for every contract)
         form = new Forms();
@@ -85,24 +82,84 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
 
-    private void initializeHF() {
-        //For HF
-        hfNamesPrv = new ArrayList<String>() {
-            {
-                add("....");
-            }
-        };
-        hfNamesPub = new ArrayList<String>() {
-            {
-                add("....");
-            }
-        };
-        hfMap = new HashMap<>();
-    }
-
-
     public void populateSpinner(final Context context) {
         // Spinner Drop down elements
+        //Collection<UsersContract> us = db.getUserByName(MainApp.userName);
+        //Collection<UsersContract> wq = Collections.singleton(db.getDistByUserName());
+
+
+        tehsilNames = new ArrayList<>();
+        tehsilCodes = new ArrayList<>();
+
+        tehsilNames.add("....");
+        tehsilCodes.add("....");
+
+        Collection<HFContract> dc = db.getAllTehsils(MainApp.DIST_ID);
+        //Collection<HFContract> dc = db.getTehsils();
+
+        for (HFContract d : dc) {
+            tehsilNames.add(d.getTehsil());
+            tehsilCodes.add(d.getTehsil_id());
+        }
+
+        bi.aa04.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, tehsilNames));
+
+
+        bi.aa04.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (position == 0) return;
+
+                ucNames = new ArrayList<>();
+                ucCodes = new ArrayList<>();
+
+                ucNames.add("....");
+                ucCodes.add("....");
+
+                Collection<HFContract> pc = db.getAllUCs(tehsilCodes.get(position));
+                for (HFContract p : pc) {
+                    ucNames.add(p.getUc_name());
+                    ucCodes.add(p.getUc_id());
+                }
+
+                bi.aa05.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, ucNames));
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+
+        bi.aa05.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (position == 0) return;
+
+                hfNames = new ArrayList<>();
+                hfCodes = new ArrayList<>();
+
+                hfNames.add("....");
+                hfCodes.add("....");
+
+                Collection<HFContract> pc = MainApp.Designation.contains("Test User") ? db.getAllHF(ucCodes.get(position)) : db.getAllHFs(ucCodes.get(position));
+                for (HFContract p : pc) {
+                    hfNames.add(p.getHf_name());
+                    hfCodes.add(p.getHfcode());
+                }
+
+                bi.aa07.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, hfNames));
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
         /*districtNames = new ArrayList<>();
         districtCodes = new ArrayList<>();
         districtTypes = new ArrayList<>();
@@ -273,7 +330,7 @@ public class SectionAActivity extends AppCompatActivity {
         form.setAa01m(dA[1]);
         form.setAa01y(dA[2]);
 
-        form.setAa02(bi.aa02a.isChecked() ? "1"
+        /*form.setAa02(bi.aa02a.isChecked() ? "1"
                 : bi.aa02b.isChecked() ? "2"
                 : bi.aa02c.isChecked() ? "3"
                 : "-1");
@@ -288,11 +345,15 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.aa03h.isChecked() ? "206"
                 : bi.aa03i.isChecked() ? "301"
                 : bi.aa03j.isChecked() ? "302"
-                : "-1");
+                : "-1");*/
 
-        form.setAa04(bi.aa04.getText().toString());
-
-        form.setAa05(bi.aa05.getText().toString());
+        form.setDistrictCode(MainApp.DIST_ID);
+        form.setAa04(bi.aa04.getSelectedItem().toString());
+        form.setAa05(bi.aa05.getSelectedItem().toString());
+        form.setTehsil(bi.aa04.getSelectedItem().toString());
+        form.setTehsilCode(tehsilCodes.get(bi.aa04.getSelectedItemPosition()));
+        form.setUc(bi.aa05.getSelectedItem().toString());
+        form.setUcCode(ucCodes.get(bi.aa05.getSelectedItemPosition()));
 
         form.setAa06(bi.aa06a.isChecked() ? "1"
                 : bi.aa06b.isChecked() ? "2"
@@ -300,36 +361,10 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.aa06d.isChecked() ? "4"
                 : "-1");
 
-        form.setAa07(bi.aa07.getText().toString());
 
-        form.setAa08(bi.aa08a.isChecked() ? "1"
-                : bi.aa08b.isChecked() ? "2"
-                : "-1");
-
-        form.setAa09(bi.aa09a.isChecked() ? "1"
-                : bi.aa09b.isChecked() ? "2"
-                : "-1");
-
-        form.setAa10(bi.aa10.getText().toString());
-
-        form.setAa11(bi.aa11a.isChecked() ? "1"
-                : bi.aa11b.isChecked() ? "2"
-                : "-1");
-
-        form.setAa12(bi.aa12a.isChecked() ? "1"
-                : bi.aa12b.isChecked() ? "2"
-                : bi.aa12c.isChecked() ? "3"
-                : bi.aa12d.isChecked() ? "4"
-                : "-1");
-
-        form.setAa13(bi.aa13.getText().toString());
-
-        form.setAa14(bi.aa14a.isChecked() ? "1"
-                : bi.aa14b.isChecked() ? "2"
-                : bi.aa14c.isChecked() ? "3"
-                : bi.aa14d.isChecked() ? "4"
-                : bi.aa14e.isChecked() ? "5"
-                : "-1");
+        form.setAa07(bi.aa07.getSelectedItem().toString());
+        form.setHf(bi.aa07.getSelectedItem().toString());
+        form.setHfCode(hfCodes.get(bi.aa07.getSelectedItemPosition()));
 
     }
 

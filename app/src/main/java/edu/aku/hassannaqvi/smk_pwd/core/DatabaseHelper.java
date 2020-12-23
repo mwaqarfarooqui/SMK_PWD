@@ -314,27 +314,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Collection<TehsilsContract> getAllTehsils(String districtCode) {
+    public Collection<HFContract> getAllTehsils(String districtCode) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                TehsilsContract.singleTehsil.COLUMN_TEHSIL_CODE,
-                TehsilsContract.singleTehsil.COLUMN_TEHSIL_NAME,
-                TehsilsContract.singleTehsil.COLUMN_DISTRICT_CODE
+                "DISTINCT " + HFContract.singleHF.COLUMN_TEHSIL,
+                HFContract.singleHF.COLUMN_TEHSIL_ID
         };
 
-        String whereClause = TehsilsContract.singleTehsil.COLUMN_DISTRICT_CODE + "=?";
+        String whereClause = HFContract.singleHF.COLUMN_DIST_ID + "=?";
         String[] whereArgs = new String[]{districtCode};
         String groupBy = null;
         String having = null;
 
         String orderBy =
-                TehsilsContract.singleTehsil.COLUMN_TEHSIL_NAME + " ASC";
+                HFContract.singleHF.COLUMN_TEHSIL + " ASC";
 
-        Collection<TehsilsContract> allDC = new ArrayList<>();
+        Collection<HFContract> allDC = new ArrayList<>();
         try {
             c = db.query(
-                    TehsilsContract.singleTehsil.TABLE_NAME,  // The table to query
+                    HFContract.singleHF.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -343,8 +342,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                TehsilsContract dc = new TehsilsContract();
-                allDC.add(dc.HydrateTehsils(c));
+                HFContract dc = new HFContract();
+                allDC.add(dc.HydrateTehsil(c));
             }
         } finally {
             if (c != null) {
@@ -358,27 +357,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Collection<UCsContract> getAllUCs(String tehsilCode) {
+    public Collection<HFContract> getAllUCs(String tehsilCode) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                UCsContract.singleUCs.COLUMN_UC_CODE,
-                UCsContract.singleUCs.COLUMN_UC_NAME,
-                UCsContract.singleUCs.COLUMN_TEHSIL_CODE
+                "DISTINCT " + HFContract.singleHF.COLUMN_UC_NAME,
+                HFContract.singleHF.COLUMN_UC_ID
         };
 
-        String whereClause = UCsContract.singleUCs.COLUMN_TEHSIL_CODE + "=?";
+        String whereClause = HFContract.singleHF.COLUMN_TEHSIL_ID + "=?";
         String[] whereArgs = new String[]{tehsilCode};
         String groupBy = null;
         String having = null;
 
         String orderBy =
-                UCsContract.singleUCs.COLUMN_UC_NAME + " ASC";
+                HFContract.singleHF.COLUMN_UC_NAME + " ASC";
 
-        Collection<UCsContract> allDC = new ArrayList<>();
+        Collection<HFContract> allDC = new ArrayList<>();
         try {
             c = db.query(
-                    UCsContract.singleUCs.TABLE_NAME,  // The table to query
+                    HFContract.singleHF.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -387,8 +385,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                UCsContract dc = new UCsContract();
-                allDC.add(dc.HydrateUCs(c));
+                HFContract dc = new HFContract();
+                allDC.add(dc.HydrateUcs(c));
             }
         } finally {
             if (c != null) {
@@ -406,20 +404,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                HFContract.singleHF.COLUMN_PROVINCE,
-                HFContract.singleHF.COLUMN_PRO_ID,
-                HFContract.singleHF.COLUMN_DISTRICT,
-                HFContract.singleHF.COLUMN_DIST_ID,
-                HFContract.singleHF.COLUMN_TEHSIL,
-                HFContract.singleHF.COLUMN_TEHSIL_ID,
-                HFContract.singleHF.COLUMN_UC_NAME,
-                HFContract.singleHF.COLUMN_UC_ID,
-                HFContract.singleHF.COLUMN_HF_NAME,
+                "DISTINCT " + HFContract.singleHF.COLUMN_HF_NAME,
                 HFContract.singleHF.COLUMN_HFCODE
         };
 
-        String whereClause = HFContract.singleHF.COLUMN_UC_ID + "=?";
-        String[] whereArgs = new String[]{uc_id};
+        String whereClause = HFContract.singleHF.COLUMN_UC_ID + "=? AND " + HFContract.singleHF.COLUMN_HF_NAME + " NOT LIKE ?";
+        String[] whereArgs = new String[]{uc_id, "%Test%"};
         String groupBy = null;
         String having = null;
 
@@ -439,7 +429,50 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             );
             while (c.moveToNext()) {
                 HFContract hf = new HFContract();
-                allHF.add(hf.HydrateHF(c));
+                allHF.add(hf.HydrateHFs(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allHF;
+    }
+
+
+    public Collection<HFContract> getAllHF(String uc_id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                "DISTINCT " + HFContract.singleHF.COLUMN_HF_NAME,
+                HFContract.singleHF.COLUMN_HFCODE
+        };
+
+        String whereClause = HFContract.singleHF.COLUMN_UC_ID + "=? AND " + HFContract.singleHF.COLUMN_HF_NAME + " LIKE ?";
+        String[] whereArgs = new String[]{uc_id, "%Test%"};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                HFContract.singleHF.COLUMN_UC_ID + " ASC";
+
+        Collection<HFContract> allHF = new ArrayList<>();
+        try {
+            c = db.query(
+                    HFContract.singleHF.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                HFContract hf = new HFContract();
+                allHF.add(hf.HydrateHFs(c));
             }
         } finally {
             if (c != null) {
@@ -501,6 +534,165 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         return allHF;
+    }
+
+
+    public Collection<UsersContract> getUserByName(String name) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                UsersContract.singleUser.ROW_USERNAME,
+                UsersContract.singleUser.ROW_PASSWORD,
+                UsersContract.singleUser.DESIGNATION,
+                UsersContract.singleUser.DIST_ID
+        };
+
+        String whereClause = UsersContract.singleUser.ROW_USERNAME + "=?";
+        String[] whereArgs = new String[]{name};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                UsersContract.singleUser.DIST_ID + " ASC";
+
+        Collection<UsersContract> all = new ArrayList<>();
+        try {
+            c = db.query(
+                    UsersContract.singleUser.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                UsersContract us = new UsersContract();
+                all.add(us.Hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return all;
+    }
+
+
+    public Collection<UsersContract> getUserByName(String name, String desig) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                UsersContract.singleUser.ROW_USERNAME,
+                UsersContract.singleUser.ROW_PASSWORD,
+                UsersContract.singleUser.DESIGNATION,
+                UsersContract.singleUser.DIST_ID
+        };
+
+        String whereClause = UsersContract.singleUser.ROW_USERNAME + "=?" + "AND" + UsersContract.singleUser.DESIGNATION + "LIKE '%Test User%'";
+        String[] whereArgs = new String[]{name};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                UsersContract.singleUser.DIST_ID + " ASC";
+
+        Collection<UsersContract> all = new ArrayList<>();
+        try {
+            c = db.query(
+                    UsersContract.singleUser.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                UsersContract us = new UsersContract();
+                all.add(us.Hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return all;
+    }
+
+
+    public int getDistIDbyName(String name) {
+        /*String countQuery = "SELECT  * FROM " + UsersContract.singleUser.TABLE_NAME + " WHERE " + UsersContract.singleUser.ROW_USERNAME + " = '" + name +"'";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int count = cursor.getCount();
+        cursor.close();
+        return count;*/
+
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor mCursor = db.rawQuery("SELECT  * FROM " + UsersContract.singleUser.TABLE_NAME + " WHERE " + UsersContract.singleUser.ROW_USERNAME + " =?", new String[]{name});
+        if (mCursor != null) {
+            if (mCursor.getCount() > 0) {
+
+                if (mCursor.moveToFirst()) {
+                    MainApp.DIST_ID = mCursor.getString(mCursor.getColumnIndex(UsersContract.singleUser.DIST_ID));
+                    MainApp.Designation = mCursor.getString(mCursor.getColumnIndex(UsersContract.singleUser.DESIGNATION));
+                    mCursor.close();
+                }
+                //return true;
+            }
+        }
+
+        return 0;
+    }
+
+
+    public UsersContract getDistByUserName() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                UsersContract.singleUser.DIST_ID
+        };
+
+        String whereClause = UsersContract.singleUser.ROW_USERNAME + " Like ? ";
+        String[] whereArgs = new String[]{"%" + MainApp.userName + "%"};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = null;
+
+        UsersContract allVC = new UsersContract();
+        try {
+            c = db.query(
+                    UsersContract.singleUser.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allVC.Hydrate(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allVC;
     }
 
 

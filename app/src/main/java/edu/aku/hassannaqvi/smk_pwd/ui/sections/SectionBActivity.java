@@ -142,6 +142,7 @@ public class SectionBActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SA, form.sAtoString());
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SB, form.sBtoString());
         if (updcount == 1) {
             return true;
@@ -153,6 +154,35 @@ public class SectionBActivity extends AppCompatActivity {
 
 
     private void SaveDraft() {
+
+        form.setAa08(bi.aa08a.isChecked() ? "1"
+                : bi.aa08b.isChecked() ? "2"
+                : "-1");
+
+        form.setAa09(bi.aa09a.isChecked() ? "1"
+                : bi.aa09b.isChecked() ? "2"
+                : "-1");
+
+        form.setAa10(bi.aa10.getText().toString());
+
+        form.setAa11(bi.aa11a.isChecked() ? "1"
+                : bi.aa11b.isChecked() ? "2"
+                : "-1");
+
+        form.setAa12(bi.aa12a.isChecked() ? "1"
+                : bi.aa12b.isChecked() ? "2"
+                : bi.aa12c.isChecked() ? "3"
+                : bi.aa12d.isChecked() ? "4"
+                : "-1");
+
+        form.setAa13(bi.aa13.getText().toString());
+
+        form.setAa14(bi.aa14a.isChecked() ? "1"
+                : bi.aa14b.isChecked() ? "2"
+                : bi.aa14c.isChecked() ? "3"
+                : bi.aa14d.isChecked() ? "4"
+                : bi.aa14e.isChecked() ? "5"
+                : "-1");
 
         form.setBa01a1(bi.ba01a1.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a1.getText().toString());
         form.setBa01a2(bi.ba01a2.getText().toString().trim().isEmpty() ? "-1" : bi.ba01a2.getText().toString());

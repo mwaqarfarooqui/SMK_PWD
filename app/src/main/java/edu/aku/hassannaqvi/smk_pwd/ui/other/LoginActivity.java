@@ -662,6 +662,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                     MainApp.admin = mEmail.contains("@");
                     Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(iLogin);
+                    db.getDistIDbyName(MainApp.userName);
 
                 } else {
                     mPasswordView.setError(getString(R.string.error_incorrect_password));

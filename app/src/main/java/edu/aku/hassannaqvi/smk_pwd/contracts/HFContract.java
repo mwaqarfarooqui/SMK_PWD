@@ -53,6 +53,24 @@ public class HFContract {
         return this;
     }
 
+    public HFContract HydrateHFs(Cursor cursor) {
+        this.hf_name = cursor.getString(cursor.getColumnIndex(singleHF.COLUMN_HF_NAME));
+        this.hfcode = cursor.getString(cursor.getColumnIndex(singleHF.COLUMN_HFCODE));
+        return this;
+    }
+
+    public HFContract HydrateTehsil(Cursor cursor) {
+        this.tehsil = cursor.getString(cursor.getColumnIndex(singleHF.COLUMN_TEHSIL));
+        this.tehsil_id = cursor.getString(cursor.getColumnIndex(singleHF.COLUMN_TEHSIL_ID));
+        return this;
+    }
+
+    public HFContract HydrateUcs(Cursor cursor) {
+        this.uc_name = cursor.getString(cursor.getColumnIndex(singleHF.COLUMN_UC_NAME));
+        this.uc_id = cursor.getString(cursor.getColumnIndex(singleHF.COLUMN_UC_ID));
+        return this;
+    }
+
     public String getProvince() {
         return province;
     }

@@ -91,6 +91,7 @@ public class MainApp extends Application {
     public static String Mon3;
     public static SharedPreferences sharedPref;
     public static String DIST_ID = null;
+    public static String Designation = null;
     public static Pair<List<Integer>, List<String>> selectedChildren;
     protected static LocationManager locationManager;
 
