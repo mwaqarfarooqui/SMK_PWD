@@ -322,8 +322,51 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 HFContract.singleHF.COLUMN_TEHSIL_ID
         };
 
-        String whereClause = HFContract.singleHF.COLUMN_DIST_ID + "=?";
-        String[] whereArgs = new String[]{districtCode};
+        String whereClause = HFContract.singleHF.COLUMN_DIST_ID + "=? AND " + HFContract.singleHF.COLUMN_HF_NAME + " NOT LIKE ?";
+        String[] whereArgs = new String[]{districtCode, "%Test%"};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                HFContract.singleHF.COLUMN_TEHSIL + " ASC";
+
+        Collection<HFContract> allDC = new ArrayList<>();
+        try {
+            c = db.query(
+                    HFContract.singleHF.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                HFContract dc = new HFContract();
+                allDC.add(dc.HydrateTehsil(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allDC;
+    }
+
+
+    public Collection<HFContract> getAllTehsil(String districtCode) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                "DISTINCT " + HFContract.singleHF.COLUMN_TEHSIL,
+                HFContract.singleHF.COLUMN_TEHSIL_ID
+        };
+
+        String whereClause = HFContract.singleHF.COLUMN_DIST_ID + "=? AND " + HFContract.singleHF.COLUMN_HF_NAME + " LIKE ?";
+        String[] whereArgs = new String[]{districtCode, "%Test%"};
         String groupBy = null;
         String having = null;
 
@@ -365,8 +408,51 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 HFContract.singleHF.COLUMN_UC_ID
         };
 
-        String whereClause = HFContract.singleHF.COLUMN_TEHSIL_ID + "=?";
-        String[] whereArgs = new String[]{tehsilCode};
+        String whereClause = HFContract.singleHF.COLUMN_TEHSIL_ID + "=? AND " + HFContract.singleHF.COLUMN_HF_NAME + " NOT LIKE ?";
+        String[] whereArgs = new String[]{tehsilCode, "%Test%"};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                HFContract.singleHF.COLUMN_UC_NAME + " ASC";
+
+        Collection<HFContract> allDC = new ArrayList<>();
+        try {
+            c = db.query(
+                    HFContract.singleHF.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                HFContract dc = new HFContract();
+                allDC.add(dc.HydrateUcs(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allDC;
+    }
+
+
+    public Collection<HFContract> getAllUC(String tehsilCode) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                "DISTINCT " + HFContract.singleHF.COLUMN_UC_NAME,
+                HFContract.singleHF.COLUMN_UC_ID
+        };
+
+        String whereClause = HFContract.singleHF.COLUMN_TEHSIL_ID + "=? AND " + HFContract.singleHF.COLUMN_HF_NAME + " LIKE ?";
+        String[] whereArgs = new String[]{tehsilCode, "%Test%"};
         String groupBy = null;
         String having = null;
 
