@@ -109,11 +109,7 @@ fun openSectionMainActivityI(activity: Activity) {
     dialog.window!!.attributes = params
     dialog.findViewById<View>(R.id.btnOk).setOnClickListener { view: View? ->
 
-        if (MainApp.form.getsI() != null) MainApp.form.setsI(null)
-        if (MainApp.psc.getsI1() != null) MainApp.psc.setsI1(null)
-        if (MainApp.psc.getsI2() != null) MainApp.psc.setsI2(null)
-        if (MainApp.psc.getsI3() != null) MainApp.psc.setsI3(null)
-        if (MainApp.psc.getsI4() != null) MainApp.psc.setsI4(null)
+        if (MainApp.psc.getsI() != null) MainApp.psc.setsI(null)
 
         activity.finish()
         val intent = Intent(activity, SectionMainActivity::class.java)
