@@ -16,11 +16,15 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Date;
+import java.util.Locale;
+
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI1Binding;
+import edu.aku.hassannaqvi.smk_pwd.models.Patients;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
@@ -105,37 +109,45 @@ public class SectionI1Activity extends AppCompatActivity {
 
     private void SaveDraft() {
 
-        form.setIa01(bi.ia01a.isChecked() ? "1"
+        psc = new Patients();
+        psc.setSysdate(new java.text.SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault()).format(new Date().getTime()));
+        psc.setUsername(MainApp.userName);
+        psc.setDeviceID(MainApp.appInfo.getDeviceID());
+        psc.setDevicetagID(MainApp.appInfo.getTagName());
+        psc.setAppversion(MainApp.appInfo.getAppVersion());
+        //MainApp.setGPS(this);
+
+        psc.setIa01(bi.ia01a.isChecked() ? "1"
                 : bi.ia01b.isChecked() ? "2"
                 : bi.ia01c.isChecked() ? "3"
                 : "-1");
 
-        form.setIa02(bi.ia02a.isChecked() ? "1"
+        psc.setIa02(bi.ia02a.isChecked() ? "1"
                 : bi.ia02b.isChecked() ? "2"
                 : bi.ia02c.isChecked() ? "3"
                 : "-1");
 
-        form.setIa03( bi.ia03a.isChecked() ? "1"
+        psc.setIa03(bi.ia03a.isChecked() ? "1"
                 : bi.ia03b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setIa04( bi.ia04a.isChecked() ? "1"
+        psc.setIa04(bi.ia04a.isChecked() ? "1"
                 : bi.ia04b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setIa05( bi.ia05a.isChecked() ? "1"
+        psc.setIa05(bi.ia05a.isChecked() ? "1"
                 : bi.ia05b.isChecked() ? "2"
                 : bi.ia05c.isChecked() ? "3"
                 : bi.ia05d.isChecked() ? "4"
-                :  "-1");
+                : "-1");
 
-        form.setIa06( bi.ia06a.isChecked() ? "1"
+        psc.setIa06(bi.ia06a.isChecked() ? "1"
                 : bi.ia06b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setIa07( bi.ia07a.isChecked() ? "1"
+        psc.setIa07(bi.ia07a.isChecked() ? "1"
                 : bi.ia07b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
     }
 

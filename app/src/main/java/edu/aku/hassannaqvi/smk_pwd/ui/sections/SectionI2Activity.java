@@ -26,7 +26,6 @@ import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI2Binding;
 
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
@@ -118,62 +117,62 @@ public class SectionI2Activity extends AppCompatActivity {
 
     private void SaveDraft() {
 
-        form.setIb01(bi.ib01a.isChecked() ? "1"
+        psc.setIb01(bi.ib01a.isChecked() ? "1"
                 : bi.ib01b.isChecked() ? "2"
                 : bi.ib01c.isChecked() ? "3"
                 : "-1");
 
-        form.setIb01dx(bi.ib01dx.getText().toString());
-        form.setIb01ex(bi.ib01ex.getText().toString());
-        form.setIb02(bi.ib02a.isChecked() ? "1"
+        psc.setIb01dx(bi.ib01dx.getText().toString());
+        psc.setIb01ex(bi.ib01ex.getText().toString());
+        psc.setIb02(bi.ib02a.isChecked() ? "1"
                 : bi.ib02b.isChecked() ? "2"
                 : bi.ib02c.isChecked() ? "3"
                 : "-1");
 
-        form.setIb02dx(bi.ib02dx.getText().toString());
-        form.setIb02ex(bi.ib02ex.getText().toString());
-        form.setIb03(bi.ib03a.isChecked() ? "1"
+        psc.setIb02dx(bi.ib02dx.getText().toString());
+        psc.setIb02ex(bi.ib02ex.getText().toString());
+        psc.setIb03(bi.ib03a.isChecked() ? "1"
                 : bi.ib03b.isChecked() ? "2"
                 : bi.ib03c.isChecked() ? "3"
                 : "-1");
 
-        form.setIb03dx(bi.ib03dx.getText().toString());
-        form.setIb03ex(bi.ib03ex.getText().toString());
-        form.setIb04(bi.ib04a.isChecked() ? "1"
+        psc.setIb03dx(bi.ib03dx.getText().toString());
+        psc.setIb03ex(bi.ib03ex.getText().toString());
+        psc.setIb04(bi.ib04a.isChecked() ? "1"
                 : bi.ib04b.isChecked() ? "2"
                 : bi.ib04c.isChecked() ? "3"
                 : "-1");
 
-        form.setIb04dx(bi.ib04dx.getText().toString());
-        form.setIb04ex(bi.ib04ex.getText().toString());
-        form.setIb05(bi.ib05a.isChecked() ? "1"
+        psc.setIb04dx(bi.ib04dx.getText().toString());
+        psc.setIb04ex(bi.ib04ex.getText().toString());
+        psc.setIb05(bi.ib05a.isChecked() ? "1"
                 : bi.ib05b.isChecked() ? "2"
                 : bi.ib05c.isChecked() ? "3"
                 : "-1");
 
-        form.setIb05dx(bi.ib05dx.getText().toString());
-        form.setIb05ex(bi.ib05ex.getText().toString());
-        form.setIb06(bi.ib06a.isChecked() ? "1"
+        psc.setIb05dx(bi.ib05dx.getText().toString());
+        psc.setIb05ex(bi.ib05ex.getText().toString());
+        psc.setIb06(bi.ib06a.isChecked() ? "1"
                 : bi.ib06b.isChecked() ? "2"
                 : bi.ib06c.isChecked() ? "3"
                 : "-1");
 
-        form.setIb06dx(bi.ib06dx.getText().toString());
-        form.setIb06ex(bi.ib06ex.getText().toString());
-        form.setIb07(bi.ib07a.isChecked() ? "1"
+        psc.setIb06dx(bi.ib06dx.getText().toString());
+        psc.setIb06ex(bi.ib06ex.getText().toString());
+        psc.setIb07(bi.ib07a.isChecked() ? "1"
                 : bi.ib07b.isChecked() ? "2"
                 : bi.ib07c.isChecked() ? "3"
                 : "-1");
 
-        form.setIb07dx(bi.ib07dx.getText().toString());
-        form.setIb07ex(bi.ib07ex.getText().toString());
-        form.setIb08(bi.ib08a.isChecked() ? "1"
+        psc.setIb07dx(bi.ib07dx.getText().toString());
+        psc.setIb07ex(bi.ib07ex.getText().toString());
+        psc.setIb08(bi.ib08a.isChecked() ? "1"
                 : bi.ib08b.isChecked() ? "2"
                 : bi.ib08c.isChecked() ? "3"
                 : "-1");
 
-        form.setIb08dx(bi.ib08dx.getText().toString());
-        form.setIb08ex(bi.ib08ex.getText().toString());
+        psc.setIb08dx(bi.ib08dx.getText().toString());
+        psc.setIb08ex(bi.ib08ex.getText().toString());
 
     }
 
