@@ -1,6 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <data>
 
         <import type="android.view.View" />
@@ -11,6 +12,7 @@
             name="callback"
             type="edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionI2Activity" />
     </data>
+
 
     <ScrollView
         android:layout_width="match_parent"

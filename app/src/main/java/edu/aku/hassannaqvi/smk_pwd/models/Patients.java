@@ -23,13 +23,7 @@ public class Patients extends LiveData<Patients> {
     private String sysdate = "";
     private String username = ""; // Interviewer
     private String serialno = "";
-    private String istatus = ""; // Interview Status
-    private String istatus96x = ""; // Interview Status
-    private String endingdatetime = "";
-    private String gpsLat = "";
-    private String gpsLng = "";
-    private String gpsDT = "";
-    private String gpsAcc = "";
+    private String status = "";
     private String deviceID = "";
     private String devicetagID = "";
     private String synced = "";
@@ -152,66 +146,12 @@ public class Patients extends LiveData<Patients> {
     }
 
 
-    public String getIstatus() {
-        return istatus;
+    public String getStatus() {
+        return status;
     }
 
-    public void setIstatus(String istatus) {
-        this.istatus = istatus;
-    }
-
-
-    public String getIstatus96x() {
-        return istatus96x;
-    }
-
-    public void setIstatus96x(String istatus96x) {
-        this.istatus96x = istatus96x;
-    }
-
-
-    public String getEndingdatetime() {
-        return endingdatetime;
-    }
-
-    public void setEndingdatetime(String endingdatetime) {
-        this.endingdatetime = endingdatetime;
-    }
-
-
-    public String getGpsLat() {
-        return gpsLat;
-    }
-
-    public void setGpsLat(String gpsLat) {
-        this.gpsLat = gpsLat;
-    }
-
-
-    public String getGpsLng() {
-        return gpsLng;
-    }
-
-    public void setGpsLng(String gpsLng) {
-        this.gpsLng = gpsLng;
-    }
-
-
-    public String getGpsDT() {
-        return gpsDT;
-    }
-
-    public void setGpsDT(String gpsDT) {
-        this.gpsDT = gpsDT;
-    }
-
-
-    public String getGpsAcc() {
-        return gpsAcc;
-    }
-
-    public void setGpsAcc(String gpsAcc) {
-        this.gpsAcc = gpsAcc;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 
@@ -680,14 +620,8 @@ public class Patients extends LiveData<Patients> {
         this.username = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_USERNAME);
         this.serialno = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_SERIALNO);
 
-        this.istatus = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_ISTATUS);
-        this.istatus96x = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_ISTATUS96x);
-        this.endingdatetime = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_ENDINGDATETIME);
+        this.status = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_STATUS);
 
-        this.gpsLat = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_GPSLAT);
-        this.gpsLng = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_GPSLNG);
-        this.gpsDT = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_GPSDATE);
-        this.gpsAcc = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_GPSACC);
         this.deviceID = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_DEVICEID);
         this.devicetagID = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_DEVICETAGID);
         this.synced = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_SYNCED);
@@ -721,16 +655,10 @@ public class Patients extends LiveData<Patients> {
         this.username = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_USERNAME));
         this.serialno = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_SERIALNO));
 
-        this.istatus = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_ISTATUS));
-        this.istatus96x = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_ISTATUS96x));
-        this.endingdatetime = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_ENDINGDATETIME));
 
-        this.gpsLat = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_GPSLAT));
-        this.gpsLng = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_GPSLNG));
-        this.gpsDT = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_GPSDATE));
-        this.gpsAcc = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_GPSACC));
         this.deviceID = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_DEVICEID));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_DEVICETAGID));
+        this.status = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_STATUS));
         this.appversion = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_APPVERSION));
 
         this.province = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_PROVINCE));
@@ -821,16 +749,10 @@ public class Patients extends LiveData<Patients> {
             json.put(PatientsContract.PatientsTable.COLUMN_SYSDATE, this.sysdate == null ? JSONObject.NULL : this.sysdate);
             json.put(PatientsContract.PatientsTable.COLUMN_USERNAME, this.username == null ? JSONObject.NULL : this.username);
             json.put(PatientsContract.PatientsTable.COLUMN_SERIALNO, this.serialno == null ? JSONObject.NULL : this.serialno);
-            json.put(PatientsContract.PatientsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
-            json.put(PatientsContract.PatientsTable.COLUMN_ISTATUS96x, this.istatus96x == null ? JSONObject.NULL : this.istatus96x);
-            json.put(PatientsContract.PatientsTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);
+            json.put(PatientsContract.PatientsTable.COLUMN_STATUS, this.status == null ? JSONObject.NULL : this.status);
 
             json.put(PatientsContract.PatientsTable.COLUMN_SI, new JSONObject(sItoString()));
 
-            json.put(PatientsContract.PatientsTable.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
-            json.put(PatientsContract.PatientsTable.COLUMN_GPSLNG, this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
-            json.put(PatientsContract.PatientsTable.COLUMN_GPSDATE, this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
-            json.put(PatientsContract.PatientsTable.COLUMN_GPSACC, this.gpsAcc == null ? JSONObject.NULL : this.gpsAcc);
             json.put(PatientsContract.PatientsTable.COLUMN_DEVICEID, this.deviceID == null ? JSONObject.NULL : this.deviceID);
             json.put(PatientsContract.PatientsTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
             json.put(PatientsContract.PatientsTable.COLUMN_APPVERSION, this.appversion == null ? JSONObject.NULL : this.appversion);

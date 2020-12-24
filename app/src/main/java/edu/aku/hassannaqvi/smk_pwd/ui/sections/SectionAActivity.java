@@ -26,10 +26,12 @@ import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.smk_pwd.models.Forms;
+import edu.aku.hassannaqvi.smk_pwd.models.Patients;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 import edu.aku.hassannaqvi.smk_pwd.utils.DateUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 
 public class SectionAActivity extends AppCompatActivity {
 
@@ -77,6 +79,7 @@ public class SectionAActivity extends AppCompatActivity {
 
         // Databinding Edit Mode (only in first activity for every contract)
         form = new Forms();
+        psc = new Patients();
         db = MainApp.appInfo.getDbHelper();
         populateSpinner(this);
     }

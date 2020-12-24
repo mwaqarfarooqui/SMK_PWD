@@ -1977,33 +1977,33 @@
     <string name="informationeducationandcommunication_mainheading">INFORMATION, EDUCATION AND COMMUNICATION: </string>
     <string name="modititle"> MODULE I: \t\tCOVID-19 ARRANGEMENTS </string>
     <string name="seciatitle"> SECTION IA: \nTRIAGE AND EARLY RECOGNITION </string>
-    <string name="ia01">Is there any Screening area set up at a single patient entry point to the facility?</string>
-    <string name="ia01a">Already available in facility</string>
-    <string name="ia01b">Set up during pandemic</string>
+    <string name="ia01">  Is there any Screening area set up at a single patient entry point to the facility ? </string>
+    <string name="ia01a"> Already available in facility </string>
+    <string name="ia01b"> Set up during pandemic </string>
     <string name="ia01c"> No </string>
-    <string name="ia02">Is there any symptom screening questionnaires are available in this facility?</string>
+    <string name="ia02"> Is there any symptom screening questionnaires are available in this facility ? </string>
     <string name="ia02a"> Yes </string>
-    <string name="ia02b">Yes ,available but supply is  short</string>
-    <string name="ia02c">Not available</string>
-    <string name="ia03">Is there any temperature measurement at triage zone with disposable or non-contact sterilized thermometers available in this facility?</string>
+    <string name="ia02b"> Yes, Available but supply is  short </string>
+    <string name="ia02c"> Not available </string>
+    <string name="ia03"> Is there any temperature measurement at triage zone with disposable or non-contact sterilized thermometers available in this facility ? </string>
     <string name="ia03a"> Yes </string>
     <string name="ia03b"> No </string>
-    <string name="ia04">Maintenance of Appropriate physical distancing of at least 1.5 meters in waiting rooms / queues?</string>
+    <string name="ia04"> Maintenance of Appropriate physical distancing of at least 1.5 meters in waiting rooms / queues ? </string>
     <string name="ia04a"> Yes </string>
     <string name="ia04b"> No </string>
-    <string name="ia05">Is there any separate waiting rooms / areas for symptomatic patients?</string>
-    <string name="ia05a">Extra room is already available in the facility</string>
-    <string name="ia05b">Utilize some other room for this purpose</string>
-    <string name="ia05c">Separate room constructed in the facility</string>
+    <string name="ia05"> Is there any separate waiting rooms / areas for symptomatic patients ? </string>
+    <string name="ia05a"> Extra room is already available in the facility</string>
+    <string name="ia05b"> Utilize some other room for this purpose </string>
+    <string name="ia05c"> Separate room constructed in the facility </string>
     <string name="ia05d"> No </string>
-    <string name="ia06">Does every staff member has received information about the guidelines of Breastfeeding and sexual reproductive health in this facility related to COVID-19?</string>
+    <string name="ia06"> Does every staff member has received information about the guidelines of Breastfeeding and sexual reproductive health in this facility related to COVID-19 ? </string>
     <string name="ia06a"> Yes </string>
     <string name="ia06b"> No </string>
-    <string name="ia07">Does training of staff members on recommended guidelines for COVID-19 and breastfeeding and sexual reproductive health conducted in this facility?</string>
+    <string name="ia07"> Does training of staff members on recommended guidelines for COVID-19 and breastfeeding and sexual reproductive health conducted in this facility ? </string>
     <string name="ia07a"> Yes </string>
     <string name="ia07b"> No </string>
 
-    <string name="secibtitle"> SECTION K6: \nMedical Supplies and Equipment </string>
+    <string name="secibtitle"> SECTION IB: \nMedical Supplies and Equipment </string>
     <string name="ib01">Infrared thermometer</string>
     <string name="ib01a">Not Available</string>
     <string name="ib01b">Yes, Available before COVID</string>
@@ -2052,7 +2052,8 @@
     <string name="ib08c">Yes, Available during Pandemic</string>
     <string name="ib08d">Available Quantity</string>
     <string name="ib08e">Functional Quantity</string>
-    <string name="secictitle">SECTION-IC-INFORMATION, EDUCATION AND COMMUNICATION</string>
+
+    <string name="secictitle"> SECTION IC: \nINFORMATION, EDUCATION AND COMMUNICATION </string>
     <string name="hint">Culturally appropriate (in local language) Information, Education, Communication (ICE)materials are displayed outside the facility and in waiting area, for:</string>
     <string name="ic01">Hand washing procedure</string>
     <string name="ic01a">Displayed, Before COVID19</string>
@@ -8621,7 +8622,7 @@
     <string name="publicHF">Public HF: This Whole section will repeat for 06 clients of same facility with Different Type (03 Maternal &amp; 03 Peads).</string>
     <string name="privateHF">Private HF:  This Whole section will repeat for 03 clients of same facility with Different Type i.e. 03 Maternal &amp; 03 Peads as per our thematic district.</string>
 
-    <string name="hfpublic"> Public HF: </string>
+    <string name="hf"> Health Facility </string>
     <string name="hfprivate"> Private HF: </string>
     <string name="section3indicatordefinitionsandreportingnumbersovertime_mainheading">SECTION-3- INDICATOR DEFINITIONS AND REPORTING NUMBERS OVER TIME: </string>
 

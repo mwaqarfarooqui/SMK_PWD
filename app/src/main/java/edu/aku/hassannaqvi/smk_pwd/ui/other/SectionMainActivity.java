@@ -8,12 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import edu.aku.hassannaqvi.smk_pwd.R;
-import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
-import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionMainBinding;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionBActivity;
@@ -24,12 +19,12 @@ import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionF1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionGActivity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionI1Activity;
-import edu.aku.hassannaqvi.smk_pwd.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 
 public class SectionMainActivity extends AppCompatActivity {
-    public static int countC2 = 0, countI = 0;
+    public static int countI = 0;
     ActivitySectionMainBinding bi;
     boolean flag = false;
 
@@ -40,65 +35,43 @@ public class SectionMainActivity extends AppCompatActivity {
         bi.setCallback(this);
 
 
-        if (countC2 != 0 && !flag) {
-
-            JSONObject json = new JSONObject();
-
-            try {
-                json.put("countC2", String.valueOf(countC2));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            try {
-                JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(form.getsC()), json);
-                form.setsC(String.valueOf(json_merge));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-            DatabaseHelper db = MainApp.appInfo.getDbHelper();
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, form.getsC());
-            Toast.makeText(this, "countC2: 0" + countC2, Toast.LENGTH_SHORT).show();
-        }
-
-
-        if (!form.getsB().isEmpty()) {
+        if (!form.sAtoString().isEmpty() && !form.sBtoString().isEmpty()) {
             bi.form01.setEnabled(false);
             bi.form01.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (!form.getsC().isEmpty()) {
+        if (!form.sCtoString().isEmpty()) {
             bi.form02.setEnabled(false);
             bi.form02.setBackgroundResource(R.color.dullWhite);
             flag = true;
         }
 
-        if (!form.getsD().isEmpty()) {
+        if (!form.sDtoString().isEmpty()) {
             bi.form03.setEnabled(false);
             bi.form03.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (!form.getsE().isEmpty()) {
+        if (!form.sEtoString().isEmpty()) {
             bi.form04.setEnabled(false);
             bi.form04.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (!form.getsF().isEmpty()) {
+        if (!form.sFtoString().isEmpty()) {
             bi.form05.setEnabled(false);
             bi.form05.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (!form.getsG().isEmpty()) {
+        if (!form.sGtoString().isEmpty()) {
             bi.form06.setEnabled(false);
             bi.form06.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (!form.getsH().isEmpty()) {
+        if (!form.sHtoString().isEmpty()) {
             bi.form07.setEnabled(false);
             bi.form07.setBackgroundResource(R.color.dullWhite);
         }
 
-        if (!form.getsI().isEmpty()) {
+        if (!psc.sItoString().isEmpty()) {
             bi.form08.setEnabled(false);
             bi.form08.setBackgroundResource(R.color.dullWhite);
         }
@@ -174,7 +147,7 @@ public class SectionMainActivity extends AppCompatActivity {
                     oF = new Intent(this, SectionH1Activity.class);
                     break;
                 case R.id.form08:
-                    countI = 0;
+                    countI = 1;
                     oF = new Intent(this, SectionI1Activity.class);
                     break;
             }

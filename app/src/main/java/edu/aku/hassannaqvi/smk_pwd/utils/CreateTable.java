@@ -4,7 +4,6 @@ import edu.aku.hassannaqvi.smk_pwd.contracts.DistrictContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.HFContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
-import edu.aku.hassannaqvi.smk_pwd.contracts.StaffingContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.TehsilsContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.UCsContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.UsersContract;
@@ -58,28 +57,6 @@ public final class CreateTable {
             + " );";
 
 
-    public static final String SQL_CREATE_TSCONTRACT = "CREATE TABLE " + StaffingContract.StaffingTable.TABLE_NAME + "("
-            + StaffingContract.StaffingTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + StaffingContract.StaffingTable.COLUMN_UID + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_UUID + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_SYSDATE + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_USERNAME + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_SERIALNO + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_DISTRICT_CODE + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_DISTRICT_TYPE + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_TEHSIL_CODE + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_UC_CODE + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_HF_CODE + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_SC2 + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_DEVICEID + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_DEVICETAGID + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_SYNCED + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_SYNCED_DATE + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_STATUS + " TEXT,"
-            + StaffingContract.StaffingTable.COLUMN_APPVERSION + " TEXT"
-            + " );";
-
-
     public static final String SQL_CREATE_PSCONTRACT = "CREATE TABLE " + PatientsContract.PatientsTable.TABLE_NAME + "("
             + PatientsContract.PatientsTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + PatientsContract.PatientsTable.COLUMN_UID + " TEXT,"
@@ -87,17 +64,23 @@ public final class CreateTable {
             + PatientsContract.PatientsTable.COLUMN_SYSDATE + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_USERNAME + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_SERIALNO + " TEXT,"
+            + PatientsContract.PatientsTable.COLUMN_PROVINCE + " TEXT,"
+            + PatientsContract.PatientsTable.COLUMN_PROVINCE_CODE + " TEXT,"
+            + PatientsContract.PatientsTable.COLUMN_DISTRICT + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_DISTRICT_CODE + " TEXT,"
+            + PatientsContract.PatientsTable.COLUMN_TEHSIL + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_TEHSIL_CODE + " TEXT,"
+            + PatientsContract.PatientsTable.COLUMN_UC + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_UC_CODE + " TEXT,"
+            + PatientsContract.PatientsTable.COLUMN_HF + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_HF_CODE + " TEXT,"
-            + PatientsContract.PatientsTable.COLUMN_SI + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_DEVICEID + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_DEVICETAGID + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_SYNCED + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_SYNCED_DATE + " TEXT,"
-            + PatientsContract.PatientsTable.COLUMN_ISTATUS + " TEXT,"
-            + PatientsContract.PatientsTable.COLUMN_APPVERSION + " TEXT"
+            + PatientsContract.PatientsTable.COLUMN_STATUS + " TEXT,"
+            + PatientsContract.PatientsTable.COLUMN_APPVERSION + " TEXT,"
+            + PatientsContract.PatientsTable.COLUMN_SI + " TEXT"
             + " );";
 
 

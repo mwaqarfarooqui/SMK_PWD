@@ -35,7 +35,6 @@ import edu.aku.hassannaqvi.smk_pwd.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.smk_pwd.adapter.UploadListAdapter;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
-import edu.aku.hassannaqvi.smk_pwd.contracts.StaffingContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySyncBinding;
@@ -162,7 +161,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }
 
 //  *******************************************************StaffingTable*********************************
-            Toast.makeText(getApplicationContext(), "Syncing StaffingTable", Toast.LENGTH_SHORT).show();
+            /*Toast.makeText(getApplicationContext(), "Syncing StaffingTable", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
@@ -176,7 +175,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     StaffingContract.StaffingTable.TABLE_NAME,
                     db.getUnsyncedStaffing(), 3, uploadListAdapter, uploadlist
-            ).execute();
+            ).execute();*/
 
 //  *******************************************************PatientsTable*********************************
             Toast.makeText(getApplicationContext(), "Syncing PatientsTable", Toast.LENGTH_SHORT).show();
@@ -192,7 +191,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     PatientsContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     PatientsContract.PatientsTable.TABLE_NAME,
-                    db.getUnsyncedPatients(), 4, uploadListAdapter, uploadlist
+                    db.getUnsyncedPatients(), 3, uploadListAdapter, uploadlist
             ).execute();
 
 

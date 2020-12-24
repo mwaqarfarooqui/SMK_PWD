@@ -25,6 +25,7 @@ import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI1Binding;
 import edu.aku.hassannaqvi.smk_pwd.models.Patients;
+import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
@@ -46,16 +47,9 @@ public class SectionI1Activity extends AppCompatActivity {
 
 
     private void setupContent() {
-
-       /* psc = new PatientsContract();
-
-        bi.hfType.setText(MainApp.fc.getA10().equals("1") ? getString(R.string.hfpublic) : getString(R.string.hfprivate));
-        bi.countI.setText(new StringBuilder("Entries: 0").append(SectionMainActivity.countI));*/
-
-        /*if (MainApp.fc.getA10().equals("1")) {
-            if (SectionMainActivity.paedsCount == 3) bi.i0108a.setEnabled(false);
-            else if (SectionMainActivity.maternalCount == 3) bi.i0108b.setEnabled(false);
-        }*/
+        psc = new Patients();
+        bi.hfType.setText(getString(R.string.hf));
+        bi.countI.setText(new StringBuilder("Count: ").append(SectionMainActivity.countI));
     }
 
 
@@ -109,12 +103,21 @@ public class SectionI1Activity extends AppCompatActivity {
 
     private void SaveDraft() {
 
-        psc = new Patients();
         psc.setSysdate(new java.text.SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault()).format(new Date().getTime()));
         psc.setUsername(MainApp.userName);
         psc.setDeviceID(MainApp.appInfo.getDeviceID());
         psc.setDevicetagID(MainApp.appInfo.getTagName());
         psc.setAppversion(MainApp.appInfo.getAppVersion());
+        psc.setProvince(form.getProvince());
+        psc.setProvinceCode(form.getProvinceCode());
+        psc.setDistrict(form.getDistrict());
+        psc.setDistrictCode(form.getDistrictCode());
+        psc.setTehsil(form.getTehsil());
+        psc.setTehsilCode(form.getTehsilCode());
+        psc.setUc(form.getUc());
+        psc.setUcCode(form.getUcCode());
+        psc.setHf(form.getHf());
+        psc.setHfCode(form.getHfCode());
         //MainApp.setGPS(this);
 
         psc.setIa01(bi.ia01a.isChecked() ? "1"
@@ -154,16 +157,29 @@ public class SectionI1Activity extends AppCompatActivity {
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
-       /* if (!Validator.emptyCheckingContainer(this, bi.GrpName))
-            return false;
+    }
 
-        if (bi.i0106a.getText().toString().trim().length() > 0 && bi.i0106b.getText().toString().trim().length() > 0) {
-            if (Integer.parseInt(bi.i0106a.getText().toString().trim()) + Integer.parseInt(bi.i0106a.getText().toString().trim()) == 0) {
-                return ValidatorClass.EmptyCustomeTextBox(this, bi.i0106a, "Both!! Month & Year Can't be Zero!");
-                //return Validator.emptyCheckingContainer(this, bi.i0106a);
-            }
+
+
+    /*@Override
+    public void endSecActivity(boolean flag) {
+            SaveDraft();
+        if (UpdateDB()) {
+            finish();
+            SectionMainActivity.countI++;
+            startActivity(new Intent(this, EndingActivity.class).putExtra(SECTION_MAIN_CHECK_FOR_END, true)
+                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        } else {
+            Toast.makeText(this, "SORRY! Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
-        return true;*/
+    }*/
+
+
+    @Override
+    public void onBackPressed() {
+        if (SectionMainActivity.countI > 0) {
+            Toast.makeText(getApplicationContext(), "Back Press Not Allowed", Toast.LENGTH_LONG).show();
+        } else super.onBackPressed();
     }
 
 }

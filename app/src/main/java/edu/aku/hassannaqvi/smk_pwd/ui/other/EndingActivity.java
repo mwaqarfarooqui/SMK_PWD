@@ -54,7 +54,7 @@ public class EndingActivity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        if (formValidation()) {
+        if (!formValidation()) return;
             SaveDraft();
             if (UpdateDB()) {
                 finish();
@@ -62,7 +62,6 @@ public class EndingActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
-        }
     }
 
     private Class<?> routingSelectionForChildEnding() {
@@ -76,7 +75,7 @@ public class EndingActivity extends AppCompatActivity {
     private void SaveDraft() {
 
         if (sectionMainCheck) {
-            MainApp.psc.setIstatus(bi.istatusa.isChecked() ? "1"
+            MainApp.psc.setStatus(bi.istatusa.isChecked() ? "1"
                     : bi.istatusb.isChecked() ? "2"
                     : bi.istatus96.isChecked() ? "96"
                     : "0");
@@ -97,7 +96,7 @@ public class EndingActivity extends AppCompatActivity {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount;
         if (sectionMainCheck) {
-            updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_ISTATUS, MainApp.psc.getIstatus());
+            updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_STATUS, MainApp.psc.getStatus());
             if (updcount == 1)
                 updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, MainApp.form.getsI());
         } else

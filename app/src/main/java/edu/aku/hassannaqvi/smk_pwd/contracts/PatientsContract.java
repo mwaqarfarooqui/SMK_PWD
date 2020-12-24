@@ -16,25 +16,12 @@ public class PatientsContract {
     public static abstract class PatientsTable implements BaseColumns {
         public static final String TABLE_NAME = "Patients";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
-        public static final String COLUMN_PROJECT_NAME = "projectName";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
         public static final String COLUMN_UUID = "_uuid";
+        public static final String COLUMN_SYSDATE = "sysdate";
         public static final String COLUMN_USERNAME = "username";
         public static final String COLUMN_SERIALNO = "serialno";
-        public static final String COLUMN_SYSDATE = "sysdate";
-        public static final String COLUMN_ISTATUS = "istatus";
-        public static final String COLUMN_ISTATUS96x = "istatus96x";
-        public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
-        public static final String COLUMN_GPSLAT = "gpslat";
-        public static final String COLUMN_GPSLNG = "gpslng";
-        public static final String COLUMN_GPSDATE = "gpsdate";
-        public static final String COLUMN_GPSACC = "gpsacc";
-        public static final String COLUMN_DEVICEID = "deviceid";
-        public static final String COLUMN_DEVICETAGID = "tagid";
-        public static final String COLUMN_SYNCED = "synced";
-        public static final String COLUMN_SYNCED_DATE = "synced_date";
-        public static final String COLUMN_APPVERSION = "appversion";
         public static final String COLUMN_PROVINCE = "province";
         public static final String COLUMN_PROVINCE_CODE = "province_code";
         public static final String COLUMN_DISTRICT = "district";
@@ -46,6 +33,12 @@ public class PatientsContract {
         public static final String COLUMN_HF = "hf";
         public static final String COLUMN_HF_CODE = "hf_code";
         public static final String COLUMN_SI = "si";
+        public static final String COLUMN_DEVICEID = "deviceid";
+        public static final String COLUMN_DEVICETAGID = "tagid";
+        public static final String COLUMN_SYNCED = "synced";
+        public static final String COLUMN_SYNCED_DATE = "synced_date";
+        public static final String COLUMN_STATUS = "status";
+        public static final String COLUMN_APPVERSION = "appversion";
         public static String PATH = "patients";
         public static final String CONTENT_TYPE =
                 ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH;

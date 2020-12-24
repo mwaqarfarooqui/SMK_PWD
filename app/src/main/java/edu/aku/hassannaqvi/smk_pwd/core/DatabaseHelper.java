@@ -38,7 +38,6 @@ import static edu.aku.hassannaqvi.smk_pwd.utils.CreateTable.SQL_CREATE_FORMS;
 import static edu.aku.hassannaqvi.smk_pwd.utils.CreateTable.SQL_CREATE_HF;
 import static edu.aku.hassannaqvi.smk_pwd.utils.CreateTable.SQL_CREATE_PSCONTRACT;
 import static edu.aku.hassannaqvi.smk_pwd.utils.CreateTable.SQL_CREATE_TEHSILS;
-import static edu.aku.hassannaqvi.smk_pwd.utils.CreateTable.SQL_CREATE_TSCONTRACT;
 import static edu.aku.hassannaqvi.smk_pwd.utils.CreateTable.SQL_CREATE_UCS;
 import static edu.aku.hassannaqvi.smk_pwd.utils.CreateTable.SQL_CREATE_USERS;
 import static edu.aku.hassannaqvi.smk_pwd.utils.CreateTable.SQL_CREATE_VERSIONAPP;
@@ -67,7 +66,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_CREATE_USERS);
         db.execSQL(SQL_CREATE_FORMS);
-        db.execSQL(SQL_CREATE_TSCONTRACT);
         db.execSQL(SQL_CREATE_PSCONTRACT);
         db.execSQL(SQL_CREATE_VERSIONAPP);
         db.execSQL(SQL_CREATE_DISTRICTS);
@@ -996,14 +994,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(PatientsTable.COLUMN_SYSDATE, psc.getSysdate());
         values.put(PatientsTable.COLUMN_USERNAME, psc.getUsername());
         values.put(PatientsTable.COLUMN_SERIALNO, psc.getSerialno());
-        values.put(PatientsTable.COLUMN_DISTRICT_CODE, psc.getDistrictCode());
-        values.put(PatientsTable.COLUMN_TEHSIL_CODE, psc.getTehsilCode());
-        values.put(PatientsTable.COLUMN_UC_CODE, psc.getUcCode());
-        values.put(PatientsTable.COLUMN_HF_CODE, psc.getHfCode());
         values.put(PatientsTable.COLUMN_SI, psc.getsI());
         values.put(PatientsTable.COLUMN_DEVICEID, psc.getDeviceID());
         values.put(PatientsTable.COLUMN_DEVICETAGID, psc.getDevicetagID());
-        values.put(PatientsTable.COLUMN_ISTATUS, psc.getIstatus());
+        values.put(PatientsTable.COLUMN_STATUS, psc.getStatus());
         values.put(PatientsTable.COLUMN_SYNCED, psc.getSynced());
         values.put(PatientsTable.COLUMN_SYNCED_DATE, psc.getSynced_date());
         values.put(PatientsTable.COLUMN_APPVERSION, psc.getAppversion());
@@ -1450,7 +1444,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 PatientsTable.COLUMN_SI,
                 PatientsTable.COLUMN_DEVICEID,
                 PatientsTable.COLUMN_DEVICETAGID,
-                PatientsTable.COLUMN_ISTATUS,
+                PatientsTable.COLUMN_STATUS,
                 PatientsTable.COLUMN_SYNCED,
                 PatientsTable.COLUMN_SYNCED_DATE,
                 PatientsTable.COLUMN_APPVERSION,
@@ -1467,7 +1461,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         };
 
-        String whereClause = "(" + PatientsContract.PatientsTable.COLUMN_SYNCED + " is null or " + PatientsContract.PatientsTable.COLUMN_SYNCED + " ='')  AND " + PatientsTable.COLUMN_ISTATUS + " =?";
+        String whereClause = "(" + PatientsContract.PatientsTable.COLUMN_SYNCED + " is null or " + PatientsContract.PatientsTable.COLUMN_SYNCED + " ='')  AND " + PatientsTable.COLUMN_STATUS + " =?";
 
         String[] whereArgs = new String[]{"1"};
 
@@ -1748,7 +1742,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     public int getPatientsByUUID(String UUID) {
-        String countQuery = "SELECT  * FROM " + PatientsTable.TABLE_NAME + " WHERE " + PatientsTable.COLUMN_UUID + " = '" + UUID + "' AND " + PatientsTable.COLUMN_ISTATUS + " = '1'";
+        String countQuery = "SELECT  * FROM " + PatientsTable.TABLE_NAME + " WHERE " + PatientsTable.COLUMN_UUID + " = '" + UUID + "' AND " + PatientsTable.COLUMN_STATUS + " = '1'";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
         int count = cursor.getCount();
