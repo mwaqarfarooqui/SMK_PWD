@@ -8,6 +8,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionMainBinding;
@@ -35,45 +38,53 @@ public class SectionMainActivity extends AppCompatActivity {
         bi.setCallback(this);
 
 
-        if (!form.sAtoString().isEmpty() && !form.sBtoString().isEmpty()) {
+        /*if (!form.sAtoString().isEmpty() && !form.sBtoString().isEmpty()) {
             bi.form01.setEnabled(false);
             bi.form01.setBackgroundResource(R.color.dullWhite);
-        }
+        }*/
 
-        if (!form.sCtoString().isEmpty()) {
-            bi.form02.setEnabled(false);
-            bi.form02.setBackgroundResource(R.color.dullWhite);
-            flag = true;
-        }
+        try {
+            if (!new JSONObject(form.sBtoString()).get("ba01h5").equals("")) {
+                bi.form01.setEnabled(false);
+                bi.form01.setBackgroundResource(R.color.dullWhite);
+            }
 
-        if (!form.sDtoString().isEmpty()) {
-            bi.form03.setEnabled(false);
-            bi.form03.setBackgroundResource(R.color.dullWhite);
-        }
+            if (!new JSONObject(form.sCtoString()).get("cg46f").equals("")) {
+                bi.form02.setEnabled(false);
+                bi.form02.setBackgroundResource(R.color.dullWhite);
+            }
 
-        if (!form.sEtoString().isEmpty()) {
-            bi.form04.setEnabled(false);
-            bi.form04.setBackgroundResource(R.color.dullWhite);
-        }
+            if (!new JSONObject(form.sDtoString()).get("db1696x").equals("")) {
+                bi.form03.setEnabled(false);
+                bi.form03.setBackgroundResource(R.color.dullWhite);
+            }
 
-        if (!form.sFtoString().isEmpty()) {
-            bi.form05.setEnabled(false);
-            bi.form05.setBackgroundResource(R.color.dullWhite);
-        }
+            if (!new JSONObject(form.sEtoString()).get("ec12m").equals("")) {
+                bi.form04.setEnabled(false);
+                bi.form04.setBackgroundResource(R.color.dullWhite);
+            }
 
-        if (!form.sGtoString().isEmpty()) {
-            bi.form06.setEnabled(false);
-            bi.form06.setBackgroundResource(R.color.dullWhite);
-        }
+            if (!new JSONObject(form.sFtoString()).get("fp05dm").equals("")) {
+                bi.form05.setEnabled(false);
+                bi.form05.setBackgroundResource(R.color.dullWhite);
+            }
 
-        if (!form.sHtoString().isEmpty()) {
-            bi.form07.setEnabled(false);
-            bi.form07.setBackgroundResource(R.color.dullWhite);
-        }
+            if (!new JSONObject(form.sGtoString()).get("ga16").equals("")) {
+                bi.form06.setEnabled(false);
+                bi.form06.setBackgroundResource(R.color.dullWhite);
+            }
 
-        if (!psc.sItoString().isEmpty()) {
-            bi.form08.setEnabled(false);
-            bi.form08.setBackgroundResource(R.color.dullWhite);
+            if (!new JSONObject(form.sHtoString()).get("hc0696x").equals("")) {
+                bi.form07.setEnabled(false);
+                bi.form07.setBackgroundResource(R.color.dullWhite);
+            }
+
+            if (!new JSONObject(psc.sItoString()).get("ic08").equals("")) {
+                bi.form08.setEnabled(false);
+                bi.form08.setBackgroundResource(R.color.dullWhite);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
 
@@ -147,7 +158,7 @@ public class SectionMainActivity extends AppCompatActivity {
                     oF = new Intent(this, SectionH1Activity.class);
                     break;
                 case R.id.form08:
-                    countI = 1;
+                    //countI = 1;
                     oF = new Intent(this, SectionI1Activity.class);
                     break;
             }

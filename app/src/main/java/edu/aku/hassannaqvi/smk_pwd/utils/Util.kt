@@ -78,14 +78,14 @@ fun openSectionMainActivity(activity: Activity, item: String) {
     dialog.findViewById<View>(R.id.btnOk).setOnClickListener { view: View? ->
 
         when (item) {
-            "B" -> MainApp.form.setsB(null)
+            "B" -> MainApp.form.sBtoString()
             "C" -> MainApp.form.setsC(null)
             "D" -> MainApp.form.setsD(null)
             "E" -> MainApp.form.setsE(null)
             "F" -> MainApp.form.setsF(null)
             "G" -> MainApp.form.setsG(null)
             "H" -> MainApp.form.setsH(null)
-            "I" -> MainApp.form.setsI(null)
+            "I" -> MainApp.psc.setsI(null)
         }
 
         activity.finish()

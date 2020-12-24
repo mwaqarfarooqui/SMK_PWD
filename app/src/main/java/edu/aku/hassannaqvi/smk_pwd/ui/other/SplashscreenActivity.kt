@@ -4,17 +4,14 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import edu.aku.hassannaqvi.smk_pwd.R
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.cancel
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
 class SplashscreenActivity : Activity() {
-    private val activityScope = CoroutineScope(Dispatchers.Main)
+    private lateinit var activityScope: Job
 
     init {
         /*provinces = mutableListOf("....")
@@ -24,21 +21,35 @@ class SplashscreenActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
-        activityScope.launch {
+        callingScope()
+    }
+
+    companion object {
+        private const val SPLASH_TIME_OUT = 1500L
+    }
+
+    override fun onPause() {
+        super.onPause()
+        activityScope.cancel()
+    }
+
+    private fun callingScope() {
+        activityScope = CoroutineScope(Dispatchers.Main).launch {
+            delay(SPLASH_TIME_OUT)
             finish()
             startActivity(Intent(this@SplashscreenActivity, LoginActivity::class.java))
         }
     }
 
-    companion object {
-        private const val SPLASH_TIME_OUT = 1000
+    override fun onResume() {
+        super.onResume()
+        if (activityScope.isActive.not()) callingScope()
     }
 
-    override fun onPause() {
+    override fun onDestroy() {
+        super.onDestroy()
         activityScope.cancel()
-        super.onPause()
     }
-
 
     //Only use for calling coroutine in java
     abstract class Continuation<in T> : kotlin.coroutines.Continuation<T> {

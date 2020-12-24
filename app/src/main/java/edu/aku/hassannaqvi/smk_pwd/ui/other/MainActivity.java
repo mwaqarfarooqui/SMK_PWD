@@ -301,6 +301,11 @@ public class MainActivity extends AppCompatActivity {
         bi.setCallback(this);
 
         db = new DatabaseHelper(this);
+        if (MainApp.userName.contains("test1234")
+                || MainApp.userName.contains("dmu@aku")
+                || MainApp.userName.contains("guest@aku")) {
+            bi.formA.setVisibility(View.GONE);
+        }
 
         Collection<Forms> todaysForms = db.getTodayForms(sysdateToday);
         Collection<Forms> unsyncedForms = db.getUnsyncedForms(1);
