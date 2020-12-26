@@ -22,7 +22,6 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme1">
-
         <activity
             android:name=".ui.list_activity.FormsReportDate"
             android:label="Forms Report"
@@ -192,20 +191,16 @@
             android:name=".ui.sections.SectionI3Activity"
             android:label="@string/modititle"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1">
-
-        <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"

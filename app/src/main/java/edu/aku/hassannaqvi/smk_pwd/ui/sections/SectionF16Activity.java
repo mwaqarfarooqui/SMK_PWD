@@ -39,16 +39,8 @@ public class SectionF16Activity extends AppCompatActivity {
     }
 
     private void setupSkips() {
-        radioGroupListener(bi.fp01a, bi.fp01ab, new ViewGroup[]{bi.cvfp01b, bi.cvfp01c, bi.cvfp01d});
-        radioGroupListener(bi.fp01c, bi.fp01cb, new ViewGroup[]{bi.cvfp01d});
-        radioGroupListener(bi.fp02a, bi.fp02ab, new ViewGroup[]{bi.cvfp02b, bi.cvfp02c, bi.cvfp02d});
-        radioGroupListener(bi.fp02c, bi.fp02cb, new ViewGroup[]{bi.cvfp02d});
-        radioGroupListener(bi.fp03a, bi.fp03ab, new ViewGroup[]{bi.cvfp03b, bi.cvfp03c, bi.cvfp03d});
-        radioGroupListener(bi.fp03c, bi.fp03cb, new ViewGroup[]{bi.cvfp03d});
-        radioGroupListener(bi.fp04a, bi.fp04ab, new ViewGroup[]{bi.cvfp04b, bi.cvfp04c, bi.cvfp04d});
-        radioGroupListener(bi.fp04c, bi.fp04cb, new ViewGroup[]{bi.cvfp04d});
-        radioGroupListener(bi.fp05a, bi.fp05ab, new ViewGroup[]{bi.cvfp05b, bi.cvfp05c, bi.cvfp05d});
-        radioGroupListener(bi.fp05c, bi.fp05cb, new ViewGroup[]{bi.cvfp05d});
+        radioGroupListener(bi.fp01a, bi.fp01ab, new ViewGroup[]{bi.cvfp01b, bi.cvfp01c, bi.cvfp01e});
+        radioGroupListener(bi.fp01c, bi.fp01cb, new ViewGroup[]{bi.cvfp01e});
     }
 
 
@@ -91,76 +83,6 @@ public class SectionF16Activity extends AppCompatActivity {
 
         form.setFp01dd(bi.fp01dd.getText().toString().trim().length() > 0 ? bi.fp01dd.getText().toString() : "-1");
         form.setFp01dm(bi.fp01dm.getText().toString().trim().length() > 0 ? bi.fp01dm.getText().toString() : "-1");
-
-        form.setFp02a(bi.fp02aa.isChecked() ? "1"
-                : bi.fp02ab.isChecked() ? "2"
-                : "-1");
-
-        form.setFp02b(bi.fp02ba.isChecked() ? "1"
-                : bi.fp02bb.isChecked() ? "2"
-                : "-1");
-
-        form.setFp02c(bi.fp02ca.isChecked() ? "1"
-                : bi.fp02cb.isChecked() ? "2"
-                : "-1");
-
-        form.setFp02dd(bi.fp02dd.getText().toString().trim().length() > 0 ? bi.fp02dd.getText().toString() : "-1");
-        form.setFp02dm(bi.fp02dm.getText().toString().trim().length() > 0 ? bi.fp02dm.getText().toString() : "-1");
-
-        form.setFp03a(bi.fp03aa.isChecked() ? "1"
-                : bi.fp03ab.isChecked() ? "2"
-                : "-1");
-
-        form.setFp03b(bi.fp03ba.isChecked() ? "1"
-                : bi.fp03bb.isChecked() ? "2"
-                : "-1");
-
-        form.setFp03c(bi.fp03ca.isChecked() ? "1"
-                : bi.fp03cb.isChecked() ? "2"
-                : "-1");
-
-        form.setFp03dd(bi.fp03dd.getText().toString().trim().length() > 0 ? bi.fp03dd.getText().toString() : "-1");
-        form.setFp03dm(bi.fp03dm.getText().toString().trim().length() > 0 ? bi.fp03dm.getText().toString() : "-1");
-
-        form.setFp04a(bi.fp04aa.isChecked() ? "1"
-                : bi.fp04ab.isChecked() ? "2"
-                : "-1");
-
-        form.setFp04b(bi.fp04ba.isChecked() ? "1"
-                : bi.fp04bb.isChecked() ? "2"
-                : "-1");
-
-        form.setFp04c(bi.fp04ca.isChecked() ? "1"
-                : bi.fp04cb.isChecked() ? "2"
-                : "-1");
-
-        form.setFp04dd(bi.fp04dd.getText().toString().trim().length() > 0 ? bi.fp04dd.getText().toString() : "-1");
-        form.setFp04dm(bi.fp04dm.getText().toString().trim().length() > 0 ? bi.fp04dm.getText().toString() : "-1");
-
-        form.setFp05a(bi.fp05aa.isChecked() ? "1"
-                : bi.fp05ab.isChecked() ? "2"
-                : "-1");
-
-        form.setFp05b(bi.fp05ba.isChecked() ? "1"
-                : bi.fp05bb.isChecked() ? "2"
-                : "-1");
-
-        form.setFp05c(bi.fp05ca.isChecked() ? "1"
-                : bi.fp05cb.isChecked() ? "2"
-                : "-1");
-
-        form.setFp05dd(bi.fp05dd.getText().toString().trim().length() > 0 ? bi.fp05dd.getText().toString() : "-1");
-        form.setFp05dm(bi.fp05dm.getText().toString().trim().length() > 0 ? bi.fp05dm.getText().toString() : "-1");
-
-
-        /*try {
-            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
-
-            MainApp.fc.setsF(String.valueOf(json_merge));
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
 
     }
 
