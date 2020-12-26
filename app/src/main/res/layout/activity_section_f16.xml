@@ -1443,7 +1443,7 @@
                         android:orientation="horizontal">
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/fp05dd"
+                            android:id="@+id/fp05dddd"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -1456,7 +1456,7 @@
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/fp05dm"
+                            android:id="@+id/fp05dmdd"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
