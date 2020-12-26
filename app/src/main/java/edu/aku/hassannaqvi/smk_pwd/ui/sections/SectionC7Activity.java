@@ -94,112 +94,132 @@ public class SectionC7Activity extends AppCompatActivity {
                 : bi.cg01n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg02f(bi.cg02f.getText().toString());
+        form.setCg02f(bi.cg02f.getText().toString().trim().isEmpty() ? "-1" : bi.cg02f.getText().toString());
+
         form.setCg03(bi.cg03y.isChecked() ? "1"
                 : bi.cg03n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg04f(bi.cg04f.getText().toString());
+        form.setCg04f(bi.cg04f.getText().toString().trim().isEmpty() ? "-1" : bi.cg04f.getText().toString());
+
         form.setCg05(bi.cg05y.isChecked() ? "1"
                 : bi.cg05n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg06f(bi.cg06f.getText().toString());
+        form.setCg06f(bi.cg06f.getText().toString().trim().isEmpty() ? "-1" : bi.cg06f.getText().toString());
+
         form.setCg07(bi.cg07y.isChecked() ? "1"
                 : bi.cg07n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg08f(bi.cg08f.getText().toString());
+        form.setCg08f(bi.cg08f.getText().toString().trim().isEmpty() ? "-1" : bi.cg08f.getText().toString());
+
         form.setCg09(bi.cg09y.isChecked() ? "1"
                 : bi.cg09n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg10f(bi.cg10f.getText().toString());
+        form.setCg10f(bi.cg10f.getText().toString().trim().isEmpty() ? "-1" : bi.cg10f.getText().toString());
+
         form.setCg11(bi.cg11y.isChecked() ? "1"
                 : bi.cg11n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg12f(bi.cg12f.getText().toString());
+        form.setCg12f(bi.cg12f.getText().toString().trim().isEmpty() ? "-1" : bi.cg12f.getText().toString());
+
         form.setCg13(bi.cg13y.isChecked() ? "1"
                 : bi.cg13n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg14f(bi.cg14f.getText().toString());
+        form.setCg14f(bi.cg14f.getText().toString().trim().isEmpty() ? "-1" : bi.cg14f.getText().toString());
+
         form.setCg15(bi.cg15y.isChecked() ? "1"
                 : bi.cg15n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg16f(bi.cg16f.getText().toString());
+        form.setCg16f(bi.cg16f.getText().toString().trim().isEmpty() ? "-1" : bi.cg16f.getText().toString());
+
         form.setCg17(bi.cg17y.isChecked() ? "1"
                 : bi.cg17n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg18f(bi.cg18f.getText().toString());
+        form.setCg18f(bi.cg18f.getText().toString().trim().isEmpty() ? "-1" : bi.cg18f.getText().toString());
+
         form.setCg19(bi.cg19y.isChecked() ? "1"
                 : bi.cg19n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg20f(bi.cg20f.getText().toString());
+        form.setCg20f(bi.cg20f.getText().toString().trim().isEmpty() ? "-1" : bi.cg20f.getText().toString());
+
         form.setCg21(bi.cg21y.isChecked() ? "1"
                 : bi.cg21n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg22f(bi.cg22f.getText().toString());
+        form.setCg22f(bi.cg22f.getText().toString().trim().isEmpty() ? "-1" : bi.cg22f.getText().toString());
+
         form.setCg23(bi.cg23y.isChecked() ? "1"
                 : bi.cg23n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg24f(bi.cg24f.getText().toString());
+        form.setCg24f(bi.cg24f.getText().toString().trim().isEmpty() ? "-1" : bi.cg24f.getText().toString());
+
         form.setCg25(bi.cg25y.isChecked() ? "1"
                 : bi.cg25n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg26f(bi.cg26f.getText().toString());
+        form.setCg26f(bi.cg26f.getText().toString().trim().isEmpty() ? "-1" : bi.cg26f.getText().toString());
+
         form.setCg27(bi.cg27y.isChecked() ? "1"
                 : bi.cg27n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg28f(bi.cg28f.getText().toString());
+        form.setCg28f(bi.cg28f.getText().toString().trim().isEmpty() ? "-1" : bi.cg28f.getText().toString());
         form.setCg29(bi.cg29y.isChecked() ? "1"
                 : bi.cg29n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg30f(bi.cg30f.getText().toString());
+        form.setCg30f(bi.cg30f.getText().toString().trim().isEmpty() ? "-1" : bi.cg30f.getText().toString());
+
         form.setCg31(bi.cg31y.isChecked() ? "1"
                 : bi.cg31n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg32f(bi.cg32f.getText().toString());
+        form.setCg32f(bi.cg32f.getText().toString().trim().isEmpty() ? "-1" : bi.cg32f.getText().toString());
+
         form.setCg33(bi.cg33y.isChecked() ? "1"
                 : bi.cg33n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg34f(bi.cg34f.getText().toString());
+        form.setCg34f(bi.cg34f.getText().toString().trim().isEmpty() ? "-1" : bi.cg34f.getText().toString());
+
         form.setCg35(bi.cg35y.isChecked() ? "1"
                 : bi.cg35n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg36f(bi.cg36f.getText().toString());
+        form.setCg36f(bi.cg36f.getText().toString().trim().isEmpty() ? "-1" : bi.cg36f.getText().toString());
+
         form.setCg37(bi.cg37y.isChecked() ? "1"
                 : bi.cg37n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg38f(bi.cg38f.getText().toString());
+        form.setCg38f(bi.cg38f.getText().toString().trim().isEmpty() ? "-1" : bi.cg38f.getText().toString());
+
         form.setCg39(bi.cg39y.isChecked() ? "1"
                 : bi.cg39n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg40f(bi.cg40f.getText().toString());
+        form.setCg40f(bi.cg40f.getText().toString().trim().isEmpty() ? "-1" : bi.cg40f.getText().toString());
+
         form.setCg41(bi.cg41y.isChecked() ? "1"
                 : bi.cg41n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg42f(bi.cg42f.getText().toString());
+        form.setCg42f(bi.cg42f.getText().toString().trim().isEmpty() ? "-1" : bi.cg42f.getText().toString());
+
         form.setCg43(bi.cg43y.isChecked() ? "1"
                 : bi.cg43n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg44f(bi.cg44f.getText().toString());
+        form.setCg44f(bi.cg44f.getText().toString().trim().isEmpty() ? "-1" : bi.cg44f.getText().toString());
 
         form.setCg45(bi.cg45y.isChecked() ? "1"
                 : bi.cg45n.isChecked() ? "2"
