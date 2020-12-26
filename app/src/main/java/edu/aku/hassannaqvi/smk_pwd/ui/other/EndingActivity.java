@@ -98,7 +98,7 @@ public class EndingActivity extends AppCompatActivity {
         if (sectionMainCheck) {
             updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_STATUS, MainApp.psc.getStatus());
             if (updcount == 1)
-                updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, MainApp.form.getsI());
+                updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, String.valueOf(SectionMainActivity.countI));
         } else
             updcount = db.updateEnding();
 

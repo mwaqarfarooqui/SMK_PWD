@@ -1798,6 +1798,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+
     public ArrayList<Forms> getUnclosedForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -1886,6 +1887,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return posts;
     }*/
+
+
+    public boolean CheckHFs(String hfCode) throws SQLException {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor mCursor = db.rawQuery("SELECT "
+                + FormsTable.COLUMN_SB + ", "
+                + FormsTable.COLUMN_SC + ", "
+                + FormsTable.COLUMN_SD + ", "
+                + FormsTable.COLUMN_SE + ", "
+                + FormsTable.COLUMN_SF + ", "
+                + FormsTable.COLUMN_SG + ", "
+                + FormsTable.COLUMN_SH + ", "
+                + FormsTable.COLUMN_SI
+
+                + " FROM " + FormsTable.TABLE_NAME + " WHERE " + FormsTable.COLUMN_HF_CODE + "=? AND " + FormsTable.COLUMN_ISTATUS + "=?", new String[]{hfCode, "1"});
+        if (mCursor != null) {
+
+            if (mCursor.moveToFirst()) {
+//                MainApp.DIST_ID = mCursor.getString(mCursor.getColumnIndex(UsersContract.singleUser.DIST_ID));
+            }
+            return mCursor.getCount() > 0;
+        }
+        return false;
+    }
 
 
 }

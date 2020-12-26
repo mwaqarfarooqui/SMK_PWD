@@ -200,11 +200,12 @@ public class SectionC7Activity extends AppCompatActivity {
                 : "-1");
 
         form.setCg44f(bi.cg44f.getText().toString());
+
         form.setCg45(bi.cg45y.isChecked() ? "1"
                 : bi.cg45n.isChecked() ? "2"
                 : "-1");
 
-        form.setCg46f(bi.cg46f.getText().toString());
+        form.setCg46f(bi.cg46f.getText().toString().trim().isEmpty() ? "-1" : bi.cg46f.getText().toString());
 
 
         /*try {

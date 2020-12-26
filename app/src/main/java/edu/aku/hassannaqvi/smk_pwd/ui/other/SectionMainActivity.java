@@ -158,7 +158,7 @@ public class SectionMainActivity extends AppCompatActivity {
                     oF = new Intent(this, SectionH1Activity.class);
                     break;
                 case R.id.form08:
-                    //countI = 1;
+                    countI = 1;
                     oF = new Intent(this, SectionI1Activity.class);
                     break;
             }

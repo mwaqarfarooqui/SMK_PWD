@@ -14,7 +14,7 @@ import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI3Binding;
-import edu.aku.hassannaqvi.smk_pwd.utils.EndSectionActivity;
+import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
@@ -114,7 +114,18 @@ public class SectionI3Activity extends AppCompatActivity {
         if (!formValidation()) return;
         SaveDraft();
         if (UpdateDB()) {
-            startActivity(new Intent(this, EndSectionActivity.class));
+            startActivity(new Intent(this, SectionMainActivity.class));
+            finish();
+        }
+    }
+
+
+    public void BtnAdd() {
+        if (!formValidation()) return;
+        SaveDraft();
+        if (UpdateDB()) {
+            SectionMainActivity.countI++;
+            startActivity(new Intent(this, SectionI1Activity.class));
             finish();
         }
     }

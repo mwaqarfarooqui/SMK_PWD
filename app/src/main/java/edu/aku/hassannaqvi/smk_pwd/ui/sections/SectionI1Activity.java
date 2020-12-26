@@ -105,12 +105,13 @@ public class SectionI1Activity extends AppCompatActivity {
 
         psc.setSysdate(new java.text.SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault()).format(new Date().getTime()));
         psc.setUsername(MainApp.userName);
+        psc.setSerialno(String.valueOf(SectionMainActivity.countI));
         psc.setDeviceID(MainApp.appInfo.getDeviceID());
         psc.setDevicetagID(MainApp.appInfo.getTagName());
         psc.setAppversion(MainApp.appInfo.getAppVersion());
-        psc.setProvince(form.getProvince());
-        psc.setProvinceCode(form.getProvinceCode());
-        psc.setDistrict(form.getDistrict());
+//        psc.setProvince(form.getProvince());
+//        psc.setProvinceCode(form.getProvinceCode());
+//        psc.setDistrict(form.getDistrict());
         psc.setDistrictCode(form.getDistrictCode());
         psc.setTehsil(form.getTehsil());
         psc.setTehsilCode(form.getTehsilCode());
