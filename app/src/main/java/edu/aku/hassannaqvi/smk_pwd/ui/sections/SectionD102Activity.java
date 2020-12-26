@@ -99,15 +99,15 @@ public class SectionD102Activity extends AppCompatActivity {
                 : bi.da15b.isChecked() ? "2"
                 : "-1");
 
-        form.setDa16(bi.da16.getText().toString());
+        form.setDa16(bi.da16.getText().toString().trim().isEmpty() ? "-1" : bi.da16.getText().toString());
 
-        form.setDa17(bi.da17.getText().toString());
+        form.setDa17(bi.da17.getText().toString().trim().isEmpty() ? "-1" : bi.da17.getText().toString());
 
         form.setDa18(bi.da18a.isChecked() ? "1"
                 : bi.da1896.isChecked() ? "96"
                 : "-1");
 
-        form.setDa1896x(bi.da1896x.getText().toString());
+        form.setDa1896x(bi.da1896x.getText().toString().trim().isEmpty() ? "-1" : bi.da1896x.getText().toString());
 
 
         form.setDa1911(bi.da1911a.isChecked() ? "1"

@@ -78,19 +78,20 @@ public class SectionE2Activity extends AppCompatActivity {
                 : bi.eb02c.isChecked() ? "3"
                 : "-1");
 
-        form.setEb03( bi.eb03a.isChecked() ? "1"
+        form.setEb03(bi.eb03a.isChecked() ? "1"
                 : bi.eb03b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setEb03t(bi.eb03t.getText().toString());
-        form.setEb04( bi.eb04a.isChecked() ? "1"
+        form.setEb03t(bi.eb03t.getText().toString().trim().isEmpty() ? "-1" : bi.eb03t.getText().toString());
+
+        form.setEb04(bi.eb04a.isChecked() ? "1"
                 : bi.eb04b.isChecked() ? "2"
                 : bi.eb04c.isChecked() ? "3"
-                :  "-1");
+                : "-1");
 
-        form.setEb05( bi.eb05a.isChecked() ? "1"
+        form.setEb05(bi.eb05a.isChecked() ? "1"
                 : bi.eb05b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
         form.setEb06( bi.eb06a.isChecked() ? "1"
                 : bi.eb06b.isChecked() ? "2"
@@ -106,7 +107,7 @@ public class SectionE2Activity extends AppCompatActivity {
         form.setEb08c(bi.eb08c.isChecked() ? "3" : "-1");
         form.setEb08d(bi.eb08d.isChecked() ? "4" : "-1");
         form.setEb0896(bi.eb0896.isChecked() ? "96" : "-1");
-        form.setEb0896x(bi.eb0896x.getText().toString());
+        form.setEb0896x(bi.eb0896x.getText().toString().trim().isEmpty() ? "-1" : bi.eb0896x.getText().toString());
 
     }
 
