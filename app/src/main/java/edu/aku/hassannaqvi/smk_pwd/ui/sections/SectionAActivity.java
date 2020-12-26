@@ -368,18 +368,21 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
+            return false;
+        }
 
-        /*if (db.CheckHF(String.valueOf(hfMap.get(bi.a13.getSelectedItem().toString())))) {
+        if (db.CheckHF(hfCodes.get(bi.aa07.getSelectedItemPosition()))) {
             Toast.makeText(this, "Facility Already filled ", Toast.LENGTH_LONG).show();
             return false;
         }
 
-        fc = db.CheckHF(String.valueOf(hfMap.get(bi.a13.getSelectedItem().toString())), "1");
-        if (fc == null) {
+        form = db.CheckHF(hfCodes.get(bi.aa07.getSelectedItemPosition()), "1");
+        if (form == null) {
             Toast.makeText(this, "Partially filled Facility ", Toast.LENGTH_LONG).show();
             return true;
-        }*/
+        }
+        return true;
 
     }
 
