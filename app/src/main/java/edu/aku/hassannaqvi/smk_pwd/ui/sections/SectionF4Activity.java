@@ -52,7 +52,7 @@ public class SectionF4Activity extends AppCompatActivity {
                 : bi.fd0196.isChecked() ? "96"
                 : "-1");
 
-        form.setFd0196x(bi.fd0196x.getText().toString());
+        form.setFd0196x(bi.fd0196x.getText().toString().trim().isEmpty() ? "-1" : bi.fd0196x.getText().toString());
 
 
         /*try {

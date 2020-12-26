@@ -51,7 +51,7 @@ public class SectionF5Activity extends AppCompatActivity {
                 : bi.fe0196.isChecked() ? "96"
                 : "-1");
 
-        form.setFe0196x(bi.fe0196x.getText().toString());
+        form.setFe0196x(bi.fe0196x.getText().toString().trim().isEmpty() ? "-1" : bi.fe0196x.getText().toString());
 
 
         /*try {

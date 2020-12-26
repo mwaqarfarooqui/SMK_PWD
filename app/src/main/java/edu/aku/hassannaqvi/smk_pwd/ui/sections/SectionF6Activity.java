@@ -74,7 +74,7 @@ public class SectionF6Activity extends AppCompatActivity {
                 : bi.ff01b.isChecked() ? "2"
                 : "-1");
 
-        form.setFf02d(bi.ff02.getText().toString());
+        form.setFf02d(bi.ff02.getText().toString().trim().isEmpty() ? "-1" : bi.ff02.getText().toString());
 
         form.setFf03(bi.ff03a.isChecked() ? "1"
                 : bi.ff03b.isChecked() ? "2"
