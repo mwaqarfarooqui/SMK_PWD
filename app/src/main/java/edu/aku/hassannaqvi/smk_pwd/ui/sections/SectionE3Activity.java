@@ -80,30 +80,35 @@ public class SectionE3Activity extends AppCompatActivity {
 
         form.setEc02d(bi.ec02d.getText().toString().trim().isEmpty() ? "-1" : bi.ec02d.getText().toString());
         form.setEc02m(bi.ec02m.getText().toString().trim().isEmpty() ? "-1" : bi.ec02m.getText().toString());
+
         form.setEc03a(bi.ec03y.isChecked() ? "1"
                 : bi.ec03n.isChecked() ? "2"
                 : "-1");
 
         form.setEc04d(bi.ec04d.getText().toString().trim().isEmpty() ? "-1" : bi.ec04d.getText().toString());
         form.setEc04m(bi.ec04m.getText().toString().trim().isEmpty() ? "-1" : bi.ec04m.getText().toString());
+
         form.setEc05a(bi.ec05y.isChecked() ? "1"
                 : bi.ec05n.isChecked() ? "2"
                 : "-1");
 
         form.setEc06d(bi.ec06d.getText().toString().trim().isEmpty() ? "-1" : bi.ec06d.getText().toString());
         form.setEc06m(bi.ec06m.getText().toString().trim().isEmpty() ? "-1" : bi.ec06m.getText().toString());
+
         form.setEc07a(bi.ec07y.isChecked() ? "1"
                 : bi.ec07n.isChecked() ? "2"
                 : "-1");
 
         form.setEc08d(bi.ec08d.getText().toString().trim().isEmpty() ? "-1" : bi.ec08d.getText().toString());
         form.setEc08m(bi.ec08m.getText().toString().trim().isEmpty() ? "-1" : bi.ec08m.getText().toString());
+
         form.setEc09a(bi.ec09y.isChecked() ? "1"
                 : bi.ec09n.isChecked() ? "2"
                 : "-1");
 
         form.setEc10d(bi.ec10d.getText().toString().trim().isEmpty() ? "-1" : bi.ec10d.getText().toString());
         form.setEc10m(bi.ec10m.getText().toString().trim().isEmpty() ? "-1" : bi.ec10m.getText().toString());
+
         form.setEc11a(bi.ec11y.isChecked() ? "1"
                 : bi.ec11n.isChecked() ? "2"
                 : "-1");

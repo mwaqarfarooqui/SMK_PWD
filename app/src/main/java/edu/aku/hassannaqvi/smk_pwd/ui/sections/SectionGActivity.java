@@ -86,31 +86,33 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.ga01b.isChecked() ? "2"
                 : "-1");
 
-        form.setGa02d(bi.ga02d.getText().toString());
-        form.setGa02m(bi.ga02m.getText().toString());
-        form.setGa02y(bi.ga02y.getText().toString());
-        form.setGa02h(bi.ga02h.getText().toString());
-        form.setGa02mi(bi.ga02mi.getText().toString());
+        form.setGa02d(bi.ga02d.getText().toString().trim().isEmpty() ? "-1" : bi.ga02d.getText().toString());
+        form.setGa02m(bi.ga02m.getText().toString().trim().isEmpty() ? "-1" : bi.ga02m.getText().toString());
+        form.setGa02y(bi.ga02y.getText().toString().trim().isEmpty() ? "-1" : bi.ga02y.getText().toString());
+        form.setGa02h(bi.ga02h.getText().toString().trim().isEmpty() ? "-1" : bi.ga02h.getText().toString());
+        form.setGa02mi(bi.ga02mi.getText().toString().trim().isEmpty() ? "-1" : bi.ga02mi.getText().toString());
+
         form.setGa02s(bi.ga02s.getText().toString());
-        form.setGa03( bi.ga03a.isChecked() ? "1"
+        form.setGa03(bi.ga03a.isChecked() ? "1"
                 : bi.ga03b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setGa04( bi.ga04a.isChecked() ? "1"
+        form.setGa04(bi.ga04a.isChecked() ? "1"
                 : bi.ga04b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setGa05( bi.ga05a.isChecked() ? "1"
+        form.setGa05(bi.ga05a.isChecked() ? "1"
                 : bi.ga05b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setGa06y(bi.ga06y.getText().toString());
-        form.setGa06m(bi.ga06m.getText().toString());
-        form.setGa07( bi.ga07a.isChecked() ? "1"
+        form.setGa06y(bi.ga06y.getText().toString().trim().isEmpty() ? "-1" : bi.ga06y.getText().toString());
+        form.setGa06m(bi.ga06m.getText().toString().trim().isEmpty() ? "-1" : bi.ga06m.getText().toString());
+
+        form.setGa07(bi.ga07a.isChecked() ? "1"
                 : bi.ga07b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setGa08a( bi.ga08aa.isChecked() ? "1"
+        form.setGa08a(bi.ga08aa.isChecked() ? "1"
                 : bi.ga08ab.isChecked() ? "2"
                 : bi.ga08ac.isChecked() ? "3"
                 : bi.ga08ad.isChecked() ? "4"
@@ -150,57 +152,62 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.ga08fc.isChecked() ? "3"
                 : bi.ga08fd.isChecked() ? "4"
                 : bi.ga08fe.isChecked() ? "5"
-                :  "-1");
+                : "-1");
 
-        form.setGa09( bi.ga09a.isChecked() ? "1"
+        form.setGa09(bi.ga09a.isChecked() ? "1"
                 : bi.ga09b.isChecked() ? "2"
                 : bi.ga09c.isChecked() ? "3"
-                :  "-1");
+                : "-1");
 
-        form.setGa09bx(bi.ga09bx.getText().toString());
-        form.setGa09cx(bi.ga09cx.getText().toString());
-        form.setGa10( bi.ga10a.isChecked() ? "1"
+        form.setGa09bx(bi.ga09bx.getText().toString().trim().isEmpty() ? "-1" : bi.ga09bx.getText().toString());
+        form.setGa09cx(bi.ga09cx.getText().toString().trim().isEmpty() ? "-1" : bi.ga09cx.getText().toString());
+
+        form.setGa10(bi.ga10a.isChecked() ? "1"
                 : bi.ga10b.isChecked() ? "2"
                 : bi.ga10c.isChecked() ? "3"
-                :  "-1");
+                : "-1");
 
-        form.setGa10bx(bi.ga10bx.getText().toString());
-        form.setGa10cx(bi.ga10cx.getText().toString());
-        form.setGa11( bi.ga11a.isChecked() ? "1"
+        form.setGa10bx(bi.ga10bx.getText().toString().trim().isEmpty() ? "-1" : bi.ga10bx.getText().toString());
+        form.setGa10cx(bi.ga10cx.getText().toString().trim().isEmpty() ? "-1" : bi.ga10cx.getText().toString());
+
+        form.setGa11(bi.ga11a.isChecked() ? "1"
                 : bi.ga11b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setGa11ax(bi.ga11ax.getText().toString());
-        form.setGa11bx(bi.ga11bx.getText().toString());
-        form.setGa12( bi.ga12a.isChecked() ? "1"
+        form.setGa11ax(bi.ga11ax.getText().toString().trim().isEmpty() ? "-1" : bi.ga11ax.getText().toString());
+        form.setGa11bx(bi.ga11bx.getText().toString().trim().isEmpty() ? "-1" : bi.ga11bx.getText().toString());
+
+        form.setGa12(bi.ga12a.isChecked() ? "1"
                 : bi.ga12b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setGa13( bi.ga13a.isChecked() ? "1"
+        form.setGa13(bi.ga13a.isChecked() ? "1"
                 : bi.ga13b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setGa14( bi.ga14a.isChecked() ? "1"
+        form.setGa14(bi.ga14a.isChecked() ? "1"
                 : bi.ga14b.isChecked() ? "2"
                 : bi.ga14c.isChecked() ? "3"
-                :  "-1");
+                : "-1");
 
-        form.setGa14ax(bi.ga14ax.getText().toString());
-        form.setGa14bx(bi.ga14bx.getText().toString());
-        form.setGa14cx(bi.ga14cx.getText().toString());
-        form.setGa15( bi.ga15a.isChecked() ? "1"
+        form.setGa14ax(bi.ga14ax.getText().toString().trim().isEmpty() ? "-1" : bi.ga14ax.getText().toString());
+        form.setGa14bx(bi.ga14bx.getText().toString().trim().isEmpty() ? "-1" : bi.ga14bx.getText().toString());
+        form.setGa14cx(bi.ga14cx.getText().toString().trim().isEmpty() ? "-1" : bi.ga14cx.getText().toString());
+
+        form.setGa15(bi.ga15a.isChecked() ? "1"
                 : bi.ga15b.isChecked() ? "2"
                 : bi.ga15c.isChecked() ? "3"
                 : bi.ga15d.isChecked() ? "4"
                 : bi.ga15e.isChecked() ? "5"
                 : bi.ga15f.isChecked() ? "6"
                 : bi.ga1596.isChecked() ? "96"
-                :  "-1");
+                : "-1");
 
-        form.setGa1596x(bi.ga1596x.getText().toString());
-        form.setGa16( bi.ga16a.isChecked() ? "1"
+        form.setGa1596x(bi.ga1596x.getText().toString().trim().isEmpty() ? "-1" : bi.ga1596x.getText().toString());
+
+        form.setGa16(bi.ga16a.isChecked() ? "1"
                 : bi.ga16b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
     }
 
