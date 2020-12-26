@@ -107,18 +107,12 @@ public class SectionH3Activity extends AppCompatActivity {
                 :  "-1");
 
         form.setHc06a(bi.hc06a.isChecked() ? "1" : "-1");
-
         form.setHc06b(bi.hc06b.isChecked() ? "2" : "-1");
-
         form.setHc06c(bi.hc06c.isChecked() ? "3" : "-1");
-
         form.setHc06d(bi.hc06d.isChecked() ? "4" : "-1");
-
         form.setHc06e(bi.hc06e.isChecked() ? "5" : "-1");
-
         form.setHc0696(bi.hc0696.isChecked() ? "96" : "-1");
-
-        form.setHc0696x(bi.hc0696x.getText().toString());
+        form.setHc0696x(bi.hc0696x.getText().toString().trim().isEmpty() ? "-1" : bi.hc0696x.getText().toString());
 
     }
 
