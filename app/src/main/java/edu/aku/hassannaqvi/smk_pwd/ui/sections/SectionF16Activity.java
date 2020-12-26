@@ -39,8 +39,10 @@ public class SectionF16Activity extends AppCompatActivity {
     }
 
     private void setupSkips() {
-        radioGroupListener(bi.fp01a, bi.fp01ab, new ViewGroup[]{bi.cvfp01b, bi.cvfp01c, bi.cvfp01e});
-        radioGroupListener(bi.fp01c, bi.fp01cb, new ViewGroup[]{bi.cvfp01e});
+        radioGroupListener(bi.fp01a, bi.fp01ab, new ViewGroup[]{bi.cvfp01b, bi.cvfp01c, bi.cvfp01d});
+        radioGroupListener(bi.fp01c, bi.fp01cb, new ViewGroup[]{bi.cvfp01d});
+        radioGroupListener(bi.fp02a, bi.fp02ab, new ViewGroup[]{bi.cvfp02b, bi.cvfp02c, bi.cvfp02d});
+        radioGroupListener(bi.fp02c, bi.fp02cb, new ViewGroup[]{bi.cvfp02d});
     }
 
 
@@ -83,6 +85,21 @@ public class SectionF16Activity extends AppCompatActivity {
 
         form.setFp01dd(bi.fp01dd.getText().toString().trim().length() > 0 ? bi.fp01dd.getText().toString() : "-1");
         form.setFp01dm(bi.fp01dm.getText().toString().trim().length() > 0 ? bi.fp01dm.getText().toString() : "-1");
+
+        form.setFp01a(bi.fp02aa.isChecked() ? "1"
+                : bi.fp02ab.isChecked() ? "2"
+                : "-1");
+
+        form.setFp01b(bi.fp02ba.isChecked() ? "1"
+                : bi.fp02bb.isChecked() ? "2"
+                : "-1");
+
+        form.setFp01c(bi.fp02ca.isChecked() ? "1"
+                : bi.fp02cb.isChecked() ? "2"
+                : "-1");
+
+        form.setFp01dd(bi.fp02dd.getText().toString().trim().length() > 0 ? bi.fp02dd.getText().toString() : "-1");
+        form.setFp01dm(bi.fp02dm.getText().toString().trim().length() > 0 ? bi.fp02dm.getText().toString() : "-1");
 
     }
 
