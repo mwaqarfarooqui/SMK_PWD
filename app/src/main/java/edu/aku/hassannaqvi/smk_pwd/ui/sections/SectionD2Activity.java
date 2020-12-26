@@ -131,15 +131,15 @@ public class SectionD2Activity extends AppCompatActivity {
                 : bi.db13b.isChecked() ? "2"
                 : "-1");
 
-        form.setDb14(bi.db14.getText().toString());
+        form.setDb14(bi.db14.getText().toString().trim().isEmpty() ? "-1" : bi.db14.getText().toString());
 
-        form.setDb15(bi.db15.getText().toString());
+        form.setDb15(bi.db15.getText().toString().trim().isEmpty() ? "-1" : bi.db15.getText().toString());
 
         form.setDb16(bi.db16a.isChecked() ? "1"
                 : bi.db1696.isChecked() ? "96"
                 : "-1");
 
-        form.setDb1696x(bi.db1696x.getText().toString());
+        form.setDb1696x(bi.db1696x.getText().toString().trim().isEmpty() ? "-1" : bi.db1696x.getText().toString());
 
 
         /*try {
