@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Validator;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
+import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
 import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
@@ -113,7 +114,7 @@ public class SectionI3Activity extends AppCompatActivity {
     public void BtnContinue() {
         if (!formValidation()) return;
         SaveDraft();
-        if (UpdateDB()) {
+        if (UpdateDB(true)) {
             startActivity(new Intent(this, SectionMainActivity.class));
             finish();
         }
@@ -123,7 +124,7 @@ public class SectionI3Activity extends AppCompatActivity {
     public void BtnAdd() {
         if (!formValidation()) return;
         SaveDraft();
-        if (UpdateDB()) {
+        if (UpdateDB(false)) {
             SectionMainActivity.countI++;
             startActivity(new Intent(this, SectionI1Activity.class));
             finish();
@@ -136,9 +137,12 @@ public class SectionI3Activity extends AppCompatActivity {
     }
 
 
-    private boolean UpdateDB() {
+    private boolean UpdateDB(Boolean save) {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_SI, psc.sItoString());
+        if (save) {
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, String.valueOf(SectionMainActivity.countI));
+        }
         if (updcount == 1) {
             return true;
         } else {

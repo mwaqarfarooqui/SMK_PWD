@@ -24,7 +24,6 @@ import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionH1Activity;
 import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionI1Activity;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 
 public class SectionMainActivity extends AppCompatActivity {
     public static int countI = 0;
@@ -79,10 +78,15 @@ public class SectionMainActivity extends AppCompatActivity {
                 bi.form07.setBackgroundResource(R.color.dullWhite);
             }
 
-            if (!new JSONObject(psc.sItoString()).get("ic08").equals("")) {
+            if (!form.getsI().isEmpty()) {
                 bi.form08.setEnabled(false);
                 bi.form08.setBackgroundResource(R.color.dullWhite);
             }
+
+            /*if (!new JSONObject(psc.sItoString()).get("ic08").equals("")) {
+                bi.form08.setEnabled(false);
+                bi.form08.setBackgroundResource(R.color.dullWhite);
+            }*/
         } catch (JSONException e) {
             e.printStackTrace();
         }
