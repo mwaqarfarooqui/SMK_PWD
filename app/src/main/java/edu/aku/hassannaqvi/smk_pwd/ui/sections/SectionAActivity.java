@@ -327,6 +327,8 @@ public class SectionAActivity extends AppCompatActivity {
         form.setAa01d(dA[0]);
         form.setAa01m(dA[1]);
         form.setAa01y(dA[2]);
+        form.setAa02(MainApp.DIST_ID);
+        form.setAa03(MainApp.DIST_ID);
 
         /*form.setAa02(bi.aa02a.isChecked() ? "1"
                 : bi.aa02b.isChecked() ? "2"
