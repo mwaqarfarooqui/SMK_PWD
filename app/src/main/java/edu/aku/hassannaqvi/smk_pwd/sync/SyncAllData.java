@@ -141,7 +141,7 @@ public class SyncAllData extends AsyncTask<Integer, Integer, String> {
                             for (Method method : contractClass.getDeclaredMethods()) {
                                 String methodName = method.getName();
 
-                                if (methodName.equals(form02_flag == 0 ? "toJSONObject" : form02_flag == 1 ? "toJSONObject02" : "toJSONObject03")) {
+                                if (methodName.equals("toJSONObject")) {
                                     for (Object fc : DBData) {
                                         jsonSync.put(fc.getClass().getMethod(methodName).invoke(fc));
                                     }
