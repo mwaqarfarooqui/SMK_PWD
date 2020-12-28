@@ -39,6 +39,8 @@ import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySyncBinding;
 import edu.aku.hassannaqvi.smk_pwd.get.GetAllData;
+import edu.aku.hassannaqvi.smk_pwd.models.Forms;
+import edu.aku.hassannaqvi.smk_pwd.models.Patients;
 import edu.aku.hassannaqvi.smk_pwd.otherClasses.SyncModel;
 import edu.aku.hassannaqvi.smk_pwd.sync.SyncAllData;
 import edu.aku.hassannaqvi.smk_pwd.sync.SyncDevice;
@@ -153,7 +155,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     this,
                     "Forms",
                     "updateSyncedForms",
-                    FormsContract.class,
+                    Forms.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     FormsContract.FormsTable.TABLE_NAME,
                     db.getUnsyncedForms(1), 0, uploadListAdapter, uploadlist
@@ -189,7 +191,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     this,
                     "Patients",
                     "updateSyncedPatient",
-                    PatientsContract.class,
+                    Patients.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     PatientsContract.PatientsTable.TABLE_NAME,
                     db.getUnsyncedPatients(), 1, uploadListAdapter, uploadlist
