@@ -18,7 +18,6 @@ import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionC1Binding;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
-import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionC1Activity extends AppCompatActivity {
 
@@ -71,11 +70,6 @@ public class SectionC1Activity extends AppCompatActivity {
             finish();
             startActivity(new Intent(this, SectionC2Activity.class));
         }
-    }
-
-
-    public void BtnEnd() {
-        openSectionMainActivity(this, "C");
     }
 
 }
