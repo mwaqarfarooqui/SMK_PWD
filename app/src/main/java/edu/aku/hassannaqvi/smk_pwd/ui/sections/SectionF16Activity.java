@@ -102,8 +102,8 @@ public class SectionF16Activity extends AppCompatActivity {
                 : bi.fp01cb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01dd(bi.fp01dd.getText().toString().trim().length() > 0 ? bi.fp01dd.getText().toString() : "-1");
-        form.setFp01dm(bi.fp01dm.getText().toString().trim().length() > 0 ? bi.fp01dm.getText().toString() : "-1");
+        form.setFp01dd(bi.fp01dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp01dd.getText().toString());
+        form.setFp01dm(bi.fp01dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp01dm.getText().toString());
 
         form.setFp01a(bi.fp02aa.isChecked() ? "1"
                 : bi.fp02ab.isChecked() ? "2"
@@ -117,8 +117,8 @@ public class SectionF16Activity extends AppCompatActivity {
                 : bi.fp02cb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01dd(bi.fp02dd.getText().toString().trim().length() > 0 ? bi.fp02dd.getText().toString() : "-1");
-        form.setFp01dm(bi.fp02dm.getText().toString().trim().length() > 0 ? bi.fp02dm.getText().toString() : "-1");
+        form.setFp01dd(bi.fp02dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp02dd.getText().toString());
+        form.setFp01dm(bi.fp02dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp02dm.getText().toString());
 
 
         form.setFp01a(bi.fp03aa.isChecked() ? "1"
@@ -133,8 +133,8 @@ public class SectionF16Activity extends AppCompatActivity {
                 : bi.fp03cb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01dd(bi.fp03dd.getText().toString().trim().length() > 0 ? bi.fp03dd.getText().toString() : "-1");
-        form.setFp01dm(bi.fp03dm.getText().toString().trim().length() > 0 ? bi.fp03dm.getText().toString() : "-1");
+        form.setFp01dd(bi.fp03dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp03dd.getText().toString());
+        form.setFp01dm(bi.fp03dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp03dm.getText().toString());
 
 
         form.setFp01a(bi.fp04aa.isChecked() ? "1"
@@ -149,8 +149,8 @@ public class SectionF16Activity extends AppCompatActivity {
                 : bi.fp04cb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01dd(bi.fp04dd.getText().toString().trim().length() > 0 ? bi.fp04dd.getText().toString() : "-1");
-        form.setFp01dm(bi.fp04dm.getText().toString().trim().length() > 0 ? bi.fp04dm.getText().toString() : "-1");
+        form.setFp01dd(bi.fp04dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp04dd.getText().toString());
+        form.setFp01dm(bi.fp04dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp04dm.getText().toString());
 
 
         form.setFp01a(bi.fp05aa.isChecked() ? "1"
@@ -165,8 +165,8 @@ public class SectionF16Activity extends AppCompatActivity {
                 : bi.fp05cb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01dd(bi.fp05dd.getText().toString().trim().length() > 0 ? bi.fp05dd.getText().toString() : "-1");
-        form.setFp01dm(bi.fp05dm.getText().toString().trim().length() > 0 ? bi.fp05dm.getText().toString() : "-1");
+        form.setFp01dd(bi.fp05dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp05dd.getText().toString());
+        form.setFp01dm(bi.fp05dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp05dm.getText().toString());
 
     }
 

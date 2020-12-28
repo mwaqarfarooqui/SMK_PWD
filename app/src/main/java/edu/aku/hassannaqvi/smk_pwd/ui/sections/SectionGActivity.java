@@ -53,11 +53,11 @@ public class SectionGActivity extends AppCompatActivity {
         bi.ga02mi.setText(dA[4]);
         bi.ga02s.setText(dA[5]);
 
-        radioGroupListener(bi.ga03, bi.ga03a, bi.cvga04);
+        rgListener(bi.ga03, bi.ga03a, bi.cvga04);
     }
 
 
-    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+    public void rgListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
         rg.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(vg);
             vg.setVisibility(View.VISIBLE);

@@ -140,8 +140,26 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             DatabaseHelper db = new DatabaseHelper(this);
 
             new SyncDevice(this, false).execute();
+
+
 //  *******************************************************Forms*********************************
-            String[] unsyncedString = {"updateSyncedForms", "updateSyncedForms02", "updateSyncedForms03"};
+            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+                if (uploadlistActivityCreated) {
+                    uploadmodel = new SyncModel();
+                    uploadmodel.setstatusID(0);
+                    uploadlist.add(uploadmodel);
+                }
+            new SyncAllData(
+                    this,
+                    "Forms",
+                    "updateSyncedForms",
+                    FormsContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    FormsContract.FormsTable.TABLE_NAME,
+                    db.getUnsyncedForms(0), 0, uploadListAdapter, uploadlist
+            ).execute(0);
+//  *******************************************************Forms*********************************
+            /*String[] unsyncedString = {"updateSyncedForms", "updateSyncedForms02", "updateSyncedForms03"};
             for (int i = 1; i <= 3; i++) {
                 Toast.makeText(getApplicationContext(), "Syncing Forms (" + i + "/3)", Toast.LENGTH_SHORT).show();
                 if (uploadlistActivityCreated) {
@@ -158,24 +176,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                         FormsContract.FormsTable.TABLE_NAME + String.format("%02d", i),
                         db.getUnsyncedForms(i), i - 1, uploadListAdapter, uploadlist
                 ).execute(i - 1);
-            }
-
-//  *******************************************************StaffingTable*********************************
-            /*Toast.makeText(getApplicationContext(), "Syncing StaffingTable", Toast.LENGTH_SHORT).show();
-            if (uploadlistActivityCreated) {
-                uploadmodel = new SyncModel();
-                uploadmodel.setstatusID(0);
-                uploadlist.add(uploadmodel);
-            }
-            new SyncAllData(
-                    this,
-                    "StaffingTable",
-                    "updateSyncedStaffing",
-                    StaffingContract.class,
-                    MainApp._HOST_URL + MainApp._SERVER_URL,
-                    StaffingContract.StaffingTable.TABLE_NAME,
-                    db.getUnsyncedStaffing(), 3, uploadListAdapter, uploadlist
-            ).execute();*/
+            }*/
 
 //  *******************************************************PatientsTable*********************************
             Toast.makeText(getApplicationContext(), "Syncing PatientsTable", Toast.LENGTH_SHORT).show();
@@ -186,12 +187,12 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }
             new SyncAllData(
                     this,
-                    "PatientsTable",
+                    "Patients",
                     "updateSyncedPatient",
                     PatientsContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     PatientsContract.PatientsTable.TABLE_NAME,
-                    db.getUnsyncedPatients(), 3, uploadListAdapter, uploadlist
+                    db.getUnsyncedPatients(), 1, uploadListAdapter, uploadlist
             ).execute();
 
 

@@ -1766,8 +1766,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/ga16b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
