@@ -156,7 +156,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     FormsContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     FormsContract.FormsTable.TABLE_NAME,
-                    db.getUnsyncedForms(0), 0, uploadListAdapter, uploadlist
+                    db.getUnsyncedForms(1), 0, uploadListAdapter, uploadlist
             ).execute(0);
 //  *******************************************************Forms*********************************
             /*String[] unsyncedString = {"updateSyncedForms", "updateSyncedForms02", "updateSyncedForms03"};

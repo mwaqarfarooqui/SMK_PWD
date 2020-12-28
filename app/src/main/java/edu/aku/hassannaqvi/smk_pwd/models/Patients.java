@@ -655,7 +655,6 @@ public class Patients extends LiveData<Patients> {
         this.username = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_USERNAME));
         this.serialno = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_SERIALNO));
 
-
         this.deviceID = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_DEVICEID));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_DEVICETAGID));
         this.status = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_STATUS));

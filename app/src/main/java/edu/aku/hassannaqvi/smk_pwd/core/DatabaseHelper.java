@@ -1327,7 +1327,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_GPSACC,
                 FormsTable.COLUMN_DEVICETAGID,
                 FormsTable.COLUMN_DEVICEID,
-                FormsTable.COLUMN_APPVERSION,
+                FormsTable.COLUMN_APPVERSION
         };
 
         String whereClause;
@@ -1388,7 +1388,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 StaffingTable.COLUMN_STATUS,
                 StaffingTable.COLUMN_SYNCED,
                 StaffingTable.COLUMN_SYNCED_DATE,
-                StaffingTable.COLUMN_APPVERSION,
+                StaffingTable.COLUMN_APPVERSION
         };
 
         String whereClause = "(" + StaffingContract.StaffingTable.COLUMN_SYNCED + " is null or " + StaffingContract.StaffingTable.COLUMN_SYNCED + " ='')  AND " + StaffingContract.StaffingTable.COLUMN_STATUS + " =?";
@@ -1432,6 +1432,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
+                StaffingTable._ID,
                 PatientsTable.COLUMN_UID,
                 PatientsTable.COLUMN_UUID,
                 PatientsTable.COLUMN_SYSDATE,
@@ -1457,7 +1458,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 PatientsTable.COLUMN_UC,
                 PatientsTable.COLUMN_UC_CODE,
                 PatientsTable.COLUMN_HF,
-                PatientsTable.COLUMN_HF_CODE,
+                PatientsTable.COLUMN_HF_CODE
 
         };
 

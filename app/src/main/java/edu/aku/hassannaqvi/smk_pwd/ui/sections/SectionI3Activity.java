@@ -17,6 +17,7 @@ import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI3Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
+import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
@@ -140,8 +141,10 @@ public class SectionI3Activity extends AppCompatActivity {
     private boolean UpdateDB(Boolean save) {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_SI, psc.sItoString());
+        db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_STATUS, "1");
         if (save) {
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, String.valueOf(SectionMainActivity.countI));
+            form.setsI(String.valueOf(SectionMainActivity.countI));
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, form.getsI());
         }
         if (updcount == 1) {
             return true;
