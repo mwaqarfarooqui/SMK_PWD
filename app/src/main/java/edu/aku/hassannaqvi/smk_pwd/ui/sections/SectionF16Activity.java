@@ -36,23 +36,36 @@ public class SectionF16Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_f16);
         bi.setCallback(this);
         setupSkips();
+        //vgChild(bi.cvfp01d);
+
+
     }
+
+
+
+    /*public void vgChild(ViewGroup viewGroup) {
+        for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            View child = viewGroup.getChildAt(i);
+            child.setEnabled(false);
+        }
+    }*/
+
 
     private void setupSkips() {
-        radioGroupListener(bi.fp01a, bi.fp01ab, new ViewGroup[]{bi.cvfp01b, bi.cvfp01c, bi.cvfp01d});
-        radioGroupListener(bi.fp01c, bi.fp01cb, new ViewGroup[]{bi.cvfp01d});
-        radioGroupListener(bi.fp02a, bi.fp02ab, new ViewGroup[]{bi.cvfp02b, bi.cvfp02c, bi.cvfp02d});
-        radioGroupListener(bi.fp02c, bi.fp02cb, new ViewGroup[]{bi.cvfp02d});
-        radioGroupListener(bi.fp03a, bi.fp03ab, new ViewGroup[]{bi.cvfp03b, bi.cvfp03c, bi.cvfp03d});
-        radioGroupListener(bi.fp03c, bi.fp03cb, new ViewGroup[]{bi.cvfp03d});
-        radioGroupListener(bi.fp04a, bi.fp04ab, new ViewGroup[]{bi.cvfp04b, bi.cvfp04c, bi.cvfp04d});
-        radioGroupListener(bi.fp04c, bi.fp04cb, new ViewGroup[]{bi.cvfp04d});
-        radioGroupListener(bi.fp05a, bi.fp05ab, new ViewGroup[]{bi.cvfp05b, bi.cvfp05c, bi.cvfp05d});
-        radioGroupListener(bi.fp05c, bi.fp05cb, new ViewGroup[]{bi.cvfp05d});
+        rgListener(bi.fp01a, bi.fp01ab, new ViewGroup[]{bi.cvfp01b, bi.cvfp01c, bi.cvfp01d});
+        rgListener(bi.fp01c, bi.fp01cb, new ViewGroup[]{bi.cvfp01d});
+        rgListener(bi.fp02a, bi.fp02ab, new ViewGroup[]{bi.cvfp02b, bi.cvfp02c, bi.cvfp02d});
+        rgListener(bi.fp02c, bi.fp02cb, new ViewGroup[]{bi.cvfp02d});
+        rgListener(bi.fp03a, bi.fp03ab, new ViewGroup[]{bi.cvfp03b, bi.cvfp03c, bi.cvfp03d});
+        rgListener(bi.fp03c, bi.fp03cb, new ViewGroup[]{bi.cvfp03d});
+        rgListener(bi.fp04a, bi.fp04ab, new ViewGroup[]{bi.cvfp04b, bi.cvfp04c, bi.cvfp04d});
+        rgListener(bi.fp04c, bi.fp04cb, new ViewGroup[]{bi.cvfp04d});
+        rgListener(bi.fp05a, bi.fp05ab, new ViewGroup[]{bi.cvfp05b, bi.cvfp05c, bi.cvfp05d});
+        rgListener(bi.fp05c, bi.fp05cb, new ViewGroup[]{bi.cvfp05d});
     }
 
 
-    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup[] vgArray) {
+    public void rgListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup[] vgArray) {
         rg.setOnCheckedChangeListener((radioGroup, i) -> {
             for (ViewGroup vg : vgArray) {
                 Clear.clearAllFields(vg);
