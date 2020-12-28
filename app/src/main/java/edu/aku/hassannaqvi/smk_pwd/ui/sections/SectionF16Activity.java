@@ -105,68 +105,68 @@ public class SectionF16Activity extends AppCompatActivity {
         form.setFp01dd(bi.fp01dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp01dd.getText().toString());
         form.setFp01dm(bi.fp01dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp01dm.getText().toString());
 
-        form.setFp01a(bi.fp02aa.isChecked() ? "1"
+        form.setFp02a(bi.fp02aa.isChecked() ? "1"
                 : bi.fp02ab.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01b(bi.fp02ba.isChecked() ? "1"
+        form.setFp02b(bi.fp02ba.isChecked() ? "1"
                 : bi.fp02bb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01c(bi.fp02ca.isChecked() ? "1"
+        form.setFp02c(bi.fp02ca.isChecked() ? "1"
                 : bi.fp02cb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01dd(bi.fp02dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp02dd.getText().toString());
-        form.setFp01dm(bi.fp02dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp02dm.getText().toString());
+        form.setFp02dd(bi.fp02dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp02dd.getText().toString());
+        form.setFp02dm(bi.fp02dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp02dm.getText().toString());
 
 
-        form.setFp01a(bi.fp03aa.isChecked() ? "1"
+        form.setFp03a(bi.fp03aa.isChecked() ? "1"
                 : bi.fp03ab.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01b(bi.fp03ba.isChecked() ? "1"
+        form.setFp03b(bi.fp03ba.isChecked() ? "1"
                 : bi.fp03bb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01c(bi.fp03ca.isChecked() ? "1"
+        form.setFp03c(bi.fp03ca.isChecked() ? "1"
                 : bi.fp03cb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01dd(bi.fp03dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp03dd.getText().toString());
-        form.setFp01dm(bi.fp03dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp03dm.getText().toString());
+        form.setFp03dd(bi.fp03dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp03dd.getText().toString());
+        form.setFp03dm(bi.fp03dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp03dm.getText().toString());
 
 
-        form.setFp01a(bi.fp04aa.isChecked() ? "1"
+        form.setFp04a(bi.fp04aa.isChecked() ? "1"
                 : bi.fp04ab.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01b(bi.fp04ba.isChecked() ? "1"
+        form.setFp04b(bi.fp04ba.isChecked() ? "1"
                 : bi.fp04bb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01c(bi.fp04ca.isChecked() ? "1"
+        form.setFp04c(bi.fp04ca.isChecked() ? "1"
                 : bi.fp04cb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01dd(bi.fp04dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp04dd.getText().toString());
-        form.setFp01dm(bi.fp04dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp04dm.getText().toString());
+        form.setFp04dd(bi.fp04dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp04dd.getText().toString());
+        form.setFp04dm(bi.fp04dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp04dm.getText().toString());
 
 
-        form.setFp01a(bi.fp05aa.isChecked() ? "1"
+        form.setFp05a(bi.fp05aa.isChecked() ? "1"
                 : bi.fp05ab.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01b(bi.fp05ba.isChecked() ? "1"
+        form.setFp05b(bi.fp05ba.isChecked() ? "1"
                 : bi.fp05bb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01c(bi.fp05ca.isChecked() ? "1"
+        form.setFp05c(bi.fp05ca.isChecked() ? "1"
                 : bi.fp05cb.isChecked() ? "2"
                 : "-1");
 
-        form.setFp01dd(bi.fp05dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp05dd.getText().toString());
-        form.setFp01dm(bi.fp05dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp05dm.getText().toString());
+        form.setFp05dd(bi.fp05dd.getText().toString().trim().isEmpty() ? "-1" : bi.fp05dd.getText().toString());
+        form.setFp05dm(bi.fp05dm.getText().toString().trim().isEmpty() ? "-1" : bi.fp05dm.getText().toString());
 
     }
 

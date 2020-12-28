@@ -92,15 +92,6 @@ public class SectionF15Activity extends AppCompatActivity {
         form.setFo05a(bi.fo05a.getText().toString().trim().isEmpty() ? "-1" : bi.fo05a.getText().toString());
         form.setFo05b(bi.fo05b.getText().toString().trim().isEmpty() ? "-1" : bi.fo05b.getText().toString());
 
-        /*try {
-            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsF()), json);
-
-            MainApp.fc.setsF(String.valueOf(json_merge));
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
-
     }
 
 
