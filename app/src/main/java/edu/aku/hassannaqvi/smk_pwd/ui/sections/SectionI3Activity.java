@@ -11,14 +11,12 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import edu.aku.hassannaqvi.smk_pwd.R;
 import edu.aku.hassannaqvi.smk_pwd.contracts.FormsContract;
-import edu.aku.hassannaqvi.smk_pwd.contracts.PatientsContract;
 import edu.aku.hassannaqvi.smk_pwd.core.DatabaseHelper;
 import edu.aku.hassannaqvi.smk_pwd.core.MainApp;
 import edu.aku.hassannaqvi.smk_pwd.databinding.ActivitySectionI3Binding;
 import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
-import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
 import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 public class SectionI3Activity extends AppCompatActivity {
@@ -115,19 +113,8 @@ public class SectionI3Activity extends AppCompatActivity {
     public void BtnContinue() {
         if (!formValidation()) return;
         SaveDraft();
-        if (UpdateDB(true)) {
+        if (UpdateDB()) {
             startActivity(new Intent(this, SectionMainActivity.class));
-            finish();
-        }
-    }
-
-
-    public void BtnAdd() {
-        if (!formValidation()) return;
-        SaveDraft();
-        if (UpdateDB(false)) {
-            SectionMainActivity.countG++;
-            startActivity(new Intent(this, SectionI1Activity.class));
             finish();
         }
     }
@@ -138,14 +125,9 @@ public class SectionI3Activity extends AppCompatActivity {
     }
 
 
-    private boolean UpdateDB(Boolean save) {
+    private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_SG, psc.sItoString());
-        db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_STATUS, "1");
-        if (save) {
-            form.setsI(String.valueOf(SectionMainActivity.countG));
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, form.getsI());
-        }
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, form.sItoString());
         if (updcount == 1) {
             return true;
         } else {
@@ -157,42 +139,42 @@ public class SectionI3Activity extends AppCompatActivity {
 
     private void SaveDraft() {
 
-        psc.setIc01(bi.ic01a.isChecked() ? "1"
+        form.setIc01(bi.ic01a.isChecked() ? "1"
                 : bi.ic01b.isChecked() ? "2"
                 : bi.ic01c.isChecked() ? "3"
                 : "-1");
 
-        psc.setIc02(bi.ic02a.isChecked() ? "1"
+        form.setIc02(bi.ic02a.isChecked() ? "1"
                 : bi.ic02b.isChecked() ? "2"
                 : bi.ic02c.isChecked() ? "3"
                 : "-1");
 
-        psc.setIc03(bi.ic03a.isChecked() ? "1"
+        form.setIc03(bi.ic03a.isChecked() ? "1"
                 : bi.ic03b.isChecked() ? "2"
                 : bi.ic03c.isChecked() ? "3"
                 : "-1");
 
-        psc.setIc04(bi.ic04a.isChecked() ? "1"
+        form.setIc04(bi.ic04a.isChecked() ? "1"
                 : bi.ic04b.isChecked() ? "2"
                 : bi.ic04c.isChecked() ? "3"
                 : "-1");
 
-        psc.setIc05(bi.ic05a.isChecked() ? "1"
+        form.setIc05(bi.ic05a.isChecked() ? "1"
                 : bi.ic05b.isChecked() ? "2"
                 : bi.ic05c.isChecked() ? "3"
                 : "-1");
 
-        psc.setIc06(bi.ic06a.isChecked() ? "1"
+        form.setIc06(bi.ic06a.isChecked() ? "1"
                 : bi.ic06b.isChecked() ? "2"
                 : bi.ic06c.isChecked() ? "3"
                 : "-1");
 
-        psc.setIc07(bi.ic07a.isChecked() ? "1"
+        form.setIc07(bi.ic07a.isChecked() ? "1"
                 : bi.ic07b.isChecked() ? "2"
                 : bi.ic07c.isChecked() ? "3"
                 : "-1");
 
-        psc.setIc08(bi.ic08a.isChecked() ? "1"
+        form.setIc08(bi.ic08a.isChecked() ? "1"
                 : bi.ic08b.isChecked() ? "2"
                 : bi.ic08c.isChecked() ? "3"
                 : "-1");

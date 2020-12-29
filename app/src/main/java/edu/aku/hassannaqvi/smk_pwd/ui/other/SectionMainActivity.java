@@ -68,7 +68,7 @@ public class SectionMainActivity extends AppCompatActivity {
                 bi.form05.setBackgroundResource(R.color.dullWhite);
             }
 
-            if (!new JSONObject(form.sGtoString()).get("ga16").equals("")) {
+            if (!form.getsG().isEmpty()) {
                 bi.form06.setEnabled(false);
                 bi.form06.setBackgroundResource(R.color.dullWhite);
             }
@@ -78,15 +78,10 @@ public class SectionMainActivity extends AppCompatActivity {
                 bi.form07.setBackgroundResource(R.color.dullWhite);
             }
 
-            if (!form.getsI().isEmpty()) {
+            if (!new JSONObject(form.sItoString()).get("ic08").equals("")) {
                 bi.form08.setEnabled(false);
                 bi.form08.setBackgroundResource(R.color.dullWhite);
             }
-
-            /*if (!new JSONObject(psc.sItoString()).get("ic08").equals("")) {
-                bi.form08.setEnabled(false);
-                bi.form08.setBackgroundResource(R.color.dullWhite);
-            }*/
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -156,13 +151,13 @@ public class SectionMainActivity extends AppCompatActivity {
                     oF = new Intent(this, SectionF1Activity.class);
                     break;
                 case R.id.form06:
+                    countG = 1;
                     oF = new Intent(this, SectionGActivity.class);
                     break;
                 case R.id.form07:
                     oF = new Intent(this, SectionH1Activity.class);
                     break;
                 case R.id.form08:
-                    countG = 1;
                     oF = new Intent(this, SectionI1Activity.class);
                     break;
             }

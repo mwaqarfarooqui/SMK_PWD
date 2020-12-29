@@ -83,9 +83,9 @@ fun openSectionMainActivity(activity: Activity, item: String) {
             "D" -> MainApp.form.setsD(null)
             "E" -> MainApp.form.setsE(null)
             "F" -> MainApp.form.setsF(null)
-            "G" -> MainApp.form.setsG(null)
+            "G" -> MainApp.psc.setsG(null)
             "H" -> MainApp.form.setsH(null)
-            "I" -> MainApp.psc.setsG(null)
+            "I" -> MainApp.form.setsI(null)
         }
 
         activity.finish()

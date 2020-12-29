@@ -37,32 +37,6 @@
 
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/hfType"
-            style="@style/textviewh"
-            android:textStyle="bold" />
-
-
-        <LinearLayout
-            style="@style/linearlayout_view_wt_bound"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/pEntries"
-                style="@style/textviewh"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="Patient Entries" />
-
-            <TextView
-                android:id="@+id/countG"
-                style="@style/textviewh"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="Count I: " />
-
-        </LinearLayout>
-
 
         <ScrollView
             android:layout_width="match_parent"
@@ -528,16 +502,6 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="24dp"
                     android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/btn_End"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:background="@color/red_overlay"
-                        android:onClick="@{() -> callback.BtnEnd()}"
-                        android:text="Cancel"
-                        android:textColor="@color/white" />
 
                     <Button
                         android:id="@+id/btn_Continue"
