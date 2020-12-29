@@ -32,7 +32,7 @@ public class PatientsContract {
         public static final String COLUMN_UC_CODE = "uc_code";
         public static final String COLUMN_HF = "hf";
         public static final String COLUMN_HF_CODE = "hf_code";
-        public static final String COLUMN_SI = "si";
+        public static final String COLUMN_SG = "si";
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_DEVICETAGID = "tagid";
         public static final String COLUMN_SYNCED = "synced";

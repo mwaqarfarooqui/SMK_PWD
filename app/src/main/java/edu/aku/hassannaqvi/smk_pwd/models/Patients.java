@@ -41,47 +41,45 @@ public class Patients extends LiveData<Patients> {
     private String hf = "";
     private String hfCode = "";
 
-    private String sI = "";
+    private String sG = "";
 
-    private String ia01 = "";
-    private String ia02 = "";
-    private String ia03 = "";
-    private String ia04 = "";
-    private String ia05 = "";
-    private String ia06 = "";
-    private String ia07 = "";
-    private String ib01 = "";
-    private String ib01dx = "";
-    private String ib01ex = "";
-    private String ib02 = "";
-    private String ib02dx = "";
-    private String ib02ex = "";
-    private String ib03 = "";
-    private String ib03dx = "";
-    private String ib03ex = "";
-    private String ib04 = "";
-    private String ib04dx = "";
-    private String ib04ex = "";
-    private String ib05 = "";
-    private String ib05dx = "";
-    private String ib05ex = "";
-    private String ib06 = "";
-    private String ib06dx = "";
-    private String ib06ex = "";
-    private String ib07 = "";
-    private String ib07dx = "";
-    private String ib07ex = "";
-    private String ib08 = "";
-    private String ib08dx = "";
-    private String ib08ex = "";
-    private String ic01 = "";
-    private String ic02 = "";
-    private String ic03 = "";
-    private String ic04 = "";
-    private String ic05 = "";
-    private String ic06 = "";
-    private String ic07 = "";
-    private String ic08 = "";
+    private String ga01 = "";
+    private String ga02d = "";
+    private String ga02m = "";
+    private String ga02y = "";
+    private String ga02h = "";
+    private String ga02mi = "";
+    private String ga02s = "";
+    private String ga03 = "";
+    private String ga04 = "";
+    private String ga05 = "";
+    private String ga06y = "";
+    private String ga06m = "";
+    private String ga07 = "";
+    private String ga08a = "";
+    private String ga08b = "";
+    private String ga08c = "";
+    private String ga08d = "";
+    private String ga08e = "";
+    private String ga08f = "";
+    private String ga09 = "";
+    private String ga09bx = "";
+    private String ga09cx = "";
+    private String ga10 = "";
+    private String ga10bx = "";
+    private String ga10cx = "";
+    private String ga11 = "";
+    private String ga11ax = "";
+    private String ga11bx = "";
+    private String ga12 = "";
+    private String ga13 = "";
+    private String ga14 = "";
+    private String ga14ax = "";
+    private String ga14bx = "";
+    private String ga14cx = "";
+    private String ga15 = "";
+    private String ga1596x = "";
+    private String ga16 = "";
 
     public Patients() {
     }
@@ -290,325 +288,308 @@ public class Patients extends LiveData<Patients> {
     }
 
 
-    public String getsI() {
-        return sI;
+    public String getsG() {
+        return sG;
     }
 
-    public void setsI(String sI) {
-        this.sI = sI;
+    public void setsG(String sG) {
+        this.sG = sG;
     }
 
-
-    public String getIa01() {
-        return ia01;
-    }
-
-    public void setIa01(String ia01) {
-        this.ia01 = ia01;
-    }
-
-    public String getIa02() {
-        return ia02;
-    }
-
-    public void setIa02(String ia02) {
-        this.ia02 = ia02;
-    }
-
-    public String getIa03() {
-        return ia03;
+    public String getGa01() {
+        return ga01;
     }
 
-    public void setIa03(String ia03) {
-        this.ia03 = ia03;
+    public void setGa01(String ga01) {
+        this.ga01 = ga01;
     }
 
-    public String getIa04() {
-        return ia04;
+    public String getGa02d() {
+        return ga02d;
     }
 
-    public void setIa04(String ia04) {
-        this.ia04 = ia04;
+    public void setGa02d(String ga02d) {
+        this.ga02d = ga02d;
     }
 
-    public String getIa05() {
-        return ia05;
+    public String getGa02m() {
+        return ga02m;
     }
 
-    public void setIa05(String ia05) {
-        this.ia05 = ia05;
+    public void setGa02m(String ga02m) {
+        this.ga02m = ga02m;
     }
 
-    public String getIa06() {
-        return ia06;
+    public String getGa02y() {
+        return ga02y;
     }
 
-    public void setIa06(String ia06) {
-        this.ia06 = ia06;
+    public void setGa02y(String ga02y) {
+        this.ga02y = ga02y;
     }
 
-    public String getIa07() {
-        return ia07;
+    public String getGa02h() {
+        return ga02h;
     }
 
-    public void setIa07(String ia07) {
-        this.ia07 = ia07;
+    public void setGa02h(String ga02h) {
+        this.ga02h = ga02h;
     }
 
-    public String getIb01() {
-        return ib01;
+    public String getGa02mi() {
+        return ga02mi;
     }
 
-    public void setIb01(String ib01) {
-        this.ib01 = ib01;
+    public void setGa02mi(String ga02mi) {
+        this.ga02mi = ga02mi;
     }
 
-    public String getIb01dx() {
-        return ib01dx;
+    public String getGa02s() {
+        return ga02s;
     }
 
-    public void setIb01dx(String ib01dx) {
-        this.ib01dx = ib01dx;
+    public void setGa02s(String ga02s) {
+        this.ga02s = ga02s;
     }
 
-    public String getIb01ex() {
-        return ib01ex;
+    public String getGa03() {
+        return ga03;
     }
 
-    public void setIb01ex(String ib01ex) {
-        this.ib01ex = ib01ex;
+    public void setGa03(String ga03) {
+        this.ga03 = ga03;
     }
 
-    public String getIb02() {
-        return ib02;
+    public String getGa04() {
+        return ga04;
     }
 
-    public void setIb02(String ib02) {
-        this.ib02 = ib02;
+    public void setGa04(String ga04) {
+        this.ga04 = ga04;
     }
 
-    public String getIb02dx() {
-        return ib02dx;
+    public String getGa05() {
+        return ga05;
     }
 
-    public void setIb02dx(String ib02dx) {
-        this.ib02dx = ib02dx;
+    public void setGa05(String ga05) {
+        this.ga05 = ga05;
     }
 
-    public String getIb02ex() {
-        return ib02ex;
+    public String getGa06y() {
+        return ga06y;
     }
 
-    public void setIb02ex(String ib02ex) {
-        this.ib02ex = ib02ex;
+    public void setGa06y(String ga06y) {
+        this.ga06y = ga06y;
     }
 
-    public String getIb03() {
-        return ib03;
+    public String getGa06m() {
+        return ga06m;
     }
 
-    public void setIb03(String ib03) {
-        this.ib03 = ib03;
+    public void setGa06m(String ga06m) {
+        this.ga06m = ga06m;
     }
 
-    public String getIb03dx() {
-        return ib03dx;
+    public String getGa07() {
+        return ga07;
     }
 
-    public void setIb03dx(String ib03dx) {
-        this.ib03dx = ib03dx;
+    public void setGa07(String ga07) {
+        this.ga07 = ga07;
     }
 
-    public String getIb03ex() {
-        return ib03ex;
+    public String getGa08a() {
+        return ga08a;
     }
 
-    public void setIb03ex(String ib03ex) {
-        this.ib03ex = ib03ex;
+    public void setGa08a(String ga08a) {
+        this.ga08a = ga08a;
     }
 
-    public String getIb04() {
-        return ib04;
+    public String getGa08b() {
+        return ga08b;
     }
 
-    public void setIb04(String ib04) {
-        this.ib04 = ib04;
+    public void setGa08b(String ga08b) {
+        this.ga08b = ga08b;
     }
 
-    public String getIb04dx() {
-        return ib04dx;
+    public String getGa08c() {
+        return ga08c;
     }
 
-    public void setIb04dx(String ib04dx) {
-        this.ib04dx = ib04dx;
+    public void setGa08c(String ga08c) {
+        this.ga08c = ga08c;
     }
 
-    public String getIb04ex() {
-        return ib04ex;
+    public String getGa08d() {
+        return ga08d;
     }
 
-    public void setIb04ex(String ib04ex) {
-        this.ib04ex = ib04ex;
+    public void setGa08d(String ga08d) {
+        this.ga08d = ga08d;
     }
 
-    public String getIb05() {
-        return ib05;
+    public String getGa08e() {
+        return ga08e;
     }
 
-    public void setIb05(String ib05) {
-        this.ib05 = ib05;
+    public void setGa08e(String ga08e) {
+        this.ga08e = ga08e;
     }
 
-    public String getIb05dx() {
-        return ib05dx;
+    public String getGa08f() {
+        return ga08f;
     }
 
-    public void setIb05dx(String ib05dx) {
-        this.ib05dx = ib05dx;
+    public void setGa08f(String ga08f) {
+        this.ga08f = ga08f;
     }
 
-    public String getIb05ex() {
-        return ib05ex;
+    public String getGa09() {
+        return ga09;
     }
 
-    public void setIb05ex(String ib05ex) {
-        this.ib05ex = ib05ex;
+    public void setGa09(String ga09) {
+        this.ga09 = ga09;
     }
 
-    public String getIb06() {
-        return ib06;
+    public String getGa09bx() {
+        return ga09bx;
     }
 
-    public void setIb06(String ib06) {
-        this.ib06 = ib06;
+    public void setGa09bx(String ga09bx) {
+        this.ga09bx = ga09bx;
     }
 
-    public String getIb06dx() {
-        return ib06dx;
+    public String getGa09cx() {
+        return ga09cx;
     }
 
-    public void setIb06dx(String ib06dx) {
-        this.ib06dx = ib06dx;
+    public void setGa09cx(String ga09cx) {
+        this.ga09cx = ga09cx;
     }
 
-    public String getIb06ex() {
-        return ib06ex;
+    public String getGa10() {
+        return ga10;
     }
 
-    public void setIb06ex(String ib06ex) {
-        this.ib06ex = ib06ex;
+    public void setGa10(String ga10) {
+        this.ga10 = ga10;
     }
 
-    public String getIb07() {
-        return ib07;
+    public String getGa10bx() {
+        return ga10bx;
     }
 
-    public void setIb07(String ib07) {
-        this.ib07 = ib07;
+    public void setGa10bx(String ga10bx) {
+        this.ga10bx = ga10bx;
     }
 
-    public String getIb07dx() {
-        return ib07dx;
+    public String getGa10cx() {
+        return ga10cx;
     }
 
-    public void setIb07dx(String ib07dx) {
-        this.ib07dx = ib07dx;
+    public void setGa10cx(String ga10cx) {
+        this.ga10cx = ga10cx;
     }
 
-    public String getIb07ex() {
-        return ib07ex;
+    public String getGa11() {
+        return ga11;
     }
 
-    public void setIb07ex(String ib07ex) {
-        this.ib07ex = ib07ex;
+    public void setGa11(String ga11) {
+        this.ga11 = ga11;
     }
 
-    public String getIb08() {
-        return ib08;
+    public String getGa11ax() {
+        return ga11ax;
     }
 
-    public void setIb08(String ib08) {
-        this.ib08 = ib08;
+    public void setGa11ax(String ga11ax) {
+        this.ga11ax = ga11ax;
     }
 
-    public String getIb08dx() {
-        return ib08dx;
+    public String getGa11bx() {
+        return ga11bx;
     }
 
-    public void setIb08dx(String ib08dx) {
-        this.ib08dx = ib08dx;
+    public void setGa11bx(String ga11bx) {
+        this.ga11bx = ga11bx;
     }
 
-    public String getIb08ex() {
-        return ib08ex;
+    public String getGa12() {
+        return ga12;
     }
 
-    public void setIb08ex(String ib08ex) {
-        this.ib08ex = ib08ex;
+    public void setGa12(String ga12) {
+        this.ga12 = ga12;
     }
 
-    public String getIc01() {
-        return ic01;
+    public String getGa13() {
+        return ga13;
     }
 
-    public void setIc01(String ic01) {
-        this.ic01 = ic01;
+    public void setGa13(String ga13) {
+        this.ga13 = ga13;
     }
 
-    public String getIc02() {
-        return ic02;
+    public String getGa14() {
+        return ga14;
     }
 
-    public void setIc02(String ic02) {
-        this.ic02 = ic02;
+    public void setGa14(String ga14) {
+        this.ga14 = ga14;
     }
 
-    public String getIc03() {
-        return ic03;
+    public String getGa14ax() {
+        return ga14ax;
     }
 
-    public void setIc03(String ic03) {
-        this.ic03 = ic03;
+    public void setGa14ax(String ga14ax) {
+        this.ga14ax = ga14ax;
     }
 
-    public String getIc04() {
-        return ic04;
+    public String getGa14bx() {
+        return ga14bx;
     }
 
-    public void setIc04(String ic04) {
-        this.ic04 = ic04;
+    public void setGa14bx(String ga14bx) {
+        this.ga14bx = ga14bx;
     }
 
-    public String getIc05() {
-        return ic05;
+    public String getGa14cx() {
+        return ga14cx;
     }
 
-    public void setIc05(String ic05) {
-        this.ic05 = ic05;
+    public void setGa14cx(String ga14cx) {
+        this.ga14cx = ga14cx;
     }
 
-    public String getIc06() {
-        return ic06;
+    public String getGa15() {
+        return ga15;
     }
 
-    public void setIc06(String ic06) {
-        this.ic06 = ic06;
+    public void setGa15(String ga15) {
+        this.ga15 = ga15;
     }
 
-    public String getIc07() {
-        return ic07;
+    public String getGa1596x() {
+        return ga1596x;
     }
 
-    public void setIc07(String ic07) {
-        this.ic07 = ic07;
+    public void setGa1596x(String ga1596x) {
+        this.ga1596x = ga1596x;
     }
 
-    public String getIc08() {
-        return ic08;
+    public String getGa16() {
+        return ga16;
     }
 
-    public void setIc08(String ic08) {
-        this.ic08 = ic08;
+    public void setGa16(String ga16) {
+        this.ga16 = ga16;
     }
 
 
@@ -639,7 +620,7 @@ public class Patients extends LiveData<Patients> {
         this.hf = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_HF);
         this.hfCode = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_HF_CODE);
 
-        this.sI = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_SI);
+        this.sG = jsonObject.getString(PatientsContract.PatientsTable.COLUMN_SG);
 
         return this;
 
@@ -671,7 +652,7 @@ public class Patients extends LiveData<Patients> {
         this.hf = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_HF));
         this.hfCode = cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_HF_CODE));
 
-        sIHydrate(cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_SI)));
+        sGHydrate(cursor.getString(cursor.getColumnIndex(PatientsContract.PatientsTable.COLUMN_SG)));
 
         return this;
     }
@@ -684,49 +665,47 @@ public class Patients extends LiveData<Patients> {
     }
 
 
-    public String sItoString() {
+    public String sGtoString() {
         JSONObject json = new JSONObject();
 
         try {
-            json.put("ia01", ia01)
-                    .put("ia02", ia02)
-                    .put("ia03", ia03)
-                    .put("ia04", ia04)
-                    .put("ia05", ia05)
-                    .put("ia06", ia06)
-                    .put("ia07", ia07)
-                    .put("ib01", ib01)
-                    .put("ib01dx", ib01dx)
-                    .put("ib01ex", ib01ex)
-                    .put("ib02", ib02)
-                    .put("ib02dx", ib02dx)
-                    .put("ib02ex", ib02ex)
-                    .put("ib03", ib03)
-                    .put("ib03dx", ib03dx)
-                    .put("ib03ex", ib03ex)
-                    .put("ib04", ib04)
-                    .put("ib04dx", ib04dx)
-                    .put("ib04ex", ib04ex)
-                    .put("ib05", ib05)
-                    .put("ib05dx", ib05dx)
-                    .put("ib05ex", ib05ex)
-                    .put("ib06", ib06)
-                    .put("ib06dx", ib06dx)
-                    .put("ib06ex", ib06ex)
-                    .put("ib07", ib07)
-                    .put("ib07dx", ib07dx)
-                    .put("ib07ex", ib07ex)
-                    .put("ib08", ib08)
-                    .put("ib08dx", ib08dx)
-                    .put("ib08ex", ib08ex)
-                    .put("ic01", ic01)
-                    .put("ic02", ic02)
-                    .put("ic03", ic03)
-                    .put("ic04", ic04)
-                    .put("ic05", ic05)
-                    .put("ic06", ic06)
-                    .put("ic07", ic07)
-                    .put("ic08", ic08);
+            json.put("ga01", ga01)
+                    .put("ga02d", ga02d)
+                    .put("ga02m", ga02m)
+                    .put("ga02y", ga02y)
+                    .put("ga02h", ga02h)
+                    .put("ga02mi", ga02mi)
+                    .put("ga02s", ga02s)
+                    .put("ga03", ga03)
+                    .put("ga04", ga04)
+                    .put("ga05", ga05)
+                    .put("ga06y", ga06y)
+                    .put("ga06m", ga06m)
+                    .put("ga07", ga07)
+                    .put("ga08a", ga08a)
+                    .put("ga08b", ga08b)
+                    .put("ga08c", ga08c)
+                    .put("ga08d", ga08d)
+                    .put("ga08e", ga08e)
+                    .put("ga08f", ga08f)
+                    .put("ga09", ga09)
+                    .put("ga09bx", ga09bx)
+                    .put("ga09cx", ga09cx)
+                    .put("ga10", ga10)
+                    .put("ga10bx", ga10bx)
+                    .put("ga10cx", ga10cx)
+                    .put("ga11", ga11)
+                    .put("ga11ax", ga11ax)
+                    .put("ga11bx", ga11bx)
+                    .put("ga12", ga12)
+                    .put("ga13", ga13)
+                    .put("ga14", ga14)
+                    .put("ga14ax", ga14ax)
+                    .put("ga14bx", ga14bx)
+                    .put("ga14cx", ga14cx)
+                    .put("ga15", ga15)
+                    .put("ga1596x", ga1596x)
+                    .put("ga16", ga16);
         } catch (JSONException e) {
             e.printStackTrace();
             return "\"error\":, \"" + e.getMessage() + "\"";
@@ -750,7 +729,7 @@ public class Patients extends LiveData<Patients> {
             json.put(PatientsContract.PatientsTable.COLUMN_SERIALNO, this.serialno == null ? JSONObject.NULL : this.serialno);
             json.put(PatientsContract.PatientsTable.COLUMN_STATUS, this.status == null ? JSONObject.NULL : this.status);
 
-            json.put(PatientsContract.PatientsTable.COLUMN_SI, new JSONObject(sItoString()));
+            json.put(PatientsContract.PatientsTable.COLUMN_SG, new JSONObject(sGtoString()));
 
             json.put(PatientsContract.PatientsTable.COLUMN_DEVICEID, this.deviceID == null ? JSONObject.NULL : this.deviceID);
             json.put(PatientsContract.PatientsTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
@@ -766,8 +745,8 @@ public class Patients extends LiveData<Patients> {
             json.put(PatientsContract.PatientsTable.COLUMN_HF, this.hf == null ? JSONObject.NULL : this.hf);
             json.put(PatientsContract.PatientsTable.COLUMN_HF_CODE, this.hfCode == null ? JSONObject.NULL : this.hfCode);
 
-            if (this.sI != null && !this.sI.equals("")) {
-                json.put(PatientsContract.PatientsTable.COLUMN_SI, new JSONObject(this.sI));
+            if (this.sG != null && !this.sG.equals("")) {
+                json.put(PatientsContract.PatientsTable.COLUMN_SG, new JSONObject(this.sG));
             }
 
             return json;
@@ -778,52 +757,50 @@ public class Patients extends LiveData<Patients> {
     }
 
 
-    private void sIHydrate(String string) {
+    private void sGHydrate(String string) {
 
         if (string != null) {
 
             try {
                 JSONObject json = null;
                 json = new JSONObject(string);
-                this.ia01 = json.getString("ia01");
-                this.ia02 = json.getString("ia02");
-                this.ia03 = json.getString("ia03");
-                this.ia04 = json.getString("ia04");
-                this.ia05 = json.getString("ia05");
-                this.ia06 = json.getString("ia06");
-                this.ia07 = json.getString("ia07");
-                this.ib01 = json.getString("ib01");
-                this.ib01dx = json.getString("ib01dx");
-                this.ib01ex = json.getString("ib01ex");
-                this.ib02 = json.getString("ib02");
-                this.ib02dx = json.getString("ib02dx");
-                this.ib02ex = json.getString("ib02ex");
-                this.ib03 = json.getString("ib03");
-                this.ib03dx = json.getString("ib03dx");
-                this.ib03ex = json.getString("ib03ex");
-                this.ib04 = json.getString("ib04");
-                this.ib04dx = json.getString("ib04dx");
-                this.ib04ex = json.getString("ib04ex");
-                this.ib05 = json.getString("ib05");
-                this.ib05dx = json.getString("ib05dx");
-                this.ib05ex = json.getString("ib05ex");
-                this.ib06 = json.getString("ib06");
-                this.ib06dx = json.getString("ib06dx");
-                this.ib06ex = json.getString("ib06ex");
-                this.ib07 = json.getString("ib07");
-                this.ib07dx = json.getString("ib07dx");
-                this.ib07ex = json.getString("ib07ex");
-                this.ib08 = json.getString("ib08");
-                this.ib08dx = json.getString("ib08dx");
-                this.ib08ex = json.getString("ib08ex");
-                this.ic01 = json.getString("ic01");
-                this.ic02 = json.getString("ic02");
-                this.ic03 = json.getString("ic03");
-                this.ic04 = json.getString("ic04");
-                this.ic05 = json.getString("ic05");
-                this.ic06 = json.getString("ic06");
-                this.ic07 = json.getString("ic07");
-                this.ic08 = json.getString("ic08");
+                this.ga01 = json.getString("ga01");
+                this.ga02d = json.getString("ga02d");
+                this.ga02m = json.getString("ga02m");
+                this.ga02y = json.getString("ga02y");
+                this.ga02h = json.getString("ga02h");
+                this.ga02mi = json.getString("ga02mi");
+                this.ga02s = json.getString("ga02s");
+                this.ga03 = json.getString("ga03");
+                this.ga04 = json.getString("ga04");
+                this.ga05 = json.getString("ga05");
+                this.ga06y = json.getString("ga06y");
+                this.ga06m = json.getString("ga06m");
+                this.ga07 = json.getString("ga07");
+                this.ga08a = json.getString("ga08a");
+                this.ga08b = json.getString("ga08b");
+                this.ga08c = json.getString("ga08c");
+                this.ga08d = json.getString("ga08d");
+                this.ga08e = json.getString("ga08e");
+                this.ga08f = json.getString("ga08f");
+                this.ga09 = json.getString("ga09");
+                this.ga09bx = json.getString("ga09bx");
+                this.ga09cx = json.getString("ga09cx");
+                this.ga10 = json.getString("ga10");
+                this.ga10bx = json.getString("ga10bx");
+                this.ga10cx = json.getString("ga10cx");
+                this.ga11 = json.getString("ga11");
+                this.ga11ax = json.getString("ga11ax");
+                this.ga11bx = json.getString("ga11bx");
+                this.ga12 = json.getString("ga12");
+                this.ga13 = json.getString("ga13");
+                this.ga14 = json.getString("ga14");
+                this.ga14ax = json.getString("ga14ax");
+                this.ga14bx = json.getString("ga14bx");
+                this.ga14cx = json.getString("ga14cx");
+                this.ga15 = json.getString("ga15");
+                this.ga1596x = json.getString("ga1596x");
+                this.ga16 = json.getString("ga16");
             } catch (JSONException e) {
                 e.printStackTrace();
             }

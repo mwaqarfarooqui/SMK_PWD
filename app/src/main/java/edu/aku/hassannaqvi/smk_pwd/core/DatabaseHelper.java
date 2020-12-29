@@ -994,7 +994,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(PatientsTable.COLUMN_SYSDATE, psc.getSysdate());
         values.put(PatientsTable.COLUMN_USERNAME, psc.getUsername());
         values.put(PatientsTable.COLUMN_SERIALNO, psc.getSerialno());
-        values.put(PatientsTable.COLUMN_SI, psc.getsI());
+        values.put(PatientsTable.COLUMN_SG, psc.getsG());
         values.put(PatientsTable.COLUMN_DEVICEID, psc.getDeviceID());
         values.put(PatientsTable.COLUMN_DEVICETAGID, psc.getDevicetagID());
         values.put(PatientsTable.COLUMN_STATUS, psc.getStatus());
@@ -1442,7 +1442,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 PatientsTable.COLUMN_TEHSIL_CODE,
                 PatientsTable.COLUMN_UC_CODE,
                 PatientsTable.COLUMN_HF_CODE,
-                PatientsTable.COLUMN_SI,
+                PatientsTable.COLUMN_SG,
                 PatientsTable.COLUMN_DEVICEID,
                 PatientsTable.COLUMN_DEVICETAGID,
                 PatientsTable.COLUMN_STATUS,

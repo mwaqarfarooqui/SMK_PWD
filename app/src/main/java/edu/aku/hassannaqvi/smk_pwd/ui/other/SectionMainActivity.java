@@ -26,7 +26,7 @@ import edu.aku.hassannaqvi.smk_pwd.ui.sections.SectionI1Activity;
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 
 public class SectionMainActivity extends AppCompatActivity {
-    public static int countI = 0;
+    public static int countG = 0;
     ActivitySectionMainBinding bi;
     boolean flag = false;
 
@@ -162,7 +162,7 @@ public class SectionMainActivity extends AppCompatActivity {
                     oF = new Intent(this, SectionH1Activity.class);
                     break;
                 case R.id.form08:
-                    countI = 1;
+                    countG = 1;
                     oF = new Intent(this, SectionI1Activity.class);
                     break;
             }

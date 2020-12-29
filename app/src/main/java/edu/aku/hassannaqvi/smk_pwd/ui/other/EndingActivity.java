@@ -65,7 +65,7 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     private Class<?> routingSelectionForChildEnding() {
-        if (SectionMainActivity.countI == 4)
+        if (SectionMainActivity.countG == 4)
             return SectionMainActivity.class;
         else
             return SectionI1Activity.class;
@@ -79,7 +79,7 @@ public class EndingActivity extends AppCompatActivity {
                     : bi.istatusb.isChecked() ? "2"
                     : bi.istatus96.isChecked() ? "96"
                     : "0");
-            MainApp.form.setsI(String.valueOf(SectionMainActivity.countI));
+            MainApp.form.setsI(String.valueOf(SectionMainActivity.countG));
         } else {
             MainApp.form.setIstatus(bi.istatusa.isChecked() ? "1"
                     : bi.istatusb.isChecked() ? "2"
@@ -98,7 +98,7 @@ public class EndingActivity extends AppCompatActivity {
         if (sectionMainCheck) {
             updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_STATUS, MainApp.psc.getStatus());
             if (updcount == 1)
-                updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, String.valueOf(SectionMainActivity.countI));
+                updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, String.valueOf(SectionMainActivity.countG));
         } else
             updcount = db.updateEnding();
 

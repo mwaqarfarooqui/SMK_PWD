@@ -126,7 +126,7 @@ public class SectionI3Activity extends AppCompatActivity {
         if (!formValidation()) return;
         SaveDraft();
         if (UpdateDB(false)) {
-            SectionMainActivity.countI++;
+            SectionMainActivity.countG++;
             startActivity(new Intent(this, SectionI1Activity.class));
             finish();
         }
@@ -140,10 +140,10 @@ public class SectionI3Activity extends AppCompatActivity {
 
     private boolean UpdateDB(Boolean save) {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_SI, psc.sItoString());
+        int updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_SG, psc.sItoString());
         db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_STATUS, "1");
         if (save) {
-            form.setsI(String.valueOf(SectionMainActivity.countI));
+            form.setsI(String.valueOf(SectionMainActivity.countG));
             db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SI, form.getsI());
         }
         if (updcount == 1) {

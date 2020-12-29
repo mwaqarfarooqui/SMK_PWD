@@ -226,4 +226,13 @@ public class SectionGActivity extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    public void onBackPressed() {
+        if (SectionMainActivity.countG > 0) {
+            Toast.makeText(getApplicationContext(), "Back Press Not Allowed", Toast.LENGTH_LONG).show();
+        } else super.onBackPressed();
+    }
+
+
 }

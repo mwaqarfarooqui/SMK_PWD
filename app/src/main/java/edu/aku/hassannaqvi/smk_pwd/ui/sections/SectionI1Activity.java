@@ -29,7 +29,6 @@ import edu.aku.hassannaqvi.smk_pwd.ui.other.SectionMainActivity;
 
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.form;
 import static edu.aku.hassannaqvi.smk_pwd.core.MainApp.psc;
-import static edu.aku.hassannaqvi.smk_pwd.utils.UtilKt.openSectionMainActivity;
 
 
 public class SectionI1Activity extends AppCompatActivity {
@@ -49,7 +48,7 @@ public class SectionI1Activity extends AppCompatActivity {
     private void setupContent() {
         psc = new Patients();
         bi.hfType.setText(getString(R.string.hf));
-        bi.countI.setText(new StringBuilder("Count: ").append(SectionMainActivity.countI));
+        bi.countG.setText(new StringBuilder("Count: ").append(SectionMainActivity.countG));
     }
 
 
@@ -77,7 +76,7 @@ public class SectionI1Activity extends AppCompatActivity {
             psc.set_UID(psc.getDeviceID() + psc.get_ID());
             db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_UID, psc.get_UID());
             db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_UUID, form.get_UID());
-            db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_SI, psc.sItoString());
+            db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_SG, psc.sItoString());
             return true;
         } else {
             Toast.makeText(this, "SORRY! Failed to update DB", Toast.LENGTH_SHORT).show();
@@ -96,16 +95,11 @@ public class SectionI1Activity extends AppCompatActivity {
     }
 
 
-    public void BtnEnd() {
-        openSectionMainActivity(this, "I");
-    }
-
-
     private void SaveDraft() {
 
         psc.setSysdate(new java.text.SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault()).format(new Date().getTime()));
         psc.setUsername(MainApp.userName);
-        psc.setSerialno(String.valueOf(SectionMainActivity.countI));
+        psc.setSerialno(String.valueOf(SectionMainActivity.countG));
         psc.setDeviceID(MainApp.appInfo.getDeviceID());
         psc.setDevicetagID(MainApp.appInfo.getTagName());
         psc.setAppversion(MainApp.appInfo.getAppVersion());
@@ -160,27 +154,5 @@ public class SectionI1Activity extends AppCompatActivity {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
-
-
-    /*@Override
-    public void endSecActivity(boolean flag) {
-            SaveDraft();
-        if (UpdateDB()) {
-            finish();
-            SectionMainActivity.countI++;
-            startActivity(new Intent(this, EndingActivity.class).putExtra(SECTION_MAIN_CHECK_FOR_END, true)
-                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-        } else {
-            Toast.makeText(this, "SORRY! Failed to Update Database!", Toast.LENGTH_SHORT).show();
-        }
-    }*/
-
-
-    @Override
-    public void onBackPressed() {
-        if (SectionMainActivity.countI > 0) {
-            Toast.makeText(getApplicationContext(), "Back Press Not Allowed", Toast.LENGTH_LONG).show();
-        } else super.onBackPressed();
-    }
 
 }

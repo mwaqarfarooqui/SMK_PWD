@@ -105,7 +105,7 @@ public class SectionI2Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_SI, psc.sItoString());
+        int updcount = db.updatesPSCColumn(PatientsContract.PatientsTable.COLUMN_SG, psc.sItoString());
         if (updcount == 1) {
             return true;
         } else {

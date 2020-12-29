@@ -80,7 +80,7 @@ public final class CreateTable {
             + PatientsContract.PatientsTable.COLUMN_SYNCED_DATE + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_STATUS + " TEXT,"
             + PatientsContract.PatientsTable.COLUMN_APPVERSION + " TEXT,"
-            + PatientsContract.PatientsTable.COLUMN_SI + " TEXT"
+            + PatientsContract.PatientsTable.COLUMN_SG + " TEXT"
             + " );";
 
 
