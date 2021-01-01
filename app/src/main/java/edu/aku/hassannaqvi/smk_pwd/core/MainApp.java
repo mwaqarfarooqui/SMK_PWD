@@ -40,10 +40,10 @@ public class MainApp extends Application {
     public static final String TAG = "AppMain";
 
     /*VCOE1 LIVE SERVER*/
-    // public static final String _IP = "https://vcoe1.aku.edu"; // .Net server
+    public static final String _IP = "https://vcoe1.aku.edu"; // .Net server
 
     /*F38158 TEST SERVER*/
-    public static final String _IP = "http://f38158";// .TEST server
+    //public static final String _IP = "http://f38158";// .TEST server
     public static final String _HOST_URL = MainApp._IP + "/smk_pwd/api/"; // .TEST server
 
     public static final String _SERVER_URL = "sync.php";

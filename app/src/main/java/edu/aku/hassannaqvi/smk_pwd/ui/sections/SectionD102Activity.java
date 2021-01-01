@@ -45,28 +45,28 @@ public class SectionD102Activity extends AppCompatActivity {
             }
         }));
 
-        radioGroupListener(bi.da1911, bi.da1911a, bi.da1912);
-        radioGroupListener(bi.da1921, bi.da1921a, bi.da1922);
-        radioGroupListener(bi.da1931, bi.da1931a, bi.da1932);
-        radioGroupListener(bi.da1941, bi.da1941a, bi.da1942);
-        radioGroupListener(bi.da1951, bi.da1951a, bi.da1952);
+        rgListener(bi.da1911, bi.da1911a, bi.da1912);
+        rgListener(bi.da1921, bi.da1921a, bi.da1922);
+        rgListener(bi.da1931, bi.da1931a, bi.da1932);
+        rgListener(bi.da1941, bi.da1941a, bi.da1942);
+        rgListener(bi.da1951, bi.da1951a, bi.da1952);
 
-        radioGroupListener(bi.da2011, bi.da2011a, bi.da2012);
-        radioGroupListener(bi.da2021, bi.da2021a, bi.da2022);
-        radioGroupListener(bi.da2031, bi.da2031a, bi.da2032);
-        radioGroupListener(bi.da2041, bi.da2041a, bi.da2042);
-        radioGroupListener(bi.da2051, bi.da2051a, bi.da2052);
-        radioGroupListener(bi.da2061, bi.da2061a, bi.da2062);
-        radioGroupListener(bi.da2071, bi.da2071a, bi.da2072);
+        rgListener(bi.da2011, bi.da2011a, bi.da2012);
+        rgListener(bi.da2021, bi.da2021a, bi.da2022);
+        rgListener(bi.da2031, bi.da2031a, bi.da2032);
+        rgListener(bi.da2041, bi.da2041a, bi.da2042);
+        rgListener(bi.da2051, bi.da2051a, bi.da2052);
+        rgListener(bi.da2061, bi.da2061a, bi.da2062);
+        rgListener(bi.da2071, bi.da2071a, bi.da2072);
 
-        radioGroupListener(bi.da2111, bi.da2111a, bi.da2112);
-        radioGroupListener(bi.da2121, bi.da2121a, bi.da2122);
-        radioGroupListener(bi.da2131, bi.da2131a, bi.da2132);
-        radioGroupListener(bi.da2141, bi.da2141a, bi.da2142);
+        rgListener(bi.da2111, bi.da2111a, bi.da2112);
+        rgListener(bi.da2121, bi.da2121a, bi.da2122);
+        rgListener(bi.da2131, bi.da2131a, bi.da2132);
+        rgListener(bi.da2141, bi.da2141a, bi.da2142);
     }
 
 
-    public void radioGroupListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+    public void rgListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
 
         rg.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(vg, false);
