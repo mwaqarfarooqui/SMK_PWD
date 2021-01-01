@@ -67,7 +67,6 @@ public class SectionD102Activity extends AppCompatActivity {
 
 
     public void rgListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
-
         rg.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(vg, false);
             if (i == rb.getId()) {
