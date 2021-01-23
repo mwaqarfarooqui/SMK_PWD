@@ -142,16 +142,6 @@ public class SectionD2Activity extends AppCompatActivity {
         form.setDb1696x(bi.db1696x.getText().toString().trim().isEmpty() ? "-1" : bi.db1696x.getText().toString());
 
 
-        /*try {
-            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsD()), json);
-
-            fc.setsD(String.valueOf(json_merge));
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
-
-
     }
 
 
