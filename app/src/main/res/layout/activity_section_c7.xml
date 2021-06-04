@@ -317,7 +317,7 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- cg07  Radio   -->
+            <!-- cg07 Radio, cg08f input   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvcg07"
                 style="@style/cardView">
@@ -327,28 +327,24 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/qtxt_cg07"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_cg07"
-                            android:text="@string/cg07" />
-
-                        <TextView
-                            android:id="@+id/q_cg07"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_cg07"
-                            android:layout_alignBottom="@id/qtxt_cg07"
+                            android:layout_height="match_parent"
                             android:text="@string/Q_cg07" />
 
-                    </RelativeLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/cg07" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/cg07"
@@ -372,45 +368,8 @@
 
                     </RadioGroup>
 
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-            <!-- cg08  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvcg08"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
-
-                        <TextView
-                            android:id="@+id/qtxt_cg08"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_cg08"
-                            android:text="@string/cg08" />
-
-                        <TextView
-                            android:id="@+id/q_cg08"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_cg08"
-                            android:layout_alignBottom="@id/qtxt_cg08"
-                            android:text="@string/Q_cg08" />
-
-                    </RelativeLayout>
-
                     <LinearLayout
+                        android:id="@+id/llcg08"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
@@ -442,7 +401,7 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- cg09  Radio   -->
+            <!-- cg09 Radio, cg10f input   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvcg09"
                 style="@style/cardView">
@@ -452,28 +411,24 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/qtxt_cg09"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_cg09"
-                            android:text="@string/cg09" />
-
-                        <TextView
-                            android:id="@+id/q_cg09"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_cg09"
-                            android:layout_alignBottom="@id/qtxt_cg09"
+                            android:layout_height="match_parent"
                             android:text="@string/Q_cg09" />
 
-                    </RelativeLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/cg09" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/cg09"
@@ -497,45 +452,8 @@
 
                     </RadioGroup>
 
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-            <!-- cg10  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvcg10"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
-
-                        <TextView
-                            android:id="@+id/qtxt_cg10"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_cg10"
-                            android:text="@string/cg10" />
-
-                        <TextView
-                            android:id="@+id/q_cg10"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_cg10"
-                            android:layout_alignBottom="@id/qtxt_cg10"
-                            android:text="@string/Q_cg10" />
-
-                    </RelativeLayout>
-
                     <LinearLayout
+                        android:id="@+id/llcg10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
