@@ -41,7 +41,7 @@ public class SectionC7Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
-        rgListener(bi.cg01, bi.cg01y, bi.cvcg02);
+        rgListener(bi.cg01, bi.cg01y, bi.llcg02);
         rgListener(bi.cg03, bi.cg03y, bi.cvcg04);
         rgListener(bi.cg05, bi.cg05y, bi.cvcg06);
         rgListener(bi.cg07, bi.cg07y, bi.cvcg08);
