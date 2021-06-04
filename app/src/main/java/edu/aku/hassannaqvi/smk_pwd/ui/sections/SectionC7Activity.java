@@ -44,26 +44,26 @@ public class SectionC7Activity extends AppCompatActivity {
         rgListener(bi.cg01, bi.cg01y, bi.llcg02);
         rgListener(bi.cg03, bi.cg03y, bi.llcg04);
         rgListener(bi.cg05, bi.cg05y, bi.llcg06);
-        rgListener(bi.cg07, bi.cg07y, bi.cvcg08);
-        rgListener(bi.cg09, bi.cg09y, bi.cvcg10);
-        rgListener(bi.cg11, bi.cg11y, bi.cvcg12);
-        rgListener(bi.cg13, bi.cg13y, bi.cvcg14);
-        rgListener(bi.cg15, bi.cg15y, bi.cvcg16);
-        rgListener(bi.cg17, bi.cg17y, bi.cvcg18);
-        rgListener(bi.cg19, bi.cg19y, bi.cvcg20);
-        rgListener(bi.cg21, bi.cg21y, bi.cvcg22);
-        rgListener(bi.cg23, bi.cg23y, bi.cvcg24);
-        rgListener(bi.cg25, bi.cg25y, bi.cvcg26);
-        rgListener(bi.cg27, bi.cg27y, bi.cvcg28);
-        rgListener(bi.cg29, bi.cg29y, bi.cvcg30);
-        rgListener(bi.cg31, bi.cg31y, bi.cvcg32);
-        rgListener(bi.cg33, bi.cg33y, bi.cvcg34);
-        rgListener(bi.cg35, bi.cg35y, bi.cvcg36);
-        rgListener(bi.cg37, bi.cg37y, bi.cvcg38);
-        rgListener(bi.cg39, bi.cg39y, bi.cvcg40);
-        rgListener(bi.cg41, bi.cg41y, bi.cvcg42);
-        rgListener(bi.cg43, bi.cg43y, bi.cvcg44);
-        rgListener(bi.cg45, bi.cg45y, bi.cvcg46);
+        rgListener(bi.cg07, bi.cg07y, bi.llcg08);
+        rgListener(bi.cg09, bi.cg09y, bi.llcg10);
+        rgListener(bi.cg11, bi.cg11y, bi.llcg12);
+        rgListener(bi.cg13, bi.cg13y, bi.llcg14);
+        rgListener(bi.cg15, bi.cg15y, bi.llcg16);
+        rgListener(bi.cg17, bi.cg17y, bi.llcg18);
+        rgListener(bi.cg19, bi.cg19y, bi.llcg20);
+        rgListener(bi.cg21, bi.cg21y, bi.llcg22);
+        rgListener(bi.cg23, bi.cg23y, bi.llcg24);
+        rgListener(bi.cg25, bi.cg25y, bi.llcg26);
+        rgListener(bi.cg27, bi.cg27y, bi.llcg28);
+        rgListener(bi.cg29, bi.cg29y, bi.llcg30);
+        rgListener(bi.cg31, bi.cg31y, bi.llcg32);
+        rgListener(bi.cg33, bi.cg33y, bi.llcg34);
+        rgListener(bi.cg35, bi.cg35y, bi.llcg36);
+        rgListener(bi.cg37, bi.cg37y, bi.llcg38);
+        rgListener(bi.cg39, bi.cg39y, bi.llcg40);
+        rgListener(bi.cg41, bi.cg41y, bi.llcg42);
+        rgListener(bi.cg43, bi.cg43y, bi.llcg44);
+        rgListener(bi.cg45, bi.cg45y, bi.llcg46);
     }
 
 
